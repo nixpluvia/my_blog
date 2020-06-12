@@ -1,15 +1,17 @@
+function MobileSideBar__toggle() {
+    var $btn = $('.btn-toggle-mobile-side-bar')
+    
+    if ($btn.hasClass('active')) {
+        $btn.removeClass('active');
+    } else {
+        $btn.addClass('active');
+    }
+}
 
-function mobileToggleSideBar() {
-    $('.btn-toggle-mobile-side-bar').click(function(){
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-        }
-        else {
-            $(this).addClass('active');
-        }
-      });
+function MobileSideBar__init() {
+    $('.btn-toggle-mobile-side-bar').click(MobileSideBar__toggle);
 }
 
 $(function () {
-    mobileToggleSideBar();
+    MobileSideBar__init();
 })
