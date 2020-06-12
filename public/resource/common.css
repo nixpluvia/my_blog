@@ -296,7 +296,7 @@ label[for] {
 
 @media (min-width: 800px) {
     .window-md-down {
-        display: block;
+        display: none;
     }
 }
 
@@ -308,8 +308,8 @@ label[for] {
 
 .btn-toggle-mobile-side-bar {
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
 }
 
 .btn-toggle-mobile-side-bar>div {
@@ -320,11 +320,6 @@ label[for] {
     height: 20%;
     background-color: white;
     transition: top .3s .3s, transform .3s, opacity .3s .3s;
-}
-
-.btn-toggle-mobile-side-bar.active>div {
-    top: 40%; 
-    transition: top .3s, transform .3s .3s, opacity 0.2s;
 }
 
 .btn-toggle-mobile-side-bar>div:nth-child(2) {
@@ -345,6 +340,11 @@ label[for] {
 
 .btn-toggle-mobile-side-bar.active>div:nth-child(2) {
     opacity: 0;
+}
+
+.btn-toggle-mobile-side-bar.active>div {
+    top: 40%; 
+    transition: top .3s, transform .3s .3s, opacity 0.2s;
 }
 
 /* 커스텀 */
@@ -422,7 +422,7 @@ label[for] {
 
 /*모바일 탑 바*/
 .mobile-top-bar {
-    height: 70px;
+    height: 50px;
     background-color: black;
 }
 .mobile-top-bar > .btn-toggle-mobile-side-bar {

@@ -37,13 +37,19 @@
                     <li class="flex flex-1-0-0">
                         <a href="#" class="flex-jc-c flex-ai-c flex-1-0-0">SNS</a>
                         <ul>
-                            <li class="flex"><a class="flex-jc-c flex-ai-c flex-1-0-0"
-                                    href="https://www.youtube.com/channel/UCaCKvCIvrW3xMmYvhCGJZZA?view_as=subscriber">Youtube</a>
+                            <li class="flex">
+                                <a class="flex-jc-c flex-ai-c flex-1-0-0"
+                                    href="https://www.youtube.com/channel/UCaCKvCIvrW3xMmYvhCGJZZA?view_as=subscriber"
+                                    target="_blank">Youtube</a>
                             </li>
-                            <li class="flex"><a class="flex-jc-c flex-ai-c flex-1-0-0"
-                                    href="https://nixpluvia.tistory.com/">Tstory블로그</a></li>
-                            <li class="flex"><a class="flex-jc-c flex-ai-c flex-1-0-0"
-                                    href="https://github.com/nixpluvia/my_blog">Github</a></li>
+                            <li class="flex">
+                                <a class="flex-jc-c flex-ai-c flex-1-0-0" href="https://nixpluvia.tistory.com/"
+                                    target="_blank">Tstory블로그</a>
+                            </li>
+                            <li class="flex">
+                                <a class="flex-jc-c flex-ai-c flex-1-0-0" href="https://github.com/nixpluvia"
+                                    target="_blank">Github</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
