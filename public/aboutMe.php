@@ -1,7 +1,7 @@
 <?php
 include "../part/head.php";
 ?>
-<h1>안녕하세요</h1>
+<h1>저에대한 자기소개입니다</h1>
 <?php
 include "../part/foot.php";
 ?>
