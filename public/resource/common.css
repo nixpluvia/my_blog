@@ -319,7 +319,7 @@ label[for] {
     width: 100%;
     height: 20%;
     background-color: white;
-    transition: top .3s .3s, transform .3s, opacity .3s .3s;
+    transition: top .15s .15s, transform .15s, opacity .15s .15s;
 }
 
 .btn-toggle-mobile-side-bar>div:nth-child(2) {
@@ -344,7 +344,7 @@ label[for] {
 
 .btn-toggle-mobile-side-bar.active>div {
     top: 40%; 
-    transition: top .3s, transform .3s .3s, opacity 0.2s;
+    transition: top .15s, transform .15s .15s, opacity .15s;
 }
 
 /* 커스텀 */
@@ -356,6 +356,9 @@ label[for] {
     max-width: 1200px;
 }
 
+html.active body {
+    overflow-y: hidden;
+}
 
 .top-bar {
     height: 100px;
@@ -422,9 +425,48 @@ label[for] {
 
 /*모바일 탑 바*/
 .mobile-top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 50px;
     background-color: black;
 }
 .mobile-top-bar > .btn-toggle-mobile-side-bar {
     margin: 0 10px;
+}
+@media (max-width: 800px) {
+    body {
+        padding-top: 50px;
+    }
+}
+
+/*모바일 사이드 바*/
+.mobile-side-bar {
+    position: fixed;
+    width: 300px;
+    bottom: 0;
+    top: 50px;
+    left: -300px;
+    transition: left .3s;
+    background-color: pink;
+}
+.mobile-side-bar.active{
+    left: 0;
+}
+
+.mobile-side-bar-bg {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background-color .3s;
+    background-color: rgba(0,0,0,0);
+    visibility: hidden;
+}
+
+.mobile-side-bar-bg.active {
+    visibility: visible;
+    background-color: rgba(0,0,0,0.8);
 }

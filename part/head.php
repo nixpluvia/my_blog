@@ -19,6 +19,15 @@
             <div></div>
         </a>
     </div>
+    <div class="mobile-side-bar-bg"></div>
+    <div class="mobile-side-bar">
+        <ul class="mobile-side-bar">
+            <li><a href="/index.php">Home</a></li>
+            <li><a href="/Articles.php">Articles</a></li>
+            <li><a href="/aboutMe.php">About me</a></li>
+            <li><a href="#">SNS</a></li>
+        </ul>
+    </div>
     <div class="top-bar window-md-up">
         <div class="top-wrap con height-100p flex">
             <a href="/" class="logo flex-ai-c">
