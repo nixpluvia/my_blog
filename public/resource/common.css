@@ -356,10 +356,7 @@ label[for] {
     max-width: 1200px;
 }
 
-html.active body {
-    overflow-y: hidden;
-}
-
+/*pc 상단 바*/
 .top-bar {
     height: 100px;
     background-color: black;
@@ -455,6 +452,11 @@ html.active body {
     left: 0;
 }
 
+html.active body {
+    overflow-y: hidden;
+}
+
+/*모바일 사이드 바 배경*/
 .mobile-side-bar-bg {
     position: fixed;
     top: 50px;
