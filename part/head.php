@@ -19,14 +19,30 @@
             <div></div>
         </a>
     </div>
-    <div class="mobile-side-bar-bg"></div>
-    <div class="mobile-side-bar">
-        <ul class="mobile-side-bar">
-            <li><a href="/index.php">Home</a></li>
-            <li><a href="/Articles.php">Articles</a></li>
-            <li><a href="/aboutMe.php">About me</a></li>
-            <li><a href="#">SNS</a></li>
-        </ul>
+    <div class="mobile-side-bar-bg window-md-down"></div>
+    <div class="mobile-side-bar window-md-down">
+        <nav class="menu-box-1">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">About me</a></li>
+                <li>
+                    <div class="mobile-sns-menu-bg"></div>
+                    <a href="#">SNS</a>
+                    <ul>
+                        <li><a href="#">Youtube</a></li>
+                        <li><a href="#">Tistory블로그</a></li>
+                        <li>
+                            <a href="#">Github</a>
+                            <ul>
+                                <li><a href="#">my_blog</a></li>
+                                <li><a href="#">test</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </div>
     <div class="top-bar window-md-up">
         <div class="top-wrap con height-100p flex">
