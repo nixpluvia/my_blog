@@ -1,5 +1,8 @@
 /* 폰트적용 */
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
 
 html {
     font-family: "Noto Sans KR", sans-serif;
@@ -359,7 +362,7 @@ label[for] {
 /*pc 상단 바*/
 .top-bar {
     height: 100px;
-    background-color: rgb(125,255,194);
+    background-color: rgb(163,24,14);
 }
 
 .top-bar .logo {
@@ -396,7 +399,7 @@ label[for] {
     left: -2px;
     width: 100%;
     background-color: white;
-    border: 2px solid rgb(125,255,194);
+    border: 2px solid rgb(163,24,14);
     border-top: none;
 }
 
@@ -409,7 +412,7 @@ label[for] {
 }
 
 .top-bar .menu-box-1 ul ul>li:hover {
-    background-color: rgb(125,255,194);
+    background-color: rgb(163,24,14);
 }
 
 .top-bar .menu-box-1 ul ul>li>a {
@@ -427,7 +430,7 @@ label[for] {
     left: 0;
     width: 100%;
     height: 50px;
-    background-color:rgb(125,255,194)
+    background-color: rgb(163,24,14);
 }
 .mobile-top-bar > .btn-toggle-mobile-side-bar {
     margin: 0 10px;
@@ -440,17 +443,37 @@ label[for] {
 
 /*모바일 사이드 바*/
 .mobile-side-bar {
+    font-family: "Anton", "Noto Sans KR", sans-serif;
     position: fixed;
     width: 300px;
     bottom: 0;
     top: 50px;
     left: -300px;
     transition: left .3s;
-    background-color: rgb(125,255,194);
+    background-color: rgb(163,24,14);
 }
 .mobile-side-bar.active{
     left: 0;
 }
+/*모바일 사이드 바 로고*/
+.mobile-side-bar .logo-box > a {  
+    display: block;
+    height: 100px;
+    line-height: 100px;    
+    font-size:48px;
+    padding-left: 18px;
+    white-space: nowrap;
+    color: white;
+    border-bottom: 4px solid white;
+    box-sizing: border-box;
+}
+.mobile-side-bar .logo-box > div.logo-border {
+    height: 8px;
+    border-bottom: 4px solid white;
+    box-sizing: border-box;
+}
+
+
 
 /*본문 스크롤 없애기*/
 @media (max-width: 799px) {
@@ -459,52 +482,75 @@ label[for] {
     }
 }
 
-
+/*모바일 사이드 바 메뉴*/
 .mobile-side-bar .menu-box-1 ul > li  {
     position: relative;
 }
-
+/*모바일 사이드 바 매인 메뉴*/
 .mobile-side-bar .menu-box-1 > ul > li > a {
     position: relative;
     display: block;
-    padding: 20px;
-    font-size: 1.5rem;
-    font-weight: bold;
+    padding: 0 20px;
+    height: 59px;
+    line-height: 59px;
+    font-size: 24px;
+    border-bottom: 4px solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
-}
-.mobile-side-bar .menu-box-1 > ul > li.active > a:not(:only-child) {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    box-sizing: border-box;
 }
 
-/*모바일 사이드 바 SNS메뉴*/
-.mobile-side-bar .menu-box-1 ul > li > a:not(:only-child)::after {
+/*모바일 사이드 바 하위목록 아이콘 */
+.mobile-side-bar .menu-box-1 ul > li > a > i {
     float: right;
     padding-right: 10px;
-    content: "+";
 }
-.mobile-side-bar .menu-box-1 ul > li.active > a:not(:only-child)::after {
-    content: "-";
+.mobile-side-bar .menu-box-1 > ul > li > a > i {
+    line-height: 59px;
+}
+.mobile-side-bar .menu-box-1 ul ul > li > a > i {
+    line-height: 49px;
+}
+.mobile-side-bar .menu-box-1 ul > li > a > i:first-of-type {
+    display: block;
+}
+.mobile-side-bar .menu-box-1 ul > li > a > i:last-of-type {
+    display: none;
+}
+.mobile-side-bar .menu-box-1 ul > li.active > a > i:first-of-type {
+    display: none;
+}
+.mobile-side-bar .menu-box-1 ul > li.active > a > i:last-of-type {
+    display: block;
 }
 
-/*모바일 사이드 바 SNS 하위메뉴*/
+/*모바일 사이드 바 하위메뉴*/
 .mobile-side-bar .menu-box-1 ul ul {
     display: none;
-    padding-left: 30px;
-    overflow: hidden;
-    background-color: rgb(255,255,255);
 }
+.mobile-side-bar .menu-box-1 > ul > li > ul {
+    border-bottom: 4px solid rgb(255, 255, 255);
+}
+
 .mobile-side-bar .menu-box-1 ul > li.active > ul {
     display: block;
 }
 .mobile-side-bar .menu-box-1 ul ul > li > a {
-    color: rgb(0, 0, 0);
     display: block;
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 20px;
+    height: 49px;
+    line-height: 49px;
+    font-size: 18px;
+    padding: 0 20px;
+    padding-left: 40px;
     white-space: nowrap;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-bottom: 4px solid rgb(163,24,14);
+    box-sizing: border-box;
 }
+.mobile-side-bar .menu-box-1 ul ul ul> li > a {
+    padding-left: 60px;
+}
+
 /*모바일 사이드 바 배경*/
 .mobile-side-bar-bg {
     position: fixed;
@@ -520,4 +566,18 @@ label[for] {
 .mobile-side-bar-bg.active {
     visibility: visible;
     background-color: rgba(0,0,0,0.8);
+}
+
+/*상단 배너 박스*/
+.top-bn-box {
+    background-image: url(top_bn_box_1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+@media (max-width: 800px) {
+    .top-bn-box {
+        height: 300px;
+    }
 }

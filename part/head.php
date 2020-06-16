@@ -21,9 +21,13 @@
     </div>
     <div class="mobile-side-bar-bg window-md-down"></div>
     <div class="mobile-side-bar window-md-down">
+        <div class="logo-box">
+            <a href="/">NIX BLOG</a>
+            <div class="logo-border"></div>
+        </div>
         <nav class="menu-box-1">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="#">IT PROGRAMING</a></li>
                 <li><a href="#">Articles</a></li>
                 <li><a href="#">About me</a></li>
                 <li>
@@ -79,4 +83,6 @@
                 </ul>
             </nav>
         </div>
+    </div>
+    <div class="top-bn-box">
     </div>

@@ -27,10 +27,16 @@ function MobileSnsMenu__toggle(e) {
     }
     e.stopPropagation();
 }
+function addCaretIcon() {
+    $('.mobile-side-bar .menu-box-1 ul > li > a:not(:only-child)').append('<i class="fas fa-caret-down"></i>');
+    $('.mobile-side-bar .menu-box-1 ul > li > a:not(:only-child)').append('<i class="fas fa-caret-right"></i>');
+};
+
 
 function MobileSideBar__init() {
     $('.btn-toggle-mobile-side-bar, .mobile-side-bar-bg').click(MobileSideBar__toggle);
     $('.mobile-side-bar .menu-box-1 ul > li').click(MobileSnsMenu__toggle);
+    addCaretIcon();
 }
 
 $(function () {
