@@ -1,20 +1,20 @@
 function MobileSideBar__toggle() {
     var $btn = $('.btn-toggle-mobile-side-bar');
-    var $btn2 = $('.mobile-side-bar');
-    var $btn3 = $('.mobile-side-bar-bg');
-    var $btn4 = $('html');
+    var $mobileSideBar = $('.mobile-side-bar');
+    var $mobileSideBarBg = $('.mobile-side-bar-bg');
+    var $html = $('html');
     
     if ($btn.hasClass('active')) {
         $btn.removeClass('active');
-        $btn2.removeClass('active');
-        $btn3.removeClass('active');
-        $btn4.removeClass('active');
+        $mobileSideBar.removeClass('active');
+        $mobileSideBarBg.removeClass('active');
+        $html.removeClass('active');
     } 
     else {
         $btn.addClass('active');
-        $btn2.addClass('active');
-        $btn3.addClass('active');
-        $btn4.addClass('active');
+        $mobileSideBar.addClass('active');
+        $mobileSideBarBg.addClass('active');
+        $html.addClass('active');
     }
 }
 function MobileSnsMenu__toggle(e) {

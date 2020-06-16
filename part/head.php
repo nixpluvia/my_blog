@@ -27,7 +27,6 @@
                 <li><a href="#">Articles</a></li>
                 <li><a href="#">About me</a></li>
                 <li>
-                    <div class="mobile-sns-menu-bg"></div>
                     <a href="#">SNS</a>
                     <ul>
                         <li><a href="#">Youtube</a></li>
