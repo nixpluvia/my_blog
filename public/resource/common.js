@@ -32,6 +32,34 @@ function addCaretIcon() {
     $('.mobile-side-bar .menu-box-1 ul > li > a:not(:only-child)').append('<i class="fas fa-caret-right"></i>');
 };
 
+function topBnSlider(){
+    var $clickedBtn = $(this);
+    var isLeft = $clickedBtn.index() == 0;
+    var $slider = $clickedBtn.closest('.top-bn-slider');
+    var $current = $slider.find(' > .slides > div.active');
+    var $post = null;
+    if( isLeft ) {
+        $post = $current.prev();
+    }
+    else {
+        $post = $current.next();
+    }
+    if ( $post.length == 0 ) {
+        if (isLeft) {
+            $post = $slider.find(' > .slides > div:last-child');
+        }
+        else {
+            $post = $slider.find(' > .slides > div:first-child');
+        }
+    }
+    
+    $current.removeClass('active');
+    $post.addClass('active');
+}
+
+
+
+
 
 function MobileSideBar__init() {
     $('.btn-toggle-mobile-side-bar, .mobile-side-bar-bg').click(MobileSideBar__toggle);
@@ -39,6 +67,15 @@ function MobileSideBar__init() {
     addCaretIcon();
 }
 
+function topBnSlider__init() {
+    $('.top-bn-slider .side-bar > div').click(topBnSlider);
+    setInterval(function(){
+        $('.top-bn-slider .side-bar > div:last-child').click();
+    }, 3000);
+}
+
+
 $(function () {
     MobileSideBar__init();
+    topBnSlider__init();
 })

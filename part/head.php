@@ -27,7 +27,7 @@
         </div>
         <nav class="menu-box-1">
             <ul>
-                <li><a href="#">IT PROGRAMING</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">Articles</a></li>
                 <li><a href="#">About me</a></li>
                 <li>
@@ -84,5 +84,18 @@
             </nav>
         </div>
     </div>
-    <div class="top-bn-box">
+    <div class="top-bn-slider">
+        <div class="slides">
+            <div class="active" style="background-image: url(https://cdn.pixabay.com/photo/2018/10/22/17/24/horse-3765847_960_720.jpg)"></div>
+            <div style="background-image: url(https://cdn.pixabay.com/photo/2020/05/31/19/37/iranian-architecture-5243948_960_720.jpg)"></div>
+            <div style="background-image: url(https://cdn.pixabay.com/photo/2020/06/14/22/46/the-caucasus-5299607_960_720.jpg)"></div>
+        </div>
+        <div class="side-bar">
+            <div>
+                <span><i class="fas fa-angle-left"></i></span>
+            </div>
+            <div>
+                <span><i class="fas fa-angle-right"></i></span>
+            </div>
+        </div>
     </div>
