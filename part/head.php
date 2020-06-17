@@ -12,13 +12,16 @@
 </head>
 
 <body>
+    <!--모바일 상단 바-->
     <div class="mobile-top-bar window-md-down flex">
         <a href="#" class="btn-toggle-mobile-side-bar flex-self-c">
             <div></div>
             <div></div>
             <div></div>
         </a>
+        <a href="/"class="title">NIX BLOG</a>
     </div>
+    <!--모바일 사이드 바-->
     <div class="mobile-side-bar-bg window-md-down"></div>
     <div class="mobile-side-bar window-md-down">
         <div class="logo-box">
@@ -47,55 +50,40 @@
             </ul>
         </nav>
     </div>
+    <!--pc 상단 바-->
     <div class="top-bar window-md-up">
-        <div class="top-wrap con height-100p flex">
-            <a href="/" class="logo flex-ai-c">
-                <i class="fab fa-adobe"></i>
+        <div class="top-bar-wrap flex con">
+            <a class="logo img-box flex-self-c" href="/">
             </a>
-            <nav class="menu-box-1 flex flex-1-0-0">
-                <ul class="flex flex-1-0-0">
-                    <li class="flex flex-1-0-0 "><a href="/index.php" class="flex-jc-c flex-ai-c flex-1-0-0">Home</a>
-                    </li>
-                    <li class="flex flex-1-0-0"><a href="/Articles.php"
-                            class="flex-jc-c flex-ai-c flex-1-0-0">Articles</a>
-                    </li>
-                    <li class="flex flex-1-0-0"><a href="/aboutMe.php" class="flex-jc-c flex-ai-c flex-1-0-0">About
-                            me</a>
-                    </li>
-                    <li class="flex flex-1-0-0">
-                        <a href="#" class="flex-jc-c flex-ai-c flex-1-0-0">SNS</a>
+            <nav class="menu-box-1 flex-jc-end flex-1-0-0">
+                <ul class="flex">
+                    <li class="flex"><a href="/itPrograming.php" class="flex-ai-c">IT PROGRAMING</a></li>
+                    <li class="flex"><a href="/photo.php" class="flex-ai-c">PHOTO</a></li>
+                    <li class="flex"><a href="/dailyLife.php" class="flex-ai-c">DAILY LIFE</a></li>
+                    <li class="flex"><a href="/aboutMe.php" class="flex-ai-c">ABOUT ME</a></li>
+                    <li class="flex">
+                        <a href="#" class="flex-ai-c">SNS</a>
                         <ul>
-                            <li class="flex">
-                                <a class="flex-jc-c flex-ai-c flex-1-0-0"
-                                    href="https://www.youtube.com/channel/UCaCKvCIvrW3xMmYvhCGJZZA?view_as=subscriber"
-                                    target="_blank">Youtube</a>
-                            </li>
-                            <li class="flex">
-                                <a class="flex-jc-c flex-ai-c flex-1-0-0" href="https://nixpluvia.tistory.com/"
-                                    target="_blank">Tstory블로그</a>
-                            </li>
-                            <li class="flex">
-                                <a class="flex-jc-c flex-ai-c flex-1-0-0" href="https://github.com/nixpluvia"
-                                    target="_blank">Github</a>
-                            </li>
+                            <li class="flex"><a href="#" class="flex-ai-c flex-jc-c flex-1-0-0">YOUTUBE</a></li>
+                            <li class="flex"><a href="#" class="flex-ai-c flex-jc-c flex-1-0-0">TISTORY</a></li>
+                            <li class="flex"><a href="#" class="flex-ai-c flex-jc-c flex-1-0-0">GITHUB</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </div>
     </div>
+    <!--상단 슬라이드 배너-->
     <div class="top-bn-slider">
-        <div class="slides">
-            <div class="active" style="background-image: url(https://cdn.pixabay.com/photo/2018/10/22/17/24/horse-3765847_960_720.jpg)"></div>
-            <div style="background-image: url(https://cdn.pixabay.com/photo/2020/05/31/19/37/iranian-architecture-5243948_960_720.jpg)"></div>
-            <div style="background-image: url(https://cdn.pixabay.com/photo/2020/06/14/22/46/the-caucasus-5299607_960_720.jpg)"></div>
-        </div>
-        <div class="side-bar">
-            <div>
-                <span><i class="fas fa-angle-left"></i></span>
+        <div class="sliderbox">
+            <div class="slides">
+                <div class="active"></div>
+                <div></div>
+                <div style="background-size:contain; background-color: rgb(214,223,253);"></div>
             </div>
-            <div>
-                <span><i class="fas fa-angle-right"></i></span>
+            <div class="side-bar">
+                <div><span><i class="fas fa-angle-left"></i></span></div>
+                <div><span><i class="fas fa-angle-right"></i></span></div>
             </div>
         </div>
     </div>

@@ -35,7 +35,7 @@ function addCaretIcon() {
 function topBnSlider(){
     var $clickedBtn = $(this);
     var isLeft = $clickedBtn.index() == 0;
-    var $slider = $clickedBtn.closest('.top-bn-slider');
+    var $slider = $clickedBtn.closest('.sliderbox');
     var $current = $slider.find(' > .slides > div.active');
     var $post = null;
     if( isLeft ) {
@@ -68,10 +68,7 @@ function MobileSideBar__init() {
 }
 
 function topBnSlider__init() {
-    $('.top-bn-slider .side-bar > div').click(topBnSlider);
-    setInterval(function(){
-        $('.top-bn-slider .side-bar > div:last-child').click();
-    }, 3000);
+    $('.sliderbox .side-bar > div').click(topBnSlider);
 }
 
 
