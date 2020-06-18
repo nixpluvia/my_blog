@@ -365,8 +365,10 @@ label[for] {
 
 /*pc 상단 바*/
 .top-bar {
+    font-family: "Anton", "Noto Sans KR", sans-serif;
     height: 80px;
     background-color: rgb(255, 255, 255);
+    z-index: 10;
 }
 .top-bar .top-bar-wrap{
     height: 100%;
@@ -389,11 +391,9 @@ label[for] {
     position: relative;
 }
 
-.top-bar .top-bar-wrap .menu-box-1 ul>li>a {
-    font-weight: bold;
-}
-
 .top-bar .top-bar-wrap .menu-box-1>ul>li>a {
+    letter-spacing: 1px;
+    font-size: 1.2rem;
     color: rgb(255,161,0);
     padding: 0 20px;
 }
@@ -407,11 +407,13 @@ label[for] {
     display: none;
     position: absolute;
     top: 100%;
-    left: -2px;
+    left: 0;
     width: 100%;
     background-color: white;
     border: 2px solid rgb(255,161,0);
     border-top: none;
+    box-sizing: border-box;
+    z-index: 10;
 }
 
 .top-bar .top-bar-wrap .menu-box-1 ul>li:hover>ul {
@@ -420,6 +422,7 @@ label[for] {
 
 .top-bar .top-bar-wrap .menu-box-1 ul ul>li {
     height: 60px;
+    z-index: 10;
 }
 
 .top-bar .top-bar-wrap .menu-box-1 ul ul>li:hover {
@@ -428,7 +431,7 @@ label[for] {
 
 .top-bar .top-bar-wrap .menu-box-1 ul ul>li>a {
     color: black;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .top-bar .top-bar-wrap .menu-box-1 ul ul>li:hover>a {
