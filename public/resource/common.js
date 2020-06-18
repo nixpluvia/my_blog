@@ -61,6 +61,8 @@ function topBnSlider(){
 
 
 
+
+
 function MobileSideBar__init() {
     $('.btn-toggle-mobile-side-bar, .mobile-side-bar-bg').click(MobileSideBar__toggle);
     $('.mobile-side-bar .menu-box-1 ul > li').click(MobileSnsMenu__toggle);
@@ -69,6 +71,9 @@ function MobileSideBar__init() {
 
 function topBnSlider__init() {
     $('.sliderbox .side-bar > div').click(topBnSlider);
+    setInterval(function(){
+        $('.sliderbox .side-bar > div:last-child').click();
+    }, 3000)
 }
 
 

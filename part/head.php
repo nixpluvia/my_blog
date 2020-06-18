@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/resource/common.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/resource/common.js"></script>
+    <link rel="icon" href="./resource/images/favicon.png">
     <title>블로그</title>
 </head>
 
@@ -19,7 +20,7 @@
             <div></div>
             <div></div>
         </a>
-        <a href="/"class="title">NIX BLOG</a>
+        <a href="/" class="title">NIX BLOG</a>
     </div>
     <!--모바일 사이드 바-->
     <div class="mobile-side-bar-bg window-md-down"></div>
@@ -30,21 +31,16 @@
         </div>
         <nav class="menu-box-1">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Articles</a></li>
-                <li><a href="#">About me</a></li>
+                <li><a href="#">IT PROGRAMING</a></li>
+                <li><a href="#">PHOTO</a></li>
+                <li><a href="#">DAILY LIFE</a></li>
+                <li><a href="#">ABOUT ME</a></li>
                 <li>
                     <a href="#">SNS</a>
                     <ul>
                         <li><a href="#">Youtube</a></li>
-                        <li><a href="#">Tistory블로그</a></li>
-                        <li>
-                            <a href="#">Github</a>
-                            <ul>
-                                <li><a href="#">my_blog</a></li>
-                                <li><a href="#">test</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="#">Tistory</a></li>
+                        <li><a href="#">Github</a></li>
                     </ul>
                 </li>
             </ul>
@@ -77,9 +73,25 @@
     <div class="top-bn-slider">
         <div class="sliderbox">
             <div class="slides">
-                <div class="active"></div>
-                <div></div>
-                <div style="background-size:contain; background-color: rgb(214,223,253);"></div>
+                <div class="active" style="background-image: url(./resource/images/top_bn_box_1.jpg);">
+                    <a href="#">
+                        더보기
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div style="background-image: url(./resource/images/top_bn_box_2.jpg);">
+                    <a href="#">
+                        더보기
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div
+                    style="background-image: url(./resource/images/top_bn_box_3.jpg);background-size:contain; background-color: rgb(214,223,253);">
+                    <a href="#">
+                        더보기
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
             <div class="side-bar">
                 <div><span><i class="fas fa-angle-left"></i></span></div>
