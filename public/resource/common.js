@@ -76,8 +76,13 @@ function topBnSlider__init() {
     }, 3000)
 }
 
+function cuttonOpen__init(){
+    $('.cutton').addClass('active');
+}
 
 $(function () {
     MobileSideBar__init();
     topBnSlider__init();
+    cuttonOpen__init();
 })
+
