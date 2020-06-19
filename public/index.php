@@ -37,11 +37,11 @@ include "../part/head_body.php";
     </div>
 </div>
 
-<div class="squareImageBox flex con">
-    <div style="background-image: url(./resource/images/squareImage_1.jpg)"></div>
-    <div></div>
-    <div></div>
-    <div style="background-image: url(./resource/images/squareImage_2.jpg)"></div>
+<div class="squareContentBox flex con">
+    <div class="squareImage" style="background-image: url(./resource/images/squareImage_1.jpg)"></div>
+    <div><div class="squareArticleBox"></div></div>
+    <div><div class="squareArticleBox"></div></div>
+    <div class="squareImage" style="background-image: url(./resource/images/squareImage_2.jpg)"></div>
 </div>
 <?php
 include "../part/foot.php";

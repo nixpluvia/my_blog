@@ -87,18 +87,18 @@
     }
 }
 
-.squareImageBox {
+.squareContentBox {
     position: relative;
     margin-top: 50px;
     flex-wrap: wrap;
 }
-.squareImageBox > div {
+.squareContentBox > div {
     width: 50%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.squareImageBox > div::after {
+.squareContentBox > div::after {
     content: "";
     display: block;
     padding-bottom: 100%;

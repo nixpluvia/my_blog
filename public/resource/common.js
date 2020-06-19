@@ -73,7 +73,7 @@ function topBnSlider__init() {
     $('.sliderbox .side-bar > div').click(topBnSlider);
     setInterval(function(){
         $('.sliderbox .side-bar > div:last-child').click();
-    }, 3000)
+    }, 5000)
 }
 
 function cuttonOpen__init(){
