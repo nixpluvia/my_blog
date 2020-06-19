@@ -418,28 +418,37 @@ body {
 }
 
 .top-bar .top-bar-wrap .logo {
-    width: 80px;
-    height: 80px;
+    align-self: center;
+    width: 70px;
+    height: 70px;
 }
-
-.top-bar .top-bar-wrap .menu-box-1>ul {
+.top-bar .top-bar-wrap .menu-box-1 .menu-box-wrap {
+    position: relative;
     margin-right: 30px;
 }
-.top-bar .top-bar-wrap .menu-box-1>ul>li {
+.top-bar .top-bar-wrap .menu-box-1 .menu-box-wrap > ul {
+    position: relative;
+}
+.top-bar .top-bar-wrap .menu-box-1 .menu-box-wrap > span {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 8px;
+    transform: translateY(-100%);
+    transition: left .3s, width .3s;
+    background-color: rgb(255,161,0);
+}
+.top-bar .top-bar-wrap .menu-box-1 .menu-box-wrap >ul>li {
     position: relative;
 }
 
-.top-bar .top-bar-wrap .menu-box-1>ul>li>a {
+.top-bar .top-bar-wrap .menu-box-1 .menu-box-wrap >ul>li>a {
     letter-spacing: 1px;
     font-size: 1.2rem;
     white-space: nowrap;
     color: rgb(255,161,0);
     padding: 0 20px;
-}
-
-.top-bar .top-bar-wrap .menu-box-1>ul>li:hover>a {
-    color: rgb(0, 0, 0);
-    background-color: rgb(255,161,0);
 }
 .top-bar .sns-bar > a {
     padding: 0 10px;
@@ -473,17 +482,12 @@ body {
     background-color: rgb(255,161,0);
 }
 .mobile-top-bar > .title {
-    font-family: "Anton", "Noto Sans KR", sans-serif;
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 40px;
+    height: 40px;
     transform: translate(-50%,-50%);
-    color: rgb(255,161,0);
-    font-size: 2rem;
-    white-space: nowrap;
-}
-.mobile-top-bar > .title > * {
-    font-family: "Noto Sans KR", sans-serif;
 }
 
 /*모바일 사이드 바*/
@@ -689,4 +693,8 @@ body {
 
 section.content {
     margin-top: 50px;
+}
+
+.top-bar .top-bar-wrap >a.logo:hover > svg .st1  {
+    fill: #00cbff;
 }

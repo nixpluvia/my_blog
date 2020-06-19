@@ -39,8 +39,34 @@ include "../part/head_body.php";
 
 <div class="squareContentBox flex con">
     <div class="squareImage" style="background-image: url(./resource/images/squareImage_1.jpg)"></div>
-    <div><div class="squareArticleBox"></div></div>
-    <div><div class="squareArticleBox"></div></div>
+    <div class="squareTextBox">
+        <div class="squareTextBox-wrap">
+            <h2 class="title">안녕하세요</h2>
+            <div class="textBox">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Fugit quas ipsum dolorum. Minus porro illo similique voluptates perferendis iure nobis quas,
+                praesentium fugiat ducimus eaque sint alias, vitae pariatur eveniet.
+            </div>
+            <a href="#">
+                더보기
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="squareTextBox">
+        <div class="squareTextBox-wrap">
+            <h2 class="title">안녕하세요</h2>
+            <div class="textBox">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Fugit quas ipsum dolorum. Minus porro illo similique voluptates perferendis iure nobis quas,
+                praesentium fugiat ducimus eaque sint alias, vitae pariatur eveniet.
+            </div>
+            <a href="#">
+                더보기
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
     <div class="squareImage" style="background-image: url(./resource/images/squareImage_2.jpg)"></div>
 </div>
 <?php

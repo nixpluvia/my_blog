@@ -57,11 +57,35 @@ function topBnSlider(){
     $post.addClass('active');
 }
 
+function HoverBorder() {
+    var $this = $(this);
+    var $activeThis = $('.top-bar .top-bar-wrap .menu-box-1 .menu-box-wrap > ul > li.active');
+    var activeWidth = $activeThis.width();
+    var activePosition = $activeThis.position().left;
+    var $border = $this.parent().parent().find(' > span');
+    if ( $this.hasClass('active') ) {
+        $border.css('width',activeWidth);
+        $border.css('left',activePosition);
+    }
+}
 
 
 
 
 
+//저장소
+function HoverBorder__init() {
+    $('.top-bar .top-bar-wrap .menu-box-1 .menu-box-wrap > ul > li').mouseenter(function(){
+        $(this).addClass('active');
+    });
+    $('.top-bar .top-bar-wrap .menu-box-1 .menu-box-wrap > ul > li').mouseleave(function(){
+        var $border = $('.top-bar .top-bar-wrap .menu-box-1 .menu-box-wrap > span');
+        $(this).removeClass('active');
+        $border.css('width','');
+        $border.css('left','');
+    });
+    $('.top-bar .top-bar-wrap .menu-box-1 .menu-box-wrap > ul > li').mouseenter(HoverBorder);
+}
 
 function MobileSideBar__init() {
     $('.btn-toggle-mobile-side-bar, .mobile-side-bar-bg').click(MobileSideBar__toggle);
@@ -80,9 +104,11 @@ function cuttonOpen__init(){
     $('.cutton').addClass('active');
 }
 
+//적용
 $(function () {
     MobileSideBar__init();
     topBnSlider__init();
     cuttonOpen__init();
+    HoverBorder__init();
 })
 
