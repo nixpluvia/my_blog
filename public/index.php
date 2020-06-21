@@ -22,7 +22,8 @@ include "../part/head_body.php";
                     <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
-            <div style="background-image: url(./resource/images/top_bn_box_3.jpg); background-size:contain; background-color: rgb(214,223,253);">
+            <div
+                style="background-image: url(./resource/images/top_bn_box_3.jpg); background-size:contain; background-color: rgb(214,223,253);">
                 <a href="#">
                     더보기
                     <i class="fas fa-arrow-right"></i>
@@ -38,36 +39,47 @@ include "../part/head_body.php";
 </div>
 
 <div class="squareContentBox flex con">
-    <div class="squareImage" style="background-image: url(./resource/images/squareImage_1.jpg)"></div>
-    <div class="squareTextBox">
-        <div class="squareTextBox-wrap">
-            <h2 class="title">안녕하세요</h2>
-            <div class="textBox">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Fugit quas ipsum dolorum. Minus porro illo similique voluptates perferendis iure nobis quas,
-                praesentium fugiat ducimus eaque sint alias, vitae pariatur eveniet.
+    <ul class="flex">
+        <li class="flex">
+            <div class="squareImage" style="background-image: url(./resource/images/squareImage_1.jpg)"></div>
+            <div class="squareTextBox flex">
+                <div class="squareTextBox-wrap">
+                    <div class="type">설명</div>
+                    <div class="title">안녕하세요</div>
+                    <div class="textBox">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Fugit quas ipsum dolorum. Minus porro illo similique voluptates perferendis iure nobis quas,
+                        praesentium fugiat ducimus eaque sint alias, vitae pariatur eveniet.
+                    </div>
+                    <a href="#">
+                        더보기
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
-            <a href="#">
-                더보기
-                <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-    </div>
-    <div class="squareTextBox">
-        <div class="squareTextBox-wrap">
-            <h2 class="title">안녕하세요</h2>
-            <div class="textBox">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Fugit quas ipsum dolorum. Minus porro illo similique voluptates perferendis iure nobis quas,
-                praesentium fugiat ducimus eaque sint alias, vitae pariatur eveniet.
+        </li>
+        <li class="flex">
+            <div class="squareImage" style="background-image: url(./resource/images/squareImage_2.jpg)"></div>
+            <div class="squareTextBox flex">
+                <div class="squareTextBox-wrap">
+                    <div class="type">설명</div>
+                    <div class="title">안녕하세요</div>
+                    <div class="textBox">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Fugit quas ipsum dolorum. Minus porro illo similique voluptates perferendis iure nobis quas,
+                        praesentium fugiat ducimus eaque sint alias, vitae pariatur eveniet.
+                    </div>
+                    <a href="#">
+                        더보기
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
-            <a href="#">
-                더보기
-                <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-    </div>
-    <div class="squareImage" style="background-image: url(./resource/images/squareImage_2.jpg)"></div>
+        </li>
+    </ul>
+
+
+
 </div>
 <?php
 include "../part/foot.php";
