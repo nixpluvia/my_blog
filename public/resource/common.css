@@ -377,8 +377,6 @@ body {
     bottom: 0;
     visibility: visible;
     z-index: 100;
-    animation: hideCutton;
-    animation-delay: 1s;
 }
 .cutton.active {
     visibility: hidden;
@@ -393,7 +391,6 @@ body {
     transition: left 1s, right 1s;
     z-index: 100;
 }
-
 .cutton >div:first-child {
     left: 0;
 }
@@ -406,7 +403,6 @@ body {
 .cutton.active >div:last-child {
     right: -50%;
 }
-
 
 
 /*pc 상단 바*/
@@ -425,6 +421,7 @@ body {
     width: 70px;
     height: 70px;
 }
+
 .top-bar .top-bar-wrap .menu-box-1 .menu-box-wrap {
     position: relative;
     margin-right: 30px;
@@ -452,6 +449,7 @@ body {
     white-space: nowrap;
     color: rgb(255,161,0);
     padding: 0 20px;
+    box-sizing: border-box;
 }
 .top-bar .sns-bar > a {
     padding: 0 10px;
@@ -471,6 +469,7 @@ body {
     width: 100%;
     height: 50px;
     background-color: rgb(255, 255, 255);
+    flex-direction: row-reverse;
     z-index: 100;
 }
 .mobile-top-bar > .btn-toggle-mobile-side-bar {
@@ -487,46 +486,43 @@ body {
 .mobile-top-bar > .title {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 5%;
     width: 40px;
     height: 40px;
-    transform: translate(-50%,-50%);
+    transform: translateY(-50%);
 }
 
+/*
 /*모바일 사이드 바*/
 .mobile-side-bar {
     font-family: "Anton", "Noto Sans KR", sans-serif;
     position: fixed;
-    width: 300px;
-    bottom: 0;
-    top: 50px;
-    left: -300px;
-    transition: left .3s;
+    text-align: center;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    transition: top .3s;
     background-color: rgb(255,161,0);
     z-index: 100;
 }
 .mobile-side-bar.active{
-    left: 0;
+    top: 0;
+}
+.mobile-side-bar .btn-toggle-mobile-side-bar{
+    position: absolute;
+    top: 20px;
+    right: 10px;
 }
 /*모바일 사이드 바 로고*/
 .mobile-side-bar .logo-box > a {  
-    display: block;
-    height: 100px;
-    line-height: 100px;    
+    display: inline-block;
+    height: 90px;
+    line-height: 90px;    
     font-size:48px;
-    padding-left: 18px;
-    white-space: nowrap;
     color: white;
-    border-bottom: 4px solid white;
-    box-sizing: border-box;
+    white-space: nowrap;
 }
-.mobile-side-bar .logo-box > div.logo-border {
-    height: 8px;
-    border-bottom: 4px solid white;
-    box-sizing: border-box;
-}
-
-
 
 /*본문 스크롤 없애기*/
 @media (max-width: 799px) {
@@ -542,73 +538,26 @@ body {
 /*모바일 사이드 바 매인 메뉴*/
 .mobile-side-bar .menu-box-1 > ul > li > a {
     position: relative;
-    display: block;
-    padding: 0 20px;
+    display: inline-block;
     height: 59px;
     line-height: 59px;
     font-size: 24px;
-    border-bottom: 4px solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
-    box-sizing: border-box;
 }
 
-/*모바일 사이드 바 하위목록 아이콘 */
-.mobile-side-bar .menu-box-1 ul > li > a > i {
-    float: right;
-    padding-right: 10px;
-}
-.mobile-side-bar .menu-box-1 > ul > li > a > i {
-    line-height: 59px;
-}
-.mobile-side-bar .menu-box-1 ul ul > li > a > i {
-    line-height: 49px;
-}
-.mobile-side-bar .menu-box-1 ul > li > a > i:first-of-type {
-    display: block;
-}
-.mobile-side-bar .menu-box-1 ul > li > a > i:last-of-type {
-    display: none;
-}
-.mobile-side-bar .menu-box-1 ul > li.active > a > i:first-of-type {
-    display: none;
-}
-.mobile-side-bar .menu-box-1 ul > li.active > a > i:last-of-type {
-    display: block;
-}
-
-/*모바일 사이드 바 하위메뉴*/
-.mobile-side-bar .menu-box-1 ul ul {
-    display: none;
-}
-.mobile-side-bar .menu-box-1 > ul > li > ul {
-    border-bottom: 4px solid rgb(255, 255, 255);
-}
-
-.mobile-side-bar .menu-box-1 ul > li.active > ul {
-    display: block;
-}
-.mobile-side-bar .menu-box-1 ul ul > li > a {
-    display: block;
-    height: 49px;
-    line-height: 49px;
-    font-size: 18px;
-    padding: 0 20px;
-    padding-left: 40px;
-    white-space: nowrap;
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    border-bottom: 4px solid rgb(255,161,0);
-    box-sizing: border-box;
-}
-.mobile-side-bar .menu-box-1 ul ul ul> li > a {
-    padding-left: 60px;
+.mobile-side-bar .moblie-side-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(90%);
 }
 
 /*모바일 사이드 바 하단 sns버튼*/
 .mobile-side-bar .sns-bar {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .mobile-side-bar .sns-bar > a {
     position: relative;
@@ -627,8 +576,6 @@ body {
  }
 
 
-
-
 /*모바일 사이드 바 배경*/
 .mobile-side-bar-bg {
     position: fixed;
@@ -641,7 +588,6 @@ body {
     visibility: hidden;
     z-index: 3;
 }
-
 .mobile-side-bar-bg.active {
     visibility: visible;
     background-color: rgba(0,0,0,0.8);
@@ -649,8 +595,7 @@ body {
 
 
 
-
-/*하단 프로필*/
+/*프로필*/
 .profile-bar {
     margin-top: 100px;
 }

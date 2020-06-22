@@ -16,14 +16,21 @@ include "../part/head_body.php";
                     <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
-            <div style="background-image: url(https://nixpluvia.github.io/img1/blog/site/top_bn_box_2.jpg);">
+            <div style="background-image: url(https://nixpluvia.github.io/img1/blog/site/top_bn_box_4.jpg);">
                 <a href="#">
                     더보기
                     <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
             <div
-                style="background-image: url(https://nixpluvia.github.io/img1/blog/site/top_bn_box_3.jpg); background-size:contain; background-color: rgb(214,223,253);">
+                style="background-image: url(https://nixpluvia.github.io/img1/blog/site/top_bn_box_5.jpg);">
+                <a href="#">
+                    더보기
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div
+                style="background-image: url(https://nixpluvia.github.io/img1/blog/site/top_bn_box_6.jpg); background-size:contain; background-color: rgb(255,222,85);">
                 <a href="#">
                     더보기
                     <i class="fas fa-arrow-right"></i>

@@ -141,6 +141,8 @@
 }
 
 .squareContentBox .squareTextBox > .squareTextBox-wrap > div.textBox{
+    max-height: 6em;
+    overflow: hidden;
     padding: 0 10%;
     font-weight: 300;
 }
@@ -172,6 +174,7 @@
     right: 10px;
     transform: translateY(-50%);
 }
+
 /*박스컨텐츠 반응형*/
 @media (max-width: 700px) {
     .squareContentBox > ul > li {
@@ -182,5 +185,11 @@
     }
     .squareContentBox > ul > li > div {
         width: 100%;
+    }
+    .squareContentBox > ul > li > div::after {
+        padding-bottom: 56.25%;
+    }
+    .squareContentBox .squareTextBox > .squareTextBox-wrap > div.textBox{
+        max-height: 4.5em;
     }
 }

@@ -2,8 +2,10 @@
 
 <body>
     <div class="cutton">
-        <div></div>
-        <div></div>
+        <div>
+        </div>
+        <div>
+        </div>
     </div>
     <!--모바일 상단 바-->
     <div class="mobile-top-bar window-md-down flex">
@@ -44,14 +46,15 @@
                 </g>
             </svg>
         </a>
-        <a href="#" class="btn-toggle-mobile-side-bar flex-self-c">
+        <div class="btn-toggle-mobile-side-bar flex-self-c">
             <div></div>
             <div></div>
             <div></div>
-        </a>
+        </div>
     </div>
     <!--모바일 사이드 바-->
     <div class="mobile-side-bar-bg window-md-down"></div>
+    <!--
     <div class="mobile-side-bar window-md-down">
         <div class="logo-box">
             <a href="/">NIX BLOG</a>
@@ -60,8 +63,8 @@
         <nav class="menu-box-1">
             <ul>
                 <li><a href="/itPrograming.php">IT PROGRAMING</a></li>
-                <li><a href="/photo.php">PHOTO</a></li>
                 <li><a href="/dailyLife.php">DAILY LIFE</a></li>
+                <li><a href="/portfolio.php">PORTFOLIO</a></li>                
                 <li><a href="/aboutMe.php">ABOUT ME</a></li>
             </ul>
         </nav>
@@ -70,7 +73,6 @@
                 class="flex flex-ai-c flex-jc-c"><i class="fab fa-youtube"></i></a>
             <a href="https://github.com/nixpluvia" class="flex flex-ai-c flex-jc-c"><i class="fab fa-github"></i></a>
             <a href="https://nixpluvia.tistory.com/">
-                <!--티스토리 로고-->
                 <svg version="1.1" id="레이어_2" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
                     style="enable-background:new 0 0 100 100;" xml:space="preserve">
@@ -88,6 +90,68 @@
                     </g>
                 </svg>
             </a>
+        </div>
+    </div>
+    -->
+    <div class="mobile-side-bar window-md-down">
+        <div class="btn-toggle-mobile-side-bar">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="logo-box">
+            <a href="/">NIX BLOG</a>
+        </div>
+        <nav class="menu-box-1">
+            <ul>
+                <li><a href="/itPrograming.php">IT PROGRAMING</a></li>
+                <li><a href="/dailyLife.php">DAILY LIFE</a></li>
+                <li><a href="/portfolio.php">PORTFOLIO</a></li>                
+                <li><a href="/aboutMe.php">ABOUT ME</a></li>
+            </ul>
+        </nav>
+        <div class="sns-bar flex">
+            <a href="https://www.youtube.com/channel/UCaCKvCIvrW3xMmYvhCGJZZA?view_as=subscriber"
+                class="flex flex-ai-c flex-jc-c"><i class="fab fa-youtube"></i></a>
+            <a href="https://github.com/nixpluvia" class="flex flex-ai-c flex-jc-c"><i class="fab fa-github"></i></a>
+            <a href="https://nixpluvia.tistory.com/">
+                <svg version="1.1" id="레이어_2" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+                    style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0 {
+                            fill: #FFFFFF;
+                        }
+                    </style>
+                    <g>
+                        <circle class="st0" cx="20.4" cy="20.4" r="9.9" />
+                        <circle class="st0" cx="50" cy="20.4" r="9.9" />
+                        <circle class="st0" cx="79.6" cy="20.4" r="9.9" />
+                        <circle class="st0" cx="50" cy="50" r="9.9" />
+                        <circle class="st0" cx="50" cy="79.6" r="9.9" />
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <div class="moblie-side-bottom">
+            <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                y="0px" viewBox="0 0 800 131" style="enable-background:new 0 0 800 131;" xml:space="preserve">
+                <style type="text/css">
+                    .side-bottom {
+                        fill: #FFA100;
+                    }
+                </style>
+                <g>
+                    <g>
+                        <path class="side-bottom" d="M0,35.8c4-0.2,8.2,0.9,12,4.2c18.8,16.3,37.2,56.8,64,54c32.4-3.4,25.2-58.5,48-68c24-10,40.9,10.6,35,35
+                            c-7,29-28,64,2,68c33.2,4.4,39-40,36-71c-1.7-17.3,13-15.1,22-2c8.2,11.9,10.2,34,21,35c13.2,1.2,14.4-27.2,29-45
+                            c9-11,13,18,23,16s17-26,24-24s6.8,7.4,7,18c0.3,15.8-14.6,44.1,6,40c10-2,0.9-24.4,4-43c2.8-16.8,4.5-33,19.3-33
+                            c22.7,0-3.6,46.3,37.7,48c15.3,0.6,31.6-23,47.4-33.4C452,25,449,50,464,50s17.3-17,20-26c3-10,12.8-10.8,19-9
+                            c7,2,13.3,12.2,15,40c2,32-14,60,11,61s5.2-34.4,12-59c8-29,23.4-34.7,38-21c17,16,28,68,78,71c44,2.6,124.3-66.6,143-83.4V0H0
+                            V35.8z"/>
+                    </g>
+                </g>
+            </svg>
         </div>
     </div>
     <!--pc 상단 바-->
@@ -134,8 +198,8 @@
                 <div class="menu-box-wrap flex">
                     <ul class="flex">
                         <li class="flex"><a href="/itPrograming.php" class="flex-ai-c">IT PROGRAMING</a></li>
-                        <li class="flex"><a href="/photo.php" class="flex-ai-c">PHOTO</a></li>
                         <li class="flex"><a href="/dailyLife.php" class="flex-ai-c">DAILY LIFE</a></li>
+                        <li class="flex"><a href="/portfolio.php" class="flex-ai-c">PORTFOLIO</a></li>
                         <li class="flex"><a href="/aboutMe.php" class="flex-ai-c">ABOUT ME</a></li>
                     </ul>
                     <span></span>
