@@ -10,20 +10,20 @@ include "../part/head_body.php";
 <div class="top-bn-slider">
     <div class="sliderbox">
         <div class="slides">
-            <div class="active" style="background-image: url(./resource/images/top_bn_box_1.jpg);">
+            <div class="active" style="background-image: url(https://nixpluvia.github.io/img1/blog/site/top_bn_box_1.jpg);">
                 <a href="#">
                     더보기
                     <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
-            <div style="background-image: url(./resource/images/top_bn_box_2.jpg);">
+            <div style="background-image: url(https://nixpluvia.github.io/img1/blog/site/top_bn_box_2.jpg);">
                 <a href="#">
                     더보기
                     <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
             <div
-                style="background-image: url(./resource/images/top_bn_box_3.jpg); background-size:contain; background-color: rgb(214,223,253);">
+                style="background-image: url(https://nixpluvia.github.io/img1/blog/site/top_bn_box_3.jpg); background-size:contain; background-color: rgb(214,223,253);">
                 <a href="#">
                     더보기
                     <i class="fas fa-arrow-right"></i>
@@ -41,7 +41,7 @@ include "../part/head_body.php";
 <div class="squareContentBox flex con">
     <ul class="flex">
         <li class="flex">
-            <div class="squareImage" style="background-image: url(./resource/images/squareImage_1.jpg)"></div>
+            <div class="squareImage" style="background-image: url(https://nixpluvia.github.io/img1/blog/site/squareImage_1.jpg)"></div>
             <div class="squareTextBox flex">
                 <div class="squareTextBox-wrap">
                     <div class="type">설명</div>
@@ -59,7 +59,7 @@ include "../part/head_body.php";
             </div>
         </li>
         <li class="flex">
-            <div class="squareImage" style="background-image: url(./resource/images/squareImage_2.jpg)"></div>
+            <div class="squareImage" style="background-image: url(https://nixpluvia.github.io/img1/blog/site/squareImage_2.jpg)"></div>
             <div class="squareTextBox flex">
                 <div class="squareTextBox-wrap">
                     <div class="type">설명</div>
@@ -81,6 +81,7 @@ include "../part/head_body.php";
 
 
 </div>
+
 <?php
 include "../part/foot.php";
 ?>
