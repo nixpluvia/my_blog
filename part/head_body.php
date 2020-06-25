@@ -7,6 +7,7 @@
         <div>
         </div>
     </div>
+    <div class="wave-top"></div>
     <!--모바일 상단 바-->
     <div class="mobile-top-bar window-md-down flex">
         <a href="/" class="title">
