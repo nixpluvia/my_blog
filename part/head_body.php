@@ -164,7 +164,7 @@
                     style="enable-background:new 0 0 100 100;" xml:space="preserve">
                     <style type="text/css">
                         .st1 {
-                            fill: #FFA100;
+                            fill: #FFFFFF;
                             transition: fill 1s;
                         }
                     </style>
@@ -218,7 +218,7 @@
                             style="enable-background:new 0 0 100 100;" xml:space="preserve">
                             <style type="text/css">
                                 .st2 {
-                                    fill: #FFA100;
+                                    fill: #FFFFFF;
                                 }
                             </style>
                             <g>

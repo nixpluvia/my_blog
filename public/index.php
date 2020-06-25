@@ -7,7 +7,7 @@ include "../part/head_body.php";
 ?>
 
 <!--상단 슬라이드 배너-->
-<div class="top-bn-slider">
+<div class="top-bn-slider con">
     <div class="sliderbox">
         <div class="slides">
             <div class="active" style="background-image: url(https://nixpluvia.github.io/img1/blog/site/top_bn_box_1.jpg);">

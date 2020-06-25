@@ -5,48 +5,30 @@ include "../part/head_head.php";
 <?php
 include "../part/head_body.php";
 ?>
-<div class="profile-bar con">
-    <div class="profile-box flex">
-        <a class="avatar" href="/"></a>
-        <div class="profile flex-1-0-0">
-            <div class="name flex-ai-c">NIX</div>
-            <div class="description flex-ai-c">인생 뉴비</div>
-        </div>
-    </div>
-    <div class="profile-bar-bottom-line"></div>
-</div>
-<article class="article-content con ">
-    <div class="article-wrap flex flex-wrap">
-        <div class="article-box">
-            <a class="article-img">
-                <img src="https://cdn.pixabay.com/photo/2020/01/31/07/26/japan-4807317_960_720.jpg" alt="">
-            </a>
-            <a class="article-title">
+
+
+<article class="article-box con flex flex-wrap">
+    <div class="article-list flex">
+        <div class="article-content">
+            <a href="#" class="article-title">
                 <h2>기사 제목입니다</h2>
             </a>
             <div class="article-body">
-                dasdasdasdas
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi non, quos fuga molestias sint dignissimos id ratione animi. Sint quisquam facilis repellendus sapiente praesentium quae, aliquam fugit blanditiis minima necessitatibus?
+                uasi non, quos fuga molestias sint dignissimos id ratione animi. Sint quisquam facilis repellendus sapiente praesentium quae, aliquam fugit blanditiis minima necessitatibus?
             </div>
-            <div class="article-time">
-                20년 06월 22일
+            <div class="article-info flex">
+                <div>2020년 06월 22일</div>
+                <div>조회수 0</div>
             </div>
-        </div>
-        <div class="article-box">
-            <a class="article-img">
-                <img src="https://cdn.pixabay.com/photo/2020/01/31/07/26/japan-4807317_960_720.jpg" alt="">
-            </a>
-            <a class="article-title">
-                <h2>기사 제목입니다</h2>
-            </a>
-            <div class="article-body">
-                dasdasdasdas
-            </div>
-            <div class="article-time">
-                20년 06월 22일
+            <div class="article-tag-bar flex">
+                <div class="article-tag flex flex-ai-c">#태그</div>
             </div>
         </div>
+        <a href="#" class="article-img" style="background-image: url(https://cdn.pixabay.com/photo/2020/01/31/07/26/japan-4807317_960_720.jpg)"></a>
     </div>
 </article>
+
 
 <?php
 include "../part/foot.php";
