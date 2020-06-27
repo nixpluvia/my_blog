@@ -6,7 +6,7 @@ include "../part/head_head.php";
 include "../part/head_body.php";
 ?>
 <?php
-$conn = mysqli_connect('localhost','sbsst','sbs123414','blog',3306);
+$conn = mysqli_connect('localhost','root','','blog',3306);
 $id = $_GET['id'];
 $sql = "
 SELECT *
@@ -50,7 +50,7 @@ $row = mysqli_fetch_assoc($rs);
     수정날짜 : <?=$row['updateDate']?>
 </div>
 <div class="con">
-    작성자 : 장희성
+    작성자 : 이호연
 </div>
 <div class="con" style="display:none;" id="origin1">
 <?=$row['body']?>

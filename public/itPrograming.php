@@ -6,7 +6,7 @@ include "../part/head_head.php";
 include "../part/head_body.php";
 ?>
 <?php
-$conn = mysqli_connect('localhost','sbsst','sbs123414','blog',3306);
+$conn = mysqli_connect('localhost','root','','blog',3306);
 $sql = "
 SELECT *
 FROM article
@@ -18,7 +18,7 @@ $articles = [];
 while( $article = mysqli_fetch_assoc($rs)) {
     $articles[] = $article;
 }
-
+$idIncrease = 1;
 ?>
 
 <!--하이라이트 라이브러리-->
@@ -44,7 +44,7 @@ while( $article = mysqli_fetch_assoc($rs)) {
 
 <article class="article-box con flex flex-wrap">
     <?php foreach( $articles as $article ) { ?>
-        <div id="origin1" style="display:none;">
+        <div id="origin<?=$idIncrease?>" style="display:none;">
             <?=$article['body']?>
         </div>
         <div class="article-list flex">
@@ -52,7 +52,7 @@ while( $article = mysqli_fetch_assoc($rs)) {
                 <a href="/detail.php?id=<?=$article['id']?>" class="article-title">
                     <h2><?=$article['title']?></h2>
                 </a>
-                <div class="article-body" id="viewer1">
+                <div class="article-body" id="viewer<?=$idIncrease?>">
                 </div>
                 <div class="article-info flex">
                     <div><?=$article['regDate']?></div>
@@ -63,18 +63,27 @@ while( $article = mysqli_fetch_assoc($rs)) {
                 </div>
             </div>
             <a href="#" class="article-img" style="background-image: url(https://cdn.pixabay.com/photo/2020/01/31/07/26/japan-4807317_960_720.jpg)"></a>
+            <?php $idIncrease += 1; ?>
         </div>
     <?php } ?>
 </article>
 
 <script>
-var editor1__initialValue = $('#origin1').html();
-var editor1 = new toastui.Editor({
-    el : document.querySelector('#viewer1'),
-    initialValue: editor1__initialValue,
-    viewer: true,
-    plugins: [toastui.Editor.plugin.codeSyntaxHighlight]
-});
+    var articleListLength = $('.article-list').length;
+    var editor1__initialValue = $('#origin1').html();
+    var textBody = null;
+    var ToastEditor = [];
+
+    for (var i = 1 ; i <= articleListLength; i++) {
+        editor1__initialValue = $('#origin' + i).html();
+        textBody = new toastui.Editor({
+                el : document.querySelector('#viewer' + i),
+                initialValue: editor1__initialValue,
+                viewer: true,
+                plugins: [toastui.Editor.plugin.codeSyntaxHighlight]
+            });
+        ToastEditor.push(textBody);
+    }
 </script>
 
 <?php
