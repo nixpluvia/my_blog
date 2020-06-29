@@ -1,5 +1,4 @@
 <?php
-require "../vendor/autoload.php";
 include "../part/head_head.php";
 ?>
 <link rel="stylesheet" href="/resource/itPrograming.css">
@@ -8,8 +7,6 @@ include "../part/head_body.php";
 ?>
 <?php
 $conn = mysqli_connect('site6.blog.oa.gg','site6','sbs123414','site6',3306);
-
-$Parsedown = new Parsedown();
 
 mysqli_query($conn, "SET NAMES utf8mb4");
 
@@ -58,9 +55,9 @@ $idIncrease = 1;
                 <a href="/detail.php?id=<?=$article['id']?>" class="article-title">
                     <h2><?=$article['title']?></h2>
                 </a>
-                <div class="article-body" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
-                    <?=mb_substr(strip_tags($Parsedown->text($article['body'])), 0, 100)?>
-                </div>
+                <a href="/detail.php?id=<?=$article['id']?>" id="viewer" class="article-body" style="display:block;">
+                    <?=str_replace(array("#","-"),"",mb_substr($article['body'], strpos($article['body'], "\n", 2), 300))?>
+                </a>
                 <div class="article-info flex">
                     <div><?=$article['regDate']?></div>
                     <div><?=$article['updateDate']?></div>
@@ -69,12 +66,11 @@ $idIncrease = 1;
                     <div class="article-tag flex flex-ai-c">#태그</div>
                 </div>
             </div>
-            <a href="#" class="article-img" style="background-image: url(https://nixpluvia.github.io/img1/blog/article/article_img_banner<?=$idIncrease?>.jpg)"></a>
+            <a href="/detail.php?id=<?=$article['id']?>" class="article-img" style="background-image: url(<?=str_replace(array("![image](",")"),"",substr($article['body'], strpos($article['body'], "![image]"), strpos($article['body'], ")") ))?>)"></a>
             <?php $idIncrease += 1; ?>
         </div>
     <?php } ?>
 </article>
-
 
 <?php
 include "../part/foot.php";

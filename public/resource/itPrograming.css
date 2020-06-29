@@ -30,6 +30,9 @@
     overflow: hidden;
     word-wrap: break-word;
     text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
 .article-box .article-list .article-content > .article-info {
@@ -62,7 +65,7 @@
     margin-bottom: 10px;
     margin-right: 10px;
     margin-left: auto;
-    background-color: aqua;
+    background-color: rgb(255,161,0);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

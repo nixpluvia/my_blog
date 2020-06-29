@@ -661,10 +661,26 @@ canvas {
 }
 .profile-bar .profile-bar-bottom-line {
     margin-top: 50px;
-    margin-bottom: 50px;
     height: 1px;
     background-color: rgb(255,161,0);
 }
+.profile-bar > .sns-bar {
+    margin-top: 15px;
+}
+.profile-bar > .sns-bar > a {
+    padding: 0 10px;
+    font-size: 40px;
+    color: rgb(255,161,0);
+}
+.profile-bar > .sns-bar > a:first-child {
+    padding-left: 0;
+}
+.profile-bar > .sns-bar > a:last-child > div{
+    width: 40px;
+}
+
+
+
 
 
 @media (min-width: 800px) and (max-width: 1200px) {

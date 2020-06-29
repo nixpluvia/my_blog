@@ -69,6 +69,32 @@ $row = mysqli_fetch_assoc($rs);
             </div>
         </div>
         <div class="profile-bar-bottom-line"></div>
+        <div class="sns-bar flex">
+            <a href="https://www.youtube.com/channel/UCaCKvCIvrW3xMmYvhCGJZZA?view_as=subscriber"
+                class="flex flex-ai-c"><i class="fab fa-youtube"></i></a>
+            <a href="https://github.com/nixpluvia" class="flex flex-ai-c"><i class="fab fa-github"></i></a>
+            <a href="https://nixpluvia.tistory.com/" class="flex flex-ai-c">
+                <div>
+                    <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="레이어_2" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+                        style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                        <style type="text/css">
+                            .profile-sns {
+                                fill: #ffa100;
+                            }
+                        </style>
+                        <g>
+                            <circle class="profile-sns" cx="20.4" cy="20.4" r="9.9" />
+                            <circle class="profile-sns" cx="50" cy="20.4" r="9.9" />
+                            <circle class="profile-sns" cx="79.6" cy="20.4" r="9.9" />
+                            <circle class="profile-sns" cx="50" cy="50" r="9.9" />
+                            <circle class="profile-sns" cx="50" cy="79.6" r="9.9" />
+                        </g>
+                    </svg>
+                </div>
+            </a>
+        </div>
     </div>
 </div>
 
@@ -79,7 +105,6 @@ $row = mysqli_fetch_assoc($rs);
 var editor1__initialValue = $('#origin1').html();
 var editor1 = new toastui.Editor({
   el: document.querySelector('#viewer1'),
-  height: '600px',
   initialValue: editor1__initialValue,
   viewer:true,
   plugins: [toastui.Editor.plugin.codeSyntaxHighlight]
