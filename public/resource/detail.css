@@ -26,3 +26,11 @@
     font-weight: bold;
     background-color: rgb(255,161,0);
 }
+.detail-wrap .btn-list-move {
+    margin-top: 100px;
+}
+
+.detail-wrap .btn-list-move > div > i{
+    font-size: 40px;
+    color: rgb(255,161,0);
+}

@@ -13,6 +13,7 @@ mysqli_query($conn, "SET NAMES utf8mb4");
 $sql = "
 SELECT *
 FROM article
+ORDER BY ID DESC
 LIMIT 100
 ";
 $rs = mysqli_query($conn, $sql);
@@ -23,7 +24,6 @@ while( $article = mysqli_fetch_assoc($rs)) {
 }
 $idIncrease = 1;
 ?>
-
 <!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
@@ -55,7 +55,7 @@ $idIncrease = 1;
                 <a href="/detail.php?id=<?=$article['id']?>" class="article-title">
                     <h2><?=$article['title']?></h2>
                 </a>
-                <a href="/detail.php?id=<?=$article['id']?>" id="viewer" class="article-body" style="display:block;">
+                <a href="/detail.php?id=<?=$article['id']?>" id="viewer" class="article-body">
                     <?=str_replace(array("#","-"),"",mb_substr($article['body'], strpos($article['body'], "\n", 2), 300))?>
                 </a>
                 <div class="article-info flex">
@@ -63,7 +63,25 @@ $idIncrease = 1;
                     <div><?=$article['updateDate']?></div>
                 </div>
                 <div class="article-tag-bar flex">
-                    <div class="article-tag flex flex-ai-c">#태그</div>
+                    <?php 
+                        $sql ="
+                            SELECT `name`
+                            FROM articleTag
+                            WHERE articleId = {$article['id']}
+                            ORDER BY id ASC
+                        ";
+
+                        $articleTags = [];
+
+                        $rs = mysqli_query($conn, $sql);
+                        while( $articleTag = mysqli_fetch_assoc($rs)) {
+                            $articleTags[] = $articleTag;
+                        }
+                        
+                        foreach ($articleTags as $tag) {
+                    ?>
+                        <div class="article-tag flex flex-ai-c"><?=$tag['name']?></div>
+                    <?php } ?>
                 </div>
             </div>
             <a href="/detail.php?id=<?=$article['id']?>" class="article-img" style="background-image: url(<?=str_replace(array("![image](",")"),"",substr($article['body'], strpos($article['body'], "![image]"), strpos($article['body'], ")") ))?>)"></a>

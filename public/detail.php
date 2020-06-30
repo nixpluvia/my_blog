@@ -18,8 +18,33 @@ WHERE id = {$id}
 ";
 $rs = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($rs);
-?>
+/*
+$sql2 = "
+SELECT *
+FROM article
+WHERE id = {$id - 1}
+";
+$sql3 = "
+SELECT id, title
+FROM article
+WHERE id = {$id + 1}
+";
+$rs2 = mysqli_query($conn, $sql2);
+$row2 = mysqli_fetch_assoc($rs2);
+$rs3 = mysqli_query($conn, $sql3);
+$row3 = mysqli_fetch_assoc($rs3);
 
+
+
+
+        <?php if(isset()){?>
+            <a href="/detail.php?<?=$row2['id']?>" class="flex"><i class="far fa-caret-square-left"></i><span></span></a>
+        <?php}
+            else{?>
+            <div style="display:none;"></div>
+        <?php}?>
+*/
+?>
 
 <!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
@@ -40,7 +65,9 @@ $row = mysqli_fetch_assoc($rs);
 <script src="https://uicdn.toast.com/editor/latest/toastui-editor-viewer.min.js"></script>
 
 <!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
-<script src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight-all.min.js"></script>
+<script
+    src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight-all.min.js">
+</script>
 
 <!-- 토스트 UI 에디터, CSS 코어 -->
 <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
@@ -57,7 +84,7 @@ $row = mysqli_fetch_assoc($rs);
     </div>
     <div class="con" style="display:none;" id="origin1">
         <?=$row['body']?>
-    </div>        
+    </div>
     <div class="con" id="viewer1">
     </div>
     <div class="profile-bar">
@@ -75,7 +102,6 @@ $row = mysqli_fetch_assoc($rs);
             <a href="https://github.com/nixpluvia" class="flex flex-ai-c"><i class="fab fa-github"></i></a>
             <a href="https://nixpluvia.tistory.com/" class="flex flex-ai-c">
                 <div>
-                    <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                     <svg version="1.1" id="레이어_2" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
                         style="enable-background:new 0 0 100 100;" xml:space="preserve">
@@ -96,9 +122,14 @@ $row = mysqli_fetch_assoc($rs);
             </a>
         </div>
     </div>
+    <div class="btn-list-move flex">
+
+
+
+
+        <a href="/detail.php?<?=$row3['id']?>" class="flex"><i class="far fa-caret-square-right"></i><span></span></a>
+    </div>
 </div>
-
-
 
 
 <script>
