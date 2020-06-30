@@ -18,32 +18,36 @@ WHERE id = {$id}
 ";
 $rs = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($rs);
-/*
+
 $sql2 = "
-SELECT *
+SELECT id, title
 FROM article
-WHERE id = {$id - 1}
+WHERE id = {$id} - 1
 ";
+
 $sql3 = "
 SELECT id, title
 FROM article
-WHERE id = {$id + 1}
+WHERE id = {$id} + 1
 ";
 $rs2 = mysqli_query($conn, $sql2);
 $row2 = mysqli_fetch_assoc($rs2);
 $rs3 = mysqli_query($conn, $sql3);
 $row3 = mysqli_fetch_assoc($rs3);
 
+$sql4 = "
+SELECT `name`
+FROM articleTag
+WHERE articleId = {$id};
+";
 
+$rs4 = mysqli_query($conn, $sql4);
 
+$articleTags = [];
 
-        <?php if(isset()){?>
-            <a href="/detail.php?<?=$row2['id']?>" class="flex"><i class="far fa-caret-square-left"></i><span></span></a>
-        <?php}
-            else{?>
-            <div style="display:none;"></div>
-        <?php}?>
-*/
+while ( $articleTag = mysqli_fetch_assoc($rs4) ) {
+    $articleTags[] = $articleTag;
+}
 ?>
 
 <!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
@@ -80,12 +84,14 @@ $row3 = mysqli_fetch_assoc($rs3);
         <div class="writer">작성자 : 이호연</div>
     </div>
     <div class="article-tag-bar flex">
-        <div class="article-tag flex flex-ai-c">#태그</div>
+        <?php foreach($articleTags as $tag) { ?>
+            <div class="article-tag flex flex-ai-c"><?=$tag['name']?></div>
+        <?php } ?>
     </div>
-    <div class="con" style="display:none;" id="origin1">
+    <div id="origin1"style="display:none;" >
         <?=$row['body']?>
     </div>
-    <div class="con" id="viewer1">
+    <div id="viewer1">
     </div>
     <div class="profile-bar">
         <div class="profile-box flex">
@@ -123,11 +129,20 @@ $row3 = mysqli_fetch_assoc($rs3);
         </div>
     </div>
     <div class="btn-list-move flex">
+        <?php if(isset($row2)) { ?>
+            <a href="/detail.php?id=<?=$row2['id']?>" class="btn-prev flex flex-ai-c flex-jc-st">
+                <i class="far fa-caret-square-left"></i><span><?=$row2['title']?></span>
+            </a>
+        <?php } ?>
 
-
-
-
-        <a href="/detail.php?<?=$row3['id']?>" class="flex"><i class="far fa-caret-square-right"></i><span></span></a>
+        <?php if(isset($row3)) { ?>
+            <a href="/detail.php?id=<?=$row3['id']?>" class="btn-next flex flex-ai-c flex-jc-end">
+                <span><?=$row3['title']?></span><i class="far fa-caret-square-right"></i>
+            </a>
+        <?php }
+            else{ ?>
+            <a style="display:none;"></a>
+        <?php } ?>
     </div>
 </div>
 

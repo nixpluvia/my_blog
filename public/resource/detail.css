@@ -1,12 +1,15 @@
+/* 게시물 */
 .detail-wrap {
     margin-top: 80px;
     background-color: rgb(255,255,255);
 }
+/* 게시물 제목 */
 .detail-wrap .detail-title {
     padding-top: 60px;
     font-size: 48px;
     font-weight: bold;
 }
+/* 게시물 정보 */
 .detail-wrap .detail-info > div {
     color: #c4c4c4;
     font-size: 12px;
@@ -15,6 +18,7 @@
 .detail-wrap .detail-info > div:not(:first-child){
     padding-left: 20px;
 }
+/* 게시물 태그 */
 .detail-wrap .article-tag-bar{
     margin-top: 15px;
 }
@@ -26,11 +30,49 @@
     font-weight: bold;
     background-color: rgb(255,161,0);
 }
-.detail-wrap .btn-list-move {
-    margin-top: 100px;
+.detail-wrap .article-tag-bar > div:not(:first-child) {
+    margin-left: 15px;
 }
 
-.detail-wrap .btn-list-move > div > i{
+/*게시물 이전,다음 버튼*/
+.detail-wrap .btn-list-move {
+    margin-top: 100px;
+    width: 100%;
+}
+.detail-wrap .btn-list-move > a {
+    width: 200px;
+}
+.detail-wrap .btn-list-move > a.btn-prev{
+    margin-right: auto;
+}
+.detail-wrap .btn-list-move > a.btn-next {
+    margin-left: auto;
+}
+.detail-wrap .btn-list-move > a > span {
+    padding: 0 10px;
+    font-size: 20px;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.detail-wrap .btn-list-move > a > i{
     font-size: 40px;
     color: rgb(255,161,0);
+}
+
+/*반응형*/
+@media (max-width: 799px){
+    .detail-wrap {
+        margin-top: 0;
+    }
+    .detail-wrap .btn-list-move {
+        margin-top: 50px;
+    }
+    .detail-wrap .btn-list-move > a {
+        width: 150px;
+    }
+    .detail-wrap .btn-list-move > a > span {
+        font-size: 16px;
+    }
 }

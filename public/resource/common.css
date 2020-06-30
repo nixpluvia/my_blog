@@ -263,6 +263,10 @@ label[for] {
 *>.flex-grow-1 {
     flex-grow: 1;
 }
+*>.flex-jc-st {
+    display: flex;
+    justify-content: flex-start;
+}
 
 *>.flex-jc-end {
     display: flex;
@@ -272,10 +276,6 @@ label[for] {
 *>.flex-jc-c {
     display: flex;
     justify-content: center;
-}
-*>.flex-js-c {
-    display: flex;
-    justify-self: center;
 }
 
 *>.flex-ai-c {
@@ -319,8 +319,8 @@ label[for] {
     .window-md-up {
         display: none;
     }
+    
 }
-
 .btn-toggle-mobile-side-bar {
     position: relative;
     width: 30px;
@@ -365,6 +365,7 @@ label[for] {
 /* 커스텀 */
 body {
     overflow-x: hidden;
+    color: #353535;
 }
 .con-min-width {
     min-width: 1356px;
@@ -377,12 +378,23 @@ body {
     body {
         padding-top: 50px;
     }
+    .con {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 @media (min-width: 800px) {
     body {
         padding-top: 80px;
     }
 }
+@media (max-width: 1200px) and (min-width: 800px) {
+    .con {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
 .cutton {
     position: fixed;
     top: 0;
@@ -438,6 +450,9 @@ canvas {
 }
 @media (max-width: 799px) {
     canvas {
+        display: none;
+    }
+    .wave-top {
         display: none;
     }
 }
@@ -637,7 +652,7 @@ canvas {
     margin-top: 100px;
 }
 .profile-bar .profile-box {
-    height: 100px;
+    height: 128px;
 }
 .profile-bar .profile-box .avatar {
     width: 128px;
@@ -660,7 +675,7 @@ canvas {
     font-size: 18px;
 }
 .profile-bar .profile-bar-bottom-line {
-    margin-top: 50px;
+    margin-top: 10px;
     height: 1px;
     background-color: rgb(255,161,0);
 }
@@ -679,16 +694,19 @@ canvas {
     width: 40px;
 }
 
-
-
-
-
-@media (min-width: 800px) and (max-width: 1200px) {
-    .con {
-        padding-left: 20px;
-        padding-right: 20px;
+@media (max-width: 799px) {
+    .profile-bar .profile-box {
+        height: 100px;
+    }
+    .profile-bar .profile-box .avatar {
+        width: 100px;
+        height: 100px;
     }
 }
+
+
+
+
 
 
 .top-bar .top-bar-wrap >a.logo:hover > svg .st1  {

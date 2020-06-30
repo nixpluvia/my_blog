@@ -23,6 +23,7 @@ while( $article = mysqli_fetch_assoc($rs)) {
     $articles[] = $article;
 }
 $idIncrease = 1;
+
 ?>
 <!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
@@ -84,7 +85,14 @@ $idIncrease = 1;
                     <?php } ?>
                 </div>
             </div>
-            <a href="/detail.php?id=<?=$article['id']?>" class="article-img" style="background-image: url(<?=str_replace(array("![image](",")"),"",substr($article['body'], strpos($article['body'], "![image]"), strpos($article['body'], ")") ))?>)"></a>
+            <?php
+                $articleBg = str_replace(array("![image](",")"),"",substr($article['body'], strpos( $article['body'], "![image]" ), strpos($article['body'], ")" ) ));
+                if (empty($articleBg)) { ?>
+                    <a href="/detail.php?id=<?=$article['id']?>" class="article-img"></a>
+            <?php } else { ?>
+                    <a href="/detail.php?id=<?=$article['id']?>" class="article-img" style="background-image: url(<?=$articleBg?>)"></a>                    
+            <?php } ?>
+
             <?php $idIncrease += 1; ?>
         </div>
     <?php } ?>
