@@ -6,7 +6,7 @@ include "../part/head_head.php";
 include "../part/head_body.php";
 ?>
 <?php
-include "../part/mysqlDbConn.php";
+include "../config.php";
 
 $sql = "
 SELECT id,regDate,updateDate,title,`body`,summary,thumbImgUrl

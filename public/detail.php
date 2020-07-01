@@ -6,9 +6,7 @@ include "../part/head_head.php";
 include "../part/head_body.php";
 ?>
 <?php
-$conn = mysqli_connect('site6.blog.oa.gg','site6','sbs123414','site6',3306);
-
-mysqli_query($conn, "SET NAMES utf8mb4");
+include "../config.php";
 
 $id = $_GET['id'];
 $sql = "
@@ -16,7 +14,7 @@ SELECT *
 FROM article
 WHERE id = {$id}
 ";
-$rs = mysqli_query($conn, $sql);
+$rs = mysqli_query($dbConn, $sql);
 $row = mysqli_fetch_assoc($rs);
 
 $sql2 = "
@@ -30,9 +28,9 @@ SELECT id, title
 FROM article
 WHERE id = {$id} + 1
 ";
-$rs2 = mysqli_query($conn, $sql2);
+$rs2 = mysqli_query($dbConn, $sql2);
 $row2 = mysqli_fetch_assoc($rs2);
-$rs3 = mysqli_query($conn, $sql3);
+$rs3 = mysqli_query($dbConn, $sql3);
 $row3 = mysqli_fetch_assoc($rs3);
 
 $sql4 = "
@@ -41,7 +39,7 @@ FROM articleTag
 WHERE articleId = {$id};
 ";
 
-$rs4 = mysqli_query($conn, $sql4);
+$rs4 = mysqli_query($dbConn, $sql4);
 
 $articleTags = [];
 
