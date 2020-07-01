@@ -119,7 +119,7 @@
     background-color: rgb(255, 255, 255);
 }
 .squareContentBox > ul > li > .squareImage{
-    background-image: url(./images/null_bg.png);
+    background-image: url(./images/null_bg.svg);
 }
 .squareContentBox > ul > li:last-child {
     flex-direction: row-reverse;

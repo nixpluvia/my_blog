@@ -62,14 +62,12 @@
 }
 .article-box .article-list .article-img {
     display: block;
-    box-sizing: border-box;
     width: 430px;
     height: 280px;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
     margin-left: auto;
-    border: 2px solid rgb(255,161,0);
     background-image: url(./images/null_bg.svg);
     background-position: center;
     background-size: cover;

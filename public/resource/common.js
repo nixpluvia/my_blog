@@ -32,30 +32,7 @@ function addCaretIcon() {
     $('.mobile-side-bar .menu-box-1 ul > li > a:not(:only-child)').append('<i class="fas fa-caret-right"></i>');
 };
 
-function topBnSlider(){
-    var $clickedBtn = $(this);
-    var isLeft = $clickedBtn.index() == 0;
-    var $slider = $clickedBtn.closest('.sliderbox');
-    var $current = $slider.find(' > .slides > div.active');
-    var $post = null;
-    if( isLeft ) {
-        $post = $current.prev();
-    }
-    else {
-        $post = $current.next();
-    }
-    if ( $post.length == 0 ) {
-        if (isLeft) {
-            $post = $slider.find(' > .slides > div:last-child');
-        }
-        else {
-            $post = $slider.find(' > .slides > div:first-child');
-        }
-    }
-    
-    $current.removeClass('active');
-    $post.addClass('active');
-}
+
 
 function HoverBorder() {
     var $this = $(this);
@@ -93,18 +70,9 @@ function MobileSideBar__init() {
     addCaretIcon();
 }
 
-function topBnSlider__init() {
-    $('.sliderbox .side-bar > div').click(topBnSlider);
-    
-}
 
-function topBnInterval__init() {
-    var bnSliderInterval = setInterval(function(){
-        $('.sliderbox .side-bar > div:last-child').click();
-    }, 1000);
-    $('.sliderbox').mouseenter(clearInterval(bnSliderInterval));
-    bnSliderInterval();
-}
+
+
 
 function cuttonOpen__init(){
     $('.cutton').addClass('active');
@@ -113,9 +81,7 @@ function cuttonOpen__init(){
 //적용
 $(function () {
     MobileSideBar__init();
-    topBnSlider__init();
     cuttonOpen__init();
     HoverBorder__init();
-    topBnInterval__init()
 })
 

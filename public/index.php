@@ -6,10 +6,10 @@ include "../part/head_head.php";
 include "../part/head_body.php";
 ?>
 <?php
-$dbConn = mysqli_connect("site6.blog.oa.gg","site6","sbs123414","site6",3306) or die ("DB CONNECT ERROR");
+include "../part/mysqlDbConn.php";
 
 $sql = "
-SELECT *
+SELECT id,cateItemId,title,`body`,summary,thumbImgUrl
 FROM article
 ORDER BY ID DESC
 LIMIT 2;
@@ -20,8 +20,6 @@ $squareArticles = [];
 while ( $squareArticle = mysqli_fetch_assoc($rs) ) {
     $squareArticles[] = $squareArticle;
 }
-$squareArticleBg1 = str_replace(array("![image](",")"),"",substr($squareArticles[0]['body'], strpos($squareArticles[0]['body'], "![image]" ), strpos($squareArticles[0]['body'], ")" ) ));
-$squareArticleBg2 = str_replace(array("![image](",")"),"",substr($squareArticles[1]['body'], strpos($squareArticles[1]['body'], "![image]" ), strpos($squareArticles[1]['body'], ")" ) ));
 ?>
 
 <!--상단 슬라이드 배너-->
@@ -65,52 +63,52 @@ $squareArticleBg2 = str_replace(array("![image](",")"),"",substr($squareArticles
 
 <div class="squareContentBox flex con">
     <ul class="flex">
+        <?php foreach($squareArticles as $article) { 
+            $sql2 ="
+            SELECT `name`
+            FROM cateItem
+            WHERE id = {$article['cateItemId']}
+            ";
+            $rs2 = mysqli_query($dbConn, $sql2);
+            $row = mysqli_fetch_assoc($rs2);
+        ?>
         <li class="flex">
-            <?php if (empty($squareArticleBg1)){ ?>
-                <a class="squareImage" href="/detail.php?id=<?=$squareArticles[0]['id']?>"></a>
-            <?php } else { ?>
-                <a class="squareImage" href="/detail.php?id=<?=$squareArticles[0]['id']?>" style="background-image: url(<?=$squareArticleBg1?>)"></a>
+            <!--게시글 이미지-->
+            <?php
+            $squareArticleBg = str_replace(array("![image](",")"),"",substr($article['body'], strpos($article['body'], "![image]" ), strpos($article['body'], ")" ) ));
+            if ( empty($article['thumbImgUrl']) ) {
+                if (empty($squareArticleBg)) { ?>
+                    <a class="squareImage" href="/detail.php?id=<?=$article['id']?>"></a>
+            <?php } 
+                else { ?>
+                    <a class="squareImage" href="/detail.php?id=<?=$article['id']?>" style="background-image: url(<?=$squareArticleBg?>)"></a>
+            <?php }
+            } 
+            else { ?>
+                <a class="squareImage" href="/detail.php?id=<?=$article['id']?>" style="background-image: url(<?=$article['thumbImgUrl']?>)"></a>
             <?php } ?>
+            <!--게시글 컨텐츠-->
             <div class="squareTextBox flex">
                 <div class="squareTextBox-wrap">
-                    <div class="type">설명</div>
-                    <div class="title"><?=$squareArticles[0]['title']?></div>
+                    <div class="type"><?=$row['name']?></div>
+                    <div class="title"><?=$article['title']?></div>
                     <div class="textBox">
-                        <?=$squareArticles[0]['body']?>
+                        <?=$article['body']?>
                     </div>
-                    <a href="/detail.php?id=<?=$squareArticles[0]['id']?>">
+                    <a href="/detail.php?id=<?=$article['id']?>">
                         더보기
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
         </li>
-        <li class="flex">
-            <?php if (empty($squareArticleBg2)){ ?>
-                <a class="squareImage" href="/detail.php?id=<?=$squareArticles[1]['id']?>"></a>
-            <?php } else { ?>
-                <a class="squareImage" href="/detail.php?id=<?=$squareArticles[1]['id']?>" style="background-image: url(<?=$squareArticleBg2?>)"></a>
-            <?php } ?>
-            <div class="squareTextBox flex">
-                <div class="squareTextBox-wrap">
-                    <div class="type">설명</div>
-                    <div class="title"><?=$squareArticles[1]['title']?></div>
-                    <div class="textBox">
-                        <?=$squareArticles[1]['body']?>
-                    </div>
-                    <a href="/detail.php?id=<?=$squareArticles[1]['id']?>">
-                        더보기
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </li>
+        <?php } ?>
     </ul>
 
 
 
 </div>
-
+<script src="/resource/index.js"></script>
 <?php
 include "../part/foot.php";
 ?>

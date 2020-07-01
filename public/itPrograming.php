@@ -6,63 +6,57 @@ include "../part/head_head.php";
 include "../part/head_body.php";
 ?>
 <?php
-$conn = mysqli_connect('site6.blog.oa.gg','site6','sbs123414','site6',3306);
-
-mysqli_query($conn, "SET NAMES utf8mb4");
+include "../part/mysqlDbConn.php";
 
 $sql = "
-SELECT *
+SELECT id,regDate,updateDate,title,`body`,summary,thumbImgUrl
 FROM article
+WHERE cateItemId = 1
 ORDER BY ID DESC
 LIMIT 100
 ";
-$rs = mysqli_query($conn, $sql);
+$rs = mysqli_query($dbConn, $sql);
 $articles = [];
 
 while( $article = mysqli_fetch_assoc($rs)) {
     $articles[] = $article;
 }
-$idIncrease = 1;
 
 ?>
-<!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
 
-<!-- 하이라이트 라이브러리, 언어 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/css.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/javascript.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/xml.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/php.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/php-template.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/sql.min.js"></script>
-
-<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css" />
-
-<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
-<script src="https://uicdn.toast.com/editor/latest/toastui-editor-viewer.min.js"></script>
-
-<!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
-<script src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight-all.min.js"></script>
-
-<!-- 토스트 UI 에디터, CSS 코어 -->
-<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
-
+<!--게시글 리스트 박스-->
 <article class="article-box con flex flex-wrap">
     <?php foreach( $articles as $article ) { ?>
         <div class="article-list flex">
+            <!--게시글 컨텐츠-->
             <div class="article-content">
+                <!--게시글 제목-->
                 <a href="/detail.php?id=<?=$article['id']?>" class="article-title">
                     <h2><?=$article['title']?></h2>
                 </a>
+                <!--게시글 본문-->
                 <a href="/detail.php?id=<?=$article['id']?>" id="viewer" class="article-body">
-                    <?=str_replace(array("#","-"),"",mb_substr($article['body'], strpos($article['body'], "\n", 2), 300))?>
+                    <?php
+                    if (empty($article['summary'])) {
+                        if (empty($article['body'])) {
+                            echo "게시물 내용이 없습니다.";
+                        }
+                        else {
+                            $articleBody = str_replace(array("#","-"),"",mb_substr($article['body'] , strpos($article['body'], "<!--컨텐츠-->") , 300));
+                            echo "$articleBody";
+                        }
+                    }
+                    else {
+                        echo $article['summary'];
+                    }
+                    ?>
                 </a>
+                <!--게시글 작성일, 업데이트, 조회수-->
                 <div class="article-info flex">
                     <div><?=$article['regDate']?></div>
                     <div><?=$article['updateDate']?></div>
                 </div>
+                <!--게시글 태그-->
                 <div class="article-tag-bar flex">
                     <?php 
                         $sql ="
@@ -74,25 +68,32 @@ $idIncrease = 1;
 
                         $articleTags = [];
 
-                        $rs = mysqli_query($conn, $sql);
+                        $rs = mysqli_query($dbConn, $sql);
                         while( $articleTag = mysqli_fetch_assoc($rs)) {
                             $articleTags[] = $articleTag;
                         }
                         
                         foreach ($articleTags as $tag) {
                     ?>
-                        <div class="article-tag flex flex-ai-c"><?=$tag['name']?></div>
+                    <div class="article-tag flex flex-ai-c"><?=$tag['name']?></div>
                     <?php } ?>
                 </div>
             </div>
+            <!--게시글 썸네일-->
             <?php
                 $articleBg = str_replace(array("![image](",")"),"",substr($article['body'], strpos( $article['body'], "![image]" ), strpos($article['body'], ")" ) ));
-                if (empty($articleBg)) { ?>
-                    <a href="/detail.php?id=<?=$article['id']?>" class="article-img"></a>
-            <?php } else { ?>
-                    <a href="/detail.php?id=<?=$article['id']?>" class="article-img" style="background-image: url(<?=$articleBg?>)"></a>                    
-            <?php } ?>
-            <?php $idIncrease += 1; ?>
+                if (empty($article['thumbImgUrl'])) {    
+                    if (empty($articleBg)) { ?>
+                        <a class="article-img" href="/detail.php?id=<?=$article['id']?>" ></a>
+                <?php }
+                    else { ?>
+                        <a class="article-img" href="/detail.php?id=<?=$article['id']?>"  style="background-image: url(<?=$articleBg?>);"></a>
+                <?php }
+                }
+                else { ?>
+                    <a class="article-img" href="/detail.php?id=<?=$article['id']?>"  style="background-image: url(<?=$article['thumbImgUrl']?>);"></a>
+                <?php } ?>
+            <!--게시글 썸네일 끝-->
         </div>
     <?php } ?>
 </article>
