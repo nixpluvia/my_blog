@@ -92,7 +92,6 @@ $idIncrease = 1;
             <?php } else { ?>
                     <a href="/detail.php?id=<?=$article['id']?>" class="article-img" style="background-image: url(<?=$articleBg?>)"></a>                    
             <?php } ?>
-
             <?php $idIncrease += 1; ?>
         </div>
     <?php } ?>

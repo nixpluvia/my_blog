@@ -103,18 +103,23 @@
 .squareContentBox > ul > li {
     width: 100%;
 }
-.squareContentBox > ul > li > div {
+.squareContentBox > ul > li > .squareImage , .squareContentBox > ul > li > .squareTextBox{
     position: relative;
     width: 50%;
-    background-color: rgb(255, 255, 255);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.squareContentBox > ul > li > div::after {
+.squareContentBox > ul > li > .squareImage::after, .squareContentBox > ul > li > .squareTextBox::after{
     content: "";
     display: block;
     padding-bottom: 100%;
+}
+.squareContentBox > ul > li > .squareTextBox{
+    background-color: rgb(255, 255, 255);
+}
+.squareContentBox > ul > li > .squareImage{
+    background-image: url(./images/null_bg.png);
 }
 .squareContentBox > ul > li:last-child {
     flex-direction: row-reverse;

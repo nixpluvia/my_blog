@@ -95,9 +95,15 @@ function MobileSideBar__init() {
 
 function topBnSlider__init() {
     $('.sliderbox .side-bar > div').click(topBnSlider);
-    setInterval(function(){
+    
+}
+
+function topBnInterval__init() {
+    var bnSliderInterval = setInterval(function(){
         $('.sliderbox .side-bar > div:last-child').click();
-    }, 5000)
+    }, 1000);
+    $('.sliderbox').mouseenter(clearInterval(bnSliderInterval));
+    bnSliderInterval();
 }
 
 function cuttonOpen__init(){
@@ -110,5 +116,6 @@ $(function () {
     topBnSlider__init();
     cuttonOpen__init();
     HoverBorder__init();
+    topBnInterval__init()
 })
 

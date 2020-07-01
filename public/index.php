@@ -5,6 +5,25 @@ include "../part/head_head.php";
 <?php
 include "../part/head_body.php";
 ?>
+<?php
+$dbConn = mysqli_connect("site6.blog.oa.gg","site6","sbs123414","site6",3306) or die ("DB CONNECT ERROR");
+
+$sql = "
+SELECT *
+FROM article
+ORDER BY ID DESC
+LIMIT 2;
+";
+
+$rs = mysqli_query($dbConn, $sql);
+$squareArticles = [];
+while ( $squareArticle = mysqli_fetch_assoc($rs) ) {
+    $squareArticles[] = $squareArticle;
+}
+$squareArticleBg1 = str_replace(array("![image](",")"),"",substr($squareArticles[0]['body'], strpos($squareArticles[0]['body'], "![image]" ), strpos($squareArticles[0]['body'], ")" ) ));
+$squareArticleBg2 = str_replace(array("![image](",")"),"",substr($squareArticles[1]['body'], strpos($squareArticles[1]['body'], "![image]" ), strpos($squareArticles[1]['body'], ")" ) ));
+?>
+
 <!--상단 슬라이드 배너-->
 <div class="top-bn-slider con">
     <div class="sliderbox">
@@ -47,17 +66,19 @@ include "../part/head_body.php";
 <div class="squareContentBox flex con">
     <ul class="flex">
         <li class="flex">
-            <div class="squareImage" style="background-image: url(https://nixpluvia.github.io/img1/blog/site/squareImage_1.jpg)"></div>
+            <?php if (empty($squareArticleBg1)){ ?>
+                <a class="squareImage" href="/detail.php?id=<?=$squareArticles[0]['id']?>"></a>
+            <?php } else { ?>
+                <a class="squareImage" href="/detail.php?id=<?=$squareArticles[0]['id']?>" style="background-image: url(<?=$squareArticleBg1?>)"></a>
+            <?php } ?>
             <div class="squareTextBox flex">
                 <div class="squareTextBox-wrap">
                     <div class="type">설명</div>
-                    <div class="title">안녕하세요</div>
+                    <div class="title"><?=$squareArticles[0]['title']?></div>
                     <div class="textBox">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Fugit quas ipsum dolorum. Minus porro illo similique voluptates perferendis iure nobis quas,
-                        praesentium fugiat ducimus eaque sint alias, vitae pariatur eveniet.
+                        <?=$squareArticles[0]['body']?>
                     </div>
-                    <a href="#">
+                    <a href="/detail.php?id=<?=$squareArticles[0]['id']?>">
                         더보기
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -65,17 +86,19 @@ include "../part/head_body.php";
             </div>
         </li>
         <li class="flex">
-            <div class="squareImage" style="background-image: url(https://nixpluvia.github.io/img1/blog/site/squareImage_2.jpg)"></div>
+            <?php if (empty($squareArticleBg2)){ ?>
+                <a class="squareImage" href="/detail.php?id=<?=$squareArticles[1]['id']?>"></a>
+            <?php } else { ?>
+                <a class="squareImage" href="/detail.php?id=<?=$squareArticles[1]['id']?>" style="background-image: url(<?=$squareArticleBg2?>)"></a>
+            <?php } ?>
             <div class="squareTextBox flex">
                 <div class="squareTextBox-wrap">
                     <div class="type">설명</div>
-                    <div class="title">안녕하세요</div>
+                    <div class="title"><?=$squareArticles[1]['title']?></div>
                     <div class="textBox">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Fugit quas ipsum dolorum. Minus porro illo similique voluptates perferendis iure nobis quas,
-                        praesentium fugiat ducimus eaque sint alias, vitae pariatur eveniet.
+                        <?=$squareArticles[1]['body']?>
                     </div>
-                    <a href="#">
+                    <a href="/detail.php?id=<?=$squareArticles[1]['id']?>">
                         더보기
                         <i class="fas fa-arrow-right"></i>
                     </a>
