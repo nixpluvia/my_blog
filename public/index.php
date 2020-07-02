@@ -88,7 +88,7 @@ while ( $squareArticle = mysqli_fetch_assoc($rs) ) {
                 <a class="squareImage" href="/detail.php?id=<?=$article['id']?>" style="background-image: url(<?=$article['thumbImgUrl']?>)"></a>
             <?php } ?>
             <!--게시글 컨텐츠-->
-            <div class="squareTextBox flex">
+            <div class="squareTextBox">
                 <div class="squareTextBox-wrap">
                     <div class="type"><?=$row['name']?></div>
                     <div class="title"><?=$article['title']?></div>
