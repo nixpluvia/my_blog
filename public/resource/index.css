@@ -26,6 +26,7 @@
 
 .top-bn-slider .slides > div > a {
     position: absolute;
+    white-space: nowrap;
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
@@ -210,11 +211,15 @@
 }
 
 @media (max-width: 500px) {
+    .squareContentBox > ul > li > .squareTextBox > .squareTextBox-wrap > div.textBox{
+        max-height: 1.5em;
+        -webkit-line-clamp: 1;
+    }
     .squareContentBox > ul > li > .squareTextBox > .squareTextBox-wrap > div.title {
         font-size: 1.5rem;
         margin-bottom: 20px;
     }
-    .squareContentBox .squareTextBox > .squareTextBox-wrap > div.textBox{
+    .squareContentBox > ul > li > .squareTextBox > .squareTextBox-wrap > div.textBox{
         font-size: 12px;
     }
     .squareContentBox > ul > li > .squareTextBox > .squareTextBox-wrap > a {

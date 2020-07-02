@@ -75,31 +75,41 @@ while ( $articleTag = mysqli_fetch_assoc($rs4) ) {
 <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
 
 <div class="detail-wrap con">
-    <h1 class="detail-title"><?=$row['title']?></h1>
+    <!--게시물 타이틀-->
+    <h2 class="detail-title"><?=$row['title']?></h2>
+    <!--게시물 정보-->
     <div class="detail-info flex">
         <div class="detail-regDate">등록일 : <?=$row['regDate']?></div>
         <div class="detail-updateDate">수정일 : <?=$row['updateDate']?></div>
         <div class="writer">작성자 : 이호연</div>
     </div>
+    <!--게시물 태그-->
     <div class="article-tag-bar flex">
         <?php foreach($articleTags as $tag) { ?>
             <div class="article-tag flex flex-ai-c"><?=$tag['name']?></div>
         <?php } ?>
     </div>
+    <!--게시물 본문 원본-->
     <div id="origin1"style="display:none;" >
         <?=$row['body']?>
     </div>
+    <!--게시물 토스트 UI 뷰어-->
     <div id="viewer1">
     </div>
+    <!--프로필 바-->
     <div class="profile-bar">
         <div class="profile-box flex">
+            <!--프로필 아바타-->
             <a class="avatar" href="/"></a>
+            <!--프로필 내용-->
             <div class="profile flex-1-0-0">
                 <div class="name flex-ai-c">NIX</div>
                 <div class="description flex-ai-c">인생 뉴비</div>
             </div>
         </div>
+        <!--프로필 하단 보더-->
         <div class="profile-bar-bottom-line"></div>
+        <!--프로필 sns 아이콘 바-->
         <div class="sns-bar flex">
             <a href="https://www.youtube.com/channel/UCaCKvCIvrW3xMmYvhCGJZZA?view_as=subscriber"
                 class="flex flex-ai-c"><i class="fab fa-youtube"></i></a>
@@ -126,13 +136,15 @@ while ( $articleTag = mysqli_fetch_assoc($rs4) ) {
             </a>
         </div>
     </div>
+    <!--게시물 이전, 다음 이동 버튼-->
     <div class="btn-list-move flex">
+        <!--게시물 이전 버튼-->
         <?php if(isset($row2)) { ?>
             <a href="/detail.php?id=<?=$row2['id']?>" class="btn-prev flex flex-ai-c flex-jc-st">
                 <i class="far fa-caret-square-left"></i><span><?=$row2['title']?></span>
             </a>
         <?php } ?>
-
+        <!--게시물 다음 버튼-->
         <?php if(isset($row3)) { ?>
             <a href="/detail.php?id=<?=$row3['id']?>" class="btn-next flex flex-ai-c flex-jc-end">
                 <span><?=$row3['title']?></span><i class="far fa-caret-square-right"></i>

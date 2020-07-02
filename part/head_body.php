@@ -208,10 +208,11 @@
                 <span class="bottomBorder"></span>
             </nav>
             <div class="sns-bar flex">
-                <a href="https://www.youtube.com/channel/UCaCKvCIvrW3xMmYvhCGJZZA?view_as=subscriber"
-                    class="flex flex-ai-c"><i class="fab fa-youtube"></i></a>
-                <a href="https://github.com/nixpluvia" class="flex flex-ai-c"><i class="fab fa-github"></i></a>
-                <a href="https://nixpluvia.tistory.com/" class="flex flex-ai-c">
+                <a class="flex flex-ai-c" href="https://www.youtube.com/channel/UCaCKvCIvrW3xMmYvhCGJZZA?view_as=subscriber" target="_blank">
+                     <i class="fab fa-youtube"></i>
+                </a>
+                <a class="flex flex-ai-c" href="https://github.com/nixpluvia" target="_blank" ><i class="fab fa-github"></i></a>
+                <a class="flex flex-ai-c" href="https://nixpluvia.tistory.com/" target="_blank" >
                     <div>
                         <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                         <svg version="1.1" id="레이어_2" xmlns="http://www.w3.org/2000/svg"

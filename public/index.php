@@ -93,7 +93,20 @@ while ( $squareArticle = mysqli_fetch_assoc($rs) ) {
                     <div class="type"><?=$row['name']?></div>
                     <div class="title"><?=$article['title']?></div>
                     <div class="textBox">
-                        <?=$article['body']?>
+                        <?php
+                        if (empty($article['summary'])) {
+                            if (empty($article['body'])) {
+                                echo "게시물 내용이 없습니다.";
+                            }
+                            else {
+                                $articleBody = str_replace(array("#","-"),"",mb_substr($article['body'] , strpos($article['body'], "<!--컨텐츠-->") , 300));
+                                echo "$articleBody";
+                            }
+                        }
+                        else {
+                            echo $article['summary'];
+                        }
+                        ?>
                     </div>
                     <a href="/detail.php?id=<?=$article['id']?>">
                         더보기

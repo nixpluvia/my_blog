@@ -476,6 +476,7 @@ canvas {
     align-self: center;
     width: 70px;
     height: 70px;
+    flex-shrink: 0;
 }
 
 .top-bar .top-bar-wrap .menu-box-1 .menu-box-wrap {

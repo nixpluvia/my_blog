@@ -1,55 +1,73 @@
+/*게시글 리스트 박스*/
 .article-box {
     margin-top: 80px;
     background-color: rgb(255, 255, 255);
 }
-.article-box .article-list {
+.article-box .article-list-wrap {
+    width: 100%;
+}
+/*게시물 리스트 아이템*/
+.article-box .article-list-wrap .article-list {
     width: 100%;
     height: 300px;
     border-bottom: 2px solid #DDDDDD;
 }
-.article-box .article-list .article-content {
+.article-box .article-list-wrap .article-list:last-child {
+    margin-bottom: 30px;
+}
+/*게시물 리스트 텍스트 컨텐츠*/
+.article-box .article-list-wrap .article-list .article-content {
     padding-top: 30px;
     padding-left: 40px;
     flex-grow: 1;
-    max-width: 620px;
+    flex-basis: 0;
 }
-.article-box .article-list .article-content > .article-title {
+/*게시물 제목*/
+.article-box .article-list-wrap .article-list .article-content > .article-title {
     display: block;
 }
-.article-box .article-list .article-content > .article-title > h2{
+.article-box .article-list-wrap .article-list .article-content > .article-title > h2{
     font-size: 32px;
     font-weight: bold;
     letter-spacing: 1px;
+    line-height: 1.5em;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
-.article-box .article-list .article-content > .article-body{
+/*게시물 리스트 본문*/
+.article-box .article-list-wrap .article-list .article-content > .article-body{
     padding-top: 30px;
     font-size: 16px;
     letter-spacing: 1px;
     line-height: 1.5em;
-    max-height: 6em;
+    max-height: 4.5em;
     overflow: hidden;
     word-wrap: break-word;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
-
-.article-box .article-list .article-content > .article-info {
+/*게시물 리스트 정보*/
+.article-box .article-list-wrap .article-list .article-content > .article-info {
     padding-top: 15px;
     font-size: 12px;
     letter-spacing: 1px;
     color: #C4C4C4;
 }
-.article-box .article-list .article-content > .article-info > div:not(:first-child){
+.article-box .article-list-wrap .article-list .article-content > .article-info > div:not(:first-child){
     padding-left: 25px;
 }
-
-.article-box .article-list .article-content > .article-tag-bar{
-    margin-top: 15px;
-
+/*게시물 리스트 태그*/
+.article-box .article-list-wrap .article-list .article-content > .article-tag-bar{
+    padding-top: 15px;
+    padding-bottom:15px;
 }
-.article-box .article-list .article-content > .article-tag-bar > div{
+.article-box .article-list-wrap .article-list .article-content > .article-tag-bar > div{
     padding: 0 20px;
     height: 35px;
     border-radius: 17.5px;
@@ -57,21 +75,63 @@
     font-weight: bold;
     background-color: rgb(255,161,0);
 }
-.article-box .article-list .article-content > .article-tag-bar > div:not(:first-child) {
+.article-box .article-list-wrap .article-list .article-content > .article-tag-bar > div:not(:first-child) {
     margin-left: 15px;
 }
-.article-box .article-list .article-img {
-    display: block;
+/*게시물 리스트 이미지*/
+.article-box .article-list-wrap .article-list .article-img {
     box-sizing: border-box;
+    flex-shrink: 0;
+    align-self: center;
     width: 430px;
-    height: 280px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
+    margin-right: 20px;
     margin-left: auto;
     border: 2px solid rgb(255,161,0);
     background-image: url(./images/null_bg.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.article-box .article-list-wrap .article-list .article-img::after {
+    content: "";
+    display: block;
+    padding-bottom: 56.25%;
+}
+
+/*게시물 반응형*/
+
+@media (max-width: 799px) {
+    .article-box {
+        margin-top: 0px;
+    }
+}
+
+@media (min-width: 951px) {
+    .article-box .article-list-wrap .article-list .article-content {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 950px) {
+    .article-box .article-list-wrap .article-list {
+        height: auto;
+        margin-top: 30px;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .article-box .article-list-wrap .article-list .article-content {
+        padding-left: 0;
+        width: 100%;
+    }
+    .article-box .article-list-wrap .article-list .article-img {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        align-self: auto;
+    }
+}
+@media (max-width: 1200px) {
+    .article-box .article-list-wrap .article-list .article-content {
+        padding-left: 0;
+    }
 }

@@ -25,17 +25,18 @@ while( $article = mysqli_fetch_assoc($rs)) {
 ?>
 
 <!--게시글 리스트 박스-->
-<article class="article-box con flex flex-wrap">
+<nav class="article-box con flex flex-wrap">
+    <ul class="article-list-wrap">
     <?php foreach( $articles as $article ) { ?>
-        <div class="article-list flex">
+        <li class="article-list flex">
             <!--게시글 컨텐츠-->
             <div class="article-content">
                 <!--게시글 제목-->
-                <a href="/detail.php?id=<?=$article['id']?>" class="article-title">
+                <a class="article-title" href="/detail.php?id=<?=$article['id']?>" >
                     <h2><?=$article['title']?></h2>
                 </a>
                 <!--게시글 본문-->
-                <a href="/detail.php?id=<?=$article['id']?>" id="viewer" class="article-body">
+                <a id="viewer" class="article-body" href="/detail.php?id=<?=$article['id']?>" >
                     <?php
                     if (empty($article['summary'])) {
                         if (empty($article['body'])) {
@@ -94,8 +95,9 @@ while( $article = mysqli_fetch_assoc($rs)) {
                     <a class="article-img" href="/detail.php?id=<?=$article['id']?>"  style="background-image: url(<?=$article['thumbImgUrl']?>);"></a>
                 <?php } ?>
             <!--게시글 썸네일 끝-->
-        </div>
+        </li>
     <?php } ?>
+    </ul>
 </article>
 
 <?php

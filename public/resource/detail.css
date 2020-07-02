@@ -8,6 +8,7 @@
     padding-top: 60px;
     font-size: 48px;
     font-weight: bold;
+    word-break: break-all;
 }
 /* 게시물 정보 */
 .detail-wrap .detail-info > div {
