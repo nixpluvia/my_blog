@@ -1,3 +1,4 @@
+/* 모바일 사이드 바 토글*/
 function MobileSideBar__toggle() {
     var $btn = $('.btn-toggle-mobile-side-bar');
     var $mobileSideBar = $('.mobile-side-bar');
@@ -17,23 +18,8 @@ function MobileSideBar__toggle() {
         $html.addClass('active');
     }
 }
-function MobileSnsMenu__toggle(e) {
-    
-    if ($(this).hasClass('active')) {
-        $(this).removeClass('active');
-    } 
-    else {
-        $(this).addClass('active');
-    }
-    e.stopPropagation();
-}
-function addCaretIcon() {
-    $('.mobile-side-bar .menu-box-1 ul > li > a:not(:only-child)').append('<i class="fas fa-caret-down"></i>');
-    $('.mobile-side-bar .menu-box-1 ul > li > a:not(:only-child)').append('<i class="fas fa-caret-right"></i>');
-};
 
-
-
+/* 상단 메뉴 border bottom*/
 function HoverBorder() {
     var $this = $(this);
     var $activeThis = $('.top-bar .top-bar-wrap .menu-box-1 .menu-box-wrap > ul > li.active');
@@ -46,6 +32,41 @@ function HoverBorder() {
     }
 }
 
+
+/*상단 메뉴 스크롤 숨기기 나타내기*/
+function variables(){
+  window.lastScrollTop = 0;
+}
+variables();
+
+function hasScrolled() {
+  var topBarHeight = $('.top-bar').outerHeight();
+  var st = $(this).scrollTop();
+  
+  if ( (st > lastScrollTop) && (st > topBarHeight ) ) {
+    $('.top-bar').addClass('nav-up');
+  }
+  else {
+    $('.top-bar').removeClass('nav-up');
+  }
+
+  lastScrollTop = st;
+}
+
+function topBarScroll__init(){
+  var didScroll;
+
+  $(window).scroll(function(){
+    didScroll = true;    
+
+    setInterval(function(){
+      if (didScroll){
+        hasScrolled();
+        didScroll = false;
+      }
+    }, 250);
+  })
+}
 
 
 
@@ -66,23 +87,20 @@ function HoverBorder__init() {
 
 function MobileSideBar__init() {
     $('.btn-toggle-mobile-side-bar, .mobile-side-bar-bg').click(MobileSideBar__toggle);
-    $('.mobile-side-bar .menu-box-1 ul > li').click(MobileSnsMenu__toggle);
-    addCaretIcon();
 }
-
-
-
-
 
 function cuttonOpen__init(){
     $('.cutton').addClass('active');
 }
+
+
 
 //적용
 $(function () {
     MobileSideBar__init();
     cuttonOpen__init();
     HoverBorder__init();
+    topBarScroll__init();
 })
 
 
