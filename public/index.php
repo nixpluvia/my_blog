@@ -62,6 +62,7 @@ while ( $squareArticle = mysqli_fetch_assoc($rs) ) {
 </div>
 
 <div class="squareContentBox flex con">
+    <h2 class="title">RECENT ARTICLES</h2>
     <ul class="flex">
         <?php foreach($squareArticles as $article) { 
             $sql2 ="

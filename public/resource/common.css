@@ -308,7 +308,27 @@ label[for] {
 }
 
 /* 공통 css */
-
+/* 토스트 UI 시작*/
+.ratio-16-9::after {
+    content:"";
+    display:block;
+    padding-top:56.25%;
+}
+  
+.ratio-1-1::after {
+    content:"";
+    display:block;
+    padding-top:100%;
+}
+.abs-full {
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+/* 토스트 UI 끝*/
 @media (min-width: 800px) {
     .window-md-down {
         display: none;
@@ -503,9 +523,9 @@ canvas {
 .top-bar .top-bar-wrap .menu-box-1 .menu-box-wrap >ul>li>a {
     letter-spacing: 1px;
     font-size: 1.2rem;
+    padding: 0 20px;
     white-space: nowrap;
     color: rgb(255,255,255);
-    padding: 0 20px;
     box-sizing: border-box;
 }
 .top-bar .sns-bar > a {

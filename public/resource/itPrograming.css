@@ -24,7 +24,22 @@
 }
 /*게시물 제목*/
 .article-box .article-list-wrap .article-list .article-content > .article-title {
+    position: relative;
     display: block;
+    transition: color .3s;
+}
+.article-box .article-list-wrap .article-list .article-content > .article-title:hover {
+    color: rgb(255,161,0);
+}
+.article-box .article-list-wrap .article-list .article-content > .article-title::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    top: calc(100% + 15px);
+    left: 0;
+    transform: translateY(-50%);
+    background-color: rgb(255,161,0);
 }
 .article-box .article-list-wrap .article-list .article-content > .article-title > h2{
     font-size: 32px;

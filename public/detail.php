@@ -90,9 +90,7 @@ while ( $articleTag = mysqli_fetch_assoc($rs4) ) {
         <?php } ?>
     </div>
     <!--게시물 본문 원본-->
-    <div id="origin1"style="display:none;" >
-        <?=$row['body']?>
-    </div>
+    <script type="text/x-template" id="origin1"style="display:none;" ><?=$row['body']?></script>
     <!--게시물 토스트 UI 뷰어-->
     <div id="viewer1">
     </div>
@@ -160,10 +158,10 @@ while ( $articleTag = mysqli_fetch_assoc($rs4) ) {
 <script>
 var editor1__initialValue = $('#origin1').html();
 var editor1 = new toastui.Editor({
-  el: document.querySelector('#viewer1'),
-  initialValue: editor1__initialValue,
+  el: document.querySelector("#viewer1"),
   viewer:true,
-  plugins: [toastui.Editor.plugin.codeSyntaxHighlight]
+  initialValue: editor1__initialValue,
+  plugins: [toastui.Editor.plugin.codeSyntaxHighlight, youtubePlugin, replPlugin, codepenPlugin]
 });
 </script>
 

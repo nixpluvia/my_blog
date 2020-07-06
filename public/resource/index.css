@@ -94,8 +94,14 @@
 /*박스 컨텐츠*/
 .squareContentBox {
     position: relative;
+    flex-direction: column;
     margin-top: 50px;
-    
+    margin-bottom: 50px;
+}
+.squareContentBox > h2.title {
+    font-family: "Anton", "Noto Sans KR", sans-serif;
+    letter-spacing: 1px;
+    padding-bottom: 15px;
 }
 .squareContentBox > ul {
     flex-wrap: wrap;
@@ -144,8 +150,19 @@
     font-weight: bold;
 }
 .squareContentBox > ul > li > .squareTextBox > .squareTextBox-wrap > div.title {
+    position: relative;
     font-size: 2rem;
     margin-bottom: 30px;
+}
+.squareContentBox > ul > li > .squareTextBox > .squareTextBox-wrap > div.title::after {
+    content: "";
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 2px;
+    background-color: rgb(255,161,0);
 }
 
 .squareContentBox .squareTextBox > .squareTextBox-wrap > div.textBox{
@@ -218,6 +235,9 @@
     .squareContentBox > ul > li > .squareTextBox > .squareTextBox-wrap > div.title {
         font-size: 1.5rem;
         margin-bottom: 20px;
+    }
+    .squareContentBox > ul > li > .squareTextBox > .squareTextBox-wrap > div.title::after {
+        top: calc(100% + 10px);
     }
     .squareContentBox > ul > li > .squareTextBox > .squareTextBox-wrap > div.textBox{
         font-size: 12px;
