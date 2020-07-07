@@ -1,7 +1,7 @@
 <?php
 include "../part/head_head.php";
 ?>
-<link rel="stylesheet" href="/resource/itPrograming.css">
+<link rel="stylesheet" href="/resource/articleList.css">
 <?php
 include "../part/head_body.php";
 ?>
@@ -81,19 +81,27 @@ while( $article = mysqli_fetch_assoc($rs)) {
                 </div>
             </div>
             <!--게시글 썸네일-->
-            <?php
+            <a class="article-img-box" href="/detail.php?id=<?=$article['id']?>">
+                <?php
                 $articleBg = str_replace(array("![image](",")"),"",substr($article['body'], strpos( $article['body'], "![image]" ), strpos($article['body'], ")" ) ));
                 if (empty($article['thumbImgUrl'])) {    
                     if (empty($articleBg)) { ?>
-                        <a class="article-img" href="/detail.php?id=<?=$article['id']?>" ></a>
+                        <div class="article-img"></div>
                 <?php }
                     else { ?>
-                        <a class="article-img" href="/detail.php?id=<?=$article['id']?>"  style="background-image: url(<?=$articleBg?>);"></a>
+                        <div class="article-img" style="background-image: url(<?=$articleBg?>);"></div>
                 <?php }
                 }
                 else { ?>
-                    <a class="article-img" href="/detail.php?id=<?=$article['id']?>"  style="background-image: url(<?=$article['thumbImgUrl']?>);"></a>
+                    <div class="article-img" style="background-image: url(<?=$article['thumbImgUrl']?>);"></div>
                 <?php } ?>
+                <span class="img-hover-bg"></span>
+                <i class="line-img-t"></i>
+                <i class="line-img-r"></i>
+                <i class="line-img-b"></i>
+                <i class="line-img-l"></i>
+            </a>
+            
             <!--게시글 썸네일 끝-->
         </li>
     <?php } ?>
