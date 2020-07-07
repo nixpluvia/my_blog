@@ -34,38 +34,24 @@ function HoverBorder() {
 
 
 /*상단 메뉴 스크롤 숨기기 나타내기*/
-function variables(){
-  window.lastScrollTop = 0;
-}
-variables();
-
-function hasScrolled() {
-  var topBarHeight = $('.top-bar').outerHeight();
-  var st = $(this).scrollTop();
-  
-  if ( (st > lastScrollTop) && (st > topBarHeight ) ) {
-    $('.top-bar').addClass('nav-up');
-  }
-  else {
-    $('.top-bar').removeClass('nav-up');
-  }
-
-  lastScrollTop = st;
-}
+var lastScrollTop= 0;
+var topBarHeight = $('.top-bar').outerHeight();
 
 function topBarScroll__init(){
-  var didScroll;
 
-  $(window).scroll(function(){
-    didScroll = true;    
+  $(window).scroll(function() {
+    var st = $(this).scrollTop();
 
-    setInterval(function(){
-      if (didScroll){
-        hasScrolled();
-        didScroll = false;
-      }
-    }, 250);
-  })
+    console.log(st);
+    if ( st > lastScrollTop ) {
+      $('.top-bar').addClass('nav-up');
+    }
+    else {
+      $('.top-bar').removeClass('nav-up');
+    }
+    
+    lastScrollTop = st;
+  });
 }
 
 
