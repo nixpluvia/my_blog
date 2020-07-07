@@ -55,45 +55,6 @@
     </div>
     <!--모바일 사이드 바-->
     <div class="mobile-side-bar-bg window-md-down"></div>
-    <!--
-    <div class="mobile-side-bar window-md-down">
-        <div class="logo-box">
-            <a href="/">NIX BLOG</a>
-            <div class="logo-border"></div>
-        </div>
-        <nav class="menu-box-1">
-            <ul>
-                <li><a href="/itPrograming.php">IT PROGRAMING</a></li>
-                <li><a href="/dailyLife.php">DAILY LIFE</a></li>
-                <li><a href="/portfolio.php">PORTFOLIO</a></li>                
-                <li><a href="/aboutMe.php">ABOUT ME</a></li>
-            </ul>
-        </nav>
-        <div class="sns-bar flex">
-            <a href="https://www.youtube.com/channel/UCaCKvCIvrW3xMmYvhCGJZZA?view_as=subscriber"
-                class="flex flex-ai-c flex-jc-c"><i class="fab fa-youtube"></i></a>
-            <a href="https://github.com/nixpluvia" class="flex flex-ai-c flex-jc-c"><i class="fab fa-github"></i></a>
-            <a href="https://nixpluvia.tistory.com/">
-                <svg version="1.1" id="레이어_2" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
-                    style="enable-background:new 0 0 100 100;" xml:space="preserve">
-                    <style type="text/css">
-                        .st0 {
-                            fill: #FFFFFF;
-                        }
-                    </style>
-                    <g>
-                        <circle class="st0" cx="20.4" cy="20.4" r="9.9" />
-                        <circle class="st0" cx="50" cy="20.4" r="9.9" />
-                        <circle class="st0" cx="79.6" cy="20.4" r="9.9" />
-                        <circle class="st0" cx="50" cy="50" r="9.9" />
-                        <circle class="st0" cx="50" cy="79.6" r="9.9" />
-                    </g>
-                </svg>
-            </a>
-        </div>
-    </div>
-    -->
     <div class="mobile-side-bar window-md-down">
         <div class="btn-toggle-mobile-side-bar">
             <div></div>
