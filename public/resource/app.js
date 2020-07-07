@@ -19,7 +19,8 @@ class App {
     }
     resize() {
         this.stageWidth = document.body.clientWidth;
-        this.stageHeight = document.body.clientHeight;
+        /*스테이지의 높이 고정*/
+        this.stageHeight = 500;
         
         this.canvas.width = this.stageWidth * 2;
         this.canvas.height = this.stageHeight * 2;
