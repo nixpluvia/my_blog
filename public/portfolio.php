@@ -1,22 +1,30 @@
 <?php
 include "../part/head_head.php";
 ?>
+<link rel="stylesheet" href="/resource/portfolio.css">
 <?php
 include "../part/head_body.php";
 ?>
-<section class="content con">
-    <h1>사진 갤러리 입니다</h1>
-</section>
-<div class="profile-bar con">
-    <div class="profile-box flex">
-        <a class="avatar" href="/"></a>
-        <div class="profile flex-1-0-0">
-            <div class="name flex-ai-c">NIX</div>
-            <div class="description flex-ai-c">인생 뉴비</div>
+
+<div class="portfolio-animation-box con">
+    <div class="ani-img">
+        <div class="img-head"></div>
+        <div class="portfolio-slide-wrap">
+            <div class="portfolio-slide">
+                <i class="teeth-left"></i>
+                <i class="teeth-right"></i>
+            </div>
         </div>
+        <div class="img-foot"></div>
     </div>
-    <div class="profile-bar-bottom-line"></div>
 </div>
+
+
+
+
+
+
+
 
 <?php
 include "../part/foot.php";
