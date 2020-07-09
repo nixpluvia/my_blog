@@ -132,12 +132,48 @@
         </div>
 
         <div class="best-seller-section">
-            <ul class="flex">
-                <li></li>
-                <li></li>
-                <li></li>
+            <h2>Best Seller</h2>
+            <ul class="best-seller-box flex">
+                <li>
+                    <a href="#">
+                        <div>
+                            <img class="product-img" src="https://nixpluvia.github.io/img1/pf/cleaderm/6434982b073801688d8dec21e2a2a3cc.jpg" alt="">
+                        </div>
+                        <div class="product-info">
+                            <div>[핫써머세트] 닥터락토 클렌징워터+카밍크림</div>
+                            <div>시원하고 촉촉하게! 클렌징부터 보습까지!</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <img class="product-img" src="https://nixpluvia.github.io/img1/pf/cleaderm/a1f554436ed51c4c6a8ac748325ef16b.jpg" alt="">
+                        </div>
+                        <div class="product-info">
+                            <div>[물광필링토너] 닥터락토 SOS 카밍토너</div>
+                            <div>피부에 쌓인 각질부터 피지까지!</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <img class="product-img" src="https://nixpluvia.github.io/img1/pf/cleaderm/f6dbce61b0ee5bf6464b40b2391bb7a7.jpg" alt="">
+                        </div>
+                        <div class="product-info">
+                            <div>[겟잇뷰티 유산균크림] 닥터락토 배리어 크림</div>
+                            <div>피부장벽강화 고보습크림</div>
+                        </div>
+                    </a>
+                </li>
             </ul>
         </div>
+
+
+
+
+
     </div>
 </body>
 </html>

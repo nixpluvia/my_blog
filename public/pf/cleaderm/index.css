@@ -379,13 +379,16 @@ label[for] {
 }
 .top-menu-bar .search-icon-box > .search-form {
     position: absolute;
-    width: 470px;
-    top: calc(100% + 5px);
+    top: 50%;
     right: -10px;
-    padding: 18px 10px 16px 33px;
-    border: 1px solid #e1e1e1;
+    width: 470px;
+    height: 0;
+    padding: 0 10px 0 33px;
+    border: none;
     box-sizing: border-box;
+    overflow: hidden;
     background-color: rgba(255,255,255,0.8);
+    transition: height 0.3s, padding 0.3s, top 0.3s;
 }
 .top-menu-bar .search-icon-box > .search-form > span {
     font-size: 17px;
@@ -406,6 +409,21 @@ label[for] {
     background-color: #f5f5f5;
     box-sizing: border-box;
 }
+.top-menu-bar .search-icon-box.active > .search-form {
+    top: calc(100% + 5px);
+    height: 74px;
+    padding: 18px 10px 16px 33px;
+    border: 1px solid #e1e1e1;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -493,7 +511,7 @@ label[for] {
     margin-top: 90px;
 }
 .main-section-1 .ms1-text {
-    flex-grow: 1;
+    flex: 1 0 0;
     margin-top: 50px;
     margin-left: 5%;
 }
@@ -512,5 +530,46 @@ label[for] {
 .main-section-1 .ms1-text > div > div:last-child {
     margin-top: 30px;
 }
-/**/
+.main-section-1 .ms1-img {
+    flex-shrink: 0;
+    height: 373px;
+}
+.best-seller-section {
+    margin: 0 5%;
+}
+.best-seller-section > h2{
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 10px;
+    padding-top: 155px;
+    padding-bottom: 5px;
+}
+.best-seller-section > ul > li {
+    flex: 1 0 0;
+}
+.best-seller-section > ul > li > a {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+.best-seller-section > ul > li > a > div {
+    overflow: hidden;
+}
+.best-seller-section > ul > li > a > div > img.product-img{
+    display: block;
+    width: 100%;
+}
 
+.best-seller-section > ul > li > a > div.product-info {
+    text-align: center;
+}
+.best-seller-section > ul > li > a > div.product-info > :first-child{
+    font-size: 22px;
+    font-weight: 400;
+}
+.best-seller-section > ul > li > a > div.product-info > :last-child{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(170,170,170);
+}

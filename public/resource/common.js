@@ -42,7 +42,6 @@ function topBarScroll__init(){
   $(window).scroll(function() {
     var st = $(this).scrollTop();
 
-    console.log(st);
     if ( st > lastScrollTop ) {
       $('.top-bar').addClass('nav-up');
     }

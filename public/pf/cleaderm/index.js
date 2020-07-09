@@ -50,11 +50,24 @@ function slideInterval(){
     }, 5000);
 };
 
-
-
 function slide__init(){
     $('.top-bn-slider > .slide-button > span').click(slide);
     $('.top-bn-slider > .btn-slide-dots > li').click(slideDots);
+}
+
+
+function searchClick(){
+    var $this = $(this);
+    if ($this.hasClass('active')) {
+        $this.removeClass('active');
+    }
+    else {
+        $this.addClass('active');
+    }
+}
+
+function searchClick__init(){
+    $('.search-icon-box').click(searchClick);
 }
 
 
@@ -66,4 +79,5 @@ function slide__init(){
 $(function(){
     slide__init();
     slideInterval();
+    searchClick__init();
 });
