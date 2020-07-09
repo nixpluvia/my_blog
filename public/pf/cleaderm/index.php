@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./index.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./index.js"></script>
-    <title>Document</title>
+    <title>클리덤 닥터락토</title>
 </head>
 <body>
     <div class="layout con">
@@ -110,6 +110,34 @@
             </ul>
         </div>
 
+        <div class="youtube-box flex flex-jc-c">
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/0Pq39JhXw0E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="main-section-1 flex">
+            <a class="ms1-text" href="#">
+                <h2>피부 예방 전문가, 닥터락토</h2>
+                <div>
+                    <div>
+                        유산균 명가 종근당건강 기술력을 담은 Lacto-7 Barrier
+                        <br>
+                        예민피부 진정 및 피부장벽 강화에 탁월한 유산균 발효물 화장품
+                    </div>
+                    <div>건강한 피부습관 클리덤</div>
+                </div>
+            </a>
+            <a class="ms1-img" href="#">
+                <img src="https://nixpluvia.github.io/img1/pf/cleaderm/main_section_2_right_img.jpg" alt="">
+            </a>
+        </div>
+
+        <div class="best-seller-section">
+            <ul class="flex">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>

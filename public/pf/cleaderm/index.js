@@ -43,6 +43,12 @@ function slideDots() {
     $this.addClass('active');
 }
 
+/* 슬라이드 인터벌 */
+function slideInterval(){
+    setInterval(function(){
+        $('.top-bn-slider > .slide-button > span:last-child').click();
+    }, 5000);
+};
 
 
 
@@ -58,5 +64,6 @@ function slide__init(){
 
 /* 실행 */
 $(function(){
-    slide__init()
+    slide__init();
+    slideInterval();
 });
