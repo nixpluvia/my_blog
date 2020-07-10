@@ -136,7 +136,7 @@
             <ul class="best-seller-box flex">
                 <li>
                     <a href="#">
-                        <div>
+                        <div class="product-img-box">
                             <img class="product-img" src="https://nixpluvia.github.io/img1/pf/cleaderm/6434982b073801688d8dec21e2a2a3cc.jpg" alt="">
                         </div>
                         <div class="product-info">
@@ -147,7 +147,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        <div>
+                        <div class="product-img-box">
                             <img class="product-img" src="https://nixpluvia.github.io/img1/pf/cleaderm/a1f554436ed51c4c6a8ac748325ef16b.jpg" alt="">
                         </div>
                         <div class="product-info">
@@ -158,7 +158,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        <div>
+                        <div class="product-img-box">
                             <img class="product-img" src="https://nixpluvia.github.io/img1/pf/cleaderm/f6dbce61b0ee5bf6464b40b2391bb7a7.jpg" alt="">
                         </div>
                         <div class="product-info">

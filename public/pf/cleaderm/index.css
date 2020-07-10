@@ -520,12 +520,18 @@ label[for] {
     font-weight: 500;
     letter-spacing: 10px;
     padding-bottom: 35px;
+    margin-left: -50px;
+    opacity: 0;
+    transition: margin 1s, opacity 1s;
 }
 .main-section-1 .ms1-text > div {
     font-size: 22px;
     line-height: 38px;
     font-weight: 300;
     color: #555;
+    margin-top: 50px;
+    opacity: 0;
+    transition: margin 1s, opacity 1s;
 }
 .main-section-1 .ms1-text > div > div:last-child {
     margin-top: 30px;
@@ -534,6 +540,38 @@ label[for] {
     flex-shrink: 0;
     height: 373px;
 }
+.main-section-1 .ms1-img > img{
+    margin-right: -30px;
+    opacity: 0;
+    transition: margin 1s, opacity 1s;
+}
+
+.main-section-1.active .ms1-text > h2 {
+    margin-left: 0;
+    opacity: 1;
+}
+.main-section-1.active .ms1-text > div {
+    margin-top: 0;
+    opacity: 1;
+}
+.main-section-1.active .ms1-img > img{
+    margin-right: 0;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .best-seller-section {
     margin: 0 5%;
 }
@@ -543,6 +581,13 @@ label[for] {
     letter-spacing: 10px;
     padding-top: 155px;
     padding-bottom: 5px;
+    margin-left: -50px;
+    opacity: 0;
+    transition: margin 1s, opacity 1s;
+}
+.best-seller-section.active > h2{
+    opacity: 1;
+    margin-left: 0;
 }
 .best-seller-section > ul > li {
     flex: 1 0 0;
@@ -558,6 +603,9 @@ label[for] {
 .best-seller-section > ul > li > a > div > img.product-img{
     display: block;
     width: 100%;
+    margin-top: 50px;
+    opacity: 0;
+    transition: margin 1s, opacity 1s;
 }
 
 .best-seller-section > ul > li > a > div.product-info {
@@ -572,4 +620,15 @@ label[for] {
     font-weight: 400;
     line-height: 18px;
     color: rgb(170,170,170);
+}
+
+
+
+
+
+
+
+.best-seller-section > ul > li > a > div.active > img.product-img{
+    margin-top: 0;
+    opacity: 1;
 }

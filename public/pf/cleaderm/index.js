@@ -71,7 +71,33 @@ function searchClick__init(){
 }
 
 
+/* 요소의 높이 값 */
+var windowHeight = $(window).height();
 
+function scrollEvent(){
+    var $this = $(this);
+    var st = $this.scrollTop();
+    var mainSectionT = $('.main-section-1').offset().top;
+    var bestSectionT = $('.best-seller-section').offset().top;
+    var bs_productT = $('.best-seller-section > ul > li > a > .product-img-box').offset().top;
+
+    if (st > (mainSectionT - windowHeight + 300)) {
+        $('.main-section-1').addClass('active');
+    }
+
+    if (st > (bestSectionT - windowHeight + 300)) {
+        $('.best-seller-section').addClass('active');
+    }
+
+    if (st > (bs_productT - windowHeight + 300)) {
+        $('.best-seller-section > ul > li > a > .product-img-box').addClass('active');
+    }
+}
+
+
+function windowScroll() {
+    $(window).scroll(scrollEvent);
+}
 
 
 
@@ -80,4 +106,5 @@ $(function(){
     slide__init();
     slideInterval();
     searchClick__init();
+    windowScroll();
 });
