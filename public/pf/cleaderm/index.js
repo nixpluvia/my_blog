@@ -80,6 +80,8 @@ function scrollEvent(){
     var mainSectionT = $('.main-section-1').offset().top;
     var bestSectionT = $('.best-seller-section').offset().top;
     var bs_productT = $('.best-seller-section > ul > li > a > .product-img-box').offset().top;
+    var product1T = $('.product-list-section > ul > li.pd-1').offset().top;
+    var product2T = $('.product-list-section > ul > li.pd-6').offset().top;
 
     if (st > (mainSectionT - windowHeight + 300)) {
         $('.main-section-1').addClass('active');
@@ -91,6 +93,12 @@ function scrollEvent(){
 
     if (st > (bs_productT - windowHeight + 300)) {
         $('.best-seller-section > ul > li > a > .product-img-box').addClass('active');
+    }
+    if (st > (product1T - windowHeight + 300)) {
+        $('.product-list-section > ul > li.pd-list-1').addClass('active');
+    }
+    if (st > (product2T - windowHeight + 300)) {
+        $('.product-list-section > ul > li.pd-list-2').addClass('active');
     }
 }
 
