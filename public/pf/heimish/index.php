@@ -76,6 +76,7 @@
         </ul>
       </div>
     </div>
+
     <div class="search-popup">
       <div class="search-popup-content">
         <div class="btn-close-box">
@@ -93,14 +94,16 @@
         </div>
       </div>
     </div>
+
     <div class="top-bn-box">
         <div class="bn-title-box">
             <h2>Make Up</h2>
             <div>누구나 공감할 수 있는 아름다움</div>
         </div>
     </div>
+
     <div class="prod-slide-section">
-        <div class="head">
+        <div class="head flex">
             <ul>
                 <li><a href="#">BEST</a></li>
                 <li><a href="#">NEW</a></li>
