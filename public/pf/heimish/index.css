@@ -1,0 +1,610 @@
+/* 폰트적용 */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+html {
+    font-family: roboto, "Noto Sans KR", sans-serif;
+}
+
+/* 노말라이즈 */
+body,
+ul,
+li,
+h1 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+label[for] {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* 라이브러리 */
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.absolute-left {
+    position: absolute;
+    left: 0;
+}
+
+.absolute-right {
+    position: absolute;
+    right: 0;
+}
+
+.absolute-bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.absolute-top {
+    position: absolute;
+    top: 0;
+}
+
+.absolute-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.absolute-middle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.absolute-middle.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.relative {
+    position: relative;
+}
+
+.cell {
+    float: left;
+    box-sizing: border-box;
+}
+
+.cell-right {
+    float: right;
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.img-box>img {
+    width: 100%;
+    display: block;
+}
+
+.con {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.margin-0-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.line-height-0 {
+    line-height: 0;
+}
+
+.line-height-0>* {
+    line-height: normal;
+}
+
+.width-30px {
+    width: 30px;
+}
+
+.width-35px {
+    width: 35px;
+}
+
+.width-40px {
+    width: 35px;
+}
+
+.width-45px {
+    width: 35px;
+}
+
+.width-50px {
+    width: 50px;
+}
+
+.width-80px {
+    width: 80px;
+}
+
+.width-100px {
+    width: 100px;
+}
+
+.width-100p {
+    width: 100%;
+}
+
+.width-60p {
+    width: 60%;
+}
+
+.width-55p {
+    width: 55%;
+}
+
+.width-50p {
+    width: 50%;
+}
+
+.width-45p {
+    width: 45%;
+}
+
+.width-40p {
+    width: 40%;
+}
+
+.width-30p {
+    width: 30%;
+}
+
+.width-35p {
+    width: 35%;
+}
+
+.width-100p-except-30px {
+    width: calc(100% - 30px);
+}
+
+.width-100p-except-35px {
+    width: calc(100% - 35px);
+}
+
+.width-100p-except-40px {
+    width: calc(100% - 40px);
+}
+
+.width-100p-except-50px {
+    width: calc(100% - 50px);
+}
+
+.width-100p-except-80px {
+    width: calc(100% - 80px);
+}
+
+.width-100p-except-100px {
+    width: calc(100% - 100px);
+}
+
+.height-100p {
+    height: 100%;
+}
+
+.height-50p {
+    height: 50%;
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+.font-size-dot-8rem {
+    font-size: 0.8rem;
+}
+
+.table-row {
+    display: table;
+}
+
+.table-row.row::after {
+    display: inline;
+    clear: non;
+}
+
+.table-row>.cell {
+    float: none;
+    display: table-cell;
+}
+
+/* 라이브러리 - flex */
+*>.flex {
+    display: flex;
+}
+
+*>.flex-column-nowrap {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+*>.flex-grow-1 {
+    flex-grow: 1;
+}
+
+*>.flex-jc-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+*>.flex-ai-c {
+    display: flex;
+    align-items: center;
+}
+
+*>.flex-row-nowrap {
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+*>.flex-ch-basis-0 {
+    display: flex;
+}
+
+.flex-ch-basis-0>* {
+    flex-basis: 0;
+}
+
+*>.flex-1-0-0 {
+    flex: 1 0 0;
+}
+
+/* 커스텀 */
+.con-min-width {
+    min-width: 1356px;
+}
+
+.con {
+    max-width: 1300px;
+}
+
+.top-bar {
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    color: white;
+    z-index: 100;
+}
+
+/*상단 바 로고*/
+.top-bar .logo {
+    margin-top: 5px;
+    margin-left: 4.75%;
+}
+
+/*상단 바 메뉴 바*/
+.top-bar .menu-box-1 {
+    flex: 1 0 0;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.top-bar .menu-box-1>ul {
+    flex: 1 0 0;
+    margin-left: 100px;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 200px;
+}
+
+.top-bar .menu-box-1>ul>li {
+    padding-right: 2.2%;
+    padding-left: 2.2%;
+    box-sizing: border-box;
+}
+
+.top-bar .menu-box-1>ul>li>a {
+    font-size: 19px;
+    white-space: nowrap;
+}
+
+/*상단 바 멤버 메뉴*/
+.top-bar .member-menu {
+    margin-top: 10px;
+    margin-right: 4.75%;
+}
+
+.top-bar .member-menu>ul {
+    justify-content: flex-end;
+}
+
+.top-bar .member-menu>ul>li {
+    padding-left: 12px;
+}
+
+/*멤버 메뉴 - 언어*/
+.top-bar .member-menu>ul>li.language-box {
+    position: relative;
+    cursor: pointer;
+}
+
+.top-bar .member-menu>ul>li.language-box .language {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.top-bar .member-menu>ul>li.language-box .caret {
+    width: 10px;
+    height: 10px;
+    padding-left: 5px;
+    background-image: url(http://www.eheimish.com/design/heimish/renewal2019/pc/menu4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.top-bar .member-menu>ul>li.language-box>.language-select {
+    position: absolute;
+    display: none;
+    top: 70%;
+    left: -20px;
+    width: 130px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: rgb(94, 95, 97);
+    background-color: white;
+    box-shadow: 0px 5px 5px rgb(0, 0, 0, 0.2);
+}
+
+.top-bar .member-menu>ul>li.language-box>.language-select>a {
+    padding: 7px 10px;
+    background-color: rgba(255, 249, 249, 0);
+    transition: background-color 0.3s;
+}
+
+.top-bar .member-menu>ul>li.language-box>.language-select>a:hover {
+    background-color: rgba(255, 249, 249, 1);
+}
+
+.top-bar .member-menu>ul>li.language-box>.language-select>a>div:first-child {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.top-bar .member-menu>ul>li.language-box>.language-select>a>div:last-child {
+    padding-top: 5px;
+    font-size: 11px;
+}
+
+.top-bar .member-menu>ul>li.language-box.active>.language-select {
+    display: block;
+}
+
+/*멤버 메뉴*/
+.top-bar .member-menu>ul>li:not(:first-child)>a {
+    width: 35px;
+    height: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.top-bar .member-menu>ul>li.login-icon-box>a {
+    background-image: url(http://www.eheimish.com/design/heimish/renewal2019/pc/menu1.png);
+}
+
+.top-bar .member-menu>ul>li.search-icon-box>a {
+    background-image: url(http://www.eheimish.com/design/heimish/renewal2019/pc/menu2.png);
+}
+
+.top-bar .member-menu>ul>li.basket-icon-box>a {
+    background-image: url(http://www.eheimish.com/design/heimish/renewal2019/pc/menu3.png);
+}
+
+/*서치 팝업창*/
+.search-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(94, 95, 97, 0.8);
+    box-sizing: border-box;
+    z-index: 100;
+    visibility: hidden;
+}
+
+.search-popup.active {
+    visibility: visible;
+}
+
+.search-popup .search-popup-content {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    padding-top: 200px;
+    padding-bottom: 150px;
+    transition: top 0.5s, opacity 0.5s;
+    background-color: white;
+}
+
+.search-popup.active .search-popup-content {
+    top: 0;
+    opacity: 1;
+}
+
+.search-popup .search-popup-content>div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-popup .search-popup-content .btn-close-box {
+    position: absolute;
+}
+
+/*서치 팝업 타이틀*/
+.search-popup .search-popup-content>h2 {
+    margin: 0 auto;
+    width: 90%;
+    font-size: 3rem;
+    color: rgb(94, 95, 97);
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+.search-popup.active .search-popup-content>h2 {
+    opacity: 1;
+}
+
+/*서치 팝업 - 텍스트 박스*/
+.search-popup .search-popup-content>.textbox {
+    position: relative;
+    width: 90%;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+.search-popup.active .search-popup-content>.textbox {
+    opacity: 1;
+}
+
+.search-popup .search-popup-content .textbox input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgb(94, 95, 97);
+}
+
+.search-popup .search-popup-content .textbox input::placeholder {
+    font-size: 17px;
+}
+
+.search-popup .search-popup-content .textbox input:focus {
+    outline: none;
+}
+
+.search-popup .search-popup-content .textbox .textbox-search-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    right: 0;
+    background-image: url(http://www.eheimish.com/design/heimish/renewal2019/pc/search_btn.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/*서치 팝업 - 해시태그*/
+.search-popup .search-popup-content .hashtag-text {
+    position: relative;
+    width: 90%;
+}
+
+.search-popup .search-popup-content .hashtag-text>a {
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    font-size: 22px;
+    margin-right: 5%;
+    padding: 10px 0;
+    color: rgb(94, 95, 97);
+    opacity: 0;
+    transition: top 0.4s, opacity 0.4s;
+}
+
+.search-popup .search-popup-content .hashtag-text>a>strong {
+    font-weight: 900;
+}
+
+.search-popup.active .search-popup-content .hashtag-text>a {
+    top: 0;
+    opacity: 1;
+}
+
+.search-popup.active .search-popup-content .hashtag-text>a:nth-child(1) {
+    transition-delay: 0.4s;
+}
+
+.search-popup.active .search-popup-content .hashtag-text>a:nth-child(2) {
+    transition-delay: 0.6s;
+}
+
+.search-popup.active .search-popup-content .hashtag-text>a:nth-child(3) {
+    transition-delay: 0.8s;
+}
+
+@media (max-width: 1200px) {
+    .search-popup .search-popup-content .hashtag-text>a {
+        margin-right: 3%;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .search-popup .search-popup-content .hashtag-text>a {
+        display: block;
+    }
+}
+
+/*탑 배너 박스*/
+.top-bn-box {
+    position: relative;
+    height: 100vh;
+    background-image: url(http://www.eheimish.com/design/heimish/renewal2019/pc/banner/make1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.top-bn-box > .bn-title-box {
+    position: absolute;
+    top: 32%;
+    left: 4.75%;
+}
+.top-bn-box > .bn-title-box > h2 {
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-size: 62px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+.top-bn-box > .bn-title-box > div {
+    font-size: 19px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.675;
+    color: #ffffff;
+}

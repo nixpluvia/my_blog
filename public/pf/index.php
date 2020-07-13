@@ -10,6 +10,9 @@
         <li>
             <a href="/pf/cleaderm">클리덤 닥터락토</a>
         </li>
+        <li>
+            <a href="/pf/heimish">헤이미쉬 공식 온라인몰</a>
+        </li>
     </ul>
 </body>
 </html>
