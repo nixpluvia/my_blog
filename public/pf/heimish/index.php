@@ -103,20 +103,22 @@
     </div>
 
     <div class="prod-slide-section">
-        <div class="head flex">
-            <ul>
-                <li><a href="#">BEST</a></li>
-                <li><a href="#">NEW</a></li>
+      <div class="prod-content">
+        <div class="head">
+            <ul class="flex">
+                <li><a>BEST</a></li>
+                <li><a>NEW</a></li>
             </ul>
         </div>
         <div class="tab-content1">
-            <h2>Best Seller</h2>
-            <div>가장 많은 사랑을 받고 있는 헤이미쉬의 베스트셀러</div>
-            <div class="btn-slide flex">
-                <div>
+            <h2 class="title">Best Seller</h2>
+            <div class="sub-title">가장 많은 사랑을 받고 있는 헤이미쉬의 베스트셀러</div>
+            <div class="btn-slide flex-ai-c">
+                <div class="flex-ai-c">
                     <img src="https://nixpluvia.github.io/img1/pf/heimish/main_slider_l.png" alt="">
                 </div>
-                <div>
+                <span class="slideIndex">1 <span>/ 4</span> </span>
+                <div class="flex-ai-c">
                     <img src="https://nixpluvia.github.io/img1/pf/heimish/main_slider_r.png" alt="">
                 </div>
             </div>
@@ -135,7 +137,8 @@
                 </li>
             </ul>
         </div>
-        <div class="slide"></div>
+      </div>
+      <div class="slide"></div>
     </div>
   </body>
 </html>

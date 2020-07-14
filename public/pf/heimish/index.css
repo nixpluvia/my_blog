@@ -608,3 +608,50 @@ label[for] {
     line-height: 1.675;
     color: #ffffff;
 }
+
+
+/*상품 슬라이드*/
+.prod-slide-section {
+    height: 100vh;
+}
+.prod-slide-section > .prod-content{
+    padding-left: 4.75%;
+}
+.prod-slide-section > .prod-content > .head{
+    margin-top: 200px;
+}
+.prod-slide-section > .prod-content > .head > ul > li:last-child{
+    margin-left: 50px;
+}
+.prod-slide-section > .prod-content > .head > ul > li > a{
+    font-size: 25px;
+    line-height: 30px;
+    color: rgb(94, 95, 97);
+}
+.prod-slide-section > .prod-content > .tab-content1 > h2.title{
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-size: 62px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.428571429;
+    color: rgb(94, 95, 97);
+}
+.prod-slide-section > .prod-content > .tab-content1 > div.sub-title{
+    font-size: 19px;
+    line-height: 1.675;
+    letter-spacing: 0.5px;
+    color: rgb(94, 95, 97);
+}
+.prod-slide-section > .prod-content > .tab-content1 > .btn-slide {
+    margin-top: 120px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 1.428571429;
+}
+.prod-slide-section > .prod-content > .tab-content1 > .btn-slide > span{
+    margin: 0 30px;
+}
+.prod-slide-section > .prod-content > .tab-content1 > .btn-slide > span > span {
+    color: #999;
+}
