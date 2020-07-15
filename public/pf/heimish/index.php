@@ -95,50 +95,86 @@
       </div>
     </div>
 
-    <div class="top-bn-box">
-        <div class="bn-title-box">
-            <h2>Make Up</h2>
-            <div>누구나 공감할 수 있는 아름다움</div>
-        </div>
-    </div>
-
-    <div class="prod-slide-section">
-      <div class="prod-content">
-        <div class="head">
-            <ul class="flex">
-                <li><a>BEST</a></li>
-                <li><a>NEW</a></li>
-            </ul>
-        </div>
-        <div class="tab-content1">
-            <h2 class="title">Best Seller</h2>
-            <div class="sub-title">가장 많은 사랑을 받고 있는 헤이미쉬의 베스트셀러</div>
-            <div class="btn-slide flex-ai-c">
-                <div class="flex-ai-c">
-                    <img src="https://nixpluvia.github.io/img1/pf/heimish/main_slider_l.png" alt="">
-                </div>
-                <span class="slideIndex">1 <span>/ 4</span> </span>
-                <div class="flex-ai-c">
-                    <img src="https://nixpluvia.github.io/img1/pf/heimish/main_slider_r.png" alt="">
-                </div>
-            </div>
-            <ul>
-                <li>
-                    <a href="#"></a>
-                </li>
-                <li>
-                    <a href="#"></a>
-                </li>
-                <li>
-                    <a href="#"></a>
-                </li>
-                <li>
-                    <a href="#"></a>
-                </li>
-            </ul>
-        </div>
+    <div class="scroll-box">
+      <div class="top-bn-box page">
+          <div class="bn-title-box">
+              <h2>Make Up</h2>
+              <div>누구나 공감할 수 있는 아름다움</div>
+          </div>
       </div>
-      <div class="slide"></div>
+      <div class="prod-slide-section page">
+        <div class="prod-content">
+          <div class="head">
+              <ul class="flex">
+                  <li><a>BEST</a></li>
+                  <li><a>NEW</a></li>
+              </ul>
+          </div>
+          <div class="tab-content">
+              <h2 class="title">Best Seller</h2>
+              <div class="sub-title">가장 많은 사랑을 받고 있는 헤이미쉬의 베스트셀러</div>
+              <div class="btn-slide flex-ai-c">
+                  <div class="flex-ai-c">
+                      <img src="https://nixpluvia.github.io/img1/pf/heimish/main_slider_l.png" alt="">
+                  </div>
+                  <span class="slideIndex"><span class="slideIndex-text">1 </span><span>/ 4</span></span>
+                  <div class="flex-ai-c">
+                      <img src="https://nixpluvia.github.io/img1/pf/heimish/main_slider_r.png" alt="">
+                  </div>
+              </div>
+              <ul class="slide-text">
+                  <li class="active">
+                      <a href="#">[다산다라쿠션] 벨벳 커버 쿠션 + 쿨메쉬 마스크 증정</a>
+                  </li>
+                  <li>
+                      <a href="#">
+                        [베리굿 조현 PICK]
+                        <br>
+                        테이핑 섀도우 피치코랄
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                        [베리굿 조현 PICK]
+                        <br>
+                        데일리즘 스머지 스탑 마스카라
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                        벨벳 파우더 팩트
+                      </a>
+                  </li>
+              </ul>
+          </div>
+        </div>
+
+        <div class="slider">
+          <ul class="flex">
+            <li>
+              <a href="#">
+                <img src="https://nixpluvia.github.io/img1/pf/heimish/008000000013.jpg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="https://nixpluvia.github.io/img1/pf/heimish/008000000010.jpg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="https://nixpluvia.github.io/img1/pf/heimish/001004000003.jpg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="https://nixpluvia.github.io/img1/pf/heimish/008000000007.jpg" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
     </div>
   </body>
 </html>
