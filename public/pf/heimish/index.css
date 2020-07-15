@@ -287,7 +287,7 @@ label[for] {
 
 /* 커스텀 */
 body {
-    overflow-y: hidden;
+    overflow: hidden;
 }
 .page {
     height: 100vh;
@@ -620,12 +620,13 @@ body {
 /*상품 슬라이드*/
 .prod-slide-section {
     position: relative;
+    padding-top: 185px;
+    box-sizing: border-box;
 }
 .prod-slide-section > .prod-content{
-    padding-left: 4.75%;
-}
-.prod-slide-section > .prod-content{
-    padding-top: 200px;
+    position: relative;
+    margin-left: 4.75%;
+    z-index: 5;
 }
 .prod-slide-section > .prod-content > .head{
     margin-top: 55px;
@@ -634,10 +635,47 @@ body {
     margin-left: 50px;
 }
 .prod-slide-section > .prod-content > .head > ul > li > a{
+    position: relative;
     font-size: 25px;
     line-height: 30px;
-    color: rgb(94, 95, 97);
+    color: rgb(200, 200, 200);
+    transition: color 0.5s;
 }
+.prod-slide-section > .prod-content > .head > ul > li > a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: rgb(94, 95, 97);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.prod-slide-section > .prod-content > .head > ul > li.active > a{
+    color: rgb(94, 95, 97);
+    transition: color 0.5s 0.5s;
+}
+.prod-slide-section > .prod-content > .head > ul > li.active > a::after {
+    opacity: 1;
+    transition: opacity 0.5s 0.5s;
+}
+
+
+
+
+
+
+.prod-slide-section > .prod-content > .tab-content {
+    position: absolute;
+    width: 100%;
+    visibility: hidden;
+}
+.prod-slide-section > .prod-content > .tab-content.active {
+    visibility: visible;
+    transition: visibility 0s 1s;
+}
+
 .prod-slide-section > .prod-content > .tab-content > h2.title{
     margin-top: 60px;
     margin-bottom: 10px;
@@ -646,46 +684,100 @@ body {
     letter-spacing: 1px;
     line-height: 1.428571429;
     color: rgb(94, 95, 97);
+    white-space: nowrap;
 }
 .prod-slide-section > .prod-content > .tab-content > div.sub-title{
     font-size: 19px;
     line-height: 1.675;
     letter-spacing: 0.5px;
     color: rgb(94, 95, 97);
+    white-space: nowrap;
 }
+
+
+
+
 .prod-slide-section > .prod-content > .tab-content > .btn-slide {
     margin-top: 145px;
     font-size: 20px;
     letter-spacing: 2px;
     line-height: 1.428571429;
 }
+.prod-slide-section > .prod-content > .tab-content > .btn-slide > div {
+    cursor: pointer;
+}
 .prod-slide-section > .prod-content > .tab-content > .btn-slide > span{
     margin: 0 30px;
     font-family: 'Rubik', sans-serif;
+    white-space: nowrap;
+}
+.prod-slide-section > .prod-content > .tab-content > .btn-slide > span > span:first-child {
+    display: inline-block;
+    width: 22px;
 }
 .prod-slide-section > .prod-content > .tab-content > .btn-slide > span > span:not(:first-child) {
+    display: inline-block;
     color: #999;
 }
+
+
+
+
+
+
 .prod-slide-section > .prod-content > .tab-content > .slide-text {
+    position: relative;
     margin-top: 30px;
 }
 .prod-slide-section > .prod-content > .tab-content > .slide-text > li{
+    display: none;
     font-size: 26px;
     font-weight: 500;
     line-height: 1.428571429;
     color: rgb(94,95,97);
-    visibility: hidden;
+    transition: display 0s 1s;
+    white-space: nowrap;
+    
 }
 .prod-slide-section > .prod-content > .tab-content > .slide-text > li.active{
-    visibility: visible;
+    display: block;
 }
+
+
+
+
 .prod-slide-section > .slider {
     position: absolute;
-    top: 50%;
+    top: 0; 
+    left: 0;
     width: 100%;
-    transform: translateY(-50%);
-    z-index: -1;
+    height: 100%;
+    z-index: 1;
+    visibility: hidden;
 }
-.prod-slide-section > .slider > li{
-    
+.prod-slide-section > .slider.active {
+    visibility: visible;
+    transition: visibility 0s 1s;
+}
+
+.prod-slide-section > .slider > ul > li{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.prod-slide-section > .slider> ul > li.active{
+    left: 0;
+    transition: left 1s;
+    z-index: 3;
+}
+.prod-slide-section > .slider> ul > li.rm-active{
+    transition: left 1s, right 1s;
+    z-index: 3;
+}
+.prod-slide-section > .slider> ul > li.left-set{
+    left: -100%;
+}
+.prod-slide-section > .slider> ul > li.right-set{
+    left: 100%;
 }
