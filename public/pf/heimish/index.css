@@ -1,7 +1,7 @@
 /* 폰트적용 */
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap');
 
 html {
     font-family: roboto, "Noto Sans KR", sans-serif;
@@ -617,10 +617,59 @@ body {
     }
 }
 
+/* 스크롤 포인트 닷 */
+.scroll-dots {
+    position: fixed;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    z-index: 300;
+}
+.scroll-dots > li {
+    position: relative;
+    width: 31px;
+    height: 31px;
+    margin: 2px 0;
+    border-radius: 100%;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.scroll-dots > li.active {
+    border: 1px solid white;
+}
+
+.scroll-dots > li > div{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.scroll-dots > li.active > div{
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.top-bar.active ~ .scroll-dots > li.active {
+    border: 1px solid rgb(0, 0, 0);
+}
+.top-bar.active ~ .scroll-dots > li > div {
+    background-color: rgba(94, 95, 97, 0.5);
+}
+.top-bar.active ~ .scroll-dots > li.active > div {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+
+
+
 /*탑 배너 박스*/
 .top-bn-box {
     position: relative;
-    background-image: url(http://www.eheimish.com/design/heimish/renewal2019/pc/banner/make1.jpg);
+    background-image: url(https://nixpluvia.github.io/img1/pf/heimish/make1.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -647,12 +696,13 @@ body {
 }
 
 
-/*상품 슬라이드*/
+/*상품 슬라이드 섹션*/
 .prod-slide-section {
     position: relative;
     padding-top: 185px;
     box-sizing: border-box;
 }
+/* 상품 정보 */
 .prod-slide-section > .prod-content{
     position: absolute;
     top: 18.5%;
@@ -660,6 +710,7 @@ body {
     width: calc(100% - 4.75%);
     z-index: 5;
 }
+/* 상품 정보 탭 헤드 */
 .prod-slide-section > .prod-content > .head{
     margin-top: 75px;
 }
@@ -695,9 +746,7 @@ body {
 
 
 
-
-
-
+/* 상품 정보 탭 내용*/
 .prod-slide-section > .prod-content > .tab-content {
     position: absolute;
     width: 100%;
@@ -708,6 +757,7 @@ body {
     transition: visibility 0s 1s;
 }
 
+/* 상품 정보 탭 타이틀*/
 .prod-slide-section > .prod-content > .tab-content > h2.title{
     margin-top: 60px;
     margin-bottom: 10px;
@@ -726,9 +776,7 @@ body {
     white-space: nowrap;
 }
 
-
-
-
+/* 상품 슬라이드 버튼*/
 .prod-slide-section > .prod-content > .tab-content > .btn-slide {
     margin-top: 145px;
     font-size: 20px;
@@ -738,6 +786,7 @@ body {
 .prod-slide-section > .prod-content > .tab-content > .btn-slide > div {
     cursor: pointer;
 }
+/* 상품 슬라이드 번호*/
 .prod-slide-section > .prod-content > .tab-content > .btn-slide > span{
     margin: 0 30px;
     font-family: 'Rubik', sans-serif;
@@ -753,10 +802,7 @@ body {
 }
 
 
-
-
-
-
+/* 상품 슬라이드 이름*/
 .prod-slide-section > .prod-content > .tab-content > .slide-text {
     position: relative;
     margin-top: 30px;
@@ -775,8 +821,7 @@ body {
 }
 
 
-
-
+/* 상품 슬라이더 */
 .prod-slide-section > .slider {
     position: absolute;
     top: 0; 
@@ -815,7 +860,7 @@ body {
 
 
 
-
+/* 메인 상품 영역 */
 .main-prod-section{
     position: relative;
 }
@@ -839,6 +884,7 @@ body {
     background-image: url(https://nixpluvia.github.io/img1/pf/heimish/velvet_pc.jpg);
 }
 
+/* 메인 상품 영역 타이틀*/
 .main-prod-section > .section-title {
     position: absolute;
     top: 32%;
@@ -865,6 +911,8 @@ body {
 }
 
 
+
+/* footer 영역 */
 .footer {
     height: auto;
     color: rgb(255,255,255);
@@ -872,11 +920,29 @@ body {
 }
 
 .footer > .footer-wrap {
-    padding-top: 100px;
+    padding-top: 90px;
+    padding-bottom: 90px;
     padding-left: 4.75%;
 }
+
+.footer > .footer-wrap > .footer-section1 {
+    width: 42%;
+}
+.footer > .footer-wrap > .footer-section2 {
+    width: 18%;
+}
+.footer > .footer-wrap > .footer-section3 {
+    width: 19%;
+}
+.footer > .footer-wrap > .footer-section4 {
+    width: 9%;
+}
+.footer > .footer-wrap > .footer-section5 {
+    width: 12%;
+}
+
 .footer > .footer-wrap > .fs > .footer-title {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     font-size: 16px;
     font-weight: 900;
 }
@@ -885,4 +951,51 @@ body {
 }
 .footer > .footer-wrap > .fs > .footer-title > a:not(:first-child){
     padding-left: 30px;
+}
+.footer > .footer-wrap > .fs > .footer-body {
+    font-size: 14px;
+    font-weight: 300;
+}
+.footer > .footer-wrap > .fs > .footer-body > li{
+    line-height: 20px;
+}
+.footer > .footer-wrap > .fs:not(:first-child) > .footer-body > li{
+    padding-bottom: 3px;
+}
+
+.footer > .footer-wrap > .footer-section1 > .footer-body > .sns-bar {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.footer > .footer-wrap > .footer-section1 > .footer-body > .sns-bar > a:not(:first-child){
+    padding-left: 35px;
+}
+.footer > .footer-wrap > .footer-section1 > .footer-body > .copyright {
+    font-size: 13px;
+    line-height: 1.428571429;
+}
+
+.footer > .footer-wrap > .footer-section2 > .footer-title{
+    margin-bottom: 20px;
+}
+.footer > .footer-wrap > .footer-section2 > .footer-body > .company-num {
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.footer > .footer-wrap > .footer-section3 > .footer-title:nth-of-type(2){
+    margin-top: 30px;
+}
+
+.footer > .footer-wrap > .footer-section4 > .footer-body > li ,
+.footer > .footer-wrap > .footer-section5 > .footer-body > li {
+    line-height: 1.8;
+}
+.footer > .footer-wrap > .footer-section4 > .footer-body > li > a,
+.footer > .footer-wrap > .footer-section5 > .footer-body > li > a{
+    display: inline-block;
+    vertical-align: middle;
 }

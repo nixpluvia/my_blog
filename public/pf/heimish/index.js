@@ -61,6 +61,7 @@ function ScrollBox__init() {
   
       if ( $post != null ) {
         var moveTop = $post.offset().top;
+        var postIndex = $post.index();
   
         // 화면 이동 0.8초(800)
         $scrollBox.data('scroll-box-now-work', true);
@@ -77,6 +78,8 @@ function ScrollBox__init() {
             complete: function () {
               $scrollBox.data('scroll-box-now-work', false);
               topBarScroll__init();
+              $('.scroll-dots > li.active').removeClass('active');
+              $('.scroll-dots > li').eq(postIndex).addClass('active');
             }
           }
         );
@@ -124,8 +127,73 @@ function topBarScroll__init(){
   }
 }
 
+function sideDotsScroll__init(){
+  $('.scroll-dots > li').click(function(e){
+    e.preventDefault();
 
+    var $scrollBox = $('.scroll-box');
+    var nowWork = $scrollBox.data('scroll-box-now-work');
+  
+    if ( nowWork == true ) {
+      return;
+    }
 
+    var $this = $(this);
+    var dotIndex = $this.index();
+    var moveTop = $('.scroll-box > .page').eq(dotIndex).offset().top;
+
+    $('.scroll-dots > li.active').removeClass('active');
+    $this.addClass('active');
+
+    $("html,body")
+      .stop()
+      .animate(
+      {
+        scrollTop: moveTop + "px"
+      },
+      {
+        duration: 800,
+        complete: function () {
+          $scrollBox.data('scroll-box-now-work', false);
+          topBarScroll__init();
+        }
+      }
+    );
+  });
+}
+
+function nowActDot(){
+  var st = $('html,body').scrollTop();
+  var arr = [];
+  var dots = $('.scroll-dots > li');
+  var actDot = $('.scroll-dots > li.active');
+  var nowDot;
+  for(var i= 1 ; i < dots.length; i++ ){
+    var pageOffset =$('.scroll-box > .page').eq(i-1).offset().top;
+    arr.push(pageOffset);
+  }
+  if ( st >= arr[0] && st < arr[1]) {
+    nowDot = dots.eq(0);
+  }
+  else if ( st >= arr[1] && st < arr[2] ) {
+    nowDot = dots.eq(1);
+  }
+  else if ( st >= arr[2] && st < arr[3] ) {
+    nowDot = dots.eq(2);
+  }
+  else if ( st >= arr[3] && st < arr[4] ) {
+    nowDot = dots.eq(3);
+  }
+  else if ( st >= arr[4] && st < arr[5] ) {
+    nowDot = dots.eq(4);
+  }
+  else {
+    nowDot = dots.eq(5);
+  }
+
+  actDot.removeClass('active');
+  nowDot.addClass('active');
+}
 
 
 
@@ -239,11 +307,13 @@ function prodSlideTab__init(){
 }
 
 
-
 $(function(){
     languageBox__init();
     searchPopUp__init();
     ScrollBox__init();
+    sideDotsScroll__init();
     slide_init();
     prodSlideTab__init();
+    topBarScroll__init();
+    nowActDot();
 });

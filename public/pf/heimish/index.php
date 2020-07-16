@@ -96,8 +96,16 @@
       </div>
     </div>
 
-    <div class="scroll-box">
+    <ul class="scroll-dots">
+      <li class="dot1 active"><div class="sm-dot"></div></li>
+      <li class="dot2"><div class="sm-dot"></div></li>
+      <li class="dot3"><div class="sm-dot"></div></li>
+      <li class="dot4"><div class="sm-dot"></div></li>
+      <li class="dot5"><div class="sm-dot"></div></li>
+      <li class="dot6"><div class="sm-dot"></div></li>
+    </ul>
 
+    <div class="scroll-box">
 
       <div class="top-bn-box page">
           <div class="bn-title-box">
@@ -105,7 +113,6 @@
               <div>누구나 공감할 수 있는 아름다움</div>
           </div>
       </div>
-
 
       <div class="prod-slide-section page">
         <div class="prod-content">
@@ -303,21 +310,61 @@
               <li>주식회사 원앤드 / 대표 : 채호병 / 사업자등록번호 : 152-81-00033 / 경기도 성남시 분당구 판교로228번길 15, 3동 7층</li>
               <li>(삼평동, 판교세븐벤처밸리1)</li>
               <li>개인정보관리책임자 : 조병규(sy@oneand.co.kr) 통신판매 번호 : 2015-경기성남-1399</li>
-              <li class="sns-bar"></li>
-              <li>2019 WONAND Ltd. All rights reserved.</li>
+              <li class="sns-bar flex">
+                <a href="#"><img src="https://nixpluvia.github.io/img1/pf/heimish/footer_i.png" alt=""></a>
+                <a href="#"><img src="https://nixpluvia.github.io/img1/pf/heimish/footer_f.png" alt=""></a>
+                <a href="#"><img src="https://nixpluvia.github.io/img1/pf/heimish/footer_y.png" alt=""></a>
+              </li>
+              <li class="copyright">2019 WONAND Ltd. All rights reserved.</li>
             </ul>
           </div>
           <div class="footer-section2 fs">
-
+            <div class="footer-title">
+              CUSTOMER CENTER
+            </div>
+            <ul class="footer-body">
+              <li class="company-num">080 130 0808</li>
+              <li>10:00 ~ 17:00 (Lunch time 12:30 ~ 13:30)</li>
+              <li>토,일 및 공휴일 휴무</li>
+            </ul>
           </div>
           <div class="footer-section3 fs">
-            
+            <div class="footer-title">
+              PARTNERSHIP
+            </div>
+            <ul class="footer-body">
+              <li>도매 / 해외수출문의 (B2B & Export)</li>
+              <li>heimish@oneand.co.kr</li>
+            </ul>
+            <div class="footer-title">
+              DELIVERY
+            </div>
+            <ul class="footer-body">
+              <li>배송조회 바로가기 ></li>
+              <li>한진택배 (1588-0011)</li>
+            </ul>
           </div>
           <div class="footer-section4 fs">
-            
+            <div class="footer-title">
+              SERVICE
+            </div>
+            <ul class="footer-body">
+              <li><a href="#">자주찾는질문</a></li>
+              <li><a href="#">문의하기</a></li>
+              <li><a href="#">이벤트</a></li>
+            </ul>
           </div>
           <div class="footer-section5 fs">
-
+            <div class="footer-title">
+              MY ACCOUNT
+            </div>
+            <ul class="footer-body">
+              <li><a href="#">마이페이지</a></li>
+              <li><a href="#">주문내역</a></li>
+              <li><a href="#">회원등급 및 혜택</a></li>
+              <li><a href="#">로그인</a></li>
+              <li><a href="#">회원가입</a></li>
+            </ul>
           </div>
         </div>
       </div>
