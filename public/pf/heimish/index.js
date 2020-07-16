@@ -18,11 +18,14 @@ function searchPopUp__init(){
 
 
 
+
 /* 구역 스크롤 */
 function ScrollBox__init() {
     var animationDuration = 800;
-  
+
     $(".scroll-box").data('scroll-box-index', 0);
+
+    topBarScroll__init();
   
     $(".scroll-box > .page").on("mousewheel DOMMouseScroll", function (e) {
       e.preventDefault();
@@ -73,11 +76,14 @@ function ScrollBox__init() {
             duration: animationDuration,
             complete: function () {
               $scrollBox.data('scroll-box-now-work', false);
+              topBarScroll__init();
             }
           }
         );
       }
     });
+
+
   
     $(window).resize(function() {
       $(".scroll-box").each(function(index, node) {
@@ -104,6 +110,23 @@ function ScrollBox__init() {
       });
     });
 }
+
+function topBarScroll__init(){
+  var windowST = $('html,body').scrollTop();
+  var secondPage = $('.scroll-box > .page:nth-child(2)').offset().top;
+  var thirdPage = $('.scroll-box > .page:nth-child(3)').offset().top;
+
+  if( windowST >= secondPage && windowST < thirdPage ) {
+    $('.top-bar').addClass('active');
+  }
+  else {
+    $('.top-bar').removeClass('active');
+  }
+}
+
+
+
+
 
 
 /* 슬라이드 */
@@ -147,11 +170,11 @@ function slide(){
   var $slideText = $prodSection.find(' > .prod-content > .tab-content.active > .slide-text > li');
   var $actText = $prodSection.find(' > .prod-content > .tab-content.active > .slide-text > .active');
   var $indexText = $prodSection.find(' > .prod-content > .tab-content.active > .btn-slide > span > .slideIndex-text');
-
   var actSlideIndex = $activePost.index();
-  $actText.removeClass('active');
-  $slideText.eq(actSlideIndex).addClass('active');
+
   setTimeout(function(){
+    $actText.removeClass('active');
+    $slideText.eq(actSlideIndex).addClass('active');
     $indexText.text(actSlideIndex + 1);
   }, 1000);
 
@@ -206,7 +229,7 @@ function prodSlideTab(){
   var tabHead = $this.attr('data-tab-head');
 
   $('[data-tab-name="' + tabName + '"]').removeClass('active');
-
+  
   $('[data-tab-name="' + tabName + '"][data-tab-head="' + tabHead + '"]').addClass('active');
   $('[data-tab-name="' + tabName + '"][data-tab-body="' + tabHead + '"]').addClass('active');
 }

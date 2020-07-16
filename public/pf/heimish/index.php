@@ -12,11 +12,12 @@
 <body>
     <div class="top-bar flex">
       <div class="logo flex-ai-c">
-        <a href="#"
-          ><img
-            src="http://www.eheimish.com/design/heimish/renewal2019/pc/logo_wh.png"
-            alt=""
-        /></a>
+        <a href="#">
+          <img src="https://nixpluvia.github.io/img1/pf/heimish/logo_wh.png" alt="">
+        </a>
+        <a href="#">
+          <img src="https://nixpluvia.github.io/img1/pf/heimish/logo_gr.png" alt="">
+        </a>
       </div>
       <nav class="menu-box-1 flex">
         <ul class="flex">
@@ -244,6 +245,83 @@
         </div>
 
       </div>
+
+      <div class="main-prod-section mpds1 page">
+        <div class="bg-img"></div>
+        <div class="section-title">
+          <div class="section-title-wrap">
+            <div class="title">Velvet Cover Cushion</div>
+            <div class="sub-title">하루 종일 자신있는 무결점 피부 초밀착 커버 쿠션</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-prod-section mpds2 page">
+        <div class="bg-img"></div>
+        <div class="section-title">
+          <div class="section-title-wrap">
+            <div class="title">Dailism Smudge Stop Mascara</div>
+            <div class="sub-title">뭉침없이 아찔하게 올려주고 번짐없이 깔끔하게</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-prod-section mpds3 page">
+        <div class="bg-img"></div>
+        <div class="section-title">
+          <div class="section-title-wrap">
+            <div class="title">
+              Taping Shadow
+              <br>
+              Peach Coral
+            </div>
+            <div class="sub-title">피치코랄과 은은하게 빛나는 골드펄로 영롱한 눈매 연출</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-prod-section mpds4 page">
+        <div class="bg-img"></div>
+        <div class="section-title">
+          <div class="section-title-wrap">
+            <div class="title">VELVET Powder Pact</div>
+            <div class="sub-title">번들거리는 유분잡고 다크닝 없는 메이크업 피니쉬</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer page ">
+        <div class="footer-wrap flex">
+          <div class="footer-section1 fs">
+            <div class="footer-title">
+              <a href="#">ABOUT</a>
+              <a href="#">TERMS OF USE</a>
+              <a href="#">HELP</a>
+              <a href="#">PRIVACY POLICY</a>
+            </div>
+            <ul class="footer-body">
+              <li>주식회사 원앤드 / 대표 : 채호병 / 사업자등록번호 : 152-81-00033 / 경기도 성남시 분당구 판교로228번길 15, 3동 7층</li>
+              <li>(삼평동, 판교세븐벤처밸리1)</li>
+              <li>개인정보관리책임자 : 조병규(sy@oneand.co.kr) 통신판매 번호 : 2015-경기성남-1399</li>
+              <li class="sns-bar"></li>
+              <li>2019 WONAND Ltd. All rights reserved.</li>
+            </ul>
+          </div>
+          <div class="footer-section2 fs">
+
+          </div>
+          <div class="footer-section3 fs">
+            
+          </div>
+          <div class="footer-section4 fs">
+            
+          </div>
+          <div class="footer-section5 fs">
+
+          </div>
+        </div>
+      </div>
+
     </div>
   </body>
 </html>

@@ -309,11 +309,29 @@ body {
     z-index: 100;
 }
 
+.top-bar.active {
+    color: rgb(94, 95, 97);
+}
+
 /*상단 바 로고*/
 .top-bar .logo {
     margin-top: 5px;
     margin-left: 4.75%;
 }
+.top-bar .logo > a:first-child{
+    display: inline-block;
+}
+.top-bar.active .logo > a:first-child{
+    display: none;
+}
+.top-bar .logo > a:last-child{
+    display: none;
+}
+
+.top-bar.active .logo > a:last-child{
+    display: inline-block;
+}
+
 
 /*상단 바 메뉴 바*/
 .top-bar .menu-box-1 {
@@ -370,9 +388,12 @@ body {
     width: 10px;
     height: 10px;
     padding-left: 5px;
-    background-image: url(http://www.eheimish.com/design/heimish/renewal2019/pc/menu4.png);
+    background-image: url(https://nixpluvia.github.io/img1/pf/heimish/menu4.png);
     background-repeat: no-repeat;
     background-position: center;
+}
+.top-bar.active .member-menu>ul>li.language-box .caret {
+    background-image: url(https://nixpluvia.github.io/img1/pf/heimish/menu4_grey.png);
 }
 
 .top-bar .member-menu>ul>li.language-box>.language-select {
@@ -421,15 +442,24 @@ body {
 }
 
 .top-bar .member-menu>ul>li.login-icon-box>a {
-    background-image: url(http://www.eheimish.com/design/heimish/renewal2019/pc/menu1.png);
+    background-image: url(https://nixpluvia.github.io/img1/pf/heimish/menu1.png);
+}
+.top-bar.active .member-menu>ul>li.login-icon-box>a {
+    background-image: url(https://nixpluvia.github.io/img1/pf/heimish/menu1_grey.png);
 }
 
 .top-bar .member-menu>ul>li.search-icon-box>a {
-    background-image: url(http://www.eheimish.com/design/heimish/renewal2019/pc/menu2.png);
+    background-image: url(https://nixpluvia.github.io/img1/pf/heimish/menu2.png);
+}
+.top-bar.active .member-menu>ul>li.search-icon-box>a {
+    background-image: url(https://nixpluvia.github.io/img1/pf/heimish/menu2_grey.png);
 }
 
 .top-bar .member-menu>ul>li.basket-icon-box>a {
-    background-image: url(http://www.eheimish.com/design/heimish/renewal2019/pc/menu3.png);
+    background-image: url(https://nixpluvia.github.io/img1/pf/heimish/menu3.png);
+}
+.top-bar.active .member-menu>ul>li.basket-icon-box>a {
+    background-image: url(https://nixpluvia.github.io/img1/pf/heimish/menu3_grey.png);
 }
 
 /*서치 팝업창*/
@@ -624,12 +654,14 @@ body {
     box-sizing: border-box;
 }
 .prod-slide-section > .prod-content{
-    position: relative;
-    margin-left: 4.75%;
+    position: absolute;
+    top: 18.5%;
+    left: 4.75%;
+    width: calc(100% - 4.75%);
     z-index: 5;
 }
 .prod-slide-section > .prod-content > .head{
-    margin-top: 55px;
+    margin-top: 75px;
 }
 .prod-slide-section > .prod-content > .head > ul > li:last-child{
     margin-left: 50px;
@@ -645,7 +677,7 @@ body {
     content: "";
     position: absolute;
     width: 100%;
-    height: 1px;
+    height: 2px;
     bottom: -2px;
     left: 0;
     background-color: rgb(94, 95, 97);
@@ -737,7 +769,6 @@ body {
     color: rgb(94,95,97);
     transition: display 0s 1s;
     white-space: nowrap;
-    
 }
 .prod-slide-section > .prod-content > .tab-content > .slide-text > li.active{
     display: block;
@@ -780,4 +811,78 @@ body {
 }
 .prod-slide-section > .slider> ul > li.right-set{
     left: 100%;
+}
+
+
+
+
+.main-prod-section{
+    position: relative;
+}
+.main-prod-section > div.bg-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.mpds1 > div.bg-img {
+    background-image: url(https://nixpluvia.github.io/img1/pf/heimish/velvetcushion.jpg);
+}
+.mpds2 > div.bg-img {
+    background-image: url(https://nixpluvia.github.io/img1/pf/heimish/mascara_down.jpg);
+}
+.mpds3 > div.bg-img {
+    background-image: url(https://nixpluvia.github.io/img1/pf/heimish/1.jpg);
+}
+.mpds4 > div.bg-img {
+    background-image: url(https://nixpluvia.github.io/img1/pf/heimish/velvet_pc.jpg);
+}
+
+.main-prod-section > .section-title {
+    position: absolute;
+    top: 32%;
+    width: 100%;
+    z-index: 50;
+}
+.main-prod-section > .section-title > .section-title-wrap{
+    margin-left: 4.75%;
+    color: rgb(255,255,255);
+}
+.main-prod-section > .section-title > .section-title-wrap > .title {
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-size: 62px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.428571429;
+}
+.main-prod-section > .section-title > .section-title-wrap > .sub-title {
+    font-size: 19px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.675;
+}
+
+
+.footer {
+    height: auto;
+    color: rgb(255,255,255);
+    background-color: rgb(228,193,190);
+}
+
+.footer > .footer-wrap {
+    padding-top: 100px;
+    padding-left: 4.75%;
+}
+.footer > .footer-wrap > .fs > .footer-title {
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: 900;
+}
+.footer > .footer-wrap > .fs > .footer-title > a{
+    display: inline-block;
+}
+.footer > .footer-wrap > .fs > .footer-title > a:not(:first-child){
+    padding-left: 30px;
 }
