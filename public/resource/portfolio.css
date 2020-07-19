@@ -13,46 +13,6 @@
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
-.portfolio-animation-box .ani-img > .img-head{
-    vertical-align: top;
-}
-.portfolio-animation-box .ani-img .portfolio-slider {
-    position: relative;
-    background-color: rgb(255,161,0);
-}
-.portfolio-animation-box .ani-img .portfolio-slider .portfolio-slides {
-    position: relative;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: brown;
-}
-.portfolio-animation-box .ani-img .portfolio-slider .portfolio-slides::after {
-    content:"";
-    display: block;
-    animation-name: mouthOpen;
-    animation-delay: 3s;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-.portfolio-animation-box .ani-img .portfolio-slider > i {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 0;
-    background-image: url(https://nixpluvia.github.io/img1/blog/site/teeth.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 10;
-}
-.portfolio-animation-box .ani-img .portfolio-slider > i.teeth-left {
-    left: 10%;
-}
-.portfolio-animation-box .ani-img .portfolio-slider > i.teeth-right {
-    right: 10%;
-}
-
 
 @keyframes fall {
     0%{
@@ -62,6 +22,44 @@
         top: 500px;
     }
 }
+.portfolio-animation-box .ani-img > .img-head {
+    position: relative;
+}
+.portfolio-animation-box .ani-img > .img-head > .slime-eye {
+    position: absolute;
+    width: 80px;
+    bottom: 5%;
+    z-index: 5;
+}
+.portfolio-animation-box .ani-img > .img-head > .slime-eye.left {
+    left: 30%;
+}
+.portfolio-animation-box .ani-img > .img-head > .slime-eye.right {
+    right: 30%;
+}
+
+
+.portfolio-animation-box .ani-img .portfolio-slider {
+    position: relative;
+    background-color: rgb(255,161,0);
+}
+.portfolio-animation-box .ani-img .portfolio-slider .portfolio-slides {
+    position: relative;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.portfolio-animation-box .ani-img .portfolio-slider .portfolio-slides::after {
+    content:"";
+    display: block;
+    animation-name: mouthOpen;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
 @keyframes mouthOpen {
     0%{
         padding-top: 0%;
@@ -69,4 +67,49 @@
     100%{
         padding-top: 56.25%;
     }
+}
+
+
+.portfolio-animation-box .ani-img .portfolio-slider .btn-slide i {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    background-image: url(https://nixpluvia.github.io/img1/blog/site/teeth.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 50;
+}
+.portfolio-animation-box .ani-img .portfolio-slider .btn-slide i.teeth-left {
+    left: 10%;
+}
+.portfolio-animation-box .ani-img .portfolio-slider .btn-slide i.teeth-right {
+    right: 10%;
+}
+
+
+.portfolio-animation-box .ani-img .portfolio-slider .portfolio-slides > .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.portfolio-animation-box .ani-img .portfolio-slider .portfolio-slides > .slide.active {
+    left: 0;
+    transition: left 1s;
+    z-index: 10;
+}
+.portfolio-animation-box .ani-img .portfolio-slider .portfolio-slides > .slide.rm-active {
+    transition: left 1s, right 1s;
+    z-index: 10;
+}
+.portfolio-animation-box .ani-img .portfolio-slider .portfolio-slides > .slide.left-set {
+    left: -100%;
+}
+.portfolio-animation-box .ani-img .portfolio-slider .portfolio-slides > .slide.right-set {
+    left: 100%;
 }
