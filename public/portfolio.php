@@ -8,23 +8,21 @@ include "../part/head_body.php";
 
 <div class="portfolio-animation-box con">
     <div class="ani-img">
-        <div class="img-head"></div>
-        <div class="portfolio-slide-wrap">
-            <div class="portfolio-slide">
-                <i class="teeth-left"></i>
-                <i class="teeth-right"></i>
+        <div class="img-head img-box">
+            <img src="https://nixpluvia.github.io/img1/blog/site/cutslime-head.svg" alt="">
+        </div>
+        <div class="portfolio-slider">
+            <i class="teeth-left"></i>
+            <i class="teeth-right"></i>
+            <div class="portfolio-slides">
+                <div class="slide"></div>
             </div>
         </div>
-        <div class="img-foot"></div>
+        <div class="img-foot img-box">
+            <img src="https://nixpluvia.github.io/img1/blog/site/cutslime-foot.svg" alt="">
+        </div>
     </div>
 </div>
-
-
-
-
-
-
-
 
 <?php
 include "../part/foot.php";
