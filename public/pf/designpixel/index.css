@@ -1,9 +1,9 @@
 /*폰트*/
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 html {
-    font-family: "Titillium Web", "Noto Sans KR", sans-serif;
+    font-family: "Roboto", "Noto Sans KR", sans-serif;
 }
 
 /* 노말라이즈 */
@@ -250,7 +250,172 @@ label[for] {
 .con {
     min-width: 1300px;
 }
+
+/* 전체 영역 */
 .layout {
+    position: relative;
     width: 100vw;
     height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: padding .5s;
+}
+
+/* 메인 로고 */
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 48px;
+    z-index: 10;
+}
+
+/* 메인 슬라이드 박스*/
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    overflow: hidden;
+}
+
+/* 슬라이드 */
+.slider > .slides > div.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/* 슬라이드 배경 이미지 */
+.slider > .slides > .slide > .slide-bg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation-name: zoomInAndOut;
+    animation-duration: 10s;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes zoomInAndOut {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+}
+
+.slider > .slides > .slide:nth-child(1) > .slide-bg{
+    background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file1_1578379819013i6lf385.jpg);
+}
+
+
+.slider > .slides > .slide > .text-box {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    
+}
+.slider > .slides > .slide > .text-box > svg:first-child {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 8vw;
+    overflow: hidden;
+    background-color: aqua;
+}
+.slider > .slides > .slide > .text-box > .text-box-top > text {
+    font-size: 6.8vw;
+    line-height: 6.8vw;
+    font-weight: 700;
+    white-space: nowrap;
+    text-anchor: middle;
+    dominant-baseline: central;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 슬라이드 버튼 */
+.slider .btn-slide {
+    position: absolute;
+    top: 50%;
+    left: 38px;
+    width: 50px;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.slider .btn-slide > a.btn {
+    display: block;
+}
+.slider .btn-slide > a.btn > img{
+    display: block;
+    width: 10px;
+    margin: 0 auto;
+}
+/* 슬라이드 INDEX */
+.slider .btn-slide .slide-num {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    color: rgb(255,255,255);
+}
+.slider .btn-slide .slide-num .line {
+    height: 1.5px;
+    background-color: rgb(255,255,255);
+}
+.slider .btn-slide .slide-num > .num:nth-of-type(1) {
+    padding-top: 25px;
+    padding-bottom: 12px;
+}
+.slider .btn-slide .slide-num > .num:nth-of-type(3) {
+    padding-top: 12px;
+    padding-bottom: 25px;
+    opacity: 0.6;
+}
+
+
+/* footer 바*/
+.footer {
+    position: absolute;
+    left: 48px;
+    bottom: 48px;
+    color: rgb(255,255,255);
+}
+.footer > .com-ad {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.4px;
+}
+.footer > .copyright {
+    margin-top: 8px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    letter-spacing: 0.4px;
+    opacity: 0.6;
 }
