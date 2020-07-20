@@ -41,6 +41,8 @@
 
 .portfolio-animation-box .ani-img .portfolio-slider {
     position: relative;
+    margin-top: -1px;
+    padding-top: 1px;
     background-color: rgb(255,161,0);
 }
 .portfolio-animation-box .ani-img .portfolio-slider .portfolio-slides {
