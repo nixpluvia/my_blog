@@ -18,18 +18,46 @@
                 <div class="slide active">
                     <div class="slide-bg"></div>
                     <div class="text-box">
-                        <svg class="text-box-top">
-                            <text class="top-text" x="50%" y="50%" >BEYOND TECH.</text>
-                        </svg>
-                        <svg class="text-box-bottom">
-                            <text class="bottom-text">SOULBRAIN</text>
-                        </svg>
+                        <div class="text-box-top">
+                            <svg>
+                                <text class="top-text" x="50%" y="50%" >BEYOND TECH.</text>
+                            </svg>
+                        </div>
+                        <div class="text-box-bottom">
+                            <div class="bottom-text">SOULBRAIN</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-bg"></div>
+                    <div class="text-box">
+                        <div class="text-box-top">
+                            <svg>
+                                <text class="top-text" x="50%" y="50%" >BEYOND TECH.</text>
+                            </svg>
+                        </div>
+                        <div class="text-box-bottom">
+                            <div class="bottom-text">SOULBRAIN</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-bg"></div>
+                    <div class="text-box">
+                        <div class="text-box-top">
+                            <svg>
+                                <text class="top-text" x="50%" y="50%" >BEYOND TECH.</text>
+                            </svg>
+                        </div>
+                        <div class="text-box-bottom">
+                            <div class="bottom-text">SOULBRAIN</div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="btn-slide">
-                <a class="btn-top btn" href="#">
+                <a class="btn-top btn">
                     <img src="https://nixpluvia.github.io/img1/pf/designpixel/i_slide_lt.svg" alt="">
                 </a>
                 <div class="slide-num">
@@ -37,7 +65,7 @@
                     <div class="line"></div>
                     <div class="num-total num">10</div>
                 </div>
-                <a class="btn-bottom btn" href="#">
+                <a class="btn-bottom btn">
                     <img src="https://nixpluvia.github.io/img1/pf/designpixel/i_slide_gt.svg" alt="">
                 </a>
             </div>

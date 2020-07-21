@@ -25,6 +25,14 @@
                     </li>
                 </ul>
             </li>
+            <li>
+                <a href="/pf/designpixel" target="_blank">디자인 픽셀 모작</a>
+                <ul>
+                    <li>
+                        <a href="https://designpixel.co.kr/" target="_blank">디자인 픽셀 원본 사이트</a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </nav>
     <h1>디자인</h1>
