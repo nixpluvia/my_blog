@@ -13,6 +13,7 @@
         <a class="logo img-box" href="#">
             <img src="https://nixpluvia.github.io/img1/pf/designpixel/main_logo_white.png" alt="">
         </a>
+
         <div class="slider main-slide-box">
             <div class="slides">
                 <div class="slide active">
@@ -26,6 +27,12 @@
                         <div class="text-box-bottom">
                             <div class="bottom-text">SOULBRAIN</div>
                         </div>
+                        <a class="site-icon" href="#">
+                            <div class="icon-img">
+                                <img src="https://nixpluvia.github.io/img1/pf/designpixel/file3_15783798193gk3h11mnv.png" alt="">
+                            </div>
+                            <div class="txt"> GO > </div>
+                        </a>
                     </div>
                 </div>
                 <div class="slide">
@@ -69,6 +76,11 @@
                     <img src="https://nixpluvia.github.io/img1/pf/designpixel/i_slide_gt.svg" alt="">
                 </a>
             </div>
+            
+        </div>
+
+        <div class="progressBar">
+            <div class="line"></div>
         </div>
         
         <div class="footer">

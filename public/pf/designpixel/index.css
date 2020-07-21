@@ -259,6 +259,7 @@ label[for] {
     padding: 10px;
     box-sizing: border-box;
     transition: padding .5s;
+    overflow: hidden;
 }
 
 /* 메인 로고 */
@@ -274,7 +275,6 @@ label[for] {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: green;
     overflow: hidden;
 }
 
@@ -299,13 +299,15 @@ label[for] {
 }
 .slider > .slides > .active[slide-direction="left"] {
     animation-name: slide-left;
-    animation-duration: 1s;
+    animation-duration: 1.2s;
     animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.9,.36,.35,.9);
 }
 .slider > .slides > .active[slide-direction="right"] {
     animation-name: slide-right;
-    animation-duration: 1s;
+    animation-duration: 1.2s;
     animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.9,.36,.35,.9);
 }
 @keyframes slide-right {
     0%{
@@ -324,16 +326,21 @@ label[for] {
     }
 }
 
+
+
 .slider > .slides > .rm-active[slide-direction="left"] {
     animation-name: rmslide-left;
-    animation-duration: 2s;
+    animation-duration: 1.2s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.9,.36,.35,.9);
 }
 .slider > .slides > .rm-active[slide-direction="right"] {
     animation-name: rmslide-right;
-    animation-delay: 0.2s;
-    animation-duration: 2s;
+    animation-duration: 1.2s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.9,.36,.35,.9);
 }
 
 @keyframes rmslide-right{
@@ -341,7 +348,7 @@ label[for] {
         left: 0;
     }
     100%{
-        left: -70%;
+        left: -100%;
     }
 }
 @keyframes rmslide-left{
@@ -349,23 +356,9 @@ label[for] {
         left: 0;
     }
     100%{
-        left: 70%;
+        left: 100%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -411,21 +404,15 @@ label[for] {
 
 
 
-
-
-
-
-
-
-
+/* 슬라이드 텍스트 top*/
 .slider > .slides > .slide > .text-box {
     position: absolute;
     top: 50%;
     left: 0;
     width: 100%;
     transform: translateY(-50%);
-    
 }
+
 .slider > .slides > .slide > .text-box > .text-box-top {
     position: relative;
     display: block;
@@ -438,11 +425,11 @@ label[for] {
     top: 100%;
     width: 100%;
     height: 100%;
-    transition: top 1s 1s, opacity 1s 1s;
 }
-.slider > .slides > .slide.active > .text-box > .text-box-top > svg{
+.slider > .slides > .slide.active[ani-play="Y"] > .text-box > .text-box-top > svg{
     top: 0;
     opacity: 1;
+    transition: top 1s 0.2s, opacity 1s 0.2s;
 }
 
 .slider > .slides > .slide > .text-box > .text-box-top > svg > text {
@@ -457,6 +444,9 @@ label[for] {
     stroke-width: 1px;
 }
 
+
+
+/* 슬라이드 텍스트 bottom*/
 .slider > .slides > .slide > .text-box > .text-box-bottom {
     position: relative;
     display: block;
@@ -474,20 +464,35 @@ label[for] {
     font-weight: 700;
     white-space: nowrap;
     color: white;
-    transition: top 1s 2s, opacity 1s 2s;
 }
-.slider > .slides > .slide.active > .text-box > .text-box-bottom > div {
+.slider > .slides > .slide.active[ani-play="Y"] > .text-box > .text-box-bottom > div {
     top: 0;
     opacity: 1;
+    transition: top 1s 0.4s, opacity 1s 0.4s;
 }
 
 
+.slider > .slides > .slide > .text-box > .site-icon {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
 
+.slider > .slides > .slide.active[ani-play="Y"] > .text-box > .site-icon {
+    opacity: 1;
+    transition: opacity 1s 1.4s;
+}
 
-
-
-
-
+.slider > .slides > .slide > .text-box > .site-icon > .txt {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 11px;
+    color: white;
+}
 
 
 
@@ -510,6 +515,7 @@ label[for] {
     width: 10px;
     margin: 0 auto;
 }
+
 /* 슬라이드 INDEX */
 .slider .btn-slide .slide-num {
     text-align: center;
@@ -530,6 +536,40 @@ label[for] {
     padding-bottom: 25px;
     opacity: 0.6;
 }
+/*현재 슬라이드 index 10 이하일 때 발생*/
+[min-num="Y"]::before {
+    content:"0";
+}
+
+
+/* 진행 바 */
+.progressBar {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.6);
+    z-index: 10;
+}
+
+.progressBar > .line {
+    position: relative;
+    width: 0;
+    height: 1px;
+    background-color: rgb(255,255,255);
+    z-index: 11;
+}
+
+.progressBar.active > .line {
+    width: 100%;
+    transition: width 3s;
+}
+
+
+
+
 
 
 /* footer 바*/
@@ -538,6 +578,7 @@ label[for] {
     left: 48px;
     bottom: 48px;
     color: rgb(255,255,255);
+    z-index: 10;
 }
 .footer > .com-ad {
     font-size: 14px;
