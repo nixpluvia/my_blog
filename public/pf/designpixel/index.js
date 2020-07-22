@@ -1,4 +1,4 @@
-console.clear();
+
 function slider(){
     var $this = $(this);
     var $parent = $this.closest('.slider');
@@ -69,6 +69,80 @@ function slideTimeOut($post,$parent,$progressBar,postIndex){
 
 
 
+/* 화면 풀사이즈 */
+
+function menuBox__init(){
+    $('.menu-bar > .menu-bar-icon').mouseenter(function(){
+        $('.layout').attr('full-size','Y');
+    })
+    $('.menu-bar > .menu-bar-icon').mouseleave(function(){
+        $('.layout').attr('full-size','N');
+    })
+
+    $('.menu-bar > .menu-bar-icon').click(function(){
+        var $this = $(this);
+        var $menuBar = $this.closest('.menu-bar');
+        var $barIcon = $this.find('> .bar-icon');
+        var $closeIcon = $this.find('> .close-icon');
+
+        if( $barIcon.hasClass('active') ) {
+
+            $closeIcon.removeClass('active');
+            $menuBar.removeClass('active');
+            
+            setTimeout(function(){
+                $barIcon.removeClass('active');
+            }, 1000);
+            menuListAniOff();
+        }
+        else {
+
+            $barIcon.addClass('active');
+            $menuBar.addClass('active');
+
+            setTimeout(function(){
+                $closeIcon.addClass('active');
+            }, 500);
+            menuListAniOn();
+        }
+    });
+}
+
+function menuListAniOn(){
+    var max = $('.menu-box > .left-menu > li').length;
+    var i = 0;
+
+    function aniOn(){
+        $('.menu-box > .left-menu > li').eq(i).attr('ani-now','Y');
+        i++
+        if( i == max - 1 ) {
+            clearInterval(aniOnInterval);
+        }
+    }
+    var aniOnInterval = setInterval(aniOn, 100);
+}
+function menuListAniOff(){
+    var max = $('.menu-box > .left-menu > li').length;
+    var i = 0;
+
+    function aniOff(){
+        $('.menu-box > .left-menu > li').eq(i).attr('ani-now','N');
+        i++
+        if( i == max - 1 ) {
+            clearInterval(aniOffInterval);
+        }
+    }
+    var aniOffInterval = setInterval(aniOff, 100);
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -105,6 +179,7 @@ function slider__init(){
 
 $(function(){
     slider__init();
+    menuBox__init();
     iconCenter();
 });
 

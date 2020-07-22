@@ -10,27 +10,54 @@
     <title>디자인 픽셀 | DESIGN PIXEL</title>
 </head>
 <body>
-    <div class="layout">
+    <div class="layout" full-size="N">
         <header>
             <a class="logo img-box" href="#">
                 <img src="https://nixpluvia.github.io/img1/pf/designpixel/main_logo_white.png" alt="">
             </a>
-            <div class="side-bar">
-                <div class="side-bar-icon">
+            
+            <div class="menu-bar">
+                <div class="menu-bar-icon">
                     <div class="bar-icon">
                         <div></div>
                         <div></div>
                         <div></div>
-                        <div class="menu-txt">
-                            MENU
-                        </div>
+                        <div class="menu-txt">MENU</div>
                     </div>
 
                     <div class="close-icon">
-
+                        <div></div>
+                        <div></div>
                     </div>
                 </div>
-                
+                <div class="menu-box">
+                    <div class="menu-box-bg"></div>
+                    <div class="vertical-line"></div>
+                    <ul class="left-menu">
+                        <li>
+                            <a href="#">Design Pixel</a>
+                        </li>
+                        <li>
+                            <a href="#">Portfolio</a>
+                            <ul>
+                                <li>Website</li>
+                                <li>Mobile</li>
+                                <li>Movie</li>
+                                <li>CI, BI</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Customer</a>
+                        </li>
+                        <li>
+                            <a href="#">Design Pixel</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                    <div class="right-menu"></div>
+                </div>
             </div>
         </header>
 
