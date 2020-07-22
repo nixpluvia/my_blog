@@ -267,8 +267,64 @@ label[for] {
     position: absolute;
     top: 40px;
     left: 48px;
-    z-index: 10;
+    z-index: 30;
 }
+
+.side-bar-icon {
+    position: absolute;
+    top: 40px;
+    right: 35px;
+    width: 64px;
+    height: 64px;
+    z-index: 30;
+}
+.side-bar-icon > .bar-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.side-bar-icon > .bar-icon > div{
+    position: absolute;
+    right: 15px;
+}
+.side-bar-icon > .bar-icon > div:not(:last-child){
+    height: 2px;
+    background-color: #fff;
+}
+.side-bar-icon > .bar-icon > div:nth-child(1) {
+    top: 9px;
+    width: 28px;
+}
+.side-bar-icon > .bar-icon > div:nth-child(2) {
+    top: 18px;
+    width: 35px;
+}
+.side-bar-icon > .bar-icon > div:nth-child(3) {
+    top: 27px;
+    width: 20px;
+}
+.side-bar-icon > .bar-icon > div:nth-child(4) {
+    top: 40px;
+    font-size: 10px;
+    font-weight: 400;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 메인 슬라이드 박스*/
 .slider {
@@ -399,7 +455,27 @@ label[for] {
 .slider > .slides > .slide:nth-child(3) > .slide-bg{
     background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file1_1578381876oe7qk7simh.jpg);
 }
-
+.slider > .slides > .slide:nth-child(4) > .slide-bg{
+    background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file1_1572412443hj79m5gmiw.jpg);
+}
+.slider > .slides > .slide:nth-child(5) > .slide-bg{
+    background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file1_1572411595m1099ffiod.jpg);
+}
+.slider > .slides > .slide:nth-child(6) > .slide-bg{
+    background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file1_1572412286v12kem8myf.jpg);
+}
+.slider > .slides > .slide:nth-child(7) > .slide-bg{
+    background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file1_1572412540gh412b8yby.jpg);
+}
+.slider > .slides > .slide:nth-child(8) > .slide-bg{
+    background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file1_1572412512qglu3ioh5l.jpg);
+}
+.slider > .slides > .slide:nth-child(9) > .slide-bg{
+    background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file1_1572412249d51j5vn7bs.jpg);
+}
+.slider > .slides > .slide:nth-child(10) > .slide-bg{
+    background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file1_1572412443hj79m5gmiw.jpg);
+}
 
 
 
@@ -476,7 +552,6 @@ label[for] {
     position: absolute;
     top: 95%;
     left: 50%;
-    transform: translateX(-50%);
     opacity: 0;
 }
 
@@ -488,10 +563,15 @@ label[for] {
 .slider > .slides > .slide > .text-box > .site-icon > .txt {
     text-align: center;
     margin-top: 10px;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 400;
-    line-height: 11px;
+    line-height: 13px;
     color: white;
+}
+.slider > .slides > .slide > .text-box > .site-icon > .txt::after {
+    content:" > ";
+    display: inline-block;
+    padding-left: 5px;
 }
 
 
@@ -509,6 +589,7 @@ label[for] {
 }
 .slider .btn-slide > a.btn {
     display: block;
+    cursor: pointer;
 }
 .slider .btn-slide > a.btn > img{
     display: block;
@@ -545,11 +626,10 @@ label[for] {
 /* 진행 바 */
 .progressBar {
     position: absolute;
-    top: 50%;
+    top: calc(50% - 1px);
     left: 0;
     width: 100%;
     height: 1px;
-    transform: translateY(-50%);
     background-color: rgba(255,255,255,0.6);
     z-index: 10;
 }

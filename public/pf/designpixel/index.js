@@ -1,4 +1,4 @@
-
+console.clear();
 function slider(){
     var $this = $(this);
     var $parent = $this.closest('.slider');
@@ -77,9 +77,16 @@ function slideTimeOut($post,$parent,$progressBar,postIndex){
 
 
 
-
-
-
+/* 슬라이드 사이트 아이콘 위치 중앙 */
+function iconCenter(){
+    $('.slider > .slides > .slide > .text-box > .site-icon ').imagesLoaded( function() {
+        $('.slider > .slides > .slide > .text-box > .site-icon').each(function(){
+            var $this = $(this);
+            var imgWidth = $this.find(' > .icon-img > img ').width();
+            $this.css('margin-left', -imgWidth / 2 + 'px');
+        });
+    });
+}
 
 
 function slider__init(){
@@ -87,8 +94,17 @@ function slider__init(){
     
     $('.slider > .slides > .slide:first-child').attr('ani-play','Y');
     $('.progressBar').addClass('active');
+
+    setTimeout(function(){
+        $('.slider > .btn-slide > .btn:last-child').click();
+        setInterval(function(){
+            $('.slider > .btn-slide > .btn:last-child').click();
+        }, 4200);
+    }, 3000);
 }
 
 $(function(){
-    slider__init()
+    slider__init();
+    iconCenter();
 });
+
