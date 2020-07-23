@@ -50,13 +50,38 @@
                             <a href="#">Customer</a>
                         </li>
                         <li>
-                            <a href="#">Design Pixel</a>
+                            <a href="#">Project Request</a>
                         </li>
                         <li>
                             <a href="#">Contact Us</a>
                         </li>
+                        <div class="menu-footer">
+                            <div class="com-ad">서울시 서초구 서초동 1440-2 픽셀빌딩 4~5층</div>
+                            <div class="copyright">(C) 2020 DESIGNPIXEL.CO.KR ALL RIGHTS RESERVED T.02.587.1152</div>
+                        </div>
                     </ul>
-                    <div class="right-menu"></div>
+                    
+                    <div class="right-menu">
+                        <ul class="site-list">
+                            <li>BUSINESS AREA</li>
+                            <li><a href="#">designpixel.co.kr</a></li>
+                            <li><a href="#">studiopixel.co.kr</a></li>
+                            <li><a href="#">brandpixel.co.kr</a></li>
+                            <li><a href="#">bio.designpixel.co.kr</a></li>
+                        </ul>
+                        <div class="nav-util">
+                            <div><a href="#">회사소개서</a></div>
+                            <div><a href="#">소개영상</a></div>
+                            <div><a href="#">찾아오시는 길</a></div>
+                            <div><a href="#">블로그</a></div>
+                        </div>
+                        <div class="company-num">T. 02 587 1152</div>
+                        <div class="btn-project">프로젝트 의뢰</div>
+                        <div class="update">
+                            <div>(주)마리진 베일리하우스 2종 사이트를 수주하였습니다.</div>
+                            <div>육첩반상 모바일 사이트를 수주하였습니다.</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>

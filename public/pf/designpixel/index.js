@@ -115,12 +115,16 @@ function menuListAniOn(){
     function aniOn(){
         $('.menu-box > .left-menu > li').eq(i).attr('ani-now','Y');
         i++
-        if( i == max - 1 ) {
+        if( i == max ) {
             clearInterval(aniOnInterval);
+            setTimeout(function(){
+                $('.menu-bar .menu-box > .left-menu > .menu-footer').attr('ani-now','Y');
+            }, 100);
         }
     }
     var aniOnInterval = setInterval(aniOn, 100);
 }
+
 function menuListAniOff(){
     var max = $('.menu-box > .left-menu > li').length;
     var i = 0;
@@ -128,8 +132,11 @@ function menuListAniOff(){
     function aniOff(){
         $('.menu-box > .left-menu > li').eq(i).attr('ani-now','N');
         i++
-        if( i == max - 1 ) {
+        if( i == max ) {
             clearInterval(aniOffInterval);
+            setTimeout(function(){
+                $('.menu-bar .menu-box > .left-menu > .menu-footer').attr('ani-now','N');
+            }, 100);
         }
     }
     var aniOffInterval = setInterval(aniOff, 100);
