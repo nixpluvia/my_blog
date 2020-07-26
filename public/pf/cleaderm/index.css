@@ -246,6 +246,9 @@ label[for] {
 }
 
 /*커스텀*/
+html,body {
+    overflow-X: hidden;
+}
 
 .con {
     min-width: 1300px;
