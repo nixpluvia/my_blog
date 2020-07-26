@@ -273,6 +273,9 @@ label[for] {
     left: 48px;
     z-index: 110;
 }
+.logo > a {
+    display: block;
+}
 
 
 /* 메뉴 바 아이콘 */
@@ -405,6 +408,57 @@ label[for] {
     transform: translate(-50%, -50%) rotate(135deg);
 }
 
+
+.menu-bar .figure {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 355px;
+    opacity: 0;
+    z-index: 101;
+}
+.menu-bar.active .figure {
+    opacity: 0.48;
+}
+.menu-bar .figure > svg {
+    width: 355px;
+    height: 537px;
+}
+.menu-bar .figure > svg .st0 {
+    fill: none;
+    stroke-dasharray: 3100;
+    stroke: #fff;
+    stroke-width: 0.4px;
+}
+.menu-bar.active .figure > svg .st0 {
+    animation-name: svg-ani;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+@keyframes svg-ani {
+    0% {
+        stroke-dashoffset: 3100;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 메뉴 박스 */
 .menu-bar .menu-box {
     position: absolute;
@@ -450,6 +504,17 @@ label[for] {
     transition: 0.4s 0.2s;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 .menu-bar .menu-box > .left-menu {
     position: absolute;
     top: 50%;
@@ -464,6 +529,7 @@ label[for] {
     transform: matrix(1,0,0,1,0,-30);
     opacity: 0;
     transition: transform 0.3s 0.1s, opacity 0.3s 0.1s;
+    transition-timing-function: cubic-bezier(1,0,.53,.94);
 }
 .menu-bar .menu-box > .left-menu > li:not(:first-child) {
     margin-top: 1.3vw;
@@ -471,6 +537,7 @@ label[for] {
 .menu-bar .menu-box > .left-menu > li[ani-now="Y"]{
     opacity: 1;
     transform: matrix(1,0,0,1,0,0);
+    transition-timing-function: cubic-bezier(.56,.22,.51,.88);
 }
 .menu-bar .menu-box > .left-menu > li > ul {
     padding-top: 1.6vw;
@@ -484,22 +551,50 @@ label[for] {
     margin-top: 14px;
 }
 
+
 .menu-bar .menu-box > .left-menu > .menu-footer{
-    margin-top: 30px;
+    margin-top: 2.8vw;
     color: #fff;
     transform: matrix(1,0,0,1,0,-30);
     opacity: 0;
     transition: transform 0.3s 0.1s, opacity 0.3s 0.1s;
-    transition-timing-function: cubic-bezier(1,0,.65,.94);
+    transition-timing-function: cubic-bezier(1,0,.53,.94);
 }
 .menu-bar .menu-box > .left-menu > .menu-footer[ani-now="Y"]{
     opacity: 1;
     transform: matrix(1,0,0,1,0,0);
+    transition-timing-function: cubic-bezier(.56,.22,.51,.88);
 }
 .menu-bar .menu-box > .left-menu > .menu-footer > .com-ad {
     font-size: 0.73vw;
     line-height: 0.73vw;
 }
+.menu-bar .menu-box > .left-menu > .menu-footer > .copyright {
+    margin-top: 8px;
+    font-size: 0.5vw;
+    line-height: 0.5vw;
+    letter-spacing: 0.4px;
+    opacity: 0.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .menu-bar .menu-box > .right-menu {
     position: absolute;
     top: 50%;
@@ -515,8 +610,197 @@ label[for] {
     transform: translateY(-50%) matrix(1,0,0,1,0,0);
 }
 
-.menu-bar .menu-box > .right-menu > .site-list {
+.menu-bar .menu-box > .right-menu > .site-list > ul > li{
+    font-size: 0.78vw;
+    line-height: 0.78vw;
+    opacity: 0.8;
+}
+.menu-bar .menu-box > .right-menu > .site-list > ul > li:first-child{
+    font-size: 0.83vw;
+    line-height: 0.85vw;
+    margin-bottom: 1.4vw;
+}
+.menu-bar .menu-box > .right-menu > .site-list > ul > li:not(:first-child){
+    margin-bottom: 7px;
+}
+.menu-bar .menu-box > .right-menu > .nav-util {
+    margin-top: 5.3vw;
+}
+.menu-bar .menu-box > .right-menu > .nav-util > ul > li:not(:first-child) {
+    margin-top: 0.91vw;
+}
+.menu-bar .menu-box > .right-menu > .nav-util > ul > li {
+    font-size: 0.78vw;
+    line-height: 0.78vw;
+    transition: transform 0.3s;
+}
+.menu-bar .menu-box > .right-menu > .nav-util > ul > li:hover {
+    transform: matrix(1,0,0,1,10,0);
+}
+.menu-bar .menu-box > .right-menu > .nav-util > ul > li > a > div > img{
+    display: block;
+    height: 20px;
+}
+.menu-bar .menu-box > .right-menu > .nav-util > ul > li > a > span{
+    margin-left: 20px;
+}
 
+
+.menu-bar .menu-box > .right-menu > .tel {
+    margin-top: 4.5vw;
+    font-size: 0.94vw;
+    line-height: 0.94vw;
+    letter-spacing: 1.2px;
+}
+
+
+.menu-bar .menu-box > .right-menu > .btn-animation {
+    margin-top: 1.3vw;
+    margin-bottom: 1.08vw;
+}
+.menu-bar .menu-box > .right-menu > .btn-animation > a{
+    position: relative;
+    display: block;
+    width: 13vw;
+    height: 2.7vw;
+    padding-left: 28px;
+    font-size: 0.83vw;
+    line-height: 2.7vw;
+    letter-spacing: -0.2px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+}
+.menu-bar .menu-box > .right-menu > .btn-animation:hover > a {
+    border: 1px solid transparent;
+}
+
+.menu-bar .menu-box > .right-menu > .btn-animation > a > span{
+    position: absolute;
+}
+.menu-bar .menu-box > .right-menu > .btn-animation > a > span:nth-child(1),
+.menu-bar .menu-box > .right-menu > .btn-animation > a > span:nth-child(2) {
+    height: 1px;
+    background-color: #fff;
+}
+.menu-bar .menu-box > .right-menu > .btn-animation > a > span:nth-child(3),
+.menu-bar .menu-box > .right-menu > .btn-animation > a > span:nth-child(4) {
+    width: 1px;
+    background-color: #fff;
+}
+.menu-bar .menu-box > .right-menu > .btn-animation[ani-now="Y"] > a[ani-set1="Y"] > span.top {
+    top: 0;
+    animation-name: top-line;
+    animation-duration: 1s;
+    animation-delay: 0.25s;
+}
+@keyframes top-line {
+    0% {
+        left: 0;
+        width: 0;
+    }
+    49% {
+        left: 0;
+    }
+    50% {
+        left: auto;
+        right: 0;
+        width: 100%;
+    }
+    100% {
+        right: 0;
+        width: 0;
+    }
+}
+.menu-bar .menu-box > .right-menu > .btn-animation[ani-now="Y"] > a[ani-set1="Y"] > span.left {
+    left: 0;
+    animation-name: left-line;
+    animation-duration: 0.5s;
+}
+@keyframes left-line {
+    0% {
+        bottom: 0;
+        top: auto;
+        height: 0;
+    }
+    49% {
+        top: auto;
+        bottom: 0;
+    }
+    50% {
+        bottom: auto;
+        top: 0;
+        height: 100%;
+    }
+    100% {
+        bottom: auto;
+        top: 0;
+        height: 0;
+    }
+}
+.menu-bar .menu-box > .right-menu > .btn-animation[ani-now="Y"] > a[ani-set2="Y"] > span.btm {
+    bottom: 0;
+    animation-name: btm-line;
+    animation-duration: 1s;
+    animation-delay: 0.25s;
+}
+@keyframes btm-line {
+    0% {
+        right: 0;
+        left: auto;
+        width: 0;
+    }
+    49% {
+        right: 0;
+        left: auto;
+    }
+    50% {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+    100% {
+        left: 0;
+        width: 0;
+    }
+}
+.menu-bar .menu-box > .right-menu > .btn-animation[ani-now="Y"] > a[ani-set2="Y"] > span.right {
+    right: 0;
+    animation-name: right-line;
+    animation-duration: 0.5s;
+}
+@keyframes right-line {
+    0% {
+        bottom: auto;
+        top: 0;
+        height: 0;
+    }
+    49% {
+        top: 0;
+        bottom: auto;
+    }
+    50% {
+        top: auto;
+        bottom: 0;        
+        height: 100%;
+    }
+    100% {
+        top: auto;
+        bottom: 0;        
+        height: 0;
+    }
+}
+
+
+
+
+.menu-bar .menu-box > .right-menu > .update > li {
+    font-size: 0.63vw;
+    line-height: 0.63vw;
+    opacity: 0.5;
+    color: #fff;
+}
+.menu-bar .menu-box > .right-menu > .update > li:not(:first-child) {
+    margin-top: 8px;
 }
 
 
@@ -541,41 +825,180 @@ label[for] {
 
 
 
+.btn-quest-bar {
+    position: fixed;
+    top: 290px;
+    right: 50px;
+    z-index: 100;
+    transform: rotate(90deg);
+    transform-origin: 100% 0;
+    color: #fff;
+}
+.btn-quest-bar .btn-quest {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+}
+.btn-quest-bar .btn-quest::after {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #f9253b;
+}
+.btn-quest-bar:hover .btn-quest::after {
+    position: absolute;
+    width: 100%;
+    transition: width 0.3s 0.2s;
+    transition-timing-function: cubic-bezier(1,0,.51,.97);
+}
+.btn-quest-bar .btn-quest > span{
+    position: relative;
+    display: block;
+    letter-spacing: 0.2px;
+    padding: 8px 32px;
+    border: 1px solid #fff;
+    white-space: nowrap;
+    z-index: 101;
+}
+.btn-quest-bar .btn-quest > div{
+    position: absolute;
+    background-color: #f9253b;
+    z-index: 102;
+}
+.btn-quest-bar:hover .btn-quest > div.ani-line-l{
+    bottom:0;
+    left: 0;
+    width: 1px;
+    animation-name: ani-line-l;
+    animation-duration: 0.05s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes ani-line-l {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+.btn-quest-bar:hover .btn-quest > div.ani-line-t{
+    top: 0;
+    left: 0;
+    height: 1px;
+    animation-name: ani-line-t;
+    animation-delay: 0.05s;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes ani-line-t {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+.btn-quest-bar:hover .btn-quest > div.ani-line-r{
+    top:0;
+    right: 0;
+    width: 1px;
+    animation-name: ani-line-r;
+    animation-delay: 0.15s;
+    animation-duration: 0.05s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes ani-line-r {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+.btn-quest-bar:hover .btn-quest > div.ani-line-b{
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    animation-name: ani-line-t;
+    animation-delay: 0.2s;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes ani-line-t {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.util-menu {
+    position: fixed;
+    right: 50px;
+    bottom: 40px;
+    color: #fff;
+    z-index: 100;
+}
+.util-menu > .tell {
+    position: absolute;
+    top: -25px;
+    right: 50%;
+    letter-spacing: 1.2px;
+    transform: rotate(90deg) translateY(-50%);
+    transform-origin: 100% 0;
+    white-space: nowrap;
+}
+.util-menu > .util-icon > li:not(:first-child) {
+    margin-top: 25px;
+}
+.util-menu > .util-icon > li > a {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+.util-menu > .util-icon > li > a .st0{
+    fill: #fff;
+    opacity: 1;
+}
+.util-menu > .util-icon > li:hover > a .st0{
+    transition: opacity 0.3s;
+    opacity: 0.6;
+}
+.util-menu > .util-icon > li > a > span.txt{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 12px;
+    padding-right: 29px;
+    opacity: 0;
+    white-space: nowrap;
+    transform: translateY(-50%);
+    transition: right 0.3s, opacity 0.3s;
+}
+.util-menu > .util-icon > li > a > span.txt::after{
+    content:"";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 9px;
+    height: 1px;
+    background-color: #fff;
+}
+.util-menu > .util-icon > li:hover > a > span.txt{
+    right: 100%;
+    opacity: 1;
+}
 
 
 
@@ -931,4 +1354,240 @@ label[for] {
     line-height: 10px;
     letter-spacing: 0.4px;
     opacity: 0.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1279px) {
+    .logo {
+        top: 30px;
+        left: 40px;
+    }
+    .menu-bar > .menu-bar-icon {
+        right: 16px;
+    }
+    .btn-quest-bar {
+        right: 30px;
+    }
+    .util-menu {
+        right: 30px;
+    }
+    .util-menu > .tell {
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .util-menu > .util-icon > li:not(:first-child) {
+        margin-top: 15px;
+    }
+    .util-menu > .util-icon > li > a > svg{
+        width: 20px;
+    }
+
+
+    .menu-bar .figure {
+        width: 260px;
+    }
+    .menu-bar .figure > svg {
+        width: 260px;
+        height: 393px;
+    }
+
+
+    .menu-bar .menu-box .vertical-line {
+        left: 53%;
+    }
+
+
+    .menu-bar .menu-box > .left-menu {
+        left: 30px;
+    }
+    .menu-bar .menu-box > .left-menu > li:not(:first-child) {
+        margin-top: 13px;
+    }
+    .menu-bar .menu-box > .left-menu > li{
+        font-size: 38px;
+        line-height: 38px;
+    }
+    .menu-bar .menu-box > .left-menu > li > ul {
+        padding-top: 15px;
+        padding-bottom: 8px;
+    }
+    .menu-bar .menu-box > .left-menu > li > ul > li:not(:first-child) {
+        margin-top: 8px;
+    }
+    .menu-bar .menu-box > .left-menu > li > ul > li{
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .menu-bar .menu-box > .left-menu > .menu-footer{
+        margin-top: 40px;
+    }
+    .menu-bar .menu-box > .left-menu > .menu-footer > .com-ad {
+        font-size: 12px;
+        line-height: 12px;
+    }
+    .menu-bar .menu-box > .left-menu > .menu-footer > .copyright {
+        transform: scale(0.92);
+        transform-origin: 0 0;
+        line-height: 10px;
+        font-size: 10px;
+    }
+
+
+    .menu-bar .menu-box > .right-menu {
+        right: auto;
+        left: 62%;
+    }
+    .menu-bar .menu-box > .right-menu > .site-list > ul > li{
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .menu-bar .menu-box > .right-menu > .site-list > ul > li:first-child{
+        font-size: 14px;
+        line-height: 14px;
+        margin-bottom: 12px;
+    }
+    .menu-bar .menu-box > .right-menu > .nav-util {
+        margin-top: 55px;
+    }
+    .menu-bar .menu-box > .right-menu > .nav-util > ul > li {
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .menu-bar .menu-box > .right-menu > .tel {
+        margin-top: 70px;
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .menu-bar .menu-box > .right-menu > .btn-animation {
+        margin-top: 24px;
+        margin-bottom: 0;
+    }
+    .menu-bar .menu-box > .right-menu > .btn-animation > a{
+        width: 182px;
+        height: 42px;
+        padding-left: 15px;
+        font-size: 12px;
+        line-height: 40px;
+    }
+    .menu-bar .menu-box > .right-menu > .update {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+    .layout {
+        padding: 5px;
+    }
+
+    .logo {
+        top: 22px;
+        left: 22px;
+        width: 100px;
+    }
+
+    .footer {
+        display: none;
+    }
+    
+    /* 슬라이드 이미지*/
+    .slider > .slides > .slide:nth-child(1) > .slide-bg{
+        background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file2_157838783494nf63v9ft.jpg);
+    }
+    .slider > .slides > .slide:nth-child(2) > .slide-bg{
+        background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file2_1572412579z61ejlgsbd.jpg);
+    }
+    .slider > .slides > .slide:nth-child(3) > .slide-bg{
+        background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file2_1578387846i3xabiiyl8.jpg);
+    }
+    .slider > .slides > .slide:nth-child(4) > .slide-bg{
+        background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file2_1572412443j60j2obqh6.jpg);
+    }
+    .slider > .slides > .slide:nth-child(5) > .slide-bg{
+        background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file2_1572411595voq2mrqz94.jpg);
+    }
+    .slider > .slides > .slide:nth-child(6) > .slide-bg{
+        background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file2_1572412286xln8jwkewg.jpg);
+    }
+    .slider > .slides > .slide:nth-child(7) > .slide-bg{
+        background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file2_1572412540aldh3kk8tf.jpg);
+    }
+    .slider > .slides > .slide:nth-child(8) > .slide-bg{
+        background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file2_1572412512ots642vmz8.jpg);
+    }
+    .slider > .slides > .slide:nth-child(9) > .slide-bg{
+        background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file2_157241224938inaquu96.jpg);
+    }
+    .slider > .slides > .slide:nth-child(10) > .slide-bg{
+        background-image: url(https://nixpluvia.github.io/img1/pf/designpixel/file2_1572412192tuu4owasmi.jpg);
+    }
+
+    /* 메뉴 배경 svg*/
+    .menu-bar .figure {
+        width: 50vw;
+    }
+    .menu-bar .figure > svg {
+        width: 50vw;
+        height: 75vw;
+    }
+
+    /* 메뉴 창 left 메뉴*/
+    .menu-bar .menu-box > .left-menu {
+        left: 18px;
+        top: 25vw;
+        bottom: 25px;
+        right: 10%;
+        transform: translateY(0);
+    }
+    .menu-bar .menu-box > .left-menu > li{
+        font-size: 7.5vw;
+        line-height: 7.5vw;
+    }
+    .menu-bar .menu-box > .left-menu > li:not(:first-child) {
+        margin-top: 5vw;
+    }
+    .menu-bar .menu-box > .left-menu > li > ul {
+        padding-top: 3.5vw;
+        padding-bottom: 0;
+    }
+    .menu-bar .menu-box > .left-menu > li > ul > li{
+        font-size: 3.3vw;
+        line-height: 3.3vw;
+    }
+    .menu-bar .menu-box > .left-menu > .menu-footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .menu-bar .menu-box > .left-menu > .menu-footer > .com-ad {
+        font-size: 11px;
+        line-height: 11px;
+    }
+    .menu-bar .menu-box > .left-menu > .menu-footer > .copyright > span{
+        display: none;
+    }
+
+    .menu-bar .menu-box > .right-menu {
+        display: none;
+    }
 }

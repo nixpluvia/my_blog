@@ -69,9 +69,10 @@ function slideTimeOut($post,$parent,$progressBar,postIndex){
 
 
 
-/* 화면 풀사이즈 */
+
 
 function menuBox__init(){
+    /* 화면 풀사이즈 */
     $('.menu-bar > .menu-bar-icon').mouseenter(function(){
         $('.layout').attr('full-size','Y');
     })
@@ -79,6 +80,7 @@ function menuBox__init(){
         $('.layout').attr('full-size','N');
     })
 
+    /* 메뉴 애니메이션 */
     $('.menu-bar > .menu-bar-icon').click(function(){
         var $this = $(this);
         var $menuBar = $this.closest('.menu-bar');
@@ -107,7 +109,7 @@ function menuBox__init(){
         }
     });
 }
-
+/* 메뉴창 오픈 이벤트 */
 function menuListAniOn(){
     var max = $('.menu-box > .left-menu > li').length;
     var i = 0;
@@ -124,7 +126,7 @@ function menuListAniOn(){
     }
     var aniOnInterval = setInterval(aniOn, 100);
 }
-
+/* 메뉴창 오프 이벤트 */
 function menuListAniOff(){
     var max = $('.menu-box > .left-menu > li').length;
     var i = 0;
@@ -147,8 +149,50 @@ function menuListAniOff(){
 
 
 
+var animationStart1;
+var animationEnd1;
+var animationStart2;
+var animationEnd2;
+
+function btnAnimation__on(){
+    $('.menu-bar > .menu-box > .right-menu > .btn-animation').attr('ani-now','Y');
+    $('.menu-bar > .menu-box > .right-menu > .btn-animation > a').attr('ani-set1','N');
+    $('.menu-bar > .menu-box > .right-menu > .btn-animation > a').attr('ani-set2','N');
+
+    
+
+    $('.menu-bar > .menu-box > .right-menu > .btn-animation > a').attr('ani-set1','Y');
+    animationEnd1 = setInterval(function(){
+        $('.menu-bar > .menu-box > .right-menu > .btn-animation > a').attr('ani-set1','N');
+    }, 1240);
+    animationStart1 = setInterval(function(){
+        $('.menu-bar > .menu-box > .right-menu > .btn-animation > a').attr('ani-set1','Y');
+    }, 1250);
 
 
+    $('.menu-bar > .menu-box > .right-menu > .btn-animation > a').attr('ani-set2','Y');
+    animationEnd2 = setInterval(function(){
+        $('.menu-bar > .menu-box > .right-menu > .btn-animation > a').attr('ani-set2','N');
+    }, 1240);
+    animationStart2 = setInterval(function(){
+        $('.menu-bar > .menu-box > .right-menu > .btn-animation > a').attr('ani-set2','Y');
+    }, 1250);
+}
+
+function btnAnimation__off(){
+    $('.menu-bar > .menu-box > .right-menu > .btn-animation').attr('ani-now','N');
+    clearInterval(animationStart1);
+    clearInterval(animationStart2);
+    clearInterval(animationEnd1);
+    clearInterval(animationEnd2);
+    $('.menu-bar > .menu-box > .right-menu > .btn-animation > a').attr('ani-set1','N');
+    $('.menu-bar > .menu-box > .right-menu > .btn-animation > a').attr('ani-set2','N');
+}
+
+function btnAnimation__init(){
+    $('.menu-bar > .menu-box > .right-menu > .btn-animation').mouseenter(btnAnimation__on);
+    $('.menu-bar > .menu-box > .right-menu > .btn-animation').mouseleave(btnAnimation__off);
+}
 
 
 
@@ -188,5 +232,6 @@ $(function(){
     slider__init();
     menuBox__init();
     iconCenter();
+    btnAnimation__init();
 });
 
