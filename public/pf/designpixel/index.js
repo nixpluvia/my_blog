@@ -66,7 +66,19 @@ function slideTimeOut($post,$parent,$progressBar,postIndex){
     }, 2700)
 }
 
+function slider__init(){
+    $('.slider > .btn-slide > .btn').click(slider);
+    
+    $('.slider > .slides > .slide:first-child').attr('ani-play','Y');
+    $('.progressBar').addClass('active');
 
+    setTimeout(function(){
+        $('.slider > .btn-slide > .btn:last-child').click();
+        setInterval(function(){
+            $('.slider > .btn-slide > .btn:last-child').click();
+        }, 4200);
+    }, 3000);
+}
 
 
 
@@ -214,19 +226,7 @@ function iconCenter(){
 }
 
 
-function slider__init(){
-    $('.slider > .btn-slide > .btn').click(slider);
-    
-    $('.slider > .slides > .slide:first-child').attr('ani-play','Y');
-    $('.progressBar').addClass('active');
 
-    setTimeout(function(){
-        $('.slider > .btn-slide > .btn:last-child').click();
-        setInterval(function(){
-            $('.slider > .btn-slide > .btn:last-child').click();
-        }, 4200);
-    }, 3000);
-}
 
 $(function(){
     slider__init();
