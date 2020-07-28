@@ -101,20 +101,151 @@
                     </a>
                 </li>
             </ul>
-            <div class="bar-icon">
-            </div>
+            <button class="bar-icon-box">
+                <div class="bar-icon">
+                    <div class="l1"></div>
+                    <div class="l2"></div>
+                    <div class="l3"></div>
+                </div>
+            </button>
         </div>
     </header>
     <div class="menu-box"></div>
 
+    <button class="btn-scroll">
+        <div class="line"></div>
+        <div class="txt">Scroll Down</div>
+    </button>
+
+    <div class="dots">
+        
+    </div>
+
     <div class="scroll-box">
-        <div class="page">
+        <section class="page1 page active-on-visible"  data-active-on-visible-diff-y="500">
             <div class="bg-video">
-                <video width="100%" muted="muted" preload="auto" autoplay="" loop="" playsinline="">
+                <video height="100%" muted="muted" preload="auto" autoplay="" loop="" playsinline="">
                     <source src="https://nixpluvia.github.io/img1/pf/artfive/v005.mp4" type="video/mp4">
                 </video>
             </div>
-        </div>
+            <div class="content-text">
+                <p class="t1">신개념 프리미엄 어린이 미술교육</p>
+                <h1 class="h1">다섯손가락의 기적</h1>
+                <p class="t2">Creative Kids Power</p>
+            </div>
+            
+        </section>
+        <section class="page2 page active-on-visible"  data-active-on-visible-diff-y="500">
+            <div class="bg-img">
+                <img src="https://nixpluvia.github.io/img1/pf/artfive/v02.jpg" alt="">
+            </div>
+            <div class="content-text">
+                <h1 class="h1">창의성, 세계의 확장</h1>
+                <p class="t1">
+                    지식 습득에 익숙한 아이는 과거지향적입니다.
+                    <br>
+                    정답을 찾기 위해 노력하고, 그 안에서 만족합니다.
+                    <br>
+                    탁월한 아이는 미지의 것이 주는 불안감을 감당하면서
+                    <br>
+                    새로운 삶의 영역을 확장시킵니다.
+                </p>
+            </div>
+            <div class="section-footer">
+                <div>Creativity, World Expansion</div>
+            </div>
+        </section>
+        <section class="page3 page active-on-visible"  data-active-on-visible-diff-y="500">
+            <div class="bg-img">
+                <img src="https://nixpluvia.github.io/img1/pf/artfive/v03.jpg" alt="">
+            </div>
+            <div class="content-text">
+                <h1 class="h1">
+                    질문하는 아이
+                    <br>
+                    대답하는 아이
+                </h1>
+                <p class="t1">
+                    대답 하는 아이는 이론과 지식이 머물다 가는 통로로서 존재합니다.
+                    <br>
+                    그러나 자신만의 고유한 시각, 감성을 가진 아이는
+                    <br>
+                    예측치 못한 상황을 접할 때 호기심을 갖게됩니다.
+                </p>
+            </div>
+            <div class="section-footer">
+                <div>A child with his own unique perspective, sensitivity,</div>
+                <div>becomes curious when faced with unforeseen circumstances.</div>
+            </div>
+        </section>
+        <section class="page4 page active-on-visible"  data-active-on-visible-diff-y="500">
+            <div class="bg-img">
+                <img src="https://nixpluvia.github.io/img1/pf/artfive/v04.jpg" alt="">
+            </div>
+            <div class="content-text">
+                <h1 class="h1">
+                    3살, 세상의 모든 것을
+                    <br>
+                    배우기에 충분한 나이
+                </h1>
+                <p class="t1">
+                    아이의 뇌는 성장함에 있어 결정적 시기가 있습니다.
+                    <br>
+                    뇌의 시냅스가 얼만큼 긴밀하고 촘촘하게 연결되는가 하는것이
+                    <br>
+                    우리 아이가 밟아 갈 세상의 크기를 결정합니다.
+                </p>
+            </div>
+            <div class="section-footer">
+                <span>Three years old, Old enough to learn everything in this World.</span>
+            </div>
+        </section>
+        <section class="page5 page active-on-visible"  data-active-on-visible-diff-y="500">
+            <div class="bg-img">
+                <img src="https://nixpluvia.github.io/img1/pf/artfive/v05.jpg" alt="">
+            </div>
+            <div class="content-text">
+                <h1 class="h1">
+                    놀이, 진짜와 가짜
+                </h1>
+                <p class="t1">
+                    몰입과 경험이 아이의 내적 동기에 의해서 발생할때,
+                    <br>
+                    놀이는 효과를 발휘하게 됩니다.
+                    <br>
+                    통제하고 가르치는 놀이는 아이의 무한한 잠재력을 깨우지 못하고
+                    <br>
+                    통제된 범위 속에서만 머무르게 합니다.
+                </p>
+            </div>
+            <div class="section-footer">
+                <div>Self-esteem and identity begin with art education</div>
+            </div>
+        </section>
+        <section class="page6 page active-on-visible" data-active-on-visible-diff-y="500">
+            <div class="bg-video">
+                <video height="100%" muted="muted" preload="auto" autoplay="" loop="" playsinline="">
+                    <source src="https://nixpluvia.github.io/img1/pf/artfive/v003.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="content-text">
+                <h1 class="h1">
+                    예술, 최고의 나를 만나는 순간
+                </h1>
+                <p class="t1">
+                    天人合一, 物我一體
+                    <br>
+                    대상과 내 자신이 하나가 되는 순간
+                    <br>
+                    아이 스스로 자신의 존재를 인식하게 됩니다.
+                    <br>
+                    자존감과 정체성은 유아동기의 미술 교육이 주는 가치입니다.
+                </p>
+            </div>
+            <div class="section-footer">
+                <div>Art is the best moment meet to the best of me</div>
+            </div>
+        </section>
     </div>
 </body>
 
