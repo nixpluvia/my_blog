@@ -111,7 +111,7 @@
         <div class="page">
             <div class="bg-video">
                 <video width="100%" muted="muted" preload="auto" autoplay="" loop="" playsinline="">
-                    <source src="http://www.artfive.co.kr/video/v005.mp4" type="video/mp4">
+                    <source src="https://nixpluvia.github.io/img1/pf/artfive/v005.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
