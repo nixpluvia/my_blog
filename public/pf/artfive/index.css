@@ -392,22 +392,37 @@ video {
 
 
 
-.dots {
+.scroll-dots {
     position: fixed;
     top: 50%;
     right: 50px;
-    background-color: pink;
     z-index: 200;
 }
-.dots > .dot {
-    width: 10px;
-    height: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+.scroll-dots > .dot {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border: 1px solid rgba(255,255,255,0);
     border-radius: 100%;
-    background-color: greenyellow;
+    box-sizing: border-box;
+    transition: border 0.3s;
 }
-
+.scroll-dots > .dot.active {
+    border: 1px solid rgba(255,255,255,1);
+}
+.scroll-dots > .dot > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+}
+.scroll-dots > .dot + .dot {
+    margin-top: 15px;
+}
 
 
 
@@ -451,6 +466,9 @@ video {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     z-index: -1;
 }
 .scroll-box > .page > .bg-img > img{

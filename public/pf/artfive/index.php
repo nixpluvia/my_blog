@@ -117,12 +117,11 @@
         <div class="txt">Scroll Down</div>
     </button>
 
-    <div class="dots">
-        
-    </div>
+    <ul class="scroll-dots">
+    </ul>
 
     <div class="scroll-box">
-        <section class="page1 page active-on-visible"  data-active-on-visible-diff-y="500">
+        <section class="page1 page" >
             <div class="bg-video">
                 <video height="100%" muted="muted" preload="auto" autoplay="" loop="" playsinline="">
                     <source src="https://nixpluvia.github.io/img1/pf/artfive/v005.mp4" type="video/mp4">
@@ -135,9 +134,8 @@
             </div>
             
         </section>
-        <section class="page2 page active-on-visible"  data-active-on-visible-diff-y="500">
-            <div class="bg-img">
-                <img src="https://nixpluvia.github.io/img1/pf/artfive/v02.jpg" alt="">
+        <section class="page2 page " >
+            <div class="bg-img" style="background-image: url(https://nixpluvia.github.io/img1/pf/artfive/v02.jpg)">
             </div>
             <div class="content-text">
                 <h1 class="h1">창의성, 세계의 확장</h1>
@@ -155,9 +153,8 @@
                 <div>Creativity, World Expansion</div>
             </div>
         </section>
-        <section class="page3 page active-on-visible"  data-active-on-visible-diff-y="500">
-            <div class="bg-img">
-                <img src="https://nixpluvia.github.io/img1/pf/artfive/v03.jpg" alt="">
+        <section class="page3 page " >
+            <div class="bg-img" style="background-image: url(https://nixpluvia.github.io/img1/pf/artfive/v03.jpg)">
             </div>
             <div class="content-text">
                 <h1 class="h1">
@@ -178,9 +175,8 @@
                 <div>becomes curious when faced with unforeseen circumstances.</div>
             </div>
         </section>
-        <section class="page4 page active-on-visible"  data-active-on-visible-diff-y="500">
-            <div class="bg-img">
-                <img src="https://nixpluvia.github.io/img1/pf/artfive/v04.jpg" alt="">
+        <section class="page4 page " >
+            <div class="bg-img" style="background-image: url(https://nixpluvia.github.io/img1/pf/artfive/v04.jpg)">
             </div>
             <div class="content-text">
                 <h1 class="h1">
@@ -200,9 +196,8 @@
                 <span>Three years old, Old enough to learn everything in this World.</span>
             </div>
         </section>
-        <section class="page5 page active-on-visible"  data-active-on-visible-diff-y="500">
-            <div class="bg-img">
-                <img src="https://nixpluvia.github.io/img1/pf/artfive/v05.jpg" alt="">
+        <section class="page5 page ">
+            <div class="bg-img" style="background-image: url(https://nixpluvia.github.io/img1/pf/artfive/v05.jpg)">
             </div>
             <div class="content-text">
                 <h1 class="h1">
@@ -222,7 +217,7 @@
                 <div>Self-esteem and identity begin with art education</div>
             </div>
         </section>
-        <section class="page6 page active-on-visible" data-active-on-visible-diff-y="500">
+        <section class="page6 page">
             <div class="bg-video">
                 <video height="100%" muted="muted" preload="auto" autoplay="" loop="" playsinline="">
                     <source src="https://nixpluvia.github.io/img1/pf/artfive/v003.mp4" type="video/mp4">

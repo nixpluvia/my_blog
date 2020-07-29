@@ -4,89 +4,194 @@ function barClick__init() {
     })
 }
 
-/* 발견 이벤트 */
-function ActiveOnVisible__init() {
-    $(window).resize(ActiveOnVisible__initOffset);
-    ActiveOnVisible__initOffset();
+/* 구역 스크롤 */
+function ScrollBox__init() {
+    var animationDuration = 800;
 
-    $(window).scroll(ActiveOnVisible__checkAndActive);
-    ActiveOnVisible__checkAndActive();
-}
+    $(".scroll-box").data('scroll-box-index', 0);
 
-function ActiveOnVisible__initOffset() {
-    $(".active-on-visible").each(function (index, node) {
-        var $node = $(node);
+    topBarScroll__init();
 
-        var offsetTop = $node.offset().top;
-        var offsetBottom = offsetTop + $node.outerHeight();
-        $node.attr("data-active-on-visible-offsetTop", offsetTop);
-        $node.attr("data-active-on-visible-offsetBottom", offsetBottom);
+    $(".scroll-box > .page").on("mousewheel DOMMouseScroll", function (e) {
+        e.preventDefault();
 
-        if (!$node.attr('data-active-on-visible-diff-y')) {
-            $node.attr('data-active-on-visible-diff-y', '0');
+        var $this = $(this);
+
+        var $scrollBox = $(this).closest('.scroll-box');
+        var nowWork = $scrollBox.data('scroll-box-now-work');
+
+        if (nowWork == true) {
+            return;
         }
 
-        if (!$node.attr("data-active-on-visible-delay")) {
-            $node.attr("data-active-on-visible-delay", "0");
+        var wheelUp = true;
+        var delta = window.event.wheelDelta;
+        /* 휠 업하면 +120, 휠 다운 하면 -120 */
+        console.log(delta);
+        if (delta < 0) {
+            wheelUp = false;
         }
-    });
 
-    ActiveOnVisible__checkAndActive();
-}
+        var $post = null;
 
-function ActiveOnVisible__checkAndActive() {
-    $(".active-on-visible").each(function (index, node) {
-        var $node = $(node);
-
-        var offsetTop = parseInt($node.attr("data-active-on-visible-offsetTop"));
-        var offsetBottom = parseInt($node.attr("data-active-on-visible-offsetBottom"));
-        var diffY = parseInt($node.attr('data-active-on-visible-diff-y'));
-        var delay = parseInt($node.attr("data-active-on-visible-delay"));
-
-        if ( ($(window).scrollTop() + diffY > offsetBottom ) == false ) {
-            if ($(window).scrollTop() + $(window).height() - diffY > offsetTop) {
-                setTimeout(function () {
-                    $node.addClass("active");
-                }, delay);
+        if (wheelUp) {
+            if ($this.prev().length > 0) {
+                $post = $this.prev();
+            }
+            // 마우스휠을 아래에서 위로
+        } else {
+            if ($this.next().length > 0) {
+                $post = $this.next();
             }
         }
+
+        if ($post != null) {
+            var moveTop = $post.offset().top;
+            var postIndex = $post.index();
+
+            // 화면 이동 0.8초(800)
+            $scrollBox.attr('scroll-box-now-work', true);
+            $scrollBox.attr('scroll-box-index', $post.index());
+
+
+
+            $('.scroll-dots > li.active').removeClass('active');
+            $('.scroll-dots > li').eq(postIndex).addClass('active');
+
+            $("html,body")
+                .stop()
+                .animate({
+                    scrollTop: moveTop + "px"
+                }, {
+                    duration: animationDuration,
+                    complete: function () {
+                        $scrollBox.attr('scroll-box-now-work', false);
+                        $this.removeClass('active');
+                        $post.addClass('active');
+                        topBarScroll__init();
+                    }
+                });
+        }
     });
 
-    $(".active-on-visible.active").each(function (index, node) {
-        var $node = $(node);
 
-        var offsetTop = $node.attr("data-active-on-visible-offsetTop");
-        var offsetBottom = $node.attr("data-active-on-visible-offsetBottom");
-        var diffY = parseInt($node.attr('data-active-on-visible-diff-y'));
-        var delay = parseInt($node.attr("data-active-on-visible-delay"));
 
-        if (($(window).scrollTop() + $(window).height() < offsetTop) || ($(window).scrollTop() > offsetBottom)) {
-            setTimeout(function () {
-                $node.removeClass("active");
-            }, delay);
+    $(window).resize(resizeEvent);
+}
+
+function resizeEvent(){
+    $(".scroll-box").each(function (index, node) {
+        var $scrollBox = $(node);
+        var index = $scrollBox.attr('scroll-box-index');
+
+        if (index == null ) {
+            index = $scrollBox.attr('scroll-box-index', 0);
         }
+
+        var moveTop = $scrollBox.find(' > .page').eq(index).offset().top;
+
+        var animationDuration = 0;
+
+
+        var $activedPage = $('.scroll-box > .page.active');
+        var $postPage = $('.scroll-box > .page').eq(index);
+
+        $("html,body")
+            .stop()
+            .animate({
+                scrollTop: moveTop + "px"
+            }, {
+                duration: animationDuration,
+                complete: function () {
+                    $scrollBox.data('scroll-box-now-work', false);
+                    $activedPage.removeClass('active');
+                    $postPage.addClass('active');
+                }
+            });
     });
 }
 
 
-function addDot__init(){
-    for(var i = 1 ; i <= $('.scroll-box > .page').length; i++) {
-        $('.dots').append('<div class="dot"></div>');
+
+function sideDotsScroll__init() {
+    $('.scroll-dots > li').click(function (e) {
+        e.preventDefault();
+
+        var $scrollBox = $('.scroll-box');
+        var nowWork = $scrollBox.attr('scroll-box-now-work');
+
+        if (nowWork == true) {
+            return;
+        }
+
+        var $this = $(this);
+        var dotIndex = $this.index();
+        var moveTop = $('.scroll-box > .page').eq(dotIndex).offset().top;
+
+        var $activedPage = $('.scroll-box > .page.active');
+        var $postPage = $('.scroll-box > .page').eq(dotIndex);
+
+
+        $('.scroll-dots > li.active').removeClass('active');
+        $this.addClass('active');
+
+        $("html,body")
+            .stop()
+            .animate({
+                scrollTop: moveTop + "px"
+            }, {
+                duration: 800,
+                complete: function () {
+                    $activedPage.removeClass('active');
+                    $postPage.addClass('active');
+                    $scrollBox.attr('scroll-box-now-work', false);
+                    topBarScroll__init();
+                }
+            });
+    });
+}
+
+
+function topBarScroll__init() {
+    var actSlide = $('.scroll-box').attr('scroll-box-index');
+
+    if (actSlide == 5 || actSlide == 6 || actSlide == 7 || actSlide == 8 || actSlide == 9) {
+        $('.top-bar').addClass('active');
+    } else {
+        $('.top-bar').removeClass('active');
     }
 }
 
-function clickDot(){
-    $('.dots > .dot').click(function(){
-        $(this).toggleClass('active');
+/* 리프레쉬 할 때 현재 페이지에 active 걸기 */
+function nowPage() {
+    $(".scroll-box > .page").each(function(){
+        var $this = $(this);
+        var thisIndex = $this.index();
+        var windowST = $(window).scrollTop();
+        var thisOffsetT = $this.offset().top;
+        var thisOffsetB = thisOffsetT + $this.outerHeight();
+        var now = null;
+        
+        if (windowST  >= thisOffsetT && windowST < thisOffsetB) {
+            $('.scroll-box > .page').eq(thisIndex).addClass('active');
+            $('.scroll-dots > .dot').eq(thisIndex).addClass('active');
+            now = $('.scroll-box').attr('scroll-box-index', thisIndex);
+        }
     });
 }
 
-
+/* 점 갯수 만들기 */
+function addDot__init() {
+    for (var i = 1; i <= $('.scroll-box > .page').length; i++) {
+        $('.scroll-dots').append('<li class="dot"><div></div></li>');
+    }
+}
 
 
 $(function () {
     addDot__init();
-    ActiveOnVisible__init();
     barClick__init();
-    clickDot();
+    ScrollBox__init();
+    sideDotsScroll__init();
+    nowPage();
 })
