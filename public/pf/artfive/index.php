@@ -14,7 +14,8 @@
     <header class="top-bar">
         <h1 class="logo">
             <a href="#">
-                <img src="https://nixpluvia.github.io/img1/pf/artfive/logo_white.png" alt="">
+                <img class="logo-white" src="https://nixpluvia.github.io/img1/pf/artfive/logo_white.png" alt="artfive">
+                <img class="logo-gray" src="https://nixpluvia.github.io/img1/pf/artfive/logo_gray.png" alt="artfive">
             </a>
         </h1>
         <div class="util-menu flex-ai-c">
