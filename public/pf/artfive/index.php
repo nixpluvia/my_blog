@@ -111,6 +111,7 @@
             </button>
         </div>
     </header>
+
     <div class="menu-box"></div>
 
     <button class="btn-scroll">
@@ -130,7 +131,7 @@
             </div>
             <div class="content-text">
                 <p class="t1">신개념 프리미엄 어린이 미술교육</p>
-                <h1 class="h1">다섯손가락의 기적</h1>
+                <h1 class="title-t1">다섯손가락의 기적</h1>
                 <p class="t2">Creative Kids Power</p>
             </div>
             
@@ -139,7 +140,7 @@
             <div class="bg-img" style="background-image: url(https://nixpluvia.github.io/img1/pf/artfive/v02.jpg)">
             </div>
             <div class="content-text">
-                <h1 class="h1">창의성, 세계의 확장</h1>
+                <h1 class="title-t1">창의성, 세계의 확장</h1>
                 <p class="t1">
                     지식 습득에 익숙한 아이는 과거지향적입니다.
                     <br>
@@ -158,7 +159,7 @@
             <div class="bg-img" style="background-image: url(https://nixpluvia.github.io/img1/pf/artfive/v03.jpg)">
             </div>
             <div class="content-text">
-                <h1 class="h1">
+                <h1 class="title-t1">
                     질문하는 아이
                     <br>
                     대답하는 아이
@@ -180,7 +181,7 @@
             <div class="bg-img" style="background-image: url(https://nixpluvia.github.io/img1/pf/artfive/v04.jpg)">
             </div>
             <div class="content-text">
-                <h1 class="h1">
+                <h1 class="title-t1">
                     3살, 세상의 모든 것을
                     <br>
                     배우기에 충분한 나이
@@ -201,7 +202,7 @@
             <div class="bg-img" style="background-image: url(https://nixpluvia.github.io/img1/pf/artfive/v05.jpg)">
             </div>
             <div class="content-text">
-                <h1 class="h1">
+                <h1 class="title-t1">
                     놀이, 진짜와 가짜
                 </h1>
                 <p class="t1">
@@ -218,14 +219,14 @@
                 <div>Self-esteem and identity begin with art education</div>
             </div>
         </section>
-        <section class="page6 page">
+        <section class="page6 page page-white">
             <div class="bg-video">
                 <video height="100%" muted="muted" preload="auto" autoplay="" loop="" playsinline="">
                     <source src="https://nixpluvia.github.io/img1/pf/artfive/v003.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="content-text">
-                <h1 class="h1">
+                <h1 class="title-t1">
                     예술, 최고의 나를 만나는 순간
                 </h1>
                 <p class="t1">
@@ -240,6 +241,64 @@
             </div>
             <div class="section-footer">
                 <div>Art is the best moment meet to the best of me</div>
+            </div>
+        </section>
+        <section class="page7 page page-white">
+            <div class="bg-color">
+            </div>
+            <div class="content-text">
+                <h1 class="title-t2 flex-jc-c">
+                    <span>CREATIVE PROGRAMS</span>
+                </h1>
+                <ul class="program-list flex">
+                    <li>
+                        <a class="flex" href="#">
+                            <div class="txt">
+                                AGE2.5-5
+                                <br>
+                                <strong>DYNAMIC ART</strong>
+                            </div>
+                            <div class="figure">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 252 252">
+                                    <circle class="s1" cx="126" cy="126" r="125"></circle>
+                                </svg>
+                            </div>
+                            <div class="img"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex" href="#">
+                            <div class="txt">
+                                AGE6-7
+                                <br>
+                                <strong>JACSON ART</strong>
+                            </div>
+                            <div class="figure">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 252 252">
+                                    <polygon class="s1" points="2.5,250.5 126,1.5 249.5,250.5 "></polygon>
+                                </svg>
+                            </div>
+                            <div class="img"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex" href="#">
+                            <div class="txt">
+                                AGE8-13
+                                <br>
+                                <strong>E ART</strong>
+                            </div>
+                            <div class="figure">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 252 252">
+                                    <g>
+                                        <path class="s1" d="M250,2v248H2V2H250 M251,1H1v250h250V1L251,1z"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="img"></div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
     </div>
