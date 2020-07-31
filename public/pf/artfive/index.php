@@ -301,6 +301,16 @@
                 </ul>
             </div>
         </section>
+        <section class="page8 page page-white">
+            <div class="bg-color">
+            </div>
+            <div class="content-text">
+                <h1 class="title-t2 flex-jc-c">
+                    <span>ARTFIVE MERIT</span>
+                </h1>
+                <div></div>
+            </div>
+        </section>
     </div>
 </body>
 
