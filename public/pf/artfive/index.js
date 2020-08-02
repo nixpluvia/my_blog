@@ -12,7 +12,6 @@ function ScrollBox__init() {
 
     $(".scroll-box > .page").on("mousewheel DOMMouseScroll", function (e) {
         e.preventDefault();
-
         var $this = $(this);
         var $scrollBox = $(this).closest('.scroll-box');
 
@@ -203,7 +202,7 @@ function topBarScroll__init() {
     }
 }
 
-/* 리프레쉬 할 때 현재 페이지에 active 걸기 & 스크롤 박스 부모에게 data 현재 index 정보 넘기기 */
+/* 리프레쉬 할 때 현재 페이지에 active 걸기 & 스크롤 박스 부모에게 data 현재 index 정보 넘기기 
 function nowPage() {
     $(".scroll-box > .page").each(function(){
         var $this = $(this);
@@ -212,7 +211,7 @@ function nowPage() {
         var thisOffsetT = $this.offset().top;
         var thisOffsetB = thisOffsetT + $this.outerHeight();
         var now = null;
-        
+
         if (windowST >= thisOffsetT && windowST < thisOffsetB) {
             if( thisIndex <= 5){
                 $('.btn-scroll').addClass('active');
@@ -223,7 +222,31 @@ function nowPage() {
         }
     });
 }
+*/
+function nowPage() {
+    $(".scroll-box > .page").each(function(){
+        var $this = $(this);
+        var thisIndex = $this.index();
+        var windowST = $(window).scrollTop();
+        var thisOffsetT = $this.offset().top;
+        var thisOffsetB = thisOffsetT + $this.outerHeight();
+        var now = null;
 
+        setTimeout(function(){
+            $(window).scrollTop(0);
+        }, 100)
+        
+        if (windowST >= thisOffsetT && windowST < thisOffsetB) {
+            if( thisIndex <= 5){
+                $('.btn-scroll').addClass('active');
+            }
+            $('.scroll-box > .page').eq(thisIndex).addClass('active');
+            $('.scroll-dots > .dot').eq(thisIndex).addClass('active');
+            now = $('.scroll-box').data('scroll-box-index', thisIndex);
+        }
+    });
+    
+}
 
 
 /* 다른 요소 스크롤 방지 */
@@ -244,9 +267,68 @@ function addDot__init() {
 }
 
 
+
+
+/*
+function slickSlider__init(){
+    var slider = {
+        1: {
+            sliderT1: '#slide1'
+        },
+        2: {
+            sliderT2: '#slide2'
+        }
+    }
+    $.each(slider,function(){
+        $(this.sliderT1).slick({
+            infinite: true,
+            slidesToShow: 1,
+            arrows: true,
+            appendArrows: $('.page9 .content > .wrap > .notice-wrap > .left > .arrow'),
+            prevArrow : "<div class='slick-prev'><img src=\"https://nixpluvia.github.io/img1/pf/artfive/notice_arrow_btn.jpg\"></div>",
+            nextArrow : "<div class='slick-next'><img src=\"https://nixpluvia.github.io/img1/pf/artfive/notice_arrow_btn.jpg\"></div>",
+        })
+        $(this.sliderT2).slick({
+            infinite: true,
+            slidesToShow: 1,
+            arrows: true,
+            rows: 2,
+            prevArrow : "<div class='slick-prev'><img src=\"https://nixpluvia.github.io/img1/pf/artfive/notice_arrow_btn.jpg\"></div>",
+            nextArrow : "<div class='slick-next'><img src=\"https://nixpluvia.github.io/img1/pf/artfive/notice_arrow_btn.jpg\"></div>",
+        })
+    })
+}
+*/
+
+function slickSlider1(){
+    $('#slide1').slick({
+        infinite: true,
+        slidesToShow: 1,
+        arrows: true,
+        appendArrows: $('.page9 .content > .wrap > .notice-wrap > .left > .arrow'),
+        prevArrow : "<div class='slick-prev'><img src=\"https://nixpluvia.github.io/img1/pf/artfive/notice_arrow_btn.jpg\"></div>",
+        nextArrow : "<div class='slick-next'><img src=\"https://nixpluvia.github.io/img1/pf/artfive/notice_arrow_btn.jpg\"></div>",
+    })
+}
+function slickSlider2(){
+    $('#slide2').slick({
+        infinite: false,
+        slidesToShow: 1,
+        rows: 2,
+        arrows: true,
+        appendArrows: $('.page9 .content > .wrap > .media-wrap > .left > .arrow'),
+        prevArrow : "<div class='slick-prev'><img src=\"https://nixpluvia.github.io/img1/pf/artfive/notice_arrow_btn.jpg\"></div>",
+        nextArrow : "<div class='slick-next'><img src=\"https://nixpluvia.github.io/img1/pf/artfive/notice_arrow_btn.jpg\"></div>",
+    })
+}
+
+
+
 $(function () {
     addDot__init();
     barClick__init();
+    slickSlider1();
+    slickSlider2();
 
     nowPage();
     ScrollBox__init();

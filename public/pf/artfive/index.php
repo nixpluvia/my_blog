@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="./index.css">
     <script src="./index.js"></script>
     <title>아트파이브</title>
@@ -129,7 +132,7 @@
                     <source src="https://nixpluvia.github.io/img1/pf/artfive/v005.mp4" type="video/mp4">
                 </video>
             </div>
-            <div class="content-text">
+            <div class="content">
                 <p class="t1">신개념 프리미엄 어린이 미술교육</p>
                 <h1 class="title-t1">다섯손가락의 기적</h1>
                 <p class="t2">Creative Kids Power</p>
@@ -139,7 +142,7 @@
         <section class="page2 page " >
             <div class="bg-img" style="background-image: url(https://nixpluvia.github.io/img1/pf/artfive/v02.jpg)">
             </div>
-            <div class="content-text">
+            <div class="content">
                 <h1 class="title-t1">창의성, 세계의 확장</h1>
                 <p class="t1">
                     지식 습득에 익숙한 아이는 과거지향적입니다.
@@ -158,7 +161,7 @@
         <section class="page3 page " >
             <div class="bg-img" style="background-image: url(https://nixpluvia.github.io/img1/pf/artfive/v03.jpg)">
             </div>
-            <div class="content-text">
+            <div class="content">
                 <h1 class="title-t1">
                     질문하는 아이
                     <br>
@@ -180,7 +183,7 @@
         <section class="page4 page " >
             <div class="bg-img" style="background-image: url(https://nixpluvia.github.io/img1/pf/artfive/v04.jpg)">
             </div>
-            <div class="content-text">
+            <div class="content">
                 <h1 class="title-t1">
                     3살, 세상의 모든 것을
                     <br>
@@ -201,7 +204,7 @@
         <section class="page5 page ">
             <div class="bg-img" style="background-image: url(https://nixpluvia.github.io/img1/pf/artfive/v05.jpg)">
             </div>
-            <div class="content-text">
+            <div class="content">
                 <h1 class="title-t1">
                     놀이, 진짜와 가짜
                 </h1>
@@ -225,7 +228,7 @@
                     <source src="https://nixpluvia.github.io/img1/pf/artfive/v003.mp4" type="video/mp4">
                 </video>
             </div>
-            <div class="content-text">
+            <div class="content">
                 <h1 class="title-t1">
                     예술, 최고의 나를 만나는 순간
                 </h1>
@@ -246,7 +249,7 @@
         <section class="page7 page page-white">
             <div class="bg-color">
             </div>
-            <div class="content-text">
+            <div class="content">
                 <h1 class="title-t2 flex-jc-c">
                     <span>CREATIVE PROGRAMS</span>
                 </h1>
@@ -304,11 +307,142 @@
         <section class="page8 page page-white">
             <div class="bg-color">
             </div>
-            <div class="content-text">
+            <div class="content">
                 <h1 class="title-t2 flex-jc-c">
                     <span>ARTFIVE MERIT</span>
                 </h1>
-                <div></div>
+                <ul class="merit-list flex">
+                    <li>
+                        <div class="wrap">
+                            <div class="figure">
+                                <img src="https://nixpluvia.github.io/img1/pf/artfive/merit_icon01.jpg" alt="">
+                            </div>
+                            <div class="info-txt">
+                                <span class="info-num">2003</span>
+                                <br>
+                                <span>설립</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wrap">
+                            <div class="figure">
+                                <img src="https://nixpluvia.github.io/img1/pf/artfive/merit_icon02.jpg" alt="">
+                            </div>
+                            <div class="info-txt">
+                                <span>누적 원생수</span>
+                                <br>
+                                <span class="info-num">16412</span><span>명</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wrap">
+                            <div class="figure">
+                                <img src="https://nixpluvia.github.io/img1/pf/artfive/merit_icon03.jpg" alt="">
+                            </div>
+                            <div class="info-txt">
+                                <span>회원 재등록률</span> <span class="info-num">94</span>%
+                                <br>
+                                <span>장기 등록률</span> <span class="info-num">48</span>%
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="page9 page page-white">
+            <div class="bg-color">
+            </div>
+            <div class="content">
+                <div class="wrap con">
+                    <div class="notice-wrap flex content-box">
+                        <div class="left">
+                            <h1 class="category-txt">NOTICE</h1>
+                            <div id="slide-nav1" class="arrow flex"></div>
+                        </div>
+                        <div class="right">
+                            <div id="slide1" class="slide">
+                                <div class="item">
+                                    <div class="bn-img" style="background-image:url(https://nixpluvia.github.io/img1/pf/artfive/b_file_15919684024tm7dwwl12.jpg)"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="bn-img" style="background-image:url(https://nixpluvia.github.io/img1/pf/artfive/b_file_1590684749gtrispx2ib.jpg)"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="bn-img" style="background-image:url(https://nixpluvia.github.io/img1/pf/artfive/b_file_15893942037ixgqguz2o.jpg)"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="bn-img" style="background-image:url(https://nixpluvia.github.io/img1/pf/artfive/b_file_1588526232lvouspthu3.jpg)"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="bn-img" style="background-image:url(https://nixpluvia.github.io/img1/pf/artfive/b_file_1588316318330dfbbjee.jpg)"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="bn-img" style="background-image:url(https://nixpluvia.github.io/img1/pf/artfive/b_file_15883163052eg2h3k92u.jpg)"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="bn-img" style="background-image:url(https://nixpluvia.github.io/img1/pf/artfive/b_file_158831628520yqk6y87h.jpg)"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="bn-img" style="background-image:url(https://nixpluvia.github.io/img1/pf/artfive/b_file_1588316272ok9a5kqo7a.jpg)"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="bn-img" style="background-image:url(https://nixpluvia.github.io/img1/pf/artfive/b_file_1588316258hzuzzbbltp.jpg)"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="bn-img" style="background-image:url(https://nixpluvia.github.io/img1/pf/artfive/b_file_1588316258hzuzzbbltp.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-wrap flex content-box">
+                        <div class="left">
+                            <h1 class="category-txt">MEDIA</h1>
+                            <div id="slide-nav2" class="arrow flex"></div>
+                        </div>
+                        <div class="right">
+                            <div id="slide2" class="slide">
+                                <div class="item">
+                                    <a class="flex" href="#">
+                                        <div class="date">
+                                            05.01
+                                            <span class="year">2020</span>
+                                        </div>
+                                        <div class="txt">
+                                            <div class="subject_title"></div>
+                                            <div class="con-txt"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a class="flex" href="#">
+                                        <div class="date">
+                                            05.01
+                                            <span class="year">2020</span>
+                                        </div>
+                                        <div class="txt">
+                                            <div class="subject_title"></div>
+                                            <div class="con-txt"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a class="flex" href="#">
+                                        <div class="date">
+                                            05.01
+                                            <span class="year">2020</span>
+                                        </div>
+                                        <div class="txt">
+                                            <div class="subject_title"></div>
+                                            <div class="con-txt"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>

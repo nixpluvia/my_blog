@@ -263,7 +263,7 @@ video {
     object-fit: contain;
 }
 .con {
-    min-width: 1300px;
+    max-width: 1400px;
 }
 /* 스크롤 페이지*/
 .scroll-box > .page {
@@ -530,7 +530,7 @@ video {
 }
 
 /* 스크롤 페이지 중앙 텍스트*/
-.scroll-box > .page > .content-text {
+.scroll-box > .page > .content {
     position: absolute;
     top: 50%;
     left: 0;
@@ -539,7 +539,7 @@ video {
     text-align: center;
     color: #fff;
 }
-.scroll-box > .page > .content-text > .title-t1 {
+.scroll-box > .page > .content > .title-t1 {
     font-size: 46px;
     font-weight: normal;
     line-height: 1.3;
@@ -547,12 +547,12 @@ video {
     opacity: 0;
     transform: translateY(60px);
 }
-.scroll-box > .page.active > .content-text > .title-t1 {
+.scroll-box > .page.active > .content > .title-t1 {
     opacity: 1;
     transform: translateY(0);
     transition: all 0.6s;
 }
-.scroll-box > .page > .content-text > .t1 {
+.scroll-box > .page > .content > .t1 {
     font-size: 17px;
     line-height: 1.8;
     font-weight: 300;
@@ -561,7 +561,7 @@ video {
     opacity: 0;
     transform: translateY(60px);
 }
-.scroll-box > .page.active > .content-text > .t1 {
+.scroll-box > .page.active > .content > .t1 {
     opacity: 1;
     transform: translateY(0);
     transition: all 0.6s 0.1s;
@@ -585,7 +585,7 @@ video {
 
 
 /* 스크롤 페이지 중앙 텍스트 section1*/
-.scroll-box > .page1 > .content-text > .t1 {
+.scroll-box > .page1 > .content > .t1 {
     font-size: 38px;
     line-height: 38px;
     font-weight: 200;
@@ -594,12 +594,12 @@ video {
     opacity: 0;
     transform: translateY(60px);
 }
-.scroll-box > .page1.active > .content-text > .t1 {
+.scroll-box > .page1.active > .content > .t1 {
     opacity: 1;
     transform: translateY(0);
     transition: all 0.6s;
 }
-.scroll-box > .page1 > .content-text > .title-t1 {
+.scroll-box > .page1 > .content > .title-t1 {
     font-size: 70px;
     line-height: 70px;
     font-weight: 300;
@@ -608,12 +608,12 @@ video {
     opacity: 0;
     transform: translateY(60px);
 }
-.scroll-box > .page1.active > .content-text > .title-t1 {
+.scroll-box > .page1.active > .content > .title-t1 {
     opacity: 1;
     transform: translateY(0);
     transition: all 0.6s 0.1s;
 }
-.scroll-box > .page > .content-text > .t2 {
+.scroll-box > .page > .content > .t2 {
     font-family: 'Montserrat',sans-serif;
     font-size: 50px;
     line-height: 50px;
@@ -623,14 +623,14 @@ video {
     opacity: 0;
     transform: translateY(60px);
 }
-.scroll-box > .page1.active > .content-text > .t2 {
+.scroll-box > .page1.active > .content > .t2 {
     opacity: 1;
     transform: translateY(0);
     transition: all 0.6s 0.2s;
 }
 
 /* 스크롤 페이지 텍스트 section6*/
-.scroll-box > .page-white > .content-text {
+.scroll-box > .page-white > .content {
     color: #333;
 }
 .scroll-box > .page-white > .section-footer {
@@ -638,20 +638,19 @@ video {
 }
 
 /* 스크롤 페이지 section7~8 타이틀*/
-.scroll-box > .page > .content-text > .title-t2 {
+.scroll-box > .page > .content > .title-t2 {
     font-family: 'Montserrat',sans-serif;
     position: relative;
     font-size: 24px;
     font-weight: 600;
     line-height: 24px;
     opacity: 0;
-    transform: translateY(60px);
 }
-.scroll-box > .page > .content-text > .title-t2 > span{
+.scroll-box > .page > .content > .title-t2 > span{
     position: relative;
     padding: 18px 0;
 }
-.scroll-box > .page > .content-text > .title-t2 > span::before {
+.scroll-box > .page > .content > .title-t2 > span::before {
     content:"";
     position: absolute;
     top: 0;
@@ -660,7 +659,7 @@ video {
     height: 1px;
     background-color: #333;
 }
-.scroll-box > .page > .content-text > .title-t2 > span::after {
+.scroll-box > .page > .content > .title-t2 > span::after {
     content:"";
     position: absolute;
     bottom: 0;
@@ -669,25 +668,24 @@ video {
     height: 1px;
     background-color: #333;
 }
-.scroll-box > .page.active > .content-text > .title-t2 {
+.scroll-box > .page.active > .content > .title-t2 {
     opacity: 1;
-    transform: translateY(0);
     transition: all 0.6s;
 }
 
 /* 스크롤 페이지 텍스트 section7 프로그램 리스트 요소*/
-.scroll-box > .page > .content-text > .program-list {
+.scroll-box > .page > .content > .program-list {
     justify-content: space-between;
     max-width: 1400px;
     margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
 }
-.scroll-box > .page > .content-text > .program-list > li{
+.scroll-box > .page > .content > .program-list > li{
     width: 400px;
     height: 400px;
 }
-.scroll-box > .page > .content-text > .program-list > li > a {
+.scroll-box > .page > .content > .program-list > li > a {
     position: relative;
     justify-content: flex-start;
     align-items: center;
@@ -695,7 +693,7 @@ video {
     height: 100%;
 }
 /* 프로그램 리스트 이미지 */
-.scroll-box > .page > .content-text > .program-list > li > a > .img{
+.scroll-box > .page > .content > .program-list > li > a > .img{
     position: absolute;
     top: 0;
     left: 0;
@@ -707,41 +705,41 @@ video {
     background-repeat: no-repeat;
     background-position: center;
 }
-.scroll-box > .page > .content-text > .program-list > li:hover > a > .img{
+.scroll-box > .page > .content > .program-list > li:hover > a > .img{
     opacity: 1;
 }
-.scroll-box > .page > .content-text > .program-list > li:nth-child(1) > a > .img{
+.scroll-box > .page > .content > .program-list > li:nth-child(1) > a > .img{
     background-image: url(https://nixpluvia.github.io/img1/pf/artfive/program_list_img01.jpg);
 }
-.scroll-box > .page > .content-text > .program-list > li:nth-child(2) > a > .img{
+.scroll-box > .page > .content > .program-list > li:nth-child(2) > a > .img{
     background-image: url(https://nixpluvia.github.io/img1/pf/artfive/program_list_img02.jpg);
 }
-.scroll-box > .page > .content-text > .program-list > li:nth-child(3) > a > .img{
+.scroll-box > .page > .content > .program-list > li:nth-child(3) > a > .img{
     background-image: url(https://nixpluvia.github.io/img1/pf/artfive/program_list_img03.jpg);
 }
 
 /* 프로그램 리스트 - 모양 */
-.scroll-box > .page > .content-text > .program-list > li > a > .figure {
+.scroll-box > .page > .content > .program-list > li > a > .figure {
     position: absolute;
     top: calc(50% - 126px);
     left: calc(50% - 126px);
     z-index: 2;
 }
-.scroll-box > .page > .content-text > .program-list > li > a > .figure > svg{
+.scroll-box > .page > .content > .program-list > li > a > .figure > svg{
     width: 252px;
     height: 252px;
 }
-.scroll-box > .page > .content-text > .program-list > li > a > .figure > svg .s1{
+.scroll-box > .page > .content > .program-list > li > a > .figure > svg .s1{
     fill: none;
     stroke: #000;
     opacity: 0.25;
 }
-.scroll-box > .page > .content-text > .program-list > li:hover > a > .figure > svg .s1{
+.scroll-box > .page > .content > .program-list > li:hover > a > .figure > svg .s1{
     stroke: #fff;
     opacity: 0.5;
 }
 /* 프로그램 리스트 - 텍스트 */
-.scroll-box > .page > .content-text > .program-list > li > a > .txt {
+.scroll-box > .page > .content > .program-list > li > a > .txt {
     font-family: 'Montserrat',sans-serif;
     position: relative;
     text-align:left;
@@ -752,14 +750,176 @@ video {
     color: #000;
     z-index: 3;
 }
-.scroll-box > .page > .content-text > .program-list > li:hover > a > .txt {
+.scroll-box > .page > .content > .program-list > li:hover > a > .txt {
     color: #fff;
 }
 
 
 
 /* 스크롤 페이지 텍스트 section8 */
+.scroll-box > .page > .content > .merit-list {
+    max-width: 1400px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+.scroll-box > .page.active > .content > .merit-list {
+    opacity: 1;
+}
+.scroll-box > .page > .content > .merit-list > li {
+    position: relative;
+    width: calc(100% / 3);
+}
+.scroll-box > .page > .content > .merit-list > li::before {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-left: 1px solid #cbcbcb;
+}
+.scroll-box > .page > .content > .merit-list > li:last-child::before {
+    border-right: 1px solid #cbcbcb;
+}
+.scroll-box > .page > .content > .merit-list > li::after {
+    content:"";
+    display: block;
+    padding-top: 64.377%;
+}
+.scroll-box > .page > .content > .merit-list > li > .wrap{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+}
+.scroll-box > .page > .content > .merit-list > li > .wrap > .info-txt{
+    margin-top: 28px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.5;
+}
+
+/* 스크롤 페이지 텍스트 section9 */
+.scroll-box > .page > .content > .wrap {
+    min-width: 1200px;
+}
+.scroll-box > .page > .content > .wrap > .content-box > .left{
+    width: calc(100% / 7);
+}
+.scroll-box > .page > .content > .wrap > .content-box > .left > h1{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #333;
+}
+.scroll-box > .page > .content > .wrap > .content-box > .left > .arrow {
+    justify-content: center;
+    margin-top: 25px
+}
+.scroll-box > .page > .content > .wrap > .content-box > .left > .arrow > .slick-arrow{
+    position: static;
+    display: flex;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    outline-style: none;
+    width: 40px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.scroll-box > .page > .content > .wrap > .content-box > .left > .arrow > .slick-arrow::before{
+    content: "";
+}
+.scroll-box > .page > .content > .wrap > .content-box > .left > .arrow > .slick-prev {
+    border-right: 1px solid #cbcbcb;
+}
+.scroll-box > .page > .content > .wrap > .content-box > .left > .arrow > .slick-next > img {
+    transform: scaleX(-1);
+}
 
 
 
 
+
+.scroll-box > .page > .content > .wrap > .notice-wrap > .right{
+    position: relative;
+    flex: 1 0 0 ;
+    overflow: hidden;
+}
+.scroll-box > .page > .content > .wrap > .notice-wrap > .right::before{
+    content:"";
+    display: block;
+    padding-top: 37.1666%;
+}
+
+.scroll-box > .page > .content > .wrap > .notice-wrap > .right > .slide {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+}
+.scroll-box > .page > .content > .wrap > .notice-wrap > .right > .slide .item{
+    outline-style: none;
+}
+.scroll-box > .page > .content > .wrap > .notice-wrap > .right > .slide .item > .bn-img{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.scroll-box > .page > .content > .wrap > .notice-wrap > .right > .slide .item > .bn-img::before{
+    content:"";
+    display: block;
+    padding-top: 30.8333%;
+}
+
+
+
+
+
+.scroll-box > .page > .content > .wrap > .media-wrap{
+    margin-top: 70px;
+}
+.scroll-box > .page > .content > .wrap > .media-wrap > .right{
+    position: relative;
+    flex: 1 0 0;
+    overflow: hidden;
+    border-top: 2px solid #000;
+    box-sizing: border-box;
+}
+.scroll-box > .page > .content > .wrap > .media-wrap > .right > .slide .item > a {
+    display: block;
+    height: 61px;
+    padding: 38px 0;
+}
+.scroll-box > .page > .content > .wrap > .media-wrap > .right > .slide .item > a > .date{
+    font-family: 'Montserrat',sans-serif;
+    width: 150px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    color: #333
+}
+.scroll-box > .page > .content > .wrap > .media-wrap > .right > .slide .item > a > .date > .year{
+    display: block;
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 15px;
+    color: #777;
+}
+.scroll-box > .page > .content > .wrap > .media-wrap > .right > .slide .item > a > .txt{
+    flex: 1 0 0;
+    padding-right: 200px;
+    box-sizing: border-box;
+}
