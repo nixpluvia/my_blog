@@ -202,52 +202,54 @@ function topBarScroll__init() {
     }
 }
 
-/* 리프레쉬 할 때 현재 페이지에 active 걸기 & 스크롤 박스 부모에게 data 현재 index 정보 넘기기 
+/* 리프레쉬 할 때 현재 페이지에 active 걸기 & 스크롤 박스 부모에게 data 현재 index 정보 넘기기 */
 function nowPage() {
-    $(".scroll-box > .page").each(function(){
-        var $this = $(this);
-        var thisIndex = $this.index();
-        var windowST = $(window).scrollTop();
-        var thisOffsetT = $this.offset().top;
-        var thisOffsetB = thisOffsetT + $this.outerHeight();
-        var now = null;
-
-        if (windowST >= thisOffsetT && windowST < thisOffsetB) {
-            if( thisIndex <= 5){
-                $('.btn-scroll').addClass('active');
+    $(document).ready(function(){
+        $(".scroll-box > .page").each(function(){
+            var $this = $(this);
+            var thisIndex = $this.index();
+            var windowST = null;
+            var thisOffsetT = $this.offset().top;
+            var thisOffsetB = thisOffsetT + $this.outerHeight();
+            var now = null;
+    
+            windowST = $(window).scrollTop();
+            console.log(windowST);
+            if (windowST >= thisOffsetT && windowST < thisOffsetB) {
+                console.log(thisIndex);
+                if( thisIndex <= 5){
+                    $('.btn-scroll').addClass('active');
+                }
+                else {
+                    $('.btn-scroll').removeClass('active');
+                }
+                if( thisIndex >= 5){
+                    $('body').addClass('active');
+                    $('.top-bar').addClass('active');
+                }
+                else {
+                    $('body').removeClass('active');
+                    $('.top-bar').removeClass('active');
+                }
+                $('.scroll-box > .page').eq(thisIndex).addClass('active');
+                $('.scroll-dots > .dot').eq(thisIndex).addClass('active');
+                now = $('.scroll-box').data('scroll-box-index', thisIndex);
             }
-            $('.scroll-box > .page').eq(thisIndex).addClass('active');
-            $('.scroll-dots > .dot').eq(thisIndex).addClass('active');
-            now = $('.scroll-box').data('scroll-box-index', thisIndex);
-        }
-    });
+        });
+    })
 }
-*/
-function nowPage() {
-    $(".scroll-box > .page").each(function(){
-        var $this = $(this);
-        var thisIndex = $this.index();
-        var windowST = $(window).scrollTop();
-        var thisOffsetT = $this.offset().top;
-        var thisOffsetB = thisOffsetT + $this.outerHeight();
-        var now = null;
 
+/*
+function nowPage() {
         setTimeout(function(){
             $(window).scrollTop(0);
+            $('.btn-scroll').removeClass('active');
+            $('.scroll-box > .page').eq(0).addClass('active');
+            $('.scroll-dots > .dot').eq(0).addClass('active');
+            $('.scroll-box').data('scroll-box-index', 0);
         }, 100)
-        
-        if (windowST >= thisOffsetT && windowST < thisOffsetB) {
-            if( thisIndex <= 5){
-                $('.btn-scroll').addClass('active');
-            }
-            $('.scroll-box > .page').eq(thisIndex).addClass('active');
-            $('.scroll-dots > .dot').eq(thisIndex).addClass('active');
-            now = $('.scroll-box').data('scroll-box-index', thisIndex);
-        }
-    });
-    
 }
-
+*/
 
 /* 다른 요소 스크롤 방지 */
 function preventScroll__init(){

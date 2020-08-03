@@ -39,6 +39,9 @@ button {
     background: none;
     outline-style: none;
 }
+*:focus{
+    outline: none;
+}
 
 /* 라이브러리 */
 .block {
@@ -899,8 +902,6 @@ video {
     box-sizing: border-box;
 }
 .scroll-box > .page > .content > .wrap > .media-wrap > .right > .slide .item > a {
-    display: block;
-    height: 61px;
     padding: 38px 0;
 }
 .scroll-box > .page > .content > .wrap > .media-wrap > .right > .slide .item > a > .date{
@@ -919,7 +920,92 @@ video {
     color: #777;
 }
 .scroll-box > .page > .content > .wrap > .media-wrap > .right > .slide .item > a > .txt{
+    position: relative;
     flex: 1 0 0;
+    text-align: left;
     padding-right: 200px;
     box-sizing: border-box;
+}
+.scroll-box > .page > .content > .wrap > .media-wrap > .right > .slide .item > a > .txt .subject_title{
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -1px;
+    font-weight: 500;
+}
+.scroll-box > .page > .content > .wrap > .media-wrap > .right > .slide .item > a > .txt > .con-txt{
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 17px;
+    color: #777;
+}
+.scroll-box > .page > .content > .wrap > .media-wrap > .right > .slide .item > a > .txt > .more-icon{
+    position: absolute;
+    top: 1px;
+    right: 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    transform: rotate(0);
+    background-color: transparent;
+    transition:  transform 0.2s, background 0.2s;
+}
+.scroll-box > .page > .content > .wrap > .media-wrap > .right > .slide .item > a:hover > .txt > .more-icon{
+    transform: rotate(90deg);
+    background-color: #333;
+}
+.scroll-box > .page > .content > .wrap > .media-wrap > .right > .slide .item > a > .txt > .more-icon::before{
+    content:"";
+    position: absolute;
+    top: 29.5px;
+    left: 17px;
+    width: 26px;
+    height: 1px;
+    background-color: #333;
+}
+.scroll-box > .page > .content > .wrap > .media-wrap > .right > .slide .item > a > .txt > .more-icon::after{
+    content:"";
+    position: absolute;
+    top: 17px;
+    left: 29.5px;
+    width: 1px;
+    height: 26px;
+    background-color: #333;
+}
+.scroll-box > .page > .content > .wrap > .media-wrap > .right > .slide .item > a:hover > .txt > .more-icon::before, .scroll-box > .page > .content > .wrap > .media-wrap > .right > .slide .item > a:hover > .txt > .more-icon::after {
+    background-color: #fff;
+}
+
+/* 스크롤 페이지 텍스트 section9 */
+body .scroll-box > .page10 {
+    height: auto;
+}
+.scroll-box > .page10 > .footer > .figure{
+    justify-content: center;
+}
+.scroll-box > .page10 > .footer .footer-nav {
+    margin-top: 35px;
+}
+.scroll-box > .page10 > .footer .footer-nav > ul{
+    justify-content: center;
+}
+.scroll-box > .page10 > .footer .footer-nav > ul > li{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+}
+.scroll-box > .page10 > .footer .footer-nav > ul > li + li{
+    margin-left: 70px;
+}
+.scroll-box > .page10 > .footer .footer-bottom{
+    margin: 35px 3% 0;
+    border-top: 1px solid #333;
+    box-sizing: border-box;
+}
+.scroll-box > .page10 > .footer .footer-bottom > .left {
+    margin-top: 50px;
+}
+.scroll-box > .page10 > .footer .footer-bottom > .left > .copyright{
+    margin-left: 30px;
 }

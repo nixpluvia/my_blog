@@ -410,8 +410,9 @@
                                             <span class="year">2020</span>
                                         </div>
                                         <div class="txt">
-                                            <div class="subject_title"></div>
-                                            <div class="con-txt"></div>
+                                            <div class="subject_title">"아이에게 미술을 선물하세요" 김은정 영통교육원장</div>
+                                            <div class="con-txt">▲"아이에게 미술을 선물하세요" 김은정 영통교육원장아이들의 건강하고 밝은 성장은 모든 부모들의 공통된 희망사..</div>
+                                            <div class="more-icon"></div>
                                         </div>
                                     </a>
                                 </div>
@@ -422,8 +423,9 @@
                                             <span class="year">2020</span>
                                         </div>
                                         <div class="txt">
-                                            <div class="subject_title"></div>
-                                            <div class="con-txt"></div>
+                                            <div class="subject_title">"실패경험에서 자라는 창의력" 윤은정 대표</div>
+                                            <div class="con-txt">▲"실패 경험에서 피어나는 우리 아이 창의력" 윤은정 대표(주)아트체어(대표 윤은정)의 미술학원창업 프랜차이..</div>
+                                            <div class="more-icon"></div>
                                         </div>
                                     </a>
                                 </div>
@@ -434,8 +436,35 @@
                                             <span class="year">2020</span>
                                         </div>
                                         <div class="txt">
-                                            <div class="subject_title"></div>
-                                            <div class="con-txt"></div>
+                                            <div class="subject_title">"행복한 아이가 잘 논다"  분당 정자동 박경희본원장</div>
+                                            <div class="con-txt">▲정자동 아동미술 아트파이브,  ‘행복한 아이가 잘 논다‘아동미술프랜차이즈 학원 아트파이브가 아이들의 발상을 바탕으로 교실에서..</div>
+                                            <div class="more-icon"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a class="flex" href="#">
+                                        <div class="date">
+                                            04.22
+                                            <span class="year">2020</span>
+                                        </div>
+                                        <div class="txt">
+                                            <div class="subject_title">“세상을 아름답게하는 사람이 되자”    아트파이브 동탄센터 신소영 원장</div>
+                                            <div class="con-txt">▲ 아트파이브 동탄센터 교육 현장 (사진=심건호 기자)아이가 세상을 바라보는 관점은 ‘나’에서 출발한다. 모든 사고 체계가..</div>
+                                            <div class="more-icon"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a class="flex" href="#">
+                                        <div class="date">
+                                            12.04
+                                            <span class="year">2019</span>
+                                        </div>
+                                        <div class="txt">
+                                            <div class="subject_title">"인문학 초등미술교육의 힘"   동래 채윤천 교육원장</div>
+                                            <div class="con-txt">▲ 아트파이브 동래교육원 교육 현장"인문학 초등미술교육 아트파이브의 힘" 동래교육원 남다른 교육 주목'부..</div>
+                                            <div class="more-icon"></div>
                                         </div>
                                     </a>
                                 </div>
@@ -444,6 +473,55 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="page10 page page-white">
+            <div class="bg-color">
+            </div>
+            <footer class="footer">
+                <div class="figure flex">
+                    <img src="https://nixpluvia.github.io/img1/pf/artfive/foot_center_logo.png" alt="">
+                </div>
+                <nav class="footer-nav">
+                    <ul class="flex">
+                        <li>
+                            <a href="#">VALUE</a>
+                        </li>
+                        <li>
+                            <a href="#">PROGRAMS</a>
+                        </li>
+                        <li>
+                            <a href="#">ARTFIVE CAMPUS</a>
+                        </li>
+                        <li>
+                            <a href="#">PR</a>
+                        </li>
+                        <li>
+                            <a href="#">FRANCHISE</a>
+                        </li>
+                        <li>
+                            <a href="#">KIDS CAFÉ · TEACHERS</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-bottom flex">
+                    <div class="left flex">
+                        <div class="footer-logo">
+                            <img src="https://nixpluvia.github.io/img1/pf/artfive/logo_gray.png" alt="">
+                        </div>
+                        <div class="copy-right">2019 ART CHAIRE CO., LTD. All Rights Reserved. CEO YOON EUN JOUNG</div>
+                    </div>
+                    <div class="right">
+                        <ul class="footer-util-icon">
+                            <li>
+                                <a href="#">
+                                    <img src="https://" alt="">
+                                    <div class="icon-name"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
         </section>
     </div>
 </body>
