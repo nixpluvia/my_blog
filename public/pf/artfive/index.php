@@ -16,7 +16,7 @@
 <body>
     <header class="top-bar">
         <h1 class="logo">
-            <a href="#">
+            <a >
                 <img class="logo-white" src="https://nixpluvia.github.io/img1/pf/artfive/logo_white.png" alt="artfive">
                 <img class="logo-gray" src="https://nixpluvia.github.io/img1/pf/artfive/logo_gray.png" alt="artfive">
             </a>
@@ -24,7 +24,7 @@
         <div class="util-menu flex-ai-c">
             <ul class="util flex">
                 <li>
-                    <a class="tell-icon" href="#">
+                    <a class="tell-icon" >
                         <svg version="1.1" id="util_tel" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                             viewBox="0 0 32.703 32.68">
                             <g>
@@ -44,7 +44,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="kakao-icon" href="#">
+                    <a class="kakao-icon" >
                         <svg version="1.1" id="util_kakao" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                             viewBox="308.949 803.653 36.114 30.701">
                             <g>
@@ -122,22 +122,22 @@
         <nav class="menu-list">
             <ul>
                 <li>
-                    <a href="#">VALUE</a>
+                    <a >VALUE</a>
                 </li>
                 <li>
-                    <a href="#">RPOGRAMS</a>
+                    <a >RPOGRAMS</a>
                 </li>
                 <li>
-                    <a href="#">ARTFIVE CAMPUS</a>
+                    <a >ARTFIVE CAMPUS</a>
                 </li>
                 <li>
-                    <a href="#">PR</a>
+                    <a >PR</a>
                 </li>
                 <li>
-                    <a href="#">FRANCHISE</a>
+                    <a >FRANCHISE</a>
                 </li>
                 <li>
-                    <a href="#">KIDS CAFÉ · TEACHERS</a>
+                    <a >KIDS CAFÉ · TEACHERS</a>
                 </li>
             </ul>
         </nav>
@@ -156,7 +156,7 @@
             <div class="bg-video">
                 <video height="100%" muted="muted" preload="auto" autoplay="" loop="" playsinline="">
                     <source src="https://nixpluvia.github.io/img1/pf/artfive/v005.mp4" type="video/mp4">
-                    <!--파일질라 <source src="./resource/v005.mp4" type="video/mp4"> -->
+                    <!-- <source src="./resource/v005.mp4" type="video/mp4"> -->
                 </video>
             </div>
             <div class="content">
@@ -253,7 +253,7 @@
             <div class="bg-video">
                 <video height="100%" muted="muted" preload="auto" autoplay="" loop="" playsinline="">
                     <source src="https://nixpluvia.github.io/img1/pf/artfive/v003.mp4" type="video/mp4">
-                    <!--파일질라 <source src="./resource/v003.mp4" type="video/mp4"> -->
+                    <!-- <source src="./resource/v003.mp4" type="video/mp4"> -->
                 </video>
             </div>
             <div class="content">
@@ -283,7 +283,7 @@
                 </h1>
                 <ul class="program-list flex">
                     <li>
-                        <a class="flex" href="#">
+                        <a class="flex" >
                             <div class="txt">
                                 AGE2.5-5
                                 <br>
@@ -298,7 +298,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="flex" href="#">
+                        <a class="flex" >
                             <div class="txt">
                                 AGE6-7
                                 <br>
@@ -313,7 +313,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="flex" href="#">
+                        <a class="flex" >
                             <div class="txt">
                                 AGE8-13
                                 <br>
@@ -432,7 +432,7 @@
                         <div class="right">
                             <div id="slide2" class="slide">
                                 <div class="item">
-                                    <a class="flex" href="#">
+                                    <a class="flex" >
                                         <div class="date">
                                             05.01
                                             <span class="year">2020</span>
@@ -445,7 +445,7 @@
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a class="flex" href="#">
+                                    <a class="flex" >
                                         <div class="date">
                                             05.01
                                             <span class="year">2020</span>
@@ -458,7 +458,7 @@
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a class="flex" href="#">
+                                    <a class="flex" >
                                         <div class="date">
                                             05.01
                                             <span class="year">2020</span>
@@ -471,7 +471,7 @@
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a class="flex" href="#">
+                                    <a class="flex" >
                                         <div class="date">
                                             04.22
                                             <span class="year">2020</span>
@@ -484,7 +484,7 @@
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a class="flex" href="#">
+                                    <a class="flex" >
                                         <div class="date">
                                             12.04
                                             <span class="year">2019</span>
@@ -512,29 +512,29 @@
                 <nav class="footer-nav">
                     <ul class="flex">
                         <li>
-                            <a href="#">VALUE</a>
+                            <a >VALUE</a>
                         </li>
                         <li>
-                            <a href="#">PROGRAMS</a>
+                            <a >PROGRAMS</a>
                         </li>
                         <li>
-                            <a href="#">ARTFIVE CAMPUS</a>
+                            <a >ARTFIVE CAMPUS</a>
                         </li>
                         <li>
-                            <a href="#">PR</a>
+                            <a >PR</a>
                         </li>
                         <li>
-                            <a href="#">FRANCHISE</a>
+                            <a >FRANCHISE</a>
                         </li>
                         <li>
-                            <a href="#">KIDS CAFÉ · TEACHERS</a>
+                            <a >KIDS CAFÉ · TEACHERS</a>
                         </li>
                     </ul>
                 </nav>
                 <div class="footer-bottom flex">
                     <div class="left flex">
                         <div class="footer-logo">
-                            <a class="img-box" href="#">
+                            <a class="img-box" >
                                 <img src="https://nixpluvia.github.io/img1/pf/artfive/logo_gray.png" alt="">
                             </a>
                         </div>
@@ -543,13 +543,13 @@
                     <div class="right">
                         <ul class="footer-util-icon flex">
                             <li>
-                                <a class="flex" href="#">
+                                <a class="flex" >
                                     <img src="https://nixpluvia.github.io/img1/pf/artfive/foot_right_util_insta.png" alt="">
                                     <div class="icon-name">인스타그램</div>
                                 </a>
                             </li>
                             <li>
-                                <a class="flex" href="#">
+                                <a class="flex" >
                                     <div class="figure flex">
                                         <img src="https://nixpluvia.github.io/img1/pf/artfive/foot_right_util_icon01.jpg" alt="">
                                     </div>
@@ -557,7 +557,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="flex" href="#">
+                                <a class="flex" >
                                     <div class="figure flex">
                                         <img src="https://nixpluvia.github.io/img1/pf/artfive/foot_right_util_icon02.jpg" alt="">
                                     </div>
@@ -565,7 +565,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="flex" href="#">
+                                <a class="flex" >
                                     <div class="figure flex">
                                         <img src="https://nixpluvia.github.io/img1/pf/artfive/foot_right_util_icon03.jpg" alt="">
                                     </div>
@@ -573,7 +573,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="flex" href="#">
+                                <a class="flex" >
                                     <div class="figure flex">
                                         <img src="https://nixpluvia.github.io/img1/pf/artfive/foot_right_util_icon04.jpg" alt="">
                                     </div>

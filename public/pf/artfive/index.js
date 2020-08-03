@@ -317,10 +317,6 @@ function nowPage() {
     });
 }
 
-function hyperClick__init(){
-    $('a').click(nowPage);
-}
-
 /* 다른 요소 스크롤 방지 */
 function preventScroll__init(){
     $('.scroll-dots,.menu-box,.top-bar,.btn-scroll').on("mousewheel DOMMouseScroll", function(e){
@@ -414,5 +410,4 @@ $(function () {
     btnScroll__init();
     // refresh 함수
     nowPage();
-    hyperClick__init()
 })
