@@ -1,8 +1,28 @@
+// 메뉴 버튼 클릭 함수
 function barClick__init() {
     $('.bar-icon-box').click(function () {
-        $(this).toggleClass('active');
+        var $this = $(this);
+        var nowIndex = $('.scroll-box').data('scroll-box-index');
+        $('.menu-box').toggleClass('active');
+
+        if($('.menu-box').hasClass('active')){
+            $('.top-bar').addClass('active');
+            $this.addClass('active');
+        }
+        else{
+            if(nowIndex <= 4){
+                setTimeout(function(){
+                    $('.top-bar').removeClass('active');
+                }, 300)
+            }
+            setTimeout(function(){
+                $('.bar-icon-box').removeClass('active');
+            }, 400)
+        }
+        
     })
 }
+
 
 /* 구역 스크롤 */
 function ScrollBox__init() {
@@ -74,14 +94,18 @@ function ScrollBox__init() {
                 }, {
                     duration: animationDuration,
                     complete: function () {
-                        /* btn-scroll - active추가 */
-                        if (postIndex <= 5) {
-                            $('.btn-scroll').addClass('active');
-                        }
                         /* 중복 마우스 휠 방지 해제 */
                         $scrollBox.data('scroll-box-now-work', false);
                         /* 특정 구역 여부 판단 실행 */
                         topBarScroll__init();
+                        /* btn-scroll - active추가 */
+                        if (postIndex <= 5) {
+                            $('.btn-scroll').addClass('active');
+                        }
+                        // 숫자 증가 함수
+                        if (postIndex == 7){
+                            numIncrease__init();
+                        }
                     }
                 });
         }
@@ -118,6 +142,10 @@ function ScrollBox__init() {
 }
 
 // 화면 resize 함수
+
+
+
+
 
 
 /* dot 클릭 이벤트 */
@@ -169,19 +197,25 @@ function sideDotsScroll__init() {
             }, {
                 duration: animationDuration,
                 complete: function () {
-                    /* btn-scroll - active추가 */
-                    if (dotIndex <= 5) {
-                        $('.btn-scroll').addClass('active');
-                    }
                     /* 중복 클릭 방지 해제 */
                     $scrollBox.data('scroll-box-now-work', false);
                     /* 특정 구역 여부 판단 실행 */
                     topBarScroll__init();
+                    /* btn-scroll - active추가 */
+                    if (dotIndex <= 5) {
+                        $('.btn-scroll').addClass('active');
+                    }
+                    if (dotIndex == 7) {
+                        numIncrease__init();
+                    }
                 }
             });
     });
 }
 
+
+
+// 스크롤 버튼 함수
 function btnScroll__init(){
     $('.btn-scroll').click(function(){
         var postIndex = $('.scroll-box').data('scroll-box-index') + 2;
@@ -202,7 +236,28 @@ function topBarScroll__init() {
     }
 }
 
-/* 리프레쉬 할 때 현재 페이지에 active 걸기 & 스크롤 박스 부모에게 data 현재 index 정보 넘기기 */
+function numIncrease__init(){
+    var actPageIndex = $('.scroll-box').data('scroll-box-index');
+
+    $('.info-num').each(function(){
+        var $this = $(this);
+        var maxNum = parseInt($this.attr('max-num'));
+        $({number: 0 }).animate(
+            {number: maxNum},
+            {duration: 800,
+            step: function(){
+                var num = parseInt(this.number);
+                $this.text(num)
+            },
+            complete: function(){
+                var num = parseInt(this.number);
+                $this.text(num)
+            }}
+        )
+    })
+}
+
+/* 리프레쉬 할 때 현재 페이지에 active 걸기 & 스크롤 박스 부모에게 data 현재 index 정보 넘기기 
 function nowPage() {
     $(document).ready(function(){
         $(".scroll-box > .page").each(function(){
@@ -238,18 +293,33 @@ function nowPage() {
         });
     })
 }
-
-/*
+*/
+// refresh할 때 0번으로 초기화 하기
 function nowPage() {
+    $(document).ready(function(){
+        // 스크롤 0 으로 이동
+        // 이전에 있던 class remove
+        $('body').removeClass('active');
+        $('.top-bar').removeClass('active');
+        $('.scroll-box > .page').removeClass('active');
+        $('.scroll-dots > .dot').removeClass('active');
+        $('.btn-scroll').removeClass('active');
+        $('.bar-icon-box').removeClass('active');
+        $('.menu-box').removeClass('active');
+        // 0번 페이지에 클래스 추가
         setTimeout(function(){
             $(window).scrollTop(0);
-            $('.btn-scroll').removeClass('active');
+            $('.scroll-box').data('scroll-box-index', 0);
+            $('.btn-scroll').addClass('active');
             $('.scroll-box > .page').eq(0).addClass('active');
             $('.scroll-dots > .dot').eq(0).addClass('active');
-            $('.scroll-box').data('scroll-box-index', 0);
         }, 100)
+    });
 }
-*/
+
+function hyperClick__init(){
+    $('a').click(nowPage);
+}
 
 /* 다른 요소 스크롤 방지 */
 function preventScroll__init(){
@@ -328,13 +398,21 @@ function slickSlider2(){
 
 $(function () {
     addDot__init();
+    //메뉴바 클릭 함수
     barClick__init();
+    //슬릭 슬라이더
     slickSlider1();
     slickSlider2();
 
-    nowPage();
+    //구역 스크롤 함수
     ScrollBox__init();
+    //dot 함수
     sideDotsScroll__init();
+    //스크롤 방지
     preventScroll__init();
+    //스크롤 버튼 함수
     btnScroll__init();
+    // refresh 함수
+    nowPage();
+    hyperClick__init()
 })

@@ -115,7 +115,33 @@
         </div>
     </header>
 
-    <div class="menu-box"></div>
+    <div class="menu-box flex">
+        <div class="menu-box-figure">
+            <img src="https://nixpluvia.github.io/img1/pf/artfive/menu_logo.png" alt="">
+        </div>
+        <nav class="menu-list">
+            <ul>
+                <li>
+                    <a href="#">VALUE</a>
+                </li>
+                <li>
+                    <a href="#">RPOGRAMS</a>
+                </li>
+                <li>
+                    <a href="#">ARTFIVE CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">PR</a>
+                </li>
+                <li>
+                    <a href="#">FRANCHISE</a>
+                </li>
+                <li>
+                    <a href="#">KIDS CAFÉ · TEACHERS</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
     <button class="btn-scroll">
         <div class="line"></div>
@@ -130,6 +156,7 @@
             <div class="bg-video">
                 <video height="100%" muted="muted" preload="auto" autoplay="" loop="" playsinline="">
                     <source src="https://nixpluvia.github.io/img1/pf/artfive/v005.mp4" type="video/mp4">
+                    <!--파일질라 <source src="./resource/v005.mp4" type="video/mp4"> -->
                 </video>
             </div>
             <div class="content">
@@ -226,6 +253,7 @@
             <div class="bg-video">
                 <video height="100%" muted="muted" preload="auto" autoplay="" loop="" playsinline="">
                     <source src="https://nixpluvia.github.io/img1/pf/artfive/v003.mp4" type="video/mp4">
+                    <!--파일질라 <source src="./resource/v003.mp4" type="video/mp4"> -->
                 </video>
             </div>
             <div class="content">
@@ -318,7 +346,7 @@
                                 <img src="https://nixpluvia.github.io/img1/pf/artfive/merit_icon01.jpg" alt="">
                             </div>
                             <div class="info-txt">
-                                <span class="info-num">2003</span>
+                                <span class="info-num info-num1" max-num="2003">0</span>
                                 <br>
                                 <span>설립</span>
                             </div>
@@ -332,7 +360,7 @@
                             <div class="info-txt">
                                 <span>누적 원생수</span>
                                 <br>
-                                <span class="info-num">16412</span><span>명</span>
+                                <span class="info-num info-num2" max-num="16412">0</span><span>명</span>
                             </div>
                         </div>
                     </li>
@@ -342,9 +370,9 @@
                                 <img src="https://nixpluvia.github.io/img1/pf/artfive/merit_icon03.jpg" alt="">
                             </div>
                             <div class="info-txt">
-                                <span>회원 재등록률</span> <span class="info-num">94</span>%
+                                <span>회원 재등록률</span> <span class="info-num info-num3" max-num="94">0</span>%
                                 <br>
-                                <span>장기 등록률</span> <span class="info-num">48</span>%
+                                <span>장기 등록률</span> <span class="info-num info-num4" max-num="48">0</span>%
                             </div>
                         </div>
                     </li>
@@ -506,16 +534,50 @@
                 <div class="footer-bottom flex">
                     <div class="left flex">
                         <div class="footer-logo">
-                            <img src="https://nixpluvia.github.io/img1/pf/artfive/logo_gray.png" alt="">
+                            <a class="img-box" href="#">
+                                <img src="https://nixpluvia.github.io/img1/pf/artfive/logo_gray.png" alt="">
+                            </a>
                         </div>
-                        <div class="copy-right">2019 ART CHAIRE CO., LTD. All Rights Reserved. CEO YOON EUN JOUNG</div>
+                        <div class="copyright">2019 ART CHAIRE CO., LTD. All Rights Reserved. CEO YOON EUN JOUNG</div>
                     </div>
                     <div class="right">
-                        <ul class="footer-util-icon">
+                        <ul class="footer-util-icon flex">
                             <li>
-                                <a href="#">
-                                    <img src="https://" alt="">
-                                    <div class="icon-name"></div>
+                                <a class="flex" href="#">
+                                    <img src="https://nixpluvia.github.io/img1/pf/artfive/foot_right_util_insta.png" alt="">
+                                    <div class="icon-name">인스타그램</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex" href="#">
+                                    <div class="figure flex">
+                                        <img src="https://nixpluvia.github.io/img1/pf/artfive/foot_right_util_icon01.jpg" alt="">
+                                    </div>
+                                    <div class="icon-name">수업상담</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex" href="#">
+                                    <div class="figure flex">
+                                        <img src="https://nixpluvia.github.io/img1/pf/artfive/foot_right_util_icon02.jpg" alt="">
+                                    </div>
+                                    <div class="icon-name">개설상담</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex" href="#">
+                                    <div class="figure flex">
+                                        <img src="https://nixpluvia.github.io/img1/pf/artfive/foot_right_util_icon03.jpg" alt="">
+                                    </div>
+                                    <div class="icon-name">리얼후기</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex" href="#">
+                                    <div class="figure flex">
+                                        <img src="https://nixpluvia.github.io/img1/pf/artfive/foot_right_util_icon04.jpg" alt="">
+                                    </div>
+                                    <div class="icon-name">센터찾기</div>
                                 </a>
                             </li>
                         </ul>
