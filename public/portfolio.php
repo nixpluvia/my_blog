@@ -72,6 +72,14 @@ while ($portfolio = mysqli_fetch_assoc($rs) ) {
                 </li>
             </ul>
         </li>
+        <li>
+            <a href="/pf/artfive/index.php" target="_blank">아트파이브 모작</a>
+            <ul>
+                <li>
+                    <a href="http://www.artfive.co.kr/" target="_blank">아트파이브 원본 사이트</a>
+                </li>
+            </ul>
+        </li>
     </ul>
 </nav>
 <h1>디자인</h1>
@@ -93,6 +101,12 @@ while ($portfolio = mysqli_fetch_assoc($rs) ) {
             </ul>
             <ul>
                 <li>출처: <a href="https://www.mangoboard.net/MangoTemplateAll.do">망고보드</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="https://nixpluvia.github.io/img1/pf/artworks/3/3.png" target="_blank">아트워크3 앱</a>
+            <ul>
+                <li>창작여부 : 창작</li>
             </ul>
         </li>
     </ul>
