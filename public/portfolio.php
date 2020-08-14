@@ -46,9 +46,9 @@ while ($portfolio = mysqli_fetch_assoc($rs) ) {
         </div>
     </div>
 </div>
-<nav>
+<nav class="con">
     <ul>
-        <li>
+        <li class="flex list1">
             <a href="/pf/cleaderm" target="_blank">클리덤 닥터락토</a>
             <ul>
                 <li>
@@ -56,7 +56,7 @@ while ($portfolio = mysqli_fetch_assoc($rs) ) {
                 </li>
             </ul>
         </li>
-        <li>
+        <li class="flex list1">
             <a href="/pf/heimish" target="_blank">헤이미쉬 공식 온라인몰</a>
             <ul>
                 <li>
@@ -64,7 +64,7 @@ while ($portfolio = mysqli_fetch_assoc($rs) ) {
                 </li>
             </ul>
         </li>
-        <li>
+        <li class="flex list1">
             <a href="/pf/designpixel" target="_blank">디자인 픽셀 모작</a>
             <ul>
                 <li>
@@ -72,7 +72,7 @@ while ($portfolio = mysqli_fetch_assoc($rs) ) {
                 </li>
             </ul>
         </li>
-        <li>
+        <li class="flex list1">
             <a href="/pf/artfive/index.php" target="_blank">아트파이브 모작</a>
             <ul>
                 <li>
@@ -82,10 +82,10 @@ while ($portfolio = mysqli_fetch_assoc($rs) ) {
         </li>
     </ul>
 </nav>
-<h1>디자인</h1>
-<nav>
+<h1 class="con">디자인</h1>
+<nav class="con">
     <ul>
-        <li>
+        <li class="flex list1">
             <a href="https://nixpluvia.github.io/img1/pf/artworks/1/1.png" target="_blank">아트워크1</a>
             <ul>
                 <li>창작여부 : 모작</li>
@@ -94,7 +94,7 @@ while ($portfolio = mysqli_fetch_assoc($rs) ) {
                 <li>출처: <a href="https://www.mangoboard.net/MangoTemplateAll.do">망고보드</a></li>
             </ul>
         </li>
-        <li>
+        <li class="flex list1">
             <a href="https://nixpluvia.github.io/img1/pf/artworks/2/2.png" target="_blank">아트워크2</a>
             <ul>
                 <li>창작여부 : 모작</li>
@@ -103,8 +103,14 @@ while ($portfolio = mysqli_fetch_assoc($rs) ) {
                 <li>출처: <a href="https://www.mangoboard.net/MangoTemplateAll.do">망고보드</a></li>
             </ul>
         </li>
-        <li>
+        <li class="flex list1">
             <a href="https://nixpluvia.github.io/img1/pf/artworks/3/3.png" target="_blank">아트워크3 앱</a>
+            <ul>
+                <li>창작여부 : 창작</li>
+            </ul>
+        </li>
+        <li class="flex list1">
+            <a href="https://nixpluvia.github.io/img1/pf/artworks/4/4.png" target="_blank">코카콜라 웹사이트 리디자인 시안</a>
             <ul>
                 <li>창작여부 : 창작</li>
             </ul>
