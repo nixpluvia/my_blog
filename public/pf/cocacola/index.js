@@ -46,15 +46,15 @@ function ScrollBox__init() {
             // 현재 페이지의 숫자 기입
             $body.data('scroll-box-index', $post.index());
 
+            /* 특정 구역 여부 판단 실행 */
+            topBarScroll__init();
+
             // dot의 active 변경
             $('.scroll-dots > li.active').removeClass('active');
             $('.scroll-dots > li').eq(postIndex).addClass('active');
 
-            /* 페이지 active 변경 */
-            setTimeout(function(){
-                $this.removeClass('active');
-                $post.addClass('active');
-            }, animationDuration / 2);
+            /* 페이지 active 삭제 */
+            $this.removeClass('active');
 
             /* 스크롤 애니메이션 실행 */
             $("html,body")
@@ -66,7 +66,8 @@ function ScrollBox__init() {
                     complete: function () {
                         /* 중복 마우스 휠 방지 해제 */
                         $body.data('scroll-box-now-work', false);
-                        /* 특정 구역 여부 판단 실행 */
+                        /* 페이지 active 추가 */
+                        $post.addClass('active');
                     }
                 });
         }
@@ -74,30 +75,29 @@ function ScrollBox__init() {
 
     // 화면 resize 함수 실행
     $(window).resize(function(){
-        $(".scroll-box").each(function(index, node) {
-            var $scrollBox = $(node);
-            var index = $scrollBox.data('scroll-box-index');
-    
-            // 현재페이지가 없을 때 0 기입
-            if (index == null ) {
-                index = $scrollBox.data('scroll-box-index', 0);
+        var $scrollBox = $('.scroll-box');
+        var index = $('body').data('scroll-box-index');
+        
+
+        // 현재페이지가 없을 때 0 기입
+        if (index == null ) {
+            index = $scrollBox.data('scroll-box-index', 0);
+        }
+        
+        // 현재 페이지의 top 값
+        var moveTop = $scrollBox.find(' > .page').eq(index).offset().top;
+
+        var animationDuration = 0;
+
+        $("html,body")
+        .stop()
+        .animate({
+            scrollTop: moveTop + "px"
+        }, {
+            duration: animationDuration,
+            complete: function () {
+                $scrollBox.data('scroll-box-now-work', false);
             }
-            
-            // 현재 페이지의 top 값
-            var moveTop = $scrollBox.find(' > .page').eq(index).offset().top;
-    
-            var animationDuration = 0;
-    
-            $("html,body")
-                .stop()
-                .animate({
-                    scrollTop: moveTop + "px"
-                }, {
-                    duration: animationDuration,
-                    complete: function () {
-                        $scrollBox.data('scroll-box-now-work', false);
-                    }
-                });
         });
     });
 }
@@ -122,9 +122,11 @@ function sideDotsScroll__init() {
         /* 누른 버튼과 같은 숫자의 페이지로 이동 */
         var moveTop = $('.scroll-box > .page').eq(dotIndex).offset().top;
         // 현재 페이지의 숫자 기입
-        $('.scroll-box').data('scroll-box-index', dotIndex);
+        $('body').data('scroll-box-index', dotIndex);
 
-        
+        /* 특정 구역 여부 판단 실행 */
+        topBarScroll__init();
+
         /* dot에 active 변경 */
         $('.scroll-dots > li.active').removeClass('active');
         $this.addClass('active');
@@ -133,12 +135,8 @@ function sideDotsScroll__init() {
         var $activedPage = $('.scroll-box > .page.active');
         var $postPage = $('.scroll-box > .page').eq(dotIndex);
 
-        /* 페이지 active 변경 */
-        setTimeout(function(){
-            $activedPage.removeClass('active');
-            $postPage.addClass('active');
-        }, animationDuration / 2);
-
+        /* 페이지 active 제거 */
+        $activedPage.removeClass('active');
 
         $scrollBox.data('scroll-box-now-work', true);
         /* 스크롤 애니메이션 */
@@ -151,8 +149,8 @@ function sideDotsScroll__init() {
                 complete: function () {
                     /* 중복 클릭 방지 해제 */
                     $scrollBox.data('scroll-box-now-work', false);
-                    /* 특정 구역 여부 판단 실행 */
-                    /* btn-scroll - active추가 */
+                    /* 페이지 active 추가 */
+                    $postPage.addClass('active');
                 }
             });
     });
@@ -167,6 +165,18 @@ function preventScroll__init(){
         return false;
     })
 }
+
+/* 특정 구역 여부 판단 */
+function topBarScroll__init() {
+    var ScrollIndex = $('body').data('scroll-box-index');
+
+    if ( ScrollIndex > 0) {
+        $('body').addClass('content_page');
+    } else {
+        $('body').removeClass('content_page');
+    }
+}
+
 
 
 
@@ -188,16 +198,35 @@ function pageHover__init(){
         $('body').removeClass('topbar_Down');
     })
 }
-function setting__init(){
-    $('body').data('scroll-box-index', 0);
+// refresh할 때 0번으로 초기화 하기
+function nowPage() {
+    $(document).ready(function(){
+        // 스크롤 0 으로 이동
+        // 이전에 있던 class remove
+        $('body').removeClass('active');
+        $('body').removeClass('topbar_Down');
+        $('body').removeClass('content_page');
+        $('.scroll-box > .page').removeClass('active');
+        $('.scroll-dots > .dot').removeClass('active');
+        // 0번 페이지에 클래스 추가
+        setTimeout(function(){
+            $(window).scrollTop(0);
+            $('body').data('scroll-box-index', 0);
+            $('.scroll-box > .page').eq(0).addClass('active');
+            $('.scroll-dots > .dot').eq(0).click();
+        }, 100)
+    });
 }
 
 $(function(){
     addDot__init();
     pageHover__init();
-    setting__init();
+    nowPage();
 
     ScrollBox__init();
     sideDotsScroll__init();
     preventScroll__init();
+
+    // refresh할 때 0번으로 초기화 하기
+    
 });

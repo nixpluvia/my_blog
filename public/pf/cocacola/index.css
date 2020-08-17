@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html {
-    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 /* 노말라이즈 */
@@ -235,15 +235,13 @@ button {
 }
 
 /* 커스텀 */
+/* body {
+    overflow: hidden;
+} */
 .con {
     max-width: 1500px;
 }
-/* 스크롤 페이지 */
-.scroll-box > .page {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-}
+
 
 /* 상단 바 */
 
@@ -258,9 +256,17 @@ button {
 
 .top-bar {
     position: absolute;
+    display: block;
     top: 0;
     left: 0;
     width: 100%;
+    height: auto;
+}
+.content_page .top-bar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 125px;
 }
 
 /* 상단 바 로고 */
@@ -271,6 +277,12 @@ button {
     margin-left: auto;
     margin-right: auto;
 }
+.content_page .top-bar .logo {
+    width: 215px;
+    padding: 0;
+    margin: 0 auto 0 0;
+}
+
 .top-bar .logo .st0{
     /*fill:#120F0D;*/
     fill: #fff;
@@ -279,9 +291,41 @@ button {
 .topbar_Down .top-bar .logo .st0{
     fill:#120F0D;
 }
+.content_page .top-bar .logo .st0{
+    fill:#120F0D;
+}
+/* 상단 메뉴 버튼 */
+.top-bar .btn-menu{
+    display: none;
+    width: 40px;
+    cursor: pointer;
+}
+.top-bar .btn-menu::before {
+    content:"";
+    display: block;
+    height: 9px;
+    background-color: #120F0D;
+}
+.top-bar .btn-menu::after {
+    content:"";
+    display: block;
+    height: 4px;
+    margin-top: 3px;
+    background-color: #120F0D;
+}
+.content_page .top-bar .btn-menu {
+    display: block;
+}
+
+
+
 
 /* 상단 메뉴바 */
+.content_page .top-bar .top-menu-bar {
+    display: none;
+}
 .top-bar .top-menu-bar {
+    display: block;
     margin-top: 24px;
 }
 .top-bar .top-menu-bar > ul {
@@ -291,6 +335,7 @@ button {
     margin-left: 70px;
 }
 .top-bar .top-menu-bar > ul > li > a{
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 16px;
     font-weight: 500;
@@ -326,16 +371,69 @@ button {
     width: 35px;
     height: 5px;
     cursor: pointer;
+    background-color: #fff;
+}
+.content_page .scroll-dots > li {
     background-color: #BFBFBF;
 }
 .scroll-dots > li + li {
-    margin-top: 7.5px;
+    margin-top: 5px;
 }
 .scroll-dots > li.active {
+    background-color: #120F0D;
+}
+.content_page .scroll-dots > li.active {
     background-color: #F40009;
 }
 
-/* 페이지1 - 메인페이지 */ 
+
+/* 스크롤 페이지 */
+.scroll-box > .page {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+}
+.scroll-box > .page.active {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0s;
+}
+.page .wrap {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.page .wrap .page-bg {
+    position: absolute;
+}
+.page .wrap > .red-line {
+    position: absolute;
+    background-color: #F40009;
+}
+.page .wrap > .page-num {
+    position: absolute;
+    align-items: center;
+}
+.page .wrap > .page-num .num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #F40009;
+}
+.page .wrap > .page-num .line {
+    width: 50px;
+    height: 0.5px;
+    margin-left: 8px;
+    background-color: #F40009;
+}
+
+/* 페이지1 - 메인페이지 */
 .page1 > .btn-scroll {
     position: absolute;
     left: 50%;
@@ -356,4 +454,57 @@ button {
     margin-left: auto;
     margin-right: auto;
     background-color: #fff;
+}
+
+/* 페이지2 - 소개페이지 */
+.page2 .wrap {
+    left: 50%;
+    transform: translateX(-50%)
+}
+.page2 .wrap > .page-bg {
+    bottom: 105px;
+    left: 0;
+    width: 100%;
+}
+.page2 .wrap > .red-line {
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 275px;
+}
+.page2 .wrap > .main-img {
+    position: absolute;
+    top: 28%;
+    left: 29.7%;
+    transform: rotate(3deg);
+    z-index: 1;
+}
+.page2 .page-num {
+    top: 210px;
+    right: 0;
+}
+
+
+
+.page2 > .content-txt {
+    margin-top: 230px;
+}
+.page2 > .content-txt > .con-title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    color: #fff;
+}
+.page2 > .content-txt > .txt-box{
+    margin-left: 40px;
+}
+.page2 > .content-txt > .txt-box > div > p{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 22px;
+    color: #514f4f;
+}
+.page2 > .content-txt > .txt-box > div.txt2 {
+    margin-top: 10px;
 }
