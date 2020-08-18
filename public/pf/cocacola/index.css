@@ -2,7 +2,15 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+/* thin 100
+extra-light 200
+light 300
+regular 400
+medium 500
+semi-bold 600
+bold 700
+extra-bold 800
+black 900 */
 html {
     font-family: 'Noto Sans KR', sans-serif;
 }
@@ -234,6 +242,13 @@ button {
     flex-wrap: wrap;
 }
 
+.no-drag {
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select:none;
+}
 /* 커스텀 */
 /* body {
     overflow: hidden;
@@ -390,6 +405,7 @@ button {
 /* 스크롤 페이지 */
 .scroll-box > .page {
     position: relative;
+    min-width: 1500px;
     height: 100vh;
     overflow: hidden;
     visibility: hidden;
@@ -406,7 +422,7 @@ button {
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
 }
 .page .wrap .page-bg {
     position: absolute;
@@ -426,11 +442,17 @@ button {
     line-height: 16px;
     color: #F40009;
 }
-.page .wrap > .page-num .line {
+.page .wrap > .page-num::after {
+    content: "";
     width: 50px;
     height: 0.5px;
     margin-left: 8px;
     background-color: #F40009;
+}
+
+.page > .content-txt {
+    position: relative;
+    z-index: 2;
 }
 
 /* 페이지1 - 메인페이지 */
@@ -479,11 +501,34 @@ button {
     transform: rotate(3deg);
     z-index: 1;
 }
-.page2 .page-num {
+.page2 .wrap > .page-num {
     top: 210px;
     right: 0;
 }
-
+.page2 .wrap > .tag1 {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    bottom: 105px;
+    right: 100%;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+    color: #B7B7B7;
+    transform: rotate(90deg);
+    transform-origin: right bottom;
+}
+.page2 .wrap > .tag2 {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    bottom: 105px;
+    right: 0%;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+    color: #B7B7B7;
+}
 
 
 .page2 > .content-txt {
@@ -507,4 +552,119 @@ button {
 }
 .page2 > .content-txt > .txt-box > div.txt2 {
     margin-top: 10px;
+}
+
+
+/* 페이지3 - 브랜드페이지 */
+
+/*배경 이미지*/
+.page3 .page-bg {
+    position: absolute;
+    width: 100%;
+    top: 94px;
+    left: 0;
+}
+/* 페이지 번호*/
+.page3 .wrap > .page-num {
+    top: 210px;
+    right: 0;
+}
+.page3 .wrap .red-line{
+    top: 23.5%;
+    left: -201.5px;
+    width: 290px;
+    height: 54px;
+}
+/* 페이지 태그*/
+.page3 .wrap > .tag1 {
+    font-family: 'Montserrat', sans-serif;
+    transform: translateX(-100%)rotate(90deg);
+    transform-origin: right top;
+    position: absolute;
+    bottom: 105px;
+    left: 100%;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+    color: #B7B7B7;
+}
+
+/* 페이지 컨텐츠 텍스트 */
+.page3 > .content-txt {
+    margin-top: 230px;
+    margin-bottom: 56px;
+}
+.page3 > .content-txt .txt-wrap{
+    width: 1125.5px;
+    justify-content: space-between;
+}
+.page3 > .content-txt .txt-wrap > .con-title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    color: #fff;
+}
+.page3 > .content-txt .txt-wrap > .txt-box > div > p{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 22px;
+    color: #514f4f;
+}
+
+
+/* 브랜드 슬라이더 */
+.page3 > .slider {
+    position: relative;
+    left: -175px;
+    max-width: 1500px;
+    z-index: 3;
+}
+.page3 > .slider #slide1 .slick-list{
+    padding-bottom: 10px;
+}
+.page3 > .slider #slide1 .item {
+    margin-left: 33px;
+    box-shadow: -7px 7px 5px #AAAAAA;
+}
+
+/* 슬라이드 dot */
+.page3 > .slider-dot {
+    position: relative;
+    max-width: 1325px;
+    justify-content: flex-end;
+    z-index: 3;
+}
+
+.page3 > .slider-dot .slick-dots{
+    position: static;
+    display: flex;
+    width: auto;
+    flex-direction: row-reverse;
+}
+.page3 > .slider-dot .slick-dots > li{
+    width: 15px;
+    height: 15px;
+}
+.page3 > .slider-dot .slick-dots > li:first-child {
+    margin-right: 0;
+}
+.page3 > .slider-dot .slick-dots > li:last-child {
+    margin-left: 0;
+}
+.page3 > .slider-dot .slick-dots > li > button{
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+    border-radius: 100%;
+    background-color: #d8d8d8;
+}
+.page3 > .slider-dot .slick-dots > li.slick-active > button{
+    background-color: #F40009;
+}
+.page3 > .slider-dot .slick-dots > li > button::before {
+    content:"";
+    display: none;
 }

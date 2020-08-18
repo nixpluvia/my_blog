@@ -158,7 +158,7 @@ function sideDotsScroll__init() {
 
 /* 다른 요소 스크롤 방지 */
 function preventScroll__init(){
-    $('.scroll-dots,.wrap,.btn-scroll').on("mousewheel DOMMouseScroll", function(e){
+    $('.scroll-box, .scroll-dots, body>.wrap, .btn-scroll, body, html').on("mousewheel DOMMouseScroll", function(e){
         e = e || window.event;
         e.preventDefault();
         e.stopPropagation();
@@ -218,15 +218,27 @@ function nowPage() {
     });
 }
 
+function slickSlider1(){
+    $('#slide1').slick({
+        infinite: true,
+        slidesToShow: 4,
+        variableWidth: true,
+        arrows: false,
+        dots: true,
+        appendDots:$('.page3 > .slider-dot'),
+        rtl: true
+    })
+}
+
 $(function(){
     addDot__init();
     pageHover__init();
-    nowPage();
-
+    
     ScrollBox__init();
     sideDotsScroll__init();
     preventScroll__init();
-
-    // refresh할 때 0번으로 초기화 하기
     
+    // refresh할 때 0번으로 초기화 하기
+    nowPage();
+    slickSlider1();
 });
