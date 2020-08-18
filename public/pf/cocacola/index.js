@@ -218,6 +218,7 @@ function nowPage() {
     });
 }
 
+/* 슬릭 슬라이더 */
 function slickSlider1(){
     $('#slide1').slick({
         infinite: true,
@@ -230,15 +231,37 @@ function slickSlider1(){
     })
 }
 
+/* tab box */
+function tabBox__init(){
+    $('[data-tab-head-item-name]').click(function(){
+        var $this = $(this);
+        var tabName = $this.attr('data-tab-name');
+        var itemName =$this.attr('data-tab-head-item-name');
+        
+        $('[data-tab-name="' + tabName + '"]').removeClass('active');
+
+        $('[data-tab-name="' + tabName + '"][data-tab-head-item-name="' + itemName +'"]').addClass('active');
+        $('[data-tab-name="' + tabName + '"][data-tab-body-item-name="' + itemName +'"]').addClass('active');
+    });
+}
+
 $(function(){
+    // 스크롤 페이지네이션 버튼 추가
     addDot__init();
+    // 메인 페이지 - 상단 메뉴 바
     pageHover__init();
     
+    // 원페이지 스크롤
     ScrollBox__init();
+    // 스크롤 페이지네이션
     sideDotsScroll__init();
+    // 스크롤 방지
     preventScroll__init();
     
     // refresh할 때 0번으로 초기화 하기
     nowPage();
+    // 슬릭슬라이더
     slickSlider1();
+    // 탭 박스
+    tabBox__init();
 });
