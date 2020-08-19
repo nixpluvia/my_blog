@@ -257,6 +257,15 @@ button {
     max-width: 1500px;
 }
 
+@keyframes ani-opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 /* 상단 바 */
 
@@ -782,41 +791,53 @@ button {
 .page4 > .content-txt .txt-wrap .body > .btn-tab-box > div.active {
     background-color: #F40009;
 }
-@keyframes ani-opacity {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
+
 
 /* 페이지5 - 미디어 페이지 */
 
+/* 배경 이미지 */
 .page5 .page-bg{
     bottom: 105px;
     right: -201.5px;
 }
+/* 페이지 넘버 */
 .page5 .wrap > .page-num {
     top: 210px;
     left: 0;
 }
+.page5 .wrap > .red-line {
+    top: 36.3%;
+    left: 18%;
+    width: 154px;
+    height: 33px;
+}
+.page5 .wrap > .red-line::before {
+    content:"";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 33px solid #fff;
+    border-left: 33px solid transparent;
+}
+
+/* 페이지 컨텐츠 */
 .page5 .content {
     position: absolute;
     top: 36.5%;
     right: -270px;
     z-index: 3;
 }
+/* 컨텐츠 타이틀 */
 .page5 .content .con-title{
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: 600;
     letter-spacing: -1.5px;
     margin-bottom: 58px;
-    /* color: #fff; */
+    color: #fff;
 }
 
-
+/* 슬라이드 탭 박스 */
 .page5 .content > .media-content > .slide-tab {
     width: 300px;
     height: 300px;
@@ -829,6 +850,7 @@ button {
 .page5 .content > .media-content > .slide-tab > ul > li{
     align-items: center;
 }
+/* 슬라이드 탭 박스 - 헤드 */
 .page5 .content > .media-content > .slide-tab > ul > li > p{
     font-family: 'Montserrat', sans-serif;
     font-size: 21px;
@@ -840,6 +862,7 @@ button {
 .page5 .content > .media-content > .slide-tab > ul > li.active > p{
     color: #F40009;
 }
+/* 슬라이드 탭 박스 - 헤드 점 */
 .page5 .content > .media-content > .slide-tab > ul > li > div{
     display: block;
     width: 32px;
@@ -852,40 +875,105 @@ button {
     height: 15px;
     border-radius: 15px 15px;
     background-color: #bfbfbf;
+    transition: width 0.6s, background 0.6s;
 }
 .page5 .content > .media-content > .slide-tab > ul > li.active > div::before {
     width: 32px;
     background-color: #F40009;
 }
 
+
+
+/* 슬라이더 */
+.page5 .content > .media-content > .media-slider > .sliders{
+    position: relative;
+}
 .page5 .content > .media-content > .media-slider > .sliders > div {
+    display: none;
     width: 1400px;
 }
+.page5 .content > .media-content > .media-slider > .sliders > div.active {
+    display: block;
+    animation: ani-opacity 0.6s forwards;
+    z-index: 4;
+}
+
+/* 슬라이드 아이템 */
 .page5 .content > .media-content > .media-slider > .sliders > div .item{
-    height: 300px;
     margin-right: 20px;
 }
 .page5 .content > .media-content > .media-slider > .sliders > div .item > a{
     display: block;
-    height: 100%;
+    width: 459.28px;
+    height: 300px;
+    margin-bottom: 10px;
 }
-.page5 .content > .media-content > .media-slider > .sliders > div .item > a > img {
+.page5 .content > .media-content > .media-slider > .sliders > div .item > a > div {
     height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 7px 7px 5px #aaaaaa;
 }
+
+
 
 /* 슬라이드 arrow 버튼 */
 .page5 .content > .media-content > .media-slider > .sliders-arrows {
-
+    margin-top: 20px;
+}
+.page5 .content > .media-content > .media-slider > .sliders-arrows > .arrow{
+    display: none;
+}
+.page5 .content > .media-content > .media-slider > .sliders-arrows > .arrow.active{
+    display: flex;
+}
+.page5 .content > .media-content > .media-slider > .sliders-arrows > .arrow > div{
+    position: static;
+    width: 0px;
+    height: 0px;
+    transform: none;
+}
+.page5 .content > .media-content > .media-slider > .sliders-arrows > .arrow > div:before {
+    display: none;
 }
 .page5 .content > .media-content > .media-slider > .sliders-arrows > .arrow > .slick-prev {
-    margin-top: 15px solid transparent;
-    margin-right: 15px solid #3d3d3d;
-    margin-bottom: 15px solid transparent;
+    border-top: 7.5px solid transparent;
+    border-right: 15px solid #3d3d3d;
+    border-bottom: 7.5px solid transparent;
     cursor:pointer;
 }
 .page5 .content > .media-content > .media-slider > .sliders-arrows > .arrow > .slick-next {
-    margin-top: 15px solid transparent;
-    margin-left: 15px solid #3d3d3d;
-    margin-bottom: 15px solid transparent;
+    margin-left: 15px;
+    border-top: 7.5px solid transparent;
+    border-left: 15px solid #3d3d3d;
+    border-bottom: 7.5px solid transparent;
     cursor:pointer;
+}
+
+
+/* footer */
+.scroll-box > .footer.page6 {
+    height: 275px;
+    background-color: #3d3d3d;
+}
+.page6 .footer-menu{
+    margin-top: 77px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.page6 .footer-menu .logo {
+    width: 330px;
+}
+.page6 .footer-menu .menu{
+    margin-bottom: 14px;
+}
+.page6 .footer-menu .menu > ul > li + li {
+    margin-left: 35px;
+}
+.page6 .footer-menu .menu > ul > li > a {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    color: #fff;
 }

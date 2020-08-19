@@ -272,119 +272,195 @@
                         <div class="sliders">
                             <div class="media-slide1 active" data-tab-name="box-2" data-tab-body-item-name="1">
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img1.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/promotion-img1.jpg)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img2.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/promotion-img2.jpg)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img3.png" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/promotion-img3.png)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img4.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/promotion-img4.jpg)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img5.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/promotion-img5.jpg)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img6.png" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/promotion-img6.png)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img7.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/promotion-img7.jpg)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img8.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/promotion-img8.jpg)"></div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="media-slide2" data-tab-name="box-2" data-tab-body-item-name="2">
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img1.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/media-life-img1.jpg)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img2.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/media-life-img2.jpg)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img3.png" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/media-life-img3.jpg)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img4.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/media-life-img4.jpg)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img5.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/media-life-img5.png)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img6.png" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/media-life-img6.png)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img7.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/media-life-img7.jpg)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img8.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/media-life-img8.jpg)"></div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="media-slide3" data-tab-name="box-2" data-tab-body-item-name="3">
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img1.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/community-img1.png)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img2.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/community-img2.png)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img3.png" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/community-img3.jpg)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img4.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/community-img4.jpg)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img5.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/community-img5.png)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img6.png" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/community-img6.png)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img7.jpg" alt=""></a>
-                                </div>
-                                <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img8.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/community-img7.png)"></div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="media-slide4" data-tab-name="box-2" data-tab-body-item-name="4">
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img1.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/news-img1.jpg)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img2.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/news-img2.png)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img3.png" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/news-img3.jpg)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img4.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/news-img4.png)"></div>
+                                    </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img5.jpg" alt=""></a>
-                                </div>
-                                <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img6.png" alt=""></a>
-                                </div>
-                                <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img7.jpg" alt=""></a>
-                                </div>
-                                <div class="item">
-                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img8.jpg" alt=""></a>
+                                    <a href="#">
+                                        <div style="background-image:url(https://nixpluvia.github.io/img1/pf/cocacola/news-img5.png)"></div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="sliders-arrows">
-                            <div class="arrow slide-arrow1"></div>
-                            <div class="arrow slide-arrow2"></div>
-                            <div class="arrow slide-arrow3"></div>
-                            <div class="arrow slide-arrow4"></div>
+                            <div class="arrow slide-arrow1 flex" data-tab-name="box-2" data-tab-body-item-name="1"></div>
+                            <div class="arrow slide-arrow2 flex" data-tab-name="box-2" data-tab-body-item-name="2"></div>
+                            <div class="arrow slide-arrow3 flex" data-tab-name="box-2" data-tab-body-item-name="3"></div>
+                            <div class="arrow slide-arrow4 flex" data-tab-name="box-2" data-tab-body-item-name="4"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <footer class="footer page page6">
+            <div class="footer-menu con flex">
+                <div class="logo">
+                    <a href="#">
+                        <img src="https://nixpluvia.github.io/img1/pf/cocacola/foot-logo.svg" alt="코카콜라-로고">
+                    </a>
+                </div>
+                <nav class="menu">
+                    <ul class="flex">
+                        <li><a href="#">제휴문의</a></li>
+                        <li><a href="#">코카콜라 재단</a></li>
+                        <li><a href="#">회사소식</a></li>
+                        <li><a href="#">회사연혁</a></li>
+                        <li><a href="#">자주묻는질문</a></li>
+                        <li><a href="#">정책</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-content">
+                <div class="footer-desc">2020 The Coca-Cola Company. All Rights Reserved.</div>
+                <div class="sns-menu">
+                    <ul>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>

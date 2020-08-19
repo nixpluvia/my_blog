@@ -1,3 +1,21 @@
+/* 스크롤 dots 만들기 */
+function addDot__init() {
+    for (var i = 1; i < $('.scroll-box > .page').length; i++) {
+        $('.scroll-dots').append('<li class="dot"></li>');
+    }
+}
+
+/* 다른 요소 스크롤 방지 */
+function preventScroll__init(){
+    $('.scroll-box, .scroll-dots, body>.wrap, .btn-scroll, body, html').on("mousewheel DOMMouseScroll", function(e){
+        e = e || window.event;
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    })
+}
+
+
 /* 구역 스크롤 */
 function ScrollBox__init() {
     var animationDuration = 800;
@@ -46,15 +64,15 @@ function ScrollBox__init() {
             // 현재 페이지의 숫자 기입
             $body.data('scroll-box-index', $post.index());
 
-            /* 특정 구역 여부 판단 실행 */
-            topBarScroll__init();
-
             // dot의 active 변경
             $('.scroll-dots > li.active').removeClass('active');
             $('.scroll-dots > li').eq(postIndex).addClass('active');
 
             /* 페이지 active 삭제 */
             $this.removeClass('active');
+
+            /* 특정 구역 여부 판단 실행 */
+            topBarScroll__init();
 
             /* 스크롤 애니메이션 실행 */
             $("html,body")
@@ -124,9 +142,6 @@ function sideDotsScroll__init() {
         // 현재 페이지의 숫자 기입
         $('body').data('scroll-box-index', dotIndex);
 
-        /* 특정 구역 여부 판단 실행 */
-        topBarScroll__init();
-
         /* dot에 active 변경 */
         $('.scroll-dots > li.active').removeClass('active');
         $this.addClass('active');
@@ -137,6 +152,9 @@ function sideDotsScroll__init() {
 
         /* 페이지 active 제거 */
         $activedPage.removeClass('active');
+
+        /* 특정 구역 여부 판단 실행 */
+        topBarScroll__init();
 
         $scrollBox.data('scroll-box-now-work', true);
         /* 스크롤 애니메이션 */
@@ -156,15 +174,7 @@ function sideDotsScroll__init() {
     });
 }
 
-/* 다른 요소 스크롤 방지 */
-function preventScroll__init(){
-    $('.scroll-box, .scroll-dots, body>.wrap, .btn-scroll, body, html').on("mousewheel DOMMouseScroll", function(e){
-        e = e || window.event;
-        e.preventDefault();
-        e.stopPropagation();
-        return false;
-    })
-}
+
 
 /* 특정 구역 여부 판단 */
 function topBarScroll__init() {
@@ -175,17 +185,12 @@ function topBarScroll__init() {
     } else {
         $('body').removeClass('content_page');
     }
-}
-
-
-
-
-/* 스크롤 dots 만들기 */
-function addDot__init() {
-    for (var i = 1; i <= $('.scroll-box > .page').length; i++) {
-        $('.scroll-dots').append('<li class="dot"></li>');
+    if ( ScrollIndex >= 4 ) {
+        $('.page5').addClass('active');
+        $('.page6').addClass('active');
     }
 }
+
 
 
 function pageHover__init(){
@@ -198,6 +203,8 @@ function pageHover__init(){
         $('body').removeClass('topbar_Down');
     })
 }
+
+
 // refresh할 때 0번으로 초기화 하기
 function nowPage() {
     $(document).ready(function(){
@@ -238,7 +245,6 @@ function slickSlider2(){
       var arr = ["1","2","3","4"];
       var search = arr.indexOf($itemName);
       arr.splice(search,1);
-      console.log('.page5 .media-slider .sliders .media-slide'+$itemName);
          
       $('.page5 .media-slider .sliders .media-slide'+$itemName).slick({
         infinite: true,
@@ -255,6 +261,7 @@ function slickSlider2(){
         $('.page5 .media-slider .sliders .media-slide'+arr[i-1]).slick('unslick');
       }
     })
+
     $('.page5 > .content > .media-content > .slide-tab > ul > li:first-child').click();
 }
 
