@@ -801,3 +801,91 @@ button {
     top: 210px;
     left: 0;
 }
+.page5 .content {
+    position: absolute;
+    top: 36.5%;
+    right: -270px;
+    z-index: 3;
+}
+.page5 .content .con-title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    margin-bottom: 58px;
+    /* color: #fff; */
+}
+
+
+.page5 .content > .media-content > .slide-tab {
+    width: 300px;
+    height: 300px;
+}
+.page5 .content > .media-content > .slide-tab > ul {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.page5 .content > .media-content > .slide-tab > ul > li{
+    align-items: center;
+}
+.page5 .content > .media-content > .slide-tab > ul > li > p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    color: #bfbfbf;
+    cursor: pointer;
+}
+.page5 .content > .media-content > .slide-tab > ul > li.active > p{
+    color: #F40009;
+}
+.page5 .content > .media-content > .slide-tab > ul > li > div{
+    display: block;
+    width: 32px;
+    margin-right: 16px;
+}
+.page5 .content > .media-content > .slide-tab > ul > li > div::before {
+    content:"";
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px 15px;
+    background-color: #bfbfbf;
+}
+.page5 .content > .media-content > .slide-tab > ul > li.active > div::before {
+    width: 32px;
+    background-color: #F40009;
+}
+
+.page5 .content > .media-content > .media-slider > .sliders > div {
+    width: 1400px;
+}
+.page5 .content > .media-content > .media-slider > .sliders > div .item{
+    height: 300px;
+    margin-right: 20px;
+}
+.page5 .content > .media-content > .media-slider > .sliders > div .item > a{
+    display: block;
+    height: 100%;
+}
+.page5 .content > .media-content > .media-slider > .sliders > div .item > a > img {
+    height: 100%;
+}
+
+/* 슬라이드 arrow 버튼 */
+.page5 .content > .media-content > .media-slider > .sliders-arrows {
+
+}
+.page5 .content > .media-content > .media-slider > .sliders-arrows > .arrow > .slick-prev {
+    margin-top: 15px solid transparent;
+    margin-right: 15px solid #3d3d3d;
+    margin-bottom: 15px solid transparent;
+    cursor:pointer;
+}
+.page5 .content > .media-content > .media-slider > .sliders-arrows > .arrow > .slick-next {
+    margin-top: 15px solid transparent;
+    margin-left: 15px solid #3d3d3d;
+    margin-bottom: 15px solid transparent;
+    cursor:pointer;
+}

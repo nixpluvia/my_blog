@@ -246,23 +246,141 @@
                 </div>
             </div>
             <div class="content">
-                <div class="con-title">
-
-                </div>
+                <div class="con-title">Media</div>
                 <div class="media-content flex">
                     <div class="slide-tab">
-                        <ul>
-                            <li data-tab-name="box-2" data-tab-head-item-name="1">Promotion</li>
-                            <li data-tab-name="box-2" data-tab-head-item-name="2">Life</li>
-                            <li data-tab-name="box-2" data-tab-head-item-name="3">Community</li>
-                            <li data-tab-name="box-2" data-tab-head-item-name="4">News</li>
+                        <ul class="flex">
+                            <li class="flex active" data-tab-name="box-2" data-tab-head-item-name="1">
+                                <div></div>
+                                <p>Promotion</p>
+                            </li>
+                            <li class="flex" data-tab-name="box-2" data-tab-head-item-name="2">
+                                <div></div>
+                                <p>Life</p>
+                            </li>
+                            <li class="flex" data-tab-name="box-2" data-tab-head-item-name="3">
+                                <div></div>
+                                <p>Community</p>
+                            </li>
+                            <li class="flex" data-tab-name="box-2" data-tab-head-item-name="4">
+                                <div></div>
+                                <p>News</p>
+                            </li>
                         </ul>
                     </div>
-                    <div class="sliders">
-                        <div class="media-slide1" data-tab-name="box-2" data-tab-body-item-name="1"></div>
-                        <div class="media-slide2" data-tab-name="box-2" data-tab-body-item-name="2"></div>
-                        <div class="media-slide3" data-tab-name="box-2" data-tab-body-item-name="3"></div>
-                        <div class="media-slide4" data-tab-name="box-2" data-tab-body-item-name="4"></div>
+                    <div class="media-slider">
+                        <div class="sliders">
+                            <div class="media-slide1 active" data-tab-name="box-2" data-tab-body-item-name="1">
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img1.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img2.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img3.png" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img4.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img5.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img6.png" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img7.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img8.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="media-slide2" data-tab-name="box-2" data-tab-body-item-name="2">
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img1.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img2.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img3.png" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img4.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img5.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img6.png" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img7.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img8.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="media-slide3" data-tab-name="box-2" data-tab-body-item-name="3">
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img1.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img2.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img3.png" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img4.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img5.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img6.png" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img7.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img8.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="media-slide4" data-tab-name="box-2" data-tab-body-item-name="4">
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img1.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img2.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img3.png" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img4.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img5.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img6.png" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img7.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="https://nixpluvia.github.io/img1/pf/cocacola/promotion-img8.jpg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sliders-arrows">
+                            <div class="arrow slide-arrow1"></div>
+                            <div class="arrow slide-arrow2"></div>
+                            <div class="arrow slide-arrow3"></div>
+                            <div class="arrow slide-arrow4"></div>
+                        </div>
                     </div>
                 </div>
             </div>

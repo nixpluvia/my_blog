@@ -230,6 +230,33 @@ function slickSlider1(){
         rtl: true
     })
 }
+/* 탭박스 슬라이더 */
+function slickSlider2(){
+    $('[data-tab-head-item-name]').click(function(){
+      var $this = $(this);
+      var $itemName = $this.attr('data-tab-head-item-name');
+      var arr = ["1","2","3","4"];
+      var search = arr.indexOf($itemName);
+      arr.splice(search,1);
+      console.log('.page5 .media-slider .sliders .media-slide'+$itemName);
+         
+      $('.page5 .media-slider .sliders .media-slide'+$itemName).slick({
+        infinite: true,
+        slidesToShow: 3,
+        variableWidth: true,
+        arrows: true,
+        appendArrows: $('.page5 .content > .media-content > .media-slider > .sliders-arrows > .slide-arrow'+$itemName),
+        prevArrow : "<div class='slick-prev'></div>",
+        nextArrow : "<div class='slick-next'></div>",
+        dots: false
+      })
+      
+      for (var i=1; i <= arr.length; i++){
+        $('.page5 .media-slider .sliders .media-slide'+arr[i-1]).slick('unslick');
+      }
+    })
+    $('.page5 > .content > .media-content > .slide-tab > ul > li:first-child').click();
+}
 
 /* tab box */
 function tabBox__init(){
@@ -260,8 +287,9 @@ $(function(){
     
     // refresh할 때 0번으로 초기화 하기
     nowPage();
-    // 슬릭슬라이더
-    slickSlider1();
     // 탭 박스
     tabBox__init();
+    // 슬릭슬라이더
+    slickSlider1();
+    slickSlider2();
 });
