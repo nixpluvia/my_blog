@@ -80,6 +80,9 @@ while ($portfolio = mysqli_fetch_assoc($rs) ) {
                 </li>
             </ul>
         </li>
+        <li class="flex list1">
+            <a href="/pf/cocacola/index.php" target="_blank">코카콜라 리디자인</a>
+        </li>
     </ul>
 </nav>
 <h1 class="con">디자인</h1>
