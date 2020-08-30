@@ -118,6 +118,18 @@ while ($portfolio = mysqli_fetch_assoc($rs) ) {
                 <li>창작여부 : 창작</li>
             </ul>
         </li>
+        <li class="flex list1">
+            <a href="https://nixpluvia.github.io/img1/pf/portfolio/1.png" target="_blank">포트폴리오 시안</a>
+            <ul>
+                <li>창작여부 : 창작</li>
+            </ul>
+        </li>
+        <li class="flex list1">
+            <a href="https://nixpluvia.github.io/img1/pf/portfolio/2.png" target="_blank">포트폴리오 스킬 페이지</a>
+            <ul>
+                <li>창작여부 : 창작</li>
+            </ul>
+        </li>
     </ul>
 </nav>
 <?php

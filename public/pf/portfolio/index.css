@@ -1,10 +1,23 @@
 /*폰트*/
+
+/* notosanskr 폰트*/
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+/* Fredericka 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+/* Nothing You Could Do 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+/* roboto 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* 쿠키런 regular 폰트 */
+@font-face {
+    font-family: 'CookieRun-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 html {
-    font-family: 'Noto Sans KR','Nanum Gothic', sans-serif;
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
 }
 
 /* 노말라이즈 */
@@ -39,6 +52,7 @@ button {
     border: none;
     background: none;
     outline-style: none;
+    cursor: pointer;
 }
 *:focus{
     outline: none;
@@ -51,6 +65,9 @@ button {
 
 .inline-block {
     display: inline-block;
+}
+.visi-hidden {
+    visibility: hidden;
 }
 
 .absolute-left {
@@ -147,30 +164,6 @@ button {
     line-height: normal;
 }
 
-.width-100p-except-30px {
-    width: calc(100% - 30px);
-}
-
-.width-100p-except-35px {
-    width: calc(100% - 35px);
-}
-
-.width-100p-except-40px {
-    width: calc(100% - 40px);
-}
-
-.width-100p-except-50px {
-    width: calc(100% - 50px);
-}
-
-.width-100p-except-80px {
-    width: calc(100% - 80px);
-}
-
-.width-100p-except-100px {
-    width: calc(100% - 100px);
-}
-
 .height-100p {
     height: 100%;
 }
@@ -205,7 +198,10 @@ button {
 *>.flex {
     display: flex;
 }
-
+*>.flex-column {
+    display: flex;
+    flex-direction: column;
+}
 *>.flex-column-nowrap {
     display: flex;
     flex-flow: column nowrap;
@@ -228,10 +224,22 @@ button {
     display: flex;
     justify-content: center;
 }
+*>.flex-jc-between {
+    display: flex;
+    justify-content: space-between;
+}
 
 *>.flex-ai-c {
     display: flex;
     align-items: center;
+}
+*>.flex-ai-st {
+    display: flex;
+    align-items: flex-start;
+}
+*>.flex-ai-end {
+    display: flex;
+    align-items: flex-end;
 }
 *>.flex-self-c {
     display: flex;
@@ -257,9 +265,337 @@ button {
 .flex-wrap {
     flex-wrap: wrap;
 }
+/* 라이브러리 폰트 */
+.font-NUCD {
+    font-family: 'Nothing You Could Do', sans-serif;
+}
+.font-cookie {
+    font-family: 'CookieRun-Regular', sans-serif;
+}
+.font-Fredericka{
+    font-family: 'Fredericka the Great', sans-serif;
+}
 
-.back {
+/* custom */
+.con {
+    max-width: 1500px;
+}
+@media (max-width: 1700px) {
+    .con {
+        padding-left: 100px;
+    }
+}
+@media (max-width: 1600px) {
+    .con {
+        padding-left: 140px;
+    }
+}
+/* 모눈종이 배경 */
+body {
+    background: url("https://nixpluvia.github.io/img1/pf/portfolio/tile2.png"),url("https://nixpluvia.github.io/img1/pf/portfolio/tile.png");
+}
+
+
+/* 상단 바 */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.top-bar > .con {
+    padding-top: 50px;
+}
+
+
+/* 사이드 바 */
+.side-bar {
+    position: fixed;
+    top: 0;
+    left: calc(-80vw + 72px);
+    width: 80vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #2D2924;
+    box-shadow: 5px 0 10px #A0A0A0;
+    z-index: 100;
+}
+.side-bar.open-ani {
+    animation-name: open-ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+.side-bar.close-ani {
+    animation-name: close-ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+@keyframes open-ani {
+    0%{
+        left: calc(-80vw + 72px);
+    }
+    100%{
+        left: 0;
+    }
+}
+@keyframes close-ani {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: calc(-80vw + 72px);
+    }
+}
+
+
+/* 사이드 바 - 버튼 */
+.side-bar .btn-side-bar{
+    position: absolute;
+    top: calc(50% - 20px);
+    right: 11px;
+    width: 50px;
+    height: 40px;
+}
+.side-bar .btn-side-bar > div{
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background-color: #fff;
+}
+.side-bar .btn-side-bar > div:nth-child(1){
+    top: 0;
+    left: 0;
+}
+.side-bar .btn-side-bar > div:nth-child(2){
+    top: calc(50% - 4px);
+    left: 0;
+}
+.side-bar .btn-side-bar > div:nth-child(3){
+    bottom: 0;
+    left: 0;
+}
+
+
+/* 사이드 바 - 메뉴 */
+.side-bar .side-bar-menu {
+    visibility: hidden;
+}
+.side-bar.active .side-bar-menu {
+    visibility: visible;
+}
+
+
+/* pagenation */
+.pagenation {
+    position: fixed;
+    top: calc(50% - 67.5px);
+    right: 5%;
+}
+.pagenation > ul > li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #2D2924;
+}
+.pagenation > ul > li + li {
+    margin-top: 15px;
+}
+.pagenation > ul > li.active {
+    background: #FFB000;
+}
+
+
+/* intro */
+.intro {
     width: 100vw;
     height: 100vh;
-    background: url(./tile2.png),url(./tile.png);
+    box-sizing: border-box;
+}
+.intro .title {
+    padding-top: 39vh;
+    align-items: flex-start;
+}
+.intro .title > span{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+.intro .title > div {
+    position: relative;
+}
+.intro .title > div + div {
+    margin-top: 10px;
+}
+.intro .title > .ti1 > span{
+    display: inline-block;
+    font-size: 84px;
+    font-weight: normal;
+    line-height: 84px;
+    color: #FFB000;
+    opacity: 0;
+}
+.intro .title > .font-Fredericka > span{
+    display: inline-block;
+    font-size: 80px;
+    font-weight: normal;
+    line-height: 80px;
+    opacity: 0;
+}
+.intro .title > div.active > span{
+    animation-name: element-opacity;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+}
+/* 타이틀 라인 애니메이션 */
+.intro .title > div > i{
+    position: absolute;
+    background-color: #2D2924;
+}
+/* 왼쪽 라인 */
+.intro .title > div.active > i.line1 {
+    left: 0;
+    width: 1px;
+    animation-name: line-left-top;
+    animation-duration: 1s;
+}
+/* 오른쪽 라인 */
+.intro .title > div.active > i.line2 {
+    right: 0;
+    width: 1px;
+    animation-name: line-right-btm;
+    animation-duration: 1s;
+    animation-delay: 0.22s;
+}
+/* 탑 라인 */
+.intro .title > div.active > i.line3 {
+    top: 0;
+    height: 1px;
+    animation-name: line-top-left;
+    animation-duration: 1s;
+    animation-delay: 0.1s;
+}
+/* 바텀 라인 */
+.intro .title > div.active > i.line4 {
+    bottom: 0;
+    height: 1px;
+    animation-name: line-btm-right;
+    animation-duration: 1s;
+    animation-delay: 0.18s;
+}
+
+@keyframes element-opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes line-left-top {
+    0%{
+        top: -50%;
+        bottom: auto;
+        height: 0%;
+        opacity: 0;
+    }
+    49% {
+        top: -50%;
+        bottom: auto;
+        height: 150%;
+        opacity: 0.4;
+    }
+    50% {
+        top: auto;
+        height: 150%;
+        bottom: 0;
+        opacity: 0.4;
+    }
+    100% {
+        top: auto;
+        height: 0;
+        bottom: 0;
+        opacity: 0;
+    }
+}
+@keyframes line-right-btm {
+    0%{
+        top: auto;
+        bottom: -80%;
+        height: 0%;
+        opacity: 0;
+    }
+    49% {
+        top: auto;
+        bottom: -80%;
+        height: 200%;
+        opacity: 0.4;
+    }
+    50% {
+        top: -20%;
+        bottom: auto;
+        height: 200%;
+        opacity: 0.4;
+    }
+    100% {
+        top: -20%;
+        bottom: auto;
+        height: 0;
+        opacity: 0;
+    }
+}
+@keyframes line-top-left {
+    0%{
+        right: auto;
+        left: -20%;
+        width: 0%;
+        opacity: 0;
+    }
+    49% {
+        right: auto;
+        left: -20%;
+        width: 130%;
+        opacity: 0.4;
+    }
+    50% {
+        right: -10%;
+        left: auto;
+        width: 130%;
+        opacity: 0.4;
+    }
+    100% {
+        right: -10%;
+        left: auto;
+        width: 0;
+        opacity: 0;
+    }
+}
+@keyframes line-btm-right {
+    0%{
+        right: -15%;
+        left: auto;
+        width: 0%;
+        opacity: 0;
+    }
+    49% {
+        right: -15%;
+        left: auto;
+        width: 125%;
+        opacity: 0.4;
+    }
+    50% {
+        right: auto;
+        left: -10%;
+        width: 125%;
+        opacity: 0.4;
+    }
+    100% {
+        right: auto;
+        left: -10%;
+        width: 0;
+        opacity: 0;
+    }
 }
