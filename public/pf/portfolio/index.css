@@ -266,6 +266,9 @@ button {
     flex-wrap: wrap;
 }
 /* 라이브러리 폰트 */
+.font-noto{
+    font-family: 'Noto Sans KR', sans-serif;
+}
 .font-NUCD {
     font-family: 'Nothing You Could Do', sans-serif;
 }
@@ -293,6 +296,7 @@ button {
 /* 모눈종이 배경 */
 body {
     background: url("https://nixpluvia.github.io/img1/pf/portfolio/tile2.png"),url("https://nixpluvia.github.io/img1/pf/portfolio/tile.png");
+    overflow-X: hidden;
 }
 
 
@@ -302,6 +306,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 100;
 }
 
 .top-bar > .con {
@@ -412,13 +417,17 @@ body {
 .intro {
     width: 100vw;
     height: 100vh;
+    align-items: flex-end;
     box-sizing: border-box;
 }
+
+/* intro 타이틀 */
 .intro .title {
-    padding-top: 39vh;
+    position: relative;
+    margin-bottom: 35vh;
     align-items: flex-start;
 }
-.intro .title > span{
+.intro .title > .section-title{
     width: 0;
     height: 0;
     overflow: hidden;
@@ -429,6 +438,7 @@ body {
 .intro .title > div + div {
     margin-top: 10px;
 }
+/* intro 타이틀 폰트 */
 .intro .title > .ti1 > span{
     display: inline-block;
     font-size: 84px;
@@ -485,7 +495,6 @@ body {
     animation-duration: 1s;
     animation-delay: 0.18s;
 }
-
 @keyframes element-opacity {
     0%{
         opacity: 0;
@@ -597,5 +606,254 @@ body {
         left: -10%;
         width: 0;
         opacity: 0;
+    }
+}
+.intro > .title > .title-paint-line {
+    position: absolute;
+    bottom: -30px;
+    width: 0;
+    overflow: hidden;
+    animation: title-line 1s 2.5s forwards;
+}
+@keyframes title-line {
+    0% {
+        width: 0%;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        width: 105%;
+    }
+}
+
+
+
+
+/* 인트로 퍼즐 이미지 */
+.intro > .intro-img {
+    position: relative;
+    margin-left: 18vw;
+    margin-bottom: 33vh;
+}
+/* 배경 이미지 */
+.intro > .intro-img > .white-bg-img {
+    width: 300px;
+}
+/* 퍼즐 라인 */
+.intro > .intro-img > .puzzle-line-img,
+.intro > .intro-img > .puzzle-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+}
+.intro > .intro-img > .puzzle-line {
+    z-index: 1;
+}
+.intro > .intro-img > .puzzle-line > svg > path.puzzle-line {
+    fill: none;
+    stroke: #ffffff;
+    stroke-miterlimit: 10;
+    stroke-dasharray:1363.472900390625;
+    stroke-width: 30px;
+    animation: path-ani 4s ease-in-out forwards;
+}
+@keyframes path-ani {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 1363.472900390625;
+    }
+}
+
+/* 메인 퍼즐 이미지 */
+.intro > .intro-img > .main-puzzle {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 300px;
+    opacity: 0;
+    z-index: 10;
+    animation: main-puzzle 1s 4s ease-in-out forwards;
+}
+.intro > .intro-img > .main-puzzle .puzzle-main{
+    fill: #2d2924;
+}
+@keyframes main-puzzle {
+    0%{
+        top: -50%;
+        opacity: 0;
+    }
+    100%{
+        top: -10%;
+        opacity: 1;
+    }
+}
+
+
+
+
+/* 어바웃 페이지 */
+.about {
+    padding-top: 200px;
+    box-sizing: border-box;
+}
+/* 어바웃 페이지 - 타이틀 */
+.about > h2 {
+    font-size: 78px;
+    line-height: 78px;
+    font-weight: normal;
+    text-align: center;
+}
+.about > h2 > span{
+    position: relative;
+    display: inline-block;
+}
+
+.about > h2 >span::after {
+    content:"";
+    position: absolute;
+    bottom: 10px;
+    left: calc(100% + 60px);
+    width: 1000px;
+    height: 10px;
+    background-color: #FFB000;
+}
+
+/* 어바웃 페이지 - 컨텐츠 박스 */
+.about > .content-box {
+    margin-top: 140px;
+}
+/* 어바웃 페이지 - 사진 */
+.about > .content-box > .photo {
+    height: 675px;
+}
+.about > .content-box > .photo > img{
+    display: block;
+    height: 100%;
+}
+/* 어바웃 페이지 - 컨텐츠 */
+.about > .content-box > .content {
+    flex-grow: 1;
+    padding-left: 180px;
+    box-sizing: border-box;
+}
+/* 어바웃 페이지 - 탭 박스 head */
+.about > .content-box > .content > .head > h2 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 500;
+}
+.about > .content-box > .content > .head > h2.active {
+    color:  #FFB000;
+}
+.about > .content-box > .content > .head > h2 + h2{
+    margin-left: 50px;
+}
+/* 어바웃 페이지 - 탭 박스 body */
+.about > .content-box > .content > .body {
+    margin-top: 45px;
+}
+.about > .content-box > .content > .body > .tab-box {
+    display: none;
+}
+.about > .content-box > .content > .body > .tab-box.active {
+    display: block;
+    animation-name: element-opacity;
+    animation-duration: 1s;
+}
+
+/* 어바웃 페이지 - profile 탭 */
+.about .content-box .content .body > .profile-tab > h3 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: normal;
+    margin-bottom: 60px;
+}
+.about .content-box .content .body > .profile-tab > h4 span{
+    display: inline-block;
+}
+.about .content-box .content .body > .profile-tab > h4 + h4{
+    margin-top: 30px;
+}
+.about .content-box .content .body > .profile-tab > h4 > .txt-head,
+.about .content-box .content .body > .profile-tab > .ty2 > .txt-body > span:first-child {
+    width: 170px;
+}
+.about .content-box .content .body > .profile-tab > h4 > .txt-head {
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: 700;
+}
+.about .content-box .content .body > .profile-tab > h4 > .txt-body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.about .content-box .content .body > .profile-tab > .ty2 > .txt-body {
+    margin-top: 30px;
+}
+.about .content-box .content .body > .profile-tab > .ty2 > .txt-body > span {
+    line-height: normal;
+}
+
+/* 어바웃 페이지 - skill 탭 */
+.about .content-box .content .body > .skill-tab {
+
+}
+.about .content-box .content .body > .skill-tab > .skills-box {
+    flex-wrap: wrap;
+    width: 75%;
+}
+.about .content-box .content .body > .skill-tab > .skills-box > .skill {
+    width: 43%;
+}
+.about .content-box .content .body > .skill-tab > .skills-box > .skill > div + div{
+    margin-top: 10px;
+}
+.about .content-box .content .body > .skill-tab > .skills-box > .skill > .skill-name,
+.about .content-box .content .body > .skill-tab > .skills-box > .skill > .txt{
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+.about .content-box .content .body > .skill-tab > .skills-box > .skill > .progress-bar{
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: #C1C1C1;
+}
+.about .content-box .content .body > .skill-tab > .skills-box > .skill > .progress-bar::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    top: -3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50% 50%;
+    background-color: #2D2924;
+}
+.about .content-box .content .body > .skill-tab > .skills-box > .skill > .progress-bar::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    animation: progress 1s forwards;
+    background-color: #2D2924;
+}
+@keyframes progress {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 80%;
     }
 }

@@ -35,7 +35,43 @@ function lineAni__init(){
         delayTime += 800;
     }
 }
+
+// 라인 사이즈 구하는 함수
+function lineSize__init(){
+    var titleSize = $('.intro > .title').outerWidth();
+    var sizePercent = titleSize / 20;
+    console.log(titleSize + sizePercent);
+    $('.intro > .title > .title-paint-line > img').css('width', titleSize + sizePercent);
+}
+
+// 리사이즈
+function windowResize__init(){
+    $(window).resize(function(){
+        var windowSize = $(window).outerWidth();
+        if (windowSize > 1400 && windowSize < 1500) {
+            console.log("hi");
+        }
+    });
+}
+
+// 탭박스
+function tabBox__init(){
+    $('[data-tab-head-item-name]').click(function(){
+        var $this = $(this);
+        var tabName = $this.attr('data-tab-name');
+        var itemName =$this.attr('data-tab-head-item-name');
+        
+        $('[data-tab-name="' + tabName + '"]').removeClass('active');
+
+        $('[data-tab-name="' + tabName + '"][data-tab-head-item-name="' + itemName +'"]').addClass('active');
+        $('[data-tab-name="' + tabName + '"][data-tab-body-item-name="' + itemName +'"]').addClass('active');
+    });
+}
+
 $(function(){
     button__init();
     lineAni__init();
+    lineSize__init();
+    tabBox__init();
+    // windowResize__init();
 });
