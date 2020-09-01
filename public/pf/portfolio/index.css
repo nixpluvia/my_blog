@@ -31,6 +31,7 @@ h4,
 h5,
 h6,
 p {
+    font-family: inherit;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -47,6 +48,7 @@ label[for] {
     user-select: none;
 }
 button {
+    font-family: inherit;
     margin: 0;
     padding: 0;
     border: none;
@@ -280,6 +282,8 @@ button {
 }
 
 /* custom */
+
+
 .con {
     max-width: 1500px;
 }
@@ -298,6 +302,16 @@ body {
     background: url("https://nixpluvia.github.io/img1/pf/portfolio/tile2.png"),url("https://nixpluvia.github.io/img1/pf/portfolio/tile.png");
     overflow-X: hidden;
 }
+
+.frame {
+    fill: #2D2924;
+}
+
+
+
+
+
+
 
 
 /* 상단 바 */
@@ -696,22 +710,27 @@ body {
 
 
 
-/* 어바웃 페이지 */
-.about {
-    padding-top: 200px;
-    box-sizing: border-box;
-}
-/* 어바웃 페이지 - 타이틀 */
-.about > h2 {
+
+/* 섹션 타이틀 */
+.section-page > h2 {
     font-size: 78px;
     line-height: 78px;
     font-weight: normal;
     text-align: center;
 }
-.about > h2 > span{
+.section-page > h2 > span{
     position: relative;
     display: inline-block;
 }
+
+
+/* 어바웃 페이지 */
+.about {
+    padding-top: 200px;
+    box-sizing: border-box;
+}
+
+/* 어바웃 페이지 - 타이틀 라인*/
 
 .about > h2 >span::after {
     content:"";
@@ -742,15 +761,15 @@ body {
     box-sizing: border-box;
 }
 /* 어바웃 페이지 - 탭 박스 head */
-.about > .content-box > .content > .head > h2 {
+.about > .content-box > .content > .head > button > h2{
     font-size: 30px;
     line-height: 30px;
     font-weight: 500;
 }
-.about > .content-box > .content > .head > h2.active {
+.about > .content-box > .content > .head > button.active {
     color:  #FFB000;
 }
-.about > .content-box > .content > .head > h2 + h2{
+.about > .content-box > .content > .head > button + button{
     margin-left: 50px;
 }
 /* 어바웃 페이지 - 탭 박스 body */
@@ -767,69 +786,71 @@ body {
 }
 
 /* 어바웃 페이지 - profile 탭 */
-.about .content-box .content .body > .profile-tab > h3 {
+.about .body > .profile-tab > h3 {
     font-size: 30px;
     line-height: 30px;
     font-weight: normal;
     margin-bottom: 60px;
 }
-.about .content-box .content .body > .profile-tab > h4 span{
+.about .body > .profile-tab > ul > li > h4 span{
     display: inline-block;
 }
-.about .content-box .content .body > .profile-tab > h4 + h4{
+.about .body > .profile-tab > ul > li + li {
     margin-top: 30px;
 }
-.about .content-box .content .body > .profile-tab > h4 > .txt-head,
-.about .content-box .content .body > .profile-tab > .ty2 > .txt-body > span:first-child {
+.about .body > .profile-tab > ul > li > h4 > .txt-head,
+.about .body > .profile-tab > ul > li > .ty2 > .txt-body > span:first-child {
     width: 170px;
 }
-.about .content-box .content .body > .profile-tab > h4 > .txt-head {
+.about .body > .profile-tab > ul > li > h4 > .txt-head {
     font-size: 21px;
     line-height: 21px;
     font-weight: 700;
 }
-.about .content-box .content .body > .profile-tab > h4 > .txt-body {
+.about .body > .profile-tab > ul > li > h4 > .txt-body {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 18px;
     line-height: 18px;
     font-weight: 500;
     letter-spacing: 1px;
 }
-.about .content-box .content .body > .profile-tab > .ty2 > .txt-body {
+.about .body > .profile-tab > ul > li > .ty2 > .txt-body {
     margin-top: 30px;
 }
-.about .content-box .content .body > .profile-tab > .ty2 > .txt-body > span {
+.about .body > .profile-tab > ul > li > .ty2 > .txt-body > span {
     line-height: normal;
 }
 
 /* 어바웃 페이지 - skill 탭 */
-.about .content-box .content .body > .skill-tab {
-
-}
-.about .content-box .content .body > .skill-tab > .skills-box {
+.about .body > .skill-tab > .skills-box {
     flex-wrap: wrap;
     width: 75%;
 }
-.about .content-box .content .body > .skill-tab > .skills-box > .skill {
-    width: 43%;
+.about .body > .skill-tab > .skills-box > .skill {
+    width: 44%;
+    margin-bottom: 50px;
 }
-.about .content-box .content .body > .skill-tab > .skills-box > .skill > div + div{
+.about .body > .skill-tab > .skills-box > .skill > div + div{
     margin-top: 10px;
 }
-.about .content-box .content .body > .skill-tab > .skills-box > .skill > .skill-name,
-.about .content-box .content .body > .skill-tab > .skills-box > .skill > .txt{
+.about .body > .skill-tab > .skills-box > .skill > .skill-name,
+.about .body > .skill-tab > .skills-box > .skill > .txt{
     font-size: 14px;
     line-height: 14px;
     font-weight: 400;
     letter-spacing: -1px;
 }
-.about .content-box .content .body > .skill-tab > .skills-box > .skill > .progress-bar{
+.about .body > .skill-tab > .skills-box > .skill > .skill-name > .info-num::after{
+    content:"%";
+    display:inline-block;
+}
+.about .body > .skill-tab > .skills-box > .skill > .progress-bar{
     position: relative;
     width: 100%;
     height: 4px;
     background-color: #C1C1C1;
 }
-.about .content-box .content .body > .skill-tab > .skills-box > .skill > .progress-bar::before{
+.about .body > .skill-tab > .skills-box > .skill > .progress-bar::before{
     content:"";
     position: absolute;
     left: 0;
@@ -839,21 +860,126 @@ body {
     border-radius: 50% 50%;
     background-color: #2D2924;
 }
-.about .content-box .content .body > .skill-tab > .skills-box > .skill > .progress-bar::after{
-    content:"";
+.about .body > .skill-tab > .skills-box > .skill > .progress-bar > .bar{
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
     height: 100%;
-    animation: progress 1s forwards;
     background-color: #2D2924;
 }
-@keyframes progress {
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 80%;
-    }
+
+.about .body .skill-tab > .other-skills > h3{
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+.about .body .skill-tab > .other-skills > .wrap> .skill-icon {
+    margin-right: 10px;
+    width:70px;
+}
+.about .body .skill-tab > .other-skills > .wrap> .skill-icon > svg .icon-1{
+    fill: #ffffff;
+}
+
+
+/* 포트폴리오 섹션 */
+.portfolio {
+    padding-top: 200px;
+}
+.portfolio > h2 > span::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: -70px;
+    width: 30px;
+    height: 100%;
+    background-color: #FFB000;
+}
+.portfolio > .content-box {
+    margin-top: 50px;
+}
+.portfolio > .content-box > .head > button + button{
+    margin-left: 30px;
+}
+.portfolio > .content-box > .head > button > h2 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 500;
+}
+.portfolio > .content-box > .head > button.active > h2 {
+    color: #FFB000;
+}
+
+
+.portfolio > .content-box > .body {
+    margin-top: 90px;
+    overflow-x: hidden;
+}
+.portfolio > .content-box > .body > ul {
+    margin-right: -3.5vw;
+    flex-wrap: wrap;
+}
+.portfolio > .content-box > .body > ul > li {
+    position: relative;
+    display: none;
+    width: calc(100% / 3);
+    padding-right: 3.5vw;
+    margin-bottom: 90px;
+    box-sizing: border-box;
+}
+.portfolio > .content-box > .body > ul > li.active {
+    display: block;
+}
+.portfolio > .content-box > .body > ul > li > .frame > svg{
+    display: block;
+}
+.portfolio > .content-box > .body > ul > li > .item-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 3.5vw);
+    height: 100%;
+}
+.portfolio > .content-box > .body > ul > li > .item-content > .img {
+    margin: 5px;
+    background-color: #ffffff;
+}
+.portfolio > .content-box > .body > ul > li > .item-content > .img::before {
+    content:"";
+    display: block;
+    padding-top: 100%;
+}
+
+.portfolio > .content-box > .body > ul > li > .item-content > div + div {
+    margin-left: 40px;
+    padding-top: 15px;
+}
+
+.portfolio > .content-box > .body > ul > li > .item-content > .tag > .tag-icon img{
+    display: block;
+    height: 24px;
+}
+.portfolio > .content-box > .body > ul > li > .item-content > .txt span{
+    font-size: 23px;
+    font-weight: 900;
+    line-height: 23px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.design {
+    margin-top: 500px;
+    height: 100vh;
+}
+.design .title > span::before {
+    content:"";
+    position: absolute;
+    bottom: -30px;
+    right: 18%;
+    width: 500px;
+    height: 3px;
+    background-color: #FFB000;
 }
