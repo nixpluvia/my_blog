@@ -1,3 +1,4 @@
+// 부모에게 active 클래스 추가하는 함수
 function parentToggle() {
     var $this = $(this);
     var $parent = $this.parent();
@@ -15,9 +16,7 @@ function parentToggle() {
     }
 }
 
-function button__init() {
-    $('.btn-side-bar').click(parentToggle);
-}
+
 
 // 라인 애니메이션 딜레이
 function lineAni__init() {
@@ -34,22 +33,16 @@ function lineAni__init() {
     }
 }
 
-// 라인 사이즈 구하는 함수
+
+// 타이틀 라인 사이즈 구하는 함수
 function lineSize__init() {
     var titleSize = $('.intro > .title').outerWidth();
     var sizePercent = titleSize / 20;
     $('.intro > .title > .title-paint-line > img').css('width', titleSize + sizePercent);
 }
 
-// 리사이즈
-function windowResize__init() {
-    $(window).resize(function () {
-        var windowSize = $(window).outerWidth();
-        if (windowSize > 1400 && windowSize < 1500) {
-            console.log("hi");
-        }
-    });
-}
+
+
 
 // 탭박스
 function tabBox__init() {
@@ -61,17 +54,17 @@ function tabBox__init() {
         $('[data-tab-name="' + tabName + '"]').removeClass('active');
 
         $('[data-tab-name="' + tabName + '"][data-tab-head-item-name="' + itemName + '"]').addClass('active');
-        
+
         $('[data-tab-name="' + tabName + '"][data-tab-body-item-name="' + itemName + '"]').addClass('active');
 
-        if( tabName == "box-2") {
-            if(itemName == 1){
+        if (tabName == "box-2") {
+            if (itemName == 1) {
                 console.log("hi");
                 $('[data-tab-name="' + tabName + '"][data-tab-body-item-name]').addClass('active');
             }
         }
 
-        if( tabName == "box-1") {
+        if (tabName == "box-1") {
             if ($this.index() == 1) {
                 numIncrease__init();
                 progressAni__init();
@@ -79,6 +72,9 @@ function tabBox__init() {
         }
     });
 }
+
+
+
 
 // 숫자 증가 함수
 function numIncrease__init() {
@@ -107,7 +103,7 @@ function progressAni__init() {
     $('.progress-bar > .bar').each(function () {
         var $this = $(this);
         var maxWidth = $this.attr('data-width');
-        $this.css('width', 0 );
+        $this.css('width', 0);
 
         $this.animate({
             width: maxWidth
@@ -123,12 +119,267 @@ function progressAni__init() {
     });
 }
 
+function introAni__init() {
+
+    var aboutPage = $('.about').offset().top + 200;
+
+    // 스크롤 방지
+    $('html').data('data-intro', true);
+    preventScroll();
+
+    // 스크롤 방지 해제
+    setTimeout(function () {
+        $('html').data('data-intro', false);
+        $('html,body').animate({
+            scrollTop: aboutPage + 'px'
+        }, 1000);
+    }, 5000);
+}
+
+function preventScroll(){
+    $('.wrap, .top-bar, .side-bar, .pagenation').on("mousewheel DOMMouseScroll", function (e) {
+        if ($('html').data('data-intro') == true) {
+            e.preventDefault();
+        }
+        return;
+    })
+}
+
+
+
+
+
+// 발견 하는 함수
+
+// 발견 요소의 offset 설정
+function ActiveOnVisible__initOffset() {
+    $(".active-on-visible").each(function (index, node) {
+        var $node = $(node);
+
+        var offsetTop = $node.offset().top;
+        var offsetBottom = offsetTop + $node.outerHeight();
+        $node.attr("data-active-on-visible-offsetTop", offsetTop);
+        $node.attr("data-active-on-visible-offsetBottom", offsetBottom);
+
+        if (!$node.attr("data-active-on-visible-diff-y")) {
+            $node.attr("data-active-on-visible-diff-y", "0");
+        }
+
+        if (!$node.attr("data-active-on-visible-delay")) {
+            $node.attr("data-active-on-visible-delay", "0");
+        }
+    });
+
+    ActiveOnVisible__checkAndActive();
+}
+
+function ActiveOnVisible__checkAndActive() {
+    // 발견하면 클래스 추가하기
+    $(".active-on-visible").each(function (index, node) {
+        var $node = $(node);
+        
+
+        var offsetTop = parseInt($node.attr("data-active-on-visible-offsetTop"));
+        var offsetBottom = parseInt(
+            $node.attr("data-active-on-visible-offsetBottom")
+        );
+        var diffY = parseInt($node.attr("data-active-on-visible-diff-y"));
+        var delay = parseInt($node.attr("data-active-on-visible-delay"));
+
+
+        if ($(window).scrollTop() + diffY > offsetBottom == false) {
+            if ($(window).scrollTop() + diffY >= offsetTop) {
+                setTimeout(function () {
+                    $node.addClass("active");
+                    $('.pagenation > ul > li').removeClass('active');
+                    $('.pagenation > ul > li').eq(index).addClass('active');
+                }, delay);
+            }
+        }
+    });
+    // 벗어나면 클래스 제거
+    $(".active-on-visible.active").each(function (index, node) {
+        var $node = $(node);
+
+        var offsetTop = $node.attr("data-active-on-visible-offsetTop");
+        var offsetBottom = $node.attr("data-active-on-visible-offsetBottom");
+        var diffY = parseInt($node.attr("data-active-on-visible-diff-y"));
+        var delay = parseInt($node.attr("data-active-on-visible-delay"));
+        
+        if (
+            $(window).scrollTop() + $(window).height() < offsetTop ||
+            $(window).scrollTop() > offsetBottom
+        ) {
+            setTimeout(function () {
+                $node.removeClass("active");
+            }, delay);
+        }
+    });
+}
+
+// 발견 함수 실행함수
+function ActiveOnVisible__init() {
+    // 최초실행
+    setTimeout(function(){
+        ActiveOnVisible__initOffset();
+    }, 1000);
+    ActiveOnVisible__checkAndActive();
+    
+
+    $(window).resize(ActiveOnVisible__initOffset);
+    $(window).scroll(ActiveOnVisible__checkAndActive);
+}
+
+
+// 리사이즈
+// function windowResize__init() {
+//     $(window).resize(function () {
+//         var windowSize = $(window).outerWidth();
+//         if (windowSize > 1400 && windowSize < 1500) {
+//             lineSize__init();
+//         }
+//     });
+// }
+
+
+
+function pagenation__init(){
+    $('.pagenation > ul > li').click(function(e){
+        if ($('html').data('data-intro') == true) {
+            e.preventDefault();
+            return;
+        }
+        var $this = $(this);
+        var dotIndext = $this.index();
+        var $section = $('.wrap > section').eq(dotIndext);
+        var sectionOffset = parseInt($section.attr("data-active-on-visible-offsetTop"));
+        console.log(sectionOffset + 1);
+
+        $('html,body').stop().animate({
+            scrollTop : sectionOffset + 1 + 'px'
+        }, 1000);
+    })
+}
+
+
+
+
+// swiper 슬라이드
+function swiperSlide__init() {
+    var swiper = new Swiper(".swiper-container");
+}
+
+// 클릭 이벤트 모음
+function click__init(){
+    $('.btn-side-bar').click(parentToggle);
+    $('[data-tab-name="box-2"][data-tab-head-item-name="1"]').click();
+    $('.portfolio > .content-box > .head > button').click(ActiveOnVisible__initOffset);
+}
 
 $(function () {
-    button__init();
+    // 라인 애니메이션
     lineAni__init();
+    // 타이틀 라인 사이즈 함수
     lineSize__init();
+    // 탭박스 함수
     tabBox__init();
+
+    // 슬라이드
+    swiperSlide__init();
     // windowResize__init();
-    $('[data-tab-name="box-2"][data-tab-head-item-name="1"]').click();
+
+    // 인트로 페이지 함수
+    introAni__init();
+
+    // 발견 함수
+    ActiveOnVisible__init();
+
+    // 클릭 이벤트 모음
+    click__init();
+
+    pagenation__init();
 });
+
+// // 시작 위치 초기화
+// setTimeout(function () {
+//     $(window).scrollTop(0);
+// }, 150)
+
+//웹페이지 닫기, 새로고침, 다른 URL 이동시 문서 최상단으로
+// 자바스크립트 버전
+// window.onbeforeunload = function() {window.scrollTo(0,0);}
+
+// 제이쿼리
+$(window).on('beforeunload', function(){
+    $(window).scrollTop(0);
+});
+
+
+
+
+
+// 이메일 보내는 기능
+function sendEmailFormSubmit(form) {
+    if ( form.receiverName.value.length == 0 ) {
+        alert('폼안에 receiverName 의 value 를 입력해주세요.');
+        return false;
+    }
+
+    if ( form.receiverEmail.value.length == 0 ) {
+        alert('폼안에 receiverEmail 의 value 를 입력해주세요.');
+        return false;
+    }
+
+    form.senderName.value = form.senderName.value.trim();
+
+    if ( form.senderName.value.length == 0 ) {
+        alert('당신의 이름을 입력해주세요.');
+        form.senderName.focus();
+        return false;
+    }
+
+    form.senderEmail.value = form.senderEmail.value.trim();
+
+    if ( form.senderEmail.value.length == 0 ) {
+        alert('당신의 이메일을 입력해주세요.');
+        form.senderEmail.focus();
+        return false;
+    }
+
+    form.body.value = form.body.value.trim();
+
+    if ( form.body.value.length == 0 ) {
+        alert('내용을 입력해주세요.');
+        form.body.focus();
+        return false;
+    }
+
+    var senderName = form.senderName.value;
+    var senderEmail = form.senderEmail.value;
+    var title = '[이력서 보고 연락 드립니다]';
+    var body = nl2br(form.body.value);
+    var receiverName = form.receiverName.value;
+    var receiverEmail = form.receiverEmail.value;
+
+    var url = 'https://email.oa.gg/doSendEmail2.php?senderName=' + senderName + '&senderEmail=' + senderEmail + '&receiverName=' + receiverName + '&receiverEmail=' + receiverEmail + '&title=' + title + '&body=' + body;
+
+    //console.log("URL : " + url);
+
+    var head= document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = url;
+    head.appendChild(script);
+}
+
+function nl2br(str){  
+    return str.replace(/\n/g, "<br />");  
+}
+
+function Email__callback(data) {
+    if ( data.resultCode.substr(0, 2) == 'S-' ) {
+        document.sendEmailForm.reset();
+    }
+
+    alert(data.msg);
+}
