@@ -329,14 +329,41 @@ body {
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
-
-body::-webkit-scrollbar,
+/* 퍼즐 배경 이미지 */
+body::before {
+    content:"";
+    position: absolute;
+    top: 31%;
+    right: 0;
+    width: 217px;
+    height: 663px;
+    background-image: url("https://nixpluvia.github.io/img1/pf/portfolio/puzzle_bg_1.svg");
+    background-position: top right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+body::after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    width: 300px;
+    height: 250px;
+    background-image: url("https://nixpluvia.github.io/img1/pf/portfolio/puzzle_bg_3.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+/* 스크롤 바 제거 */
 body::-webkit-scrollbar {
     display: none;
     width: 0;
 }
 
-.frame {
+/* svg 색상 */
+.frame,.quotes,.icon-scroll-path {
     fill: #2D2924;
 }
 
@@ -460,6 +487,10 @@ body::-webkit-scrollbar {
     border-radius: 50%;
     background: #2D2924;
 }
+.pagenation>ul>li>button {
+    width: 100%;
+    height: 100%;
+}
 
 .pagenation>ul>li+li {
     margin-top: 13px;
@@ -472,6 +503,7 @@ body::-webkit-scrollbar {
 
 /* intro */
 .intro {
+    position: relative;
     width: 100vw;
     height: 100vh;
     align-items: flex-end;
@@ -791,6 +823,28 @@ body::-webkit-scrollbar {
     }
 }
 
+/* intro 섹션 - 스크롤 아이콘 */
+.intro>.icon-scroll{
+    position: absolute;
+    left: calc(50% - 15px);
+    opacity: 0;
+    transition: opacity 1s;
+}
+.intro>.icon-scroll.active{
+    opacity: 1;
+    animation: scroll-icon-ani 1s infinite alternate-reverse;
+}
+@keyframes scroll-icon-ani {
+    0%{
+        bottom: 45px;
+    }
+    100%{
+        bottom: 35px;
+    }
+}
+.intro>.icon-scroll>svg{
+    width: 30px;
+}
 
 
 
@@ -1133,7 +1187,6 @@ body::-webkit-scrollbar {
 /* design 섹션 - 슬라이드 */
 .design .swiper-container {
     flex: 1 0 0;
-    background-color: #ffffff;
 }
 .design .swiper-container .swiper-slide {
     position: relative;
@@ -1154,8 +1207,9 @@ body::-webkit-scrollbar {
 /* design 섹션 - 슬라이드 텍스트 박스*/
 .design .swiper-container .swiper-slide>.txt {
     position: relative;
-    margin-top: 60px;
-    margin-left: 70px;
+    padding-top: 60px;
+    padding-left: 70px;
+    background-color: #ffffff;
 }
 
 .design .swiper-container .swiper-slide>.txt>.title {
@@ -1212,10 +1266,16 @@ body::-webkit-scrollbar {
 }
 
 
+
+
+
+
+/* contact 섹션 */
 .contact {
     margin-top: 200px;
     padding-top: 200px;
 }
+/* contact 타이틀 라인 */
 .contact>h2>span::before {
     content: "";
     position: absolute;
@@ -1226,10 +1286,13 @@ body::-webkit-scrollbar {
     background-color: #FFB000;
 }
 
+/* contact 섹션 - 컨텐츠 박스 */
 .contact>.content {
     margin-top: 150px;
     margin-bottom: 150px;
 }
+
+/* contact 섹션 - 메일 전송 박스*/
 .contact>.content>.send-mail {
     width: 100%;
     max-width: 750px;
@@ -1262,10 +1325,11 @@ body::-webkit-scrollbar {
     box-sizing: border-box;
 }
 .contact>.content>.send-mail > form > .type1 > textarea{
-    padding-left: 30px;
-    padding-top: 10px;
+    display: block;
     width: 100%;
     height: 220px;
+    padding-left: 30px;
+    padding-top: 10px;
     box-sizing: border-box;
 }
 
@@ -1283,14 +1347,73 @@ body::-webkit-scrollbar {
 
 
 
-
-
-
+/* contact 섹션 - info box */
 .contact>.content>.info-box {
     flex: 1 0 0;
+    padding-bottom: 87px;
+    box-sizing: border-box;
 }
 .contact>.content>.info-box>.info-wrap {
-    padding-left: 20%;
+    position: relative;
+    width: 100%;
     height: 100%;
+    padding-left: 20%;
     box-sizing: border-box;
+}
+
+/* contact 섹션 - info 타이틀 */
+.contact>.content>.info-box .sub-title .txt-wrap> :not(:last-child){
+    margin-bottom: 25px;
+}
+.contact>.content>.info-box .sub-title .txt-wrap> div{
+    width: 100%;
+}
+.contact>.content>.info-box .sub-title .txt-wrap> div > svg{
+    width: 25px;
+}
+.contact>.content>.info-box .sub-title .txt-wrap> h2{
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    word-break: keep-all;
+}
+
+/* contact 섹션 - 개인 정보 */
+.contact .content .info-box .myself-info{
+    margin-top: 25px;
+}
+.contact .content .info-box .myself-info > ul > li + li {
+    margin-top: 20px;
+}
+.contact .content .info-box .myself-info > ul > li > span {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 14px;
+    vertical-align: bottom;
+}
+.contact .content .info-box .myself-info > ul > li > span:first-child{
+    width: 65px;
+    font-weight: 700;
+}
+.contact .content .info-box .myself-info > ul > li > span:last-child{
+    font-weight: 300;
+}
+
+
+/* contact 섹션 - sns icon bar */
+.contact .content .sns-bar {
+    margin-top: auto;
+}
+.contact .content .sns-bar >  ul > li {
+    height: 35px;
+}
+.contact .content .sns-bar >  ul > li + li {
+    margin-left: 20px;
+}
+.contact .content .sns-bar >  ul > li > a{
+    display: block;
+    height: 100%;
+}
+.contact .content .sns-bar >  ul > li > a > svg{
+    height: 100%;
 }

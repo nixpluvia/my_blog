@@ -1,4 +1,4 @@
-// 부모에게 active 클래스 추가하는 함수
+// 부모에게 active 클래스 추가하는 함수 시작
 function parentToggle() {
     var $this = $(this);
     var $parent = $this.parent();
@@ -15,10 +15,10 @@ function parentToggle() {
         // console.log("add");
     }
 }
+// 부모에게 active 클래스 추가하는 함수 끝
 
 
-
-// 라인 애니메이션 딜레이
+// 라인 애니메이션 딜레이 시작
 function lineAni__init() {
     var line = $('.intro > .title > div');
     var arrLine = [line.eq(0), line.eq(1), line.eq(2)];
@@ -32,19 +32,21 @@ function lineAni__init() {
         delayTime += 800;
     }
 }
+// 라인 애니메이션 딜레이 끝
 
 
-// 타이틀 라인 사이즈 구하는 함수
+// 타이틀 라인 사이즈 구하는 함수 시작
 function lineSize__init() {
     var titleSize = $('.intro > .title').outerWidth();
     var sizePercent = titleSize / 20;
     $('.intro > .title > .title-paint-line > img').css('width', titleSize + sizePercent);
 }
+// 타이틀 라인 사이즈 구하는 함수 끝
 
 
 
 
-// 탭박스
+// 탭박스 함수 시작
 function tabBox__init() {
     $('[data-tab-head-item-name]').click(function () {
         var $this = $(this);
@@ -72,11 +74,11 @@ function tabBox__init() {
         }
     });
 }
+// 탭박스 함수 끝
 
 
 
-
-// 숫자 증가 함수
+// 숫자 증가 함수 시작
 function numIncrease__init() {
     $(".info-num").each(function () {
         var $this = $(this);
@@ -98,7 +100,10 @@ function numIncrease__init() {
         });
     });
 }
+// 숫자 증가 함수 끝
 
+
+// 프로그레스 바 애니메이션 시작
 function progressAni__init() {
     $('.progress-bar > .bar').each(function () {
         var $this = $(this);
@@ -118,7 +123,11 @@ function progressAni__init() {
         });
     });
 }
+// 프로그레스 바 애니메이션 끝
 
+
+
+// 인트로 페이지 함수 시작
 function introAni__init() {
 
     var aboutPage = $('.about').offset().top + 200;
@@ -136,6 +145,7 @@ function introAni__init() {
     }, 5000);
 }
 
+// 스크롤 방지 함수
 function preventScroll(){
     $('.wrap, .top-bar, .side-bar, .pagenation').on("mousewheel DOMMouseScroll", function (e) {
         if ($('html').data('data-intro') == true) {
@@ -144,12 +154,12 @@ function preventScroll(){
         return;
     })
 }
+// 인트로 페이지 함수 끝
 
 
 
 
-
-// 발견 하는 함수
+// 발견 하는 함수 시작
 
 // 발견 요소의 offset 설정
 function ActiveOnVisible__initOffset() {
@@ -230,6 +240,8 @@ function ActiveOnVisible__init() {
     $(window).scroll(ActiveOnVisible__checkAndActive);
 }
 
+// 발견 하는 함수 끝
+
 
 // 리사이즈
 // function windowResize__init() {
@@ -242,7 +254,7 @@ function ActiveOnVisible__init() {
 // }
 
 
-
+// pagenation 함수 시작
 function pagenation__init(){
     $('.pagenation > ul > li').click(function(e){
         if ($('html').data('data-intro') == true) {
@@ -250,24 +262,33 @@ function pagenation__init(){
             return;
         }
         var $this = $(this);
-        var dotIndext = $this.index();
-        var $section = $('.wrap > section').eq(dotIndext);
+        var dotIndex = $this.index();
+        var $section = $('.wrap > section').eq(dotIndex);
         var sectionOffset = parseInt($section.attr("data-active-on-visible-offsetTop"));
-        console.log(sectionOffset + 1);
+
+        var diffy = 1;
+
+        if( dotIndex == 1 ) {
+            diffy = 200;
+        }
 
         $('html,body').stop().animate({
-            scrollTop : sectionOffset + 1 + 'px'
+            scrollTop : sectionOffset + diffy + 'px'
         }, 1000);
     })
 }
+// pagenation 함수 끝
 
 
 
-
-// swiper 슬라이드
+// swiper 슬라이드 시작
 function swiperSlide__init() {
     var swiper = new Swiper(".swiper-container");
 }
+// swiper 슬라이드 끝
+
+
+
 
 // 클릭 이벤트 모음
 function click__init(){
@@ -275,6 +296,17 @@ function click__init(){
     $('[data-tab-name="box-2"][data-tab-head-item-name="1"]').click();
     $('.portfolio > .content-box > .head > button').click(ActiveOnVisible__initOffset);
 }
+
+
+
+// 지연 시작 모음
+function setTime__init(){
+    setTimeout(function(){
+        $('.icon-scroll').addClass('active');
+    }, 4000);
+}
+
+
 
 $(function () {
     // 라인 애니메이션
@@ -298,6 +330,8 @@ $(function () {
     click__init();
 
     pagenation__init();
+    
+    setTime__init();
 });
 
 // // 시작 위치 초기화
