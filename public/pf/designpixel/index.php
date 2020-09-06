@@ -403,7 +403,7 @@
                         </div>
                         <a class="site-icon" href="#">
                             <div class="icon-img">
-                                <img src="https://nixpluvia.github.io/img1/pf/designpixel/file3_1572412192nmm2jhpf7u.png" alt="">
+                                <img src="https://nixpluvia.github.io/img1/pf/designpixel/file1_1572412192pxq0y40t0j.jpg" alt="">
                             </div>
                             <div class="txt"> GO </div>
                         </a>

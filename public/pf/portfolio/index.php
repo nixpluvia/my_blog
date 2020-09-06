@@ -54,6 +54,139 @@
         </ul>
     </div>
 
+    <div class="portfolio-popup">
+        <div class="popup-box flex">
+            <div class="popup-img">
+                <a href="" target="_blank">
+                </a>
+            </div>
+            <div class="txt-box">
+                <ul>
+                    <li class="txt-item font-noto">
+                        <div class="title">
+                            <span>Coca Cola Company_</span>
+                            <span>코카콜라</span>
+                        </div>
+                        <div class="tag flex">
+                            <div class="tag-icon redesign">
+                                <img src="https://nixpluvia.github.io/img1/pf/portfolio/icon-redesign.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="txt-body">
+                            <p>코카콜라 사이트를 리디자인했습니다.</p>
+                        </div>
+                        <div class="source">
+                            <div>
+                                <span class="type1">디자인 출처:</span>
+                                <span class="type2">창작</span>
+                            </div>
+                            <div>
+                                <span class="type1">원본사이트:</span>
+                                <span class="type2"><a href="https://www.coca-colacompany.com/" target="_blank">Cocacola Company</a></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="txt-item font-noto">
+                        <div class="title font-noto">
+                            <span>Artfive_</span>
+                            <span>아트파이브</span>
+                        </div>
+                        <div class="tag flex">
+                            <div class="tag-icon redesign">
+                                <img src="https://nixpluvia.github.io/img1/pf/portfolio/icon-copy.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="txt-body font-noto">
+                            <p>기존의 아트파이브 사이트를 모작 해보았습니다.</p>
+                        </div>
+                        <div class="source">
+                            <div>
+                                <span class="type1">디자인 출처:</span>
+                                <span class="type2">모작</span>
+                            </div>
+                            <div>
+                                <span class="type1">원본사이트:</span>
+                                <span class="type2"><a href="http://www.artfive.co.kr/" target="_blank">Artfive</a></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="txt-item font-noto">
+                        <div class="title">
+                            <span>Design Pixel_</span>
+                            <span>디자인픽셀</span>
+                        </div>
+                        <div class="tag flex">
+                            <div class="tag-icon redesign">
+                                <img src="https://nixpluvia.github.io/img1/pf/portfolio/icon-copy.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="txt-body">
+                            <p>기존의 디자인픽셀 사이트를 모작 해보았습니다.</p>
+                        </div>
+                        <div class="source">
+                            <div>
+                                <span class="type1">디자인 출처:</span>
+                                <span class="type2">모작</span>
+                            </div>
+                            <div>
+                                <span class="type1">원본사이트:</span>
+                                <span class="type2"><a href="https://designpixel.co.kr/" target="_blank">Design Pixel</a></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="txt-item font-noto">
+                        <div class="title">
+                            <span>Hemish_</span>
+                            <span>헤이미쉬</span>
+                        </div>
+                        <div class="tag flex">
+                            <div class="tag-icon redesign">
+                                <img src="https://nixpluvia.github.io/img1/pf/portfolio/icon-copy.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="txt-body">
+                            <p>기존의 헤이미쉬 사이트를 모작 해보았습니다.</p>
+                        </div>
+                        <div class="source">
+                            <div>
+                                <span class="type1">디자인 출처:</span>
+                                <span class="type2">모작</span>
+                            </div>
+                            <div>
+                                <span class="type1">원본사이트:</span>
+                                <span class="type2"><a href="http://www.eheimish.com/" target="_blank">Heimish</a></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="txt-item font-noto">
+                        <div class="title">
+                            <span>Cleaderm_</span>
+                            <span>클리덤 닥터락토</span>
+                        </div>
+                        <div class="tag flex">
+                            <div class="tag-icon redesign">
+                                <img src="https://nixpluvia.github.io/img1/pf/portfolio/icon-copy.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="txt-body">
+                            <p>기존의 클리덤 닥터락토 사이트를 모작 해보았습니다.</p>
+                        </div>
+                        <div class="source">
+                            <div>
+                                <span class="type1">디자인 출처:</span>
+                                <span class="type2">모작</span>
+                            </div>
+                            <div>
+                                <span class="type1">원본사이트:</span>
+                                <span class="type2"><a href="https://cleaderm.co.kr/" target="_blank">Cleaderm</a></span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div class="wrap">
         <section class="intro con flex active-on-visible">
             <h2 class="title flex-column line-height-0">
@@ -132,8 +265,9 @@
                 </div>
             </div>
             <div class="icon-scroll">
-                <svg version="1.1" id="layer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    x="0px" y="0px" viewBox="0 0 30 54" style="enable-background:new 0 0 30 54;" xml:space="preserve">
+                <svg version="1.1" id="layer" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 54"
+                    style="enable-background:new 0 0 30 54;" xml:space="preserve">
                     <polygon class="icon-scroll-path" points="27,36 15,48 3,36 0,39 15,54 30,39 " />
                     <polygon class="icon-scroll-path" points="27,18 15,30 3,18 0,21 15,36 30,21 " />
                     <polygon class="icon-scroll-path" points="27,0 15,12 3,0 0,3 15,18 30,3 " />
@@ -334,15 +468,19 @@
                                 <img src="https://nixpluvia.github.io/img1/pf/portfolio/portfolio_box.svg" alt="">
                             </div>
                             <div class="item-content">
-                                <div class="img"></div>
+                                <div class="img" data-pu-href="https://nix.blog.oa.gg/pf/cocacola/index.php"
+                                    data-pu-imgurl="https://nixpluvia.github.io/img1/pf/portfolio/portfolio-cocacola.png">
+                                    <img src="https://nixpluvia.github.io/img1/pf/portfolio/cocacola-img.png" alt="">
+                                </div>
                                 <div class="tag flex">
-                                    <div class="tag-icon">
+                                    <div class="tag-icon redesign">
                                         <img src="https://nixpluvia.github.io/img1/pf/portfolio/icon-redesign.svg"
                                             alt="">
                                     </div>
                                 </div>
                                 <div class="txt">
-                                    <span class="font-noto">Coca Cola Company</span>
+                                    <span class="font-noto">Coca Cola Company_</span>
+                                    <span class="font-noto">코카콜라</span>
                                 </div>
                             </div>
                         </li>
@@ -351,13 +489,19 @@
                                 <img src="https://nixpluvia.github.io/img1/pf/portfolio/portfolio_box.svg" alt="">
                             </div>
                             <div class="item-content">
-                                <div class="img"></div>
+                                <div class="img" data-pu-href="https://nix.blog.oa.gg/pf/artfive/index.php"
+                                    data-pu-imgurl="https://nixpluvia.github.io/img1/pf/portfolio/portfolio-artfive.png">
+                                    <img src="https://nixpluvia.github.io/img1/pf/portfolio/artfive-img.png" alt="">
+                                </div>
                                 <div class="tag">
-                                    <div class="tag-icon">
+                                    <div class="tag-icon copy">
                                         <img src="https://nixpluvia.github.io/img1/pf/portfolio/icon-copy.svg" alt="">
                                     </div>
                                 </div>
-                                <div class="txt"></div>
+                                <div class="txt">
+                                    <span class="font-noto">Artfive_</span>
+                                    <span class="font-noto">아트파이브</span>
+                                </div>
                             </div>
                         </li>
                         <li class="item" data-tab-name="box-2" data-tab-body-item-name="3">
@@ -365,13 +509,19 @@
                                 <img src="https://nixpluvia.github.io/img1/pf/portfolio/portfolio_box.svg" alt="">
                             </div>
                             <div class="item-content">
-                                <div class="img"></div>
+                                <div class="img" data-pu-href="https://nix.blog.oa.gg/pf/designpixel/index.php"
+                                    data-pu-imgurl="https://nixpluvia.github.io/img1/pf/portfolio/portfolio-designpixel.png">
+                                    <img src="https://nixpluvia.github.io/img1/pf/portfolio/designpixel-img.png" alt="">
+                                </div>
                                 <div class="tag">
-                                    <div class="tag-icon">
+                                    <div class="tag-icon copy">
                                         <img src="https://nixpluvia.github.io/img1/pf/portfolio/icon-copy.svg" alt="">
                                     </div>
                                 </div>
-                                <div class="txt"></div>
+                                <div class="txt">
+                                    <span class="font-noto">Design Pixel_</span>
+                                    <span class="font-noto">디자인픽셀</span>
+                                </div>
                             </div>
                         </li>
                         <li class="item" data-tab-name="box-2" data-tab-body-item-name="3">
@@ -379,13 +529,19 @@
                                 <img src="https://nixpluvia.github.io/img1/pf/portfolio/portfolio_box.svg" alt="">
                             </div>
                             <div class="item-content">
-                                <div class="img"></div>
+                                <div class="img" data-pu-href="https://nix.blog.oa.gg/pf/heimish/index.php"
+                                    data-pu-imgurl="https://nixpluvia.github.io/img1/pf/portfolio/portfolio-heimish.png">
+                                    <img src="https://nixpluvia.github.io/img1/pf/portfolio/hemish-img.png" alt="">
+                                </div>
                                 <div class="tag">
-                                    <div class="tag-icon">
+                                    <div class="tag-icon copy">
                                         <img src="https://nixpluvia.github.io/img1/pf/portfolio/icon-copy.svg" alt="">
                                     </div>
                                 </div>
-                                <div class="txt"></div>
+                                <div class="txt">
+                                    <span class="font-noto">Hemish_</span>
+                                    <span class="font-noto">헤이미쉬</span>
+                                </div>
                             </div>
                         </li>
                         <li class="item" data-tab-name="box-2" data-tab-body-item-name="3">
@@ -393,27 +549,19 @@
                                 <img src="https://nixpluvia.github.io/img1/pf/portfolio/portfolio_box.svg" alt="">
                             </div>
                             <div class="item-content">
-                                <div class="img"></div>
+                                <div class="img" data-pu-href="https://nix.blog.oa.gg/pf/cleaderm/index.php"
+                                    data-pu-imgurl="https://nixpluvia.github.io/img1/pf/portfolio/portfolio-cleaderm.png">
+                                    <img src="https://nixpluvia.github.io/img1/pf/portfolio/cleaderm-img.png" alt="">
+                                </div>
                                 <div class="tag">
-                                    <div class="tag-icon">
+                                    <div class="tag-icon copy">
                                         <img src="https://nixpluvia.github.io/img1/pf/portfolio/icon-copy.svg" alt="">
                                     </div>
                                 </div>
-                                <div class="txt"></div>
-                            </div>
-                        </li>
-                        <li class="item" data-tab-name="box-2" data-tab-body-item-name="3">
-                            <div class="frame">
-                                <img src="https://nixpluvia.github.io/img1/pf/portfolio/portfolio_box.svg" alt="">
-                            </div>
-                            <div class="item-content">
-                                <div class="img"></div>
-                                <div class="tag">
-                                    <div class="tag-icon">
-                                        <img src="https://nixpluvia.github.io/img1/pf/portfolio/icon-copy.svg" alt="">
-                                    </div>
+                                <div class="txt">
+                                    <span class="font-noto">Cleaderm_</span>
+                                    <span class="font-noto">클리덤 닥터락토</span>
                                 </div>
-                                <div class="txt"></div>
                             </div>
                         </li>
                     </ul>
@@ -537,8 +685,9 @@
                             <div class="txt-wrap">
                                 <div class="flex-jc-st font-Fredericka">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25.3 19.4"
-                                        style="enable-background:new 0 0 25.3 19.4;" xml:space="preserve">
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 25.3 19.4" style="enable-background:new 0 0 25.3 19.4;"
+                                        xml:space="preserve">
                                         <g>
                                             <path class="quotes" d="M12.6,13.4c0.1,0.3,0.1,0.6,0,1c-0.1,0.4-0.4,0.7-0.8,0.8c-0.2,0.7-0.4,1.2-0.5,1.7c-0.2,0.5-0.4,1-0.6,1.4
                                                 c-0.4,0.1-0.7,0.3-1,0.5c-0.3,0.2-0.6,0.4-0.9,0.5c-0.9,0.3-1.7,0.2-2.4-0.3c-0.8-0.5-1.4-1-2-1.5c-0.9-0.9-1.6-1.8-2.4-2.8
@@ -591,8 +740,9 @@
                                 <h2 class="font-cookie">작지만 빠져서는 안되는 퍼즐 한 조각 처럼</h2>
                                 <div class="flex-jc-end font-Fredericka">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25.3 19.4"
-                                        style="enable-background:new 0 0 25.3 19.4;" xml:space="preserve">
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 25.3 19.4" style="enable-background:new 0 0 25.3 19.4;"
+                                        xml:space="preserve">
                                         <g>
                                             <path class="quotes"
                                                 d="M0.1,7.7C-0.1,6.4,0,5.5,0.4,4.8c0.4-0.7,0.8-1.4,1.4-2.2c0.5-0.2,0.7-0.3,0.8-0.5c0-0.2,0.2-0.3,0.3-0.3
@@ -663,7 +813,8 @@
                         <div class="sns-bar">
                             <ul class="flex">
                                 <li class="sns-icon icon-youtube">
-                                    <a href="https://www.youtube.com/channel/UCaCKvCIvrW3xMmYvhCGJZZA?view_as=subscriber" target="_blank">
+                                    <a href="https://www.youtube.com/channel/UCaCKvCIvrW3xMmYvhCGJZZA?view_as=subscriber"
+                                        target="_blank">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.78 35">
                                             <g>
                                                 <path
@@ -702,6 +853,9 @@
             </div>
         </section>
     </div>
+    <footer class="con">
+        <h2 class="font-noto">본 사이트는 상업적 목적이 아닌 개인 포트폴리오 사이트로 제작되었습니다.</h2>
+    </footer>
 </body>
 
 </html>

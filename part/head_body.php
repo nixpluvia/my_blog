@@ -68,7 +68,7 @@
             <ul>
                 <li><a href="/itPrograming.php">IT PROGRAMING</a></li>
                 <li><a href="/dailyLife.php">DAILY LIFE</a></li>
-                <li><a href="/portfolio.php">PORTFOLIO</a></li>                
+                <li><a href="/pf/portfolio/index.php">PORTFOLIO</a></li>                
                 <li><a href="/aboutMe.php">ABOUT ME</a></li>
             </ul>
         </nav>
@@ -161,7 +161,7 @@
                     <ul class="flex">
                         <li class="flex"><a href="/itPrograming.php" class="flex-ai-c">IT PROGRAMING</a></li>
                         <li class="flex"><a href="/dailyLife.php" class="flex-ai-c">DAILY LIFE</a></li>
-                        <li class="flex"><a href="/portfolio.php" class="flex-ai-c">PORTFOLIO</a></li>
+                        <li class="flex"><a href="/pf/portfolio/index.php" class="flex-ai-c">PORTFOLIO</a></li>
                         <li class="flex"><a href="/aboutMe.php" class="flex-ai-c">ABOUT ME</a></li>
                     </ul>
                     <span></span>

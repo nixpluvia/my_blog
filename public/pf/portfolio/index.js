@@ -290,11 +290,55 @@ function swiperSlide__init() {
 
 
 
+
+
+
+// 팝업 함수
+function popup__init(){
+    var $this = $(this);
+    var $item = $this.closest('.item');
+    var itemIndex = $item.index();
+
+    var $img = $item.find('> .item-content > .img');
+    var imgHref = $img.attr('data-pu-href');
+    var imgUrl = $img.attr('data-pu-imgurl');
+
+    var $popup = $('.portfolio-popup');
+    var $popupImg = $popup.find(' > .popup-box > .popup-img > a');
+    var $popupTxt = $popup.find(' > .popup-box > .txt-box > ul > li').eq(itemIndex);
+
+    $popupImg.attr('href', imgHref);
+    $popupImg.css('background-image', 'url(' + imgUrl + ')');
+    $popup.addClass('active');
+    $popupTxt.addClass('active');
+}
+
+// 팝업 스크롤 방지
+function preventScroll(){
+    $('.portfolio-popup').on("mousewheel DOMMouseScroll", function (e) {
+        e.preventDefault();
+        return;
+    })
+}
+
+
 // 클릭 이벤트 모음
 function click__init(){
+    // 사이드 바 클릭 이벤트
     $('.btn-side-bar').click(parentToggle);
+    // 탭박스 클릭 이벤트
     $('[data-tab-name="box-2"][data-tab-head-item-name="1"]').click();
     $('.portfolio > .content-box > .head > button').click(ActiveOnVisible__initOffset);
+
+    // 팝업 클릭 이벤트
+    $('.portfolio .content-box .body .img, .portfolio .content-box .body .txt').click(popup__init);
+    $('.portfolio-popup > .popup-box').click(function(e){
+        e.stopPropagation();
+    })
+    $('.portfolio-popup').click(function(){
+        $('.portfolio-popup').removeClass('active');
+        $('.portfolio-popup > .popup-box > .txt-box > ul > li').removeClass('active');
+    });
 }
 
 
@@ -347,7 +391,6 @@ $(function () {
 $(window).on('beforeunload', function(){
     $(window).scrollTop(0);
 });
-
 
 
 

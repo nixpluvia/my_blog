@@ -1127,14 +1127,23 @@ body::-webkit-scrollbar {
 }
 
 .portfolio>.content-box>.body>ul>li>.item-content>.img {
+    position: relative;
     margin: 5px;
     background-color: #ffffff;
+    overflow: hidden;
+    cursor:pointer;
 }
 
 .portfolio>.content-box>.body>ul>li>.item-content>.img::before {
     content: "";
     display: block;
     padding-top: 100%;
+}
+.portfolio>.content-box>.body>ul>li>.item-content>.img > img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .portfolio>.content-box>.body>ul>li>.item-content>div+div {
@@ -1146,12 +1155,21 @@ body::-webkit-scrollbar {
     display: block;
     height: 24px;
 }
-
 .portfolio>.content-box>.body>ul>li>.item-content>.txt span {
-    font-size: 23px;
-    font-weight: 900;
-    line-height: 23px;
+    display: inline-block;
+    vertical-align: bottom;
     letter-spacing: 1px;
+}
+.portfolio>.content-box>.body>ul>li>.item-content>.txt span:first-child {
+    font-size: 23px;
+    line-height: 23px;
+    font-weight: 900;
+    color: #ffffff;
+}
+.portfolio>.content-box>.body>ul>li>.item-content>.txt span:last-child {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
     color: #ffffff;
 }
 
@@ -1289,7 +1307,7 @@ body::-webkit-scrollbar {
 /* contact 섹션 - 컨텐츠 박스 */
 .contact>.content {
     margin-top: 150px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 
 /* contact 섹션 - 메일 전송 박스*/
@@ -1416,4 +1434,131 @@ body::-webkit-scrollbar {
 }
 .contact .content .sns-bar >  ul > li > a > svg{
     height: 100%;
+}
+
+
+
+footer {
+    position: relative;
+}
+footer > h2{
+    position: absolute;
+    top: -114px;
+    right: 0;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 14px;
+    color: #2D2924;
+}
+
+
+
+
+/* 포트폴리오 팝업 */
+.portfolio-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    background-color: rgba(45, 41, 36, 0.3);
+    z-index: 200;
+}
+.portfolio-popup.active {
+    display: block;
+    visibility: visible;
+}
+.popup-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+}
+.popup-box > .popup-img {
+    max-width: 450px;
+    flex: 1.5 0 0;
+}
+.popup-box > .popup-img > a {
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transition: background-position 3s;
+}
+.popup-box > .popup-img > a:hover {
+    background-position: 0 100%;
+}
+.popup-box > .popup-img > a::before{
+    content:"";
+    display: block;
+    padding-bottom: 177.77777777777777%;
+}
+
+.popup-box > .txt-box {
+    flex: 2 0 0;
+    padding-top: 5%;
+    padding-left: 5%;
+    box-sizing: border-box;
+}
+.popup-box > .txt-box > ul,
+.popup-box > .txt-box > ul > li {
+    width: 100%;
+    height: 100%;
+}
+.popup-box > .txt-box > ul > li {
+    position: relative;
+    display: none;
+}
+.popup-box > .txt-box > ul > li.active {
+    display: block;
+}
+.popup-box > .txt-box > ul > li::after {
+    content:"본 사이트는 상업적 목적이 아닌 개인 포트폴리오 사이트로 제작되었습니다.";
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    font-size: 12px;
+    line-height: 12px;
+    color: #A0A0A0;
+}
+.popup-box > .txt-box > ul > li > .title > span:first-child{
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 900;
+    color: #2D2924;
+}
+.popup-box > .txt-box > ul > li > .title > span:last-child{
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
+    color: #2D2924;
+}
+.popup-box > .txt-box > ul > li > .tag {
+    margin-top: 10px;
+}
+.popup-box > .txt-box > ul > li > .tag > .tag-icon > img{
+    display: block;
+    height: 24px;
+}
+
+.popup-box > .txt-box > ul > li > .txt-body {
+    margin-top: 30px;
+}
+.popup-box > .txt-box > ul > li > .txt-body > p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #2D2924;
+}
+
+.popup-box > .txt-box > ul > li > .source {
+    margin-top: 100px;
+}
+.popup-box > .txt-box > ul > li > .source > div > span{
+    font-size: 14px;
+    line-height: 14px;
+    color: #2D2924;
 }

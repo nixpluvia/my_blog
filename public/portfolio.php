@@ -22,6 +22,14 @@ while ($portfolio = mysqli_fetch_assoc($rs) ) {
 
 ?>
 
+<script>
+    function jsLocationReplace() {
+        location.replace('https://nix.blog.oa.gg/pf/portfolio/index.php');
+        exit;
+    }
+    jsLocationReplace();
+</script>
+
 <div class="portfolio-animation-box con">
     <div class="ani-img">
         <div class="img-head img-box">
