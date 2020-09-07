@@ -1,7 +1,11 @@
 // 부모에게 active 클래스 추가하는 함수 시작
-function parentToggle() {
+function sideBarToggle(e) {
+    if ($('html').data('data-intro') == true) {
+        e.preventDefault();
+        return;
+    }
     var $this = $(this);
-    var $parent = $this.parent();
+    var $parent = $this.closest('.side-bar');
 
     if ($parent.hasClass('active')) {
         $parent.removeClass('active');
@@ -253,30 +257,37 @@ function ActiveOnVisible__init() {
 //     });
 // }
 
+function pagenation(){
+    if ($('html').data('data-intro') == true) {
+        e.preventDefault();
+        return;
+    }
+    var $this = $(this);
+    var dotIndex = $this.index();
+    var $section = $('.wrap > section').eq(dotIndex);
+    var sectionOffset = parseInt($section.attr("data-active-on-visible-offsetTop"));
+
+    console.log($this.index());
+    var diffy = 1;
+
+    if( dotIndex == 1 ) {
+        diffy = 200;
+    }
+    $('html,body').stop().animate({
+        scrollTop : sectionOffset + diffy + 'px'
+    }, 1000);
+
+}
 
 // pagenation 함수 시작
 function pagenation__init(){
-    $('.pagenation > ul > li').click(function(e){
-        if ($('html').data('data-intro') == true) {
-            e.preventDefault();
-            return;
-        }
-        var $this = $(this);
-        var dotIndex = $this.index();
-        var $section = $('.wrap > section').eq(dotIndex);
-        var sectionOffset = parseInt($section.attr("data-active-on-visible-offsetTop"));
+    $('.pagenation > ul > li').click(pagenation);
 
-        var diffy = 1;
-
-        if( dotIndex == 1 ) {
-            diffy = 200;
-        }
-
-        $('html,body').stop().animate({
-            scrollTop : sectionOffset + diffy + 'px'
-        }, 1000);
-    })
+    $('.side-bar > .side-bar-menu > ul > li').click(pagenation);
+    $('.side-bar > .side-bar-menu > ul > li').click(sideBarToggle);
 }
+
+
 // pagenation 함수 끝
 
 
@@ -299,7 +310,7 @@ function popup__init(){
     var $item = $this.closest('.item');
     var itemIndex = $item.index();
 
-    var $img = $item.find('> .item-content > .img');
+    var $img = $item.find('> .item-content > .item-img-box');
     var imgHref = $img.attr('data-pu-href');
     var imgUrl = $img.attr('data-pu-imgurl');
 
@@ -325,13 +336,13 @@ function preventScroll(){
 // 클릭 이벤트 모음
 function click__init(){
     // 사이드 바 클릭 이벤트
-    $('.btn-side-bar').click(parentToggle);
+    $('.btn-side-bar').click(sideBarToggle);
     // 탭박스 클릭 이벤트
     $('[data-tab-name="box-2"][data-tab-head-item-name="1"]').click();
     $('.portfolio > .content-box > .head > button').click(ActiveOnVisible__initOffset);
 
     // 팝업 클릭 이벤트
-    $('.portfolio .content-box .body .img, .portfolio .content-box .body .txt').click(popup__init);
+    $('.portfolio .content-box .body .item-img-box, .portfolio .content-box .body .txt').click(popup__init);
     $('.portfolio-popup > .popup-box').click(function(e){
         e.stopPropagation();
     })

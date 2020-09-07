@@ -323,6 +323,9 @@ button {
 }
 
 /* 모눈종이 배경 */
+html {
+    overflow-x: hidden;
+}
 body {
     background: url("https://nixpluvia.github.io/img1/pf/portfolio/tile2.png"), url("https://nixpluvia.github.io/img1/pf/portfolio/tile.png");
     overflow-X: hidden;
@@ -386,8 +389,8 @@ body::-webkit-scrollbar {
 .side-bar {
     position: fixed;
     top: 0;
-    left: calc(-80vw + 72px);
-    width: 80vw;
+    left: calc(-30vw + 72px);
+    width: 30vw;
     height: 100vh;
     box-sizing: border-box;
     background-color: #2D2924;
@@ -411,7 +414,7 @@ body::-webkit-scrollbar {
 
 @keyframes open-ani {
     0% {
-        left: calc(-80vw + 72px);
+        left: calc(-30vw + 72px);
     }
 
     100% {
@@ -425,7 +428,7 @@ body::-webkit-scrollbar {
     }
 
     100% {
-        left: calc(-80vw + 72px);
+        left: calc(-30vw + 72px);
     }
 }
 
@@ -464,11 +467,21 @@ body::-webkit-scrollbar {
 
 /* 사이드 바 - 메뉴 */
 .side-bar .side-bar-menu {
+    margin-top: 10vh;
+    margin-left: 10vh;
     visibility: hidden;
 }
 
 .side-bar.active .side-bar-menu {
     visibility: visible;
+}
+.side-bar .side-bar-menu > ul > li + li {
+    margin-top: 20px;
+}
+.side-bar .side-bar-menu > ul > li {
+    font-size: 32px;
+    line-height: 32px;
+    color: #ffffff;
 }
 
 
@@ -888,12 +901,17 @@ body::-webkit-scrollbar {
 
 /* 어바웃 페이지 - 사진 */
 .about>.content-box>.photo {
+    position: relative;
     height: 675px;
+    background-color: #2D2924;
+    box-sizing: border-box;
 }
 
 .about>.content-box>.photo>img {
     display: block;
+    padding: 10px;
     height: 100%;
+    box-sizing: border-box;
 }
 
 /* 어바웃 페이지 - 컨텐츠 */
@@ -1126,7 +1144,8 @@ body::-webkit-scrollbar {
     height: 100%;
 }
 
-.portfolio>.content-box>.body>ul>li>.item-content>.img {
+/* 포트폴리오 섹션 - 이미지 박스 */
+.portfolio>.content-box>.body>ul>li>.item-content>.item-img-box {
     position: relative;
     margin: 5px;
     background-color: #ffffff;
@@ -1134,27 +1153,66 @@ body::-webkit-scrollbar {
     cursor:pointer;
 }
 
-.portfolio>.content-box>.body>ul>li>.item-content>.img::before {
+.portfolio>.content-box>.body>ul>li>.item-content>.item-img-box::before {
     content: "";
     display: block;
     padding-top: 100%;
 }
-.portfolio>.content-box>.body>ul>li>.item-content>.img > img{
+
+.portfolio>.content-box>.body>ul>li>.item-content>.item-img-box::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 41, 36, 0);
+    visibility: hidden;
+    transition: background 1s, visibility 1s;
+}
+.portfolio>.content-box>.body>ul>li>.item-content:hover >.item-img-box::after{
+    visibility:visible;
+    background-color: rgba(45, 41, 36, 0.5);
+}
+.portfolio>.content-box>.body>ul>li>.item-content>.item-img-box > span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 22px;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+    transition: opacity 1s, visibility 1s;
+    z-index: 10;
+}
+.portfolio>.content-box>.body>ul>li>.item-content:hover >.item-img-box> span{
+    visibility: visible;
+    opacity: 1;
+}
+
+.portfolio>.content-box>.body>ul>li>.item-content>.item-img-box > img{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
 }
 
+
 .portfolio>.content-box>.body>ul>li>.item-content>div+div {
     margin-left: 40px;
     padding-top: 15px;
 }
 
+/* 포트폴리오 섹션 - 태그 아이콘 */
 .portfolio>.content-box>.body>ul>li>.item-content>.tag>.tag-icon img {
     display: block;
     height: 24px;
 }
+
+/* 포트폴리오 섹션 - 포트폴리오 */
 .portfolio>.content-box>.body>ul>li>.item-content>.txt span {
     display: inline-block;
     vertical-align: bottom;
@@ -1213,13 +1271,28 @@ body::-webkit-scrollbar {
 .design .swiper-container .swiper-slide>.img {
     width: 100%;
     max-width: 450px;
-    background-color: #2D2924;
+    border-right: 10px solid #2D2924;
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    transition: background 3s;
 }
+.design .swiper-container .swiper-slide>.img:hover {
+    background-position: 0 100%;
+}
+
 
 .design .swiper-container .swiper-slide>.img::before {
     content: "";
     display: block;
     padding-bottom: 133.33333333333333%;
+}
+.design .swiper-container .swiper-slide:nth-child(1) >.img {
+    background-image: url("https://nixpluvia.github.io/img1/pf/portfolio/design-kyobo.png");
+}
+.design .swiper-container .swiper-slide:nth-child(2) >.img {
+    background-image: url("https://nixpluvia.github.io/img1/pf/portfolio/portfolio-cocacola.png");
 }
 
 /* design 섹션 - 슬라이드 텍스트 박스*/

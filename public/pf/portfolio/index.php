@@ -16,6 +16,7 @@
 </head>
 
 <body class="relative">
+    <!-- 상단 메뉴 바 -->
     <header class="top-bar">
         <div class="con flex-ai-end flex-jc-between">
             <h1 class="logo line-height-0">
@@ -27,6 +28,7 @@
         </div>
     </header>
 
+    <!-- 사이드 바 -->
     <div class="side-bar">
         <button class="btn-side-bar">
             <div></div>
@@ -34,16 +36,17 @@
             <div></div>
         </button>
         <nav class="side-bar-menu">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+            <ul class="font-Fredericka">
+                <li>Intro</li>
+                <li>About</li>
+                <li>Portfolio</li>
+                <li>Design</li>
+                <li>Contact</li>
             </ul>
         </nav>
     </div>
 
+    <!-- 페이지 버튼 -->
     <div class="pagenation">
         <ul>
             <li class="active"><button></button></li>
@@ -54,6 +57,7 @@
         </ul>
     </div>
 
+    <!-- 포트폴리오 팝업 -->
     <div class="portfolio-popup">
         <div class="popup-box flex">
             <div class="popup-img">
@@ -187,7 +191,9 @@
         </div>
     </div>
 
+    <!-- 본문 섹션 -->
     <div class="wrap">
+        <!-- 인트로 -->
         <section class="intro con flex active-on-visible">
             <h2 class="title flex-column line-height-0">
                 <span class="section-title visi-hidden">WEB PUBLISHER/DESIGNER</span>
@@ -275,13 +281,14 @@
             </div>
         </section>
 
+        <!-- 소개 -->
         <section class="about section-page con active-on-visible">
             <h2 class="title font-Fredericka">
                 <span>About</span>
             </h2>
             <div class="content-box flex">
                 <div class="photo">
-                    <img src="https://nixpluvia.github.io/img1/pf/portfolio/photo-frame.svg" alt="">
+                    <img src="https://nixpluvia.github.io/img1/pf/portfolio/photo.png" alt="이호연 사진">
                 </div>
                 <div class="content">
                     <div class="head flex">
@@ -445,6 +452,7 @@
             </div>
         </section>
 
+        <!-- 웹사이트 포트폴리오 -->
         <section class="portfolio section-page con active-on-visible">
             <h2 class="title font-Fredericka">
                 <span>Portfolio</span>
@@ -468,9 +476,10 @@
                                 <img src="https://nixpluvia.github.io/img1/pf/portfolio/portfolio_box.svg" alt="">
                             </div>
                             <div class="item-content">
-                                <div class="img" data-pu-href="https://nix.blog.oa.gg/pf/cocacola/index.php"
+                                <div class="item-img-box" data-pu-href="https://nix.blog.oa.gg/pf/cocacola/index.php"
                                     data-pu-imgurl="https://nixpluvia.github.io/img1/pf/portfolio/portfolio-cocacola.png">
                                     <img src="https://nixpluvia.github.io/img1/pf/portfolio/cocacola-img.png" alt="">
+                                    <span>view</span>
                                 </div>
                                 <div class="tag flex">
                                     <div class="tag-icon redesign">
@@ -489,9 +498,10 @@
                                 <img src="https://nixpluvia.github.io/img1/pf/portfolio/portfolio_box.svg" alt="">
                             </div>
                             <div class="item-content">
-                                <div class="img" data-pu-href="https://nix.blog.oa.gg/pf/artfive/index.php"
+                                <div class="item-img-box" data-pu-href="https://nix.blog.oa.gg/pf/artfive/index.php"
                                     data-pu-imgurl="https://nixpluvia.github.io/img1/pf/portfolio/portfolio-artfive.png">
                                     <img src="https://nixpluvia.github.io/img1/pf/portfolio/artfive-img.png" alt="">
+                                    <span>view</span>
                                 </div>
                                 <div class="tag">
                                     <div class="tag-icon copy">
@@ -509,9 +519,10 @@
                                 <img src="https://nixpluvia.github.io/img1/pf/portfolio/portfolio_box.svg" alt="">
                             </div>
                             <div class="item-content">
-                                <div class="img" data-pu-href="https://nix.blog.oa.gg/pf/designpixel/index.php"
+                                <div class="item-img-box" data-pu-href="https://nix.blog.oa.gg/pf/designpixel/index.php"
                                     data-pu-imgurl="https://nixpluvia.github.io/img1/pf/portfolio/portfolio-designpixel.png">
                                     <img src="https://nixpluvia.github.io/img1/pf/portfolio/designpixel-img.png" alt="">
+                                    <span>view</span>
                                 </div>
                                 <div class="tag">
                                     <div class="tag-icon copy">
@@ -529,9 +540,10 @@
                                 <img src="https://nixpluvia.github.io/img1/pf/portfolio/portfolio_box.svg" alt="">
                             </div>
                             <div class="item-content">
-                                <div class="img" data-pu-href="https://nix.blog.oa.gg/pf/heimish/index.php"
+                                <div class="item-img-box" data-pu-href="https://nix.blog.oa.gg/pf/heimish/index.php"
                                     data-pu-imgurl="https://nixpluvia.github.io/img1/pf/portfolio/portfolio-heimish.png">
                                     <img src="https://nixpluvia.github.io/img1/pf/portfolio/hemish-img.png" alt="">
+                                    <span>view</span>
                                 </div>
                                 <div class="tag">
                                     <div class="tag-icon copy">
@@ -549,9 +561,10 @@
                                 <img src="https://nixpluvia.github.io/img1/pf/portfolio/portfolio_box.svg" alt="">
                             </div>
                             <div class="item-content">
-                                <div class="img" data-pu-href="https://nix.blog.oa.gg/pf/cleaderm/index.php"
+                                <div class="item-img-box" data-pu-href="https://nix.blog.oa.gg/pf/cleaderm/index.php"
                                     data-pu-imgurl="https://nixpluvia.github.io/img1/pf/portfolio/portfolio-cleaderm.png">
                                     <img src="https://nixpluvia.github.io/img1/pf/portfolio/cleaderm-img.png" alt="">
+                                    <span>view</span>
                                 </div>
                                 <div class="tag">
                                     <div class="tag-icon copy">
@@ -569,6 +582,7 @@
             </div>
         </section>
 
+        <!-- 디자인 포트폴리오 -->
         <section class="design section-page flex active-on-visible">
             <h2 class="title font-Fredericka">
                 <span>“Design”</span>
@@ -578,7 +592,7 @@
                     <div class="swiper-slide flex">
                         <div class="img"></div>
                         <ul class="txt">
-                            <li class="title font-noto">디자인 작업물 이름</li>
+                            <li class="title font-noto">교보문고 리디자인</li>
                             <li class="tag flex">
                                 <div class="tag-icon">
                                     <img src="https://nixpluvia.github.io/img1/pf/portfolio/icon-copy.svg" alt="">
@@ -589,15 +603,15 @@
                             </li>
                             <li class="txt-body font-noto">
                                 <p>
-                                    이 작업물은 위대한 작업물을 모방한 작품으로서
-                                    굉장히 굉장히 심열을 기울여서 카피했습니다.
-                                    여름느낌이 포인트인 작품이기 때문에 그 느낌을 살리기 위해서
-                                    작업 했습니다.
+                                    기존의 교보문고 e-book 디자인의 문제점인 너무 많은 내용을 담고 있다는 점을 토대로
+                                    직장인과 학생들을 타겟으로 최대한의 불필요한 정보를 배제하고
+                                    간편하게 즐길 수 있도록 컨셉을 잡았습니다.
+                                    그 후 브로앤팁스 사이트의 디자인을 참고해서 리디자인을 진행 했습니다.
                                 </p>
                             </li>
                             <li class="source font-noto">
                                 <span>디자인 출처 : </span>
-                                <span>망고보드</span>
+                                <span><a href="https://brontips.com/">브로앤팁스</a></span>
                             </li>
                         </ul>
                         <div class="bg-img"></div>
@@ -616,42 +630,15 @@
                             </li>
                             <li class="txt-body font-noto">
                                 <p>
-                                    이 작업물은 위대한 작업물을 모방한 작품으로서
-                                    굉장히 굉장히 심열을 기울여서 카피했습니다.
-                                    여름느낌이 포인트인 작품이기 때문에 그 느낌을 살리기 위해서
-                                    작업 했습니다.
+                                    기존의 cocacola company 사이트의 불편한 사이트의 구성과 요소들을 제거하고
+                                    코카콜라의 아이덴티티를 살린 디자인을 컨셉으로 잡고 진행 했습니다.
+                                    코카콜라의 색상을 포인트로 화면을 구성하고 페이지에 맞는 모양의 디자인을 사용해서
+                                    단조로움을 피하는 디자인을 진행 했습니다.
                                 </p>
                             </li>
                             <li class="source font-noto">
                                 <span>디자인 출처 : </span>
-                                <span>망고보드</span>
-                            </li>
-                        </ul>
-                        <div class="bg-img"></div>
-                    </div>
-                    <div class="swiper-slide flex">
-                        <div class="img"></div>
-                        <ul class="txt">
-                            <li class="title font-noto">디자인 작업물 이름</li>
-                            <li class="tag flex">
-                                <div class="tag-icon">
-                                    <img src="https://nixpluvia.github.io/img1/pf/portfolio/icon-copy.svg" alt="">
-                                </div>
-                                <div class="tag-icon">
-                                    <img src="https://nixpluvia.github.io/img1/pf/portfolio/icon-redesign.svg" alt="">
-                                </div>
-                            </li>
-                            <li class="txt-body font-noto">
-                                <p>
-                                    이 작업물은 위대한 작업물을 모방한 작품으로서
-                                    굉장히 굉장히 심열을 기울여서 카피했습니다.
-                                    여름느낌이 포인트인 작품이기 때문에 그 느낌을 살리기 위해서
-                                    작업 했습니다.
-                                </p>
-                            </li>
-                            <li class="source font-noto">
-                                <span>디자인 출처 : </span>
-                                <span>망고보드</span>
+                                <span>창작</span>
                             </li>
                         </ul>
                         <div class="bg-img"></div>
@@ -660,6 +647,7 @@
             </div>
         </section>
 
+        <!-- contact -->
         <section class="contact section-page con active-on-visible">
             <h2 class="title font-Fredericka">
                 <span>Contact</span>
@@ -853,6 +841,8 @@
             </div>
         </section>
     </div>
+    
+    <!-- footer 바 -->
     <footer class="con">
         <h2 class="font-noto">본 사이트는 상업적 목적이 아닌 개인 포트폴리오 사이트로 제작되었습니다.</h2>
     </footer>
