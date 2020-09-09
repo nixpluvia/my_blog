@@ -197,21 +197,21 @@
         <section class="intro con flex active-on-visible">
             <h2 class="title flex-column line-height-0">
                 <span class="section-title visi-hidden">WEB PUBLISHER/DESIGNER</span>
-                <div class="ti1 font-NUCD">
+                <div class="ti1 font-NUCD fs-title1">
                     <span>WEB</span>
                     <i class="line1"></i>
                     <i class="line2"></i>
                     <i class="line3"></i>
                     <i class="line4"></i>
                 </div>
-                <div class="ti2 font-Fredericka">
+                <div class="ti2 font-Fredericka fs-title2">
                     <span>PUBLISHER</span>
                     <i class="line1"></i>
                     <i class="line2"></i>
                     <i class="line3"></i>
                     <i class="line4"></i>
                 </div>
-                <div class="ti3 font-Fredericka">
+                <div class="ti3 font-Fredericka fs-title2">
                     <span>DESIGNER</span>
                     <i class="line1"></i>
                     <i class="line2"></i>
@@ -281,56 +281,56 @@
             </div>
         </section>
 
-        <!-- 소개 -->
+        <!-- 소개 페이지 -->
         <section class="about section-page con active-on-visible">
-            <h2 class="title font-Fredericka">
+            <h2 class="title font-Fredericka fs-title2">
                 <span>About</span>
             </h2>
-            <div class="content-box flex">
+            <div class="content-box flex-ai-st">
                 <div class="photo">
                     <img src="https://nixpluvia.github.io/img1/pf/portfolio/photo.png" alt="이호연 사진">
                 </div>
-                <div class="content">
+                <div class="content flex-grow-1">
                     <div class="head flex">
                         <button class="tab-head1 active" data-tab-name="box-1" data-tab-head-item-name="1">
-                            <h2>Profile</h2>
+                            <h2 class="fs-subtitle1">Profile</h2>
                         </button>
                         <button class="tab-head2" data-tab-name="box-1" data-tab-head-item-name="2">
-                            <h2>Skill</h2>
+                            <h2 class="fs-subtitle1">Skill</h2>
                         </button>
                     </div>
                     <div class="body">
                         <div class="profile-tab tab-box active" data-tab-name="box-1" data-tab-body-item-name="1">
-                            <h3 class="font-cookie">“ 부족한 부분을 채워주는 퍼즐이 되겠습니다! ”</h3>
+                            <h3 class="font-cookie fs-subtitle1">“ 부족한 부분을 채워주는 퍼즐이 되겠습니다! ”</h3>
                             <ul>
                                 <li>
                                     <h4 class="info-name flex ty1">
-                                        <span class="txt-head">Name</span>
-                                        <span class="txt-body">이호연</span>
+                                        <span class="txt-head fs-txthead">Name</span>
+                                        <span class="txt-body fs-txtbody">이호연</span>
                                     </h4>
                                 </li>
                                 <li>
                                     <h4 class="info-birth flex ty1">
-                                        <span class="txt-head">Birth</span>
-                                        <span class="txt-body">1993.08.14</span>
+                                        <span class="txt-head fs-txthead">Birth</span>
+                                        <span class="txt-body fs-txtbody">1993.08.14</span>
                                     </h4>
                                 </li>
                                 <li>
                                     <h4 class="info-number flex ty1">
-                                        <span class="txt-head">Number</span>
-                                        <span class="txt-body">010-9553-3855</span>
+                                        <span class="txt-head fs-txthead">Number</span>
+                                        <span class="txt-body fs-txtbody">010-9553-3855</span>
                                     </h4>
                                 </li>
                                 <li>
                                     <h4 class="info-email flex ty1">
-                                        <span class="txt-head">Email</span>
-                                        <span class="txt-body">whbear12@gmail.com</span>
+                                        <span class="txt-head fs-txthead">Email</span>
+                                        <span class="txt-body fs-txtbody">whbear12@gmail.com</span>
                                     </h4>
                                 </li>
                                 <li>
                                     <h4 class="info-edu ty2">
-                                        <div class="txt-head">Education</div>
-                                        <div class="txt-body flex">
+                                        <div class="txt-head fs-txthead">Education</div>
+                                        <div class="txt-body flex fs-txtbody">
                                             <span>2020.10</span>
                                             <span>
                                                 SBS아카데미컴퓨터아트학원
@@ -338,7 +338,7 @@
                                                 교육과정 수료
                                             </span>
                                         </div>
-                                        <div class="txt-body flex">
+                                        <div class="txt-body flex fs-txtbody">
                                             <span>2020.08</span>
                                             <span>우송대학교 미디어디자인 학과 졸업</span>
                                         </div>
@@ -349,52 +349,52 @@
                         <div class="skill-tab tab-box" data-tab-name="box-1" data-tab-body-item-name="2">
                             <div class="skills-box flex-jc-between">
                                 <div class="skill">
-                                    <div class="skill-name flex-jc-between font-noto">
+                                    <div class="skill-name flex-jc-between font-noto fs-txt1">
                                         <span>HTML</span>
                                         <span class="info-num" data-max-num="80"></span>
                                     </div>
                                     <div class="progress-bar">
                                         <div class="bar" data-width="80%"></div>
                                     </div>
-                                    <div class="txt font-noto">웹 표준·웹접근성에 대한 이해를 통한 마크업</div>
+                                    <div class="txt font-noto fs-txt1">웹 표준·웹접근성에 대한 이해를 통한 마크업</div>
                                 </div>
                                 <div class="skill">
-                                    <div class="skill-name flex-jc-between font-noto">
+                                    <div class="skill-name flex-jc-between font-noto fs-txt1">
                                         <span>CSS</span>
                                         <span class="info-num" data-max-num="82"></span>
                                     </div>
                                     <div class="progress-bar">
                                         <div class="bar" data-width="82%"></div>
                                     </div>
-                                    <div class="txt font-noto">실용적인 코드 사용과 반응형 사이트, 애니메이션 구현</div>
+                                    <div class="txt font-noto fs-txt1">실용적인 코드 사용과 반응형 사이트, 애니메이션 구현</div>
                                 </div>
                                 <div class="skill">
-                                    <div class="skill-name flex-jc-between font-noto">
+                                    <div class="skill-name flex-jc-between font-noto fs-txt1">
                                         <span>JavaScript / JQuery</span>
                                         <span class="info-num" data-max-num="65"></span>
                                     </div>
                                     <div class="progress-bar">
                                         <div class="bar" data-width="65%"></div>
                                     </div>
-                                    <div class="txt font-noto">
+                                    <div class="txt font-noto fs-txt1">
                                         기본적인 문법 이해와 알고리즘 문제 해결, 라이브러리와
                                         <br>
                                         플러그인을 사용한 유용한 기능 구현
                                     </div>
                                 </div>
                                 <div class="skill">
-                                    <div class="skill-name flex-jc-between font-noto">
+                                    <div class="skill-name flex-jc-between font-noto fs-txt1">
                                         <span>PHP</span>
                                         <span class="info-num" data-max-num="40"></span>
                                     </div>
                                     <div class="progress-bar">
                                         <div class="bar" data-width="40%"></div>
                                     </div>
-                                    <div class="txt font-noto">데이터베이스 MYSQL을 활용한 기본적인 게시판 기능 구현</div>
+                                    <div class="txt font-noto fs-txt1">데이터베이스 MYSQL을 활용한 기본적인 게시판 기능 구현</div>
                                 </div>
                             </div>
                             <div class="other-skills">
-                                <h3 class="box-title font-noto">Other Skills</h3>
+                                <h3 class="box-title font-noto fs-txt1">Other Skills</h3>
                                 <div class="wrap flex">
                                     <div class="skill-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
@@ -454,19 +454,19 @@
 
         <!-- 웹사이트 포트폴리오 -->
         <section class="portfolio section-page con active-on-visible">
-            <h2 class="title font-Fredericka">
+            <h2 class="title font-Fredericka fs-title2">
                 <span>Portfolio</span>
             </h2>
             <div class="content-box">
                 <div class="head flex-jc-c">
                     <button class="active" data-tab-name="box-2" data-tab-head-item-name="1">
-                        <h2>All</h2>
+                        <h2 class="fs-subtitle1">All</h2>
                     </button>
                     <button data-tab-name="box-2" data-tab-head-item-name="2">
-                        <h2>Re:Design</h2>
+                        <h2 class="fs-subtitle1">Re:Design</h2>
                     </button>
                     <button data-tab-name="box-2" data-tab-head-item-name="3">
-                        <h2>Copy</h2>
+                        <h2 class="fs-subtitle1">Copy</h2>
                     </button>
                 </div>
                 <div class="body">
@@ -489,7 +489,7 @@
                                 </div>
                                 <div class="txt">
                                     <span class="font-noto">Coca Cola Company_</span>
-                                    <span class="font-noto">코카콜라</span>
+                                    <span class="font-noto fs-txt2">코카콜라</span>
                                 </div>
                             </div>
                         </li>
@@ -510,7 +510,7 @@
                                 </div>
                                 <div class="txt">
                                     <span class="font-noto">Artfive_</span>
-                                    <span class="font-noto">아트파이브</span>
+                                    <span class="font-noto fs-txt2">아트파이브</span>
                                 </div>
                             </div>
                         </li>
@@ -531,7 +531,7 @@
                                 </div>
                                 <div class="txt">
                                     <span class="font-noto">Design Pixel_</span>
-                                    <span class="font-noto">디자인픽셀</span>
+                                    <span class="font-noto fs-txt2">디자인픽셀</span>
                                 </div>
                             </div>
                         </li>
@@ -552,7 +552,7 @@
                                 </div>
                                 <div class="txt">
                                     <span class="font-noto">Hemish_</span>
-                                    <span class="font-noto">헤이미쉬</span>
+                                    <span class="font-noto fs-txt2">헤이미쉬</span>
                                 </div>
                             </div>
                         </li>
@@ -573,7 +573,7 @@
                                 </div>
                                 <div class="txt">
                                     <span class="font-noto">Cleaderm_</span>
-                                    <span class="font-noto">클리덤 닥터락토</span>
+                                    <span class="font-noto fs-txt2">클리덤 닥터락토</span>
                                 </div>
                             </div>
                         </li>
@@ -584,7 +584,7 @@
 
         <!-- 디자인 포트폴리오 -->
         <section class="design section-page flex active-on-visible">
-            <h2 class="title font-Fredericka">
+            <h2 class="title font-Fredericka fs-title2">
                 <span>“Design”</span>
             </h2>
             <div class="slider swiper-container">
@@ -592,7 +592,7 @@
                     <div class="swiper-slide flex">
                         <div class="img"></div>
                         <ul class="txt">
-                            <li class="title font-noto">교보문고 리디자인</li>
+                            <li class="title font-noto fs-subtitle2">교보문고 리디자인</li>
                             <li class="tag flex">
                                 <div class="tag-icon">
                                     <img src="https://nixpluvia.github.io/img1/pf/portfolio/icon-copy.svg" alt="">
@@ -610,8 +610,8 @@
                                 </p>
                             </li>
                             <li class="source font-noto">
-                                <span>디자인 출처 : </span>
-                                <span><a href="https://brontips.com/">브로앤팁스</a></span>
+                                <span class="fs-txt2">디자인 출처 : </span>
+                                <span class="fs-txt2"><a href="https://brontips.com/">브로앤팁스</a></span>
                             </li>
                         </ul>
                         <div class="bg-img"></div>
@@ -619,7 +619,7 @@
                     <div class="swiper-slide flex">
                         <div class="img"></div>
                         <ul class="txt">
-                            <li class="title font-noto">디자인 작업물 이름</li>
+                            <li class="title font-noto fs-subtitle2">코카콜라 리디자인</li>
                             <li class="tag flex">
                                 <div class="tag-icon">
                                     <img src="https://nixpluvia.github.io/img1/pf/portfolio/icon-copy.svg" alt="">
@@ -637,8 +637,8 @@
                                 </p>
                             </li>
                             <li class="source font-noto">
-                                <span>디자인 출처 : </span>
-                                <span>창작</span>
+                                <span class="fs-txt2">디자인 출처 : </span>
+                                <span class="fs-txt2">창작</span>
                             </li>
                         </ul>
                         <div class="bg-img"></div>
@@ -649,7 +649,7 @@
 
         <!-- contact -->
         <section class="contact section-page con active-on-visible">
-            <h2 class="title font-Fredericka">
+            <h2 class="title font-Fredericka fs-title2">
                 <span>Contact</span>
             </h2>
             <div class="content flex">

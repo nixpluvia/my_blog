@@ -325,7 +325,7 @@ function popup__init(){
 }
 
 // 팝업 스크롤 방지
-function preventScroll(){
+function popUpScroll(){
     $('.portfolio-popup').on("mousewheel DOMMouseScroll", function (e) {
         e.preventDefault();
         return;
@@ -387,6 +387,8 @@ $(function () {
     pagenation__init();
     
     setTime__init();
+
+    popUpScroll();
 });
 
 // // 시작 위치 초기화
