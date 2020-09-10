@@ -191,27 +191,29 @@
         </div>
     </div>
 
+
+
     <!-- 본문 섹션 -->
     <div class="wrap">
         <!-- 인트로 -->
         <section class="intro con flex active-on-visible">
             <h2 class="title flex-column line-height-0">
                 <span class="section-title visi-hidden">WEB PUBLISHER/DESIGNER</span>
-                <div class="ti1 font-NUCD fs-title1">
+                <div class="ti1 font-NUCD">
                     <span>WEB</span>
                     <i class="line1"></i>
                     <i class="line2"></i>
                     <i class="line3"></i>
                     <i class="line4"></i>
                 </div>
-                <div class="ti2 font-Fredericka fs-title2">
+                <div class="ti2 font-Fredericka">
                     <span>PUBLISHER</span>
                     <i class="line1"></i>
                     <i class="line2"></i>
                     <i class="line3"></i>
                     <i class="line4"></i>
                 </div>
-                <div class="ti3 font-Fredericka fs-title2">
+                <div class="ti3 font-Fredericka">
                     <span>DESIGNER</span>
                     <i class="line1"></i>
                     <i class="line2"></i>
@@ -301,7 +303,7 @@
                     </div>
                     <div class="body">
                         <div class="profile-tab tab-box active" data-tab-name="box-1" data-tab-body-item-name="1">
-                            <h3 class="font-cookie fs-subtitle1">“ 부족한 부분을 채워주는 퍼즐이 되겠습니다! ”</h3>
+                            <h3 class="font-cookie">“ 부족한 부분을 채워주는 퍼즐이 되겠습니다! ”</h3>
                             <ul>
                                 <li>
                                     <h4 class="info-name flex ty1">

@@ -372,10 +372,11 @@ body::-webkit-scrollbar {
 }
 
 /* 폰트 사이즈 */
-.fs-title1 {
-    font-size: calc(4.5rem + 2vw);
-    line-height: calc(4.5rem + 2vw);
-}
+
+
+
+
+
 .fs-title2 {
     font-size: calc(4rem + 2vw);
     line-height: calc(4rem + 2vw);
@@ -595,6 +596,8 @@ section {
 /* intro 타이틀 폰트 */
 .intro .title>.ti1>span {
     display: inline-block;
+    font-size: calc(4.5rem + 2vw);
+    line-height: calc(4.5rem + 2vw);
     font-weight: normal;
     color: #FFB000;
     opacity: 0;
@@ -602,6 +605,8 @@ section {
 
 .intro .title>.font-Fredericka>span {
     display: inline-block;
+    font-size: calc(4rem + 2vw);
+    line-height: calc(4rem + 2vw);
     font-weight: normal;
     opacity: 0;
 }
@@ -787,7 +792,7 @@ section {
 
 .intro>.title>.title-paint-line {
     position: absolute;
-    bottom: -30px;
+    bottom: -3.0960vh;
     width: 0;
     overflow: hidden;
     animation: title-line 1s 2.5s forwards;
@@ -1011,6 +1016,8 @@ section {
 /* 어바웃 페이지 - profile 탭 */
 .about .body>.profile-tab>h3 {
     margin-bottom: 60px;
+    font-size: calc(1.8rem + 0.625vw);
+    line-height: calc(1.8rem + 0.625vw);
     font-weight: normal;
     white-space: nowrap;
 }
@@ -1633,11 +1640,13 @@ footer>h2 {
     top: 50%;
     left: 50%;
     width: 60%;
+    min-width: 700px;
     transform: translate(-50%, -50%);
     background-color: #ffffff;
 }
 
 .popup-box>.popup-img {
+    min-width: 300px;
     max-width: 450px;
     flex: 1.5 0 0;
 }
@@ -1716,7 +1725,7 @@ footer>h2 {
 }
 
 .popup-box>.txt-box>ul>li>.txt-body {
-    margin-top: 30px;
+    margin-top: 1.5625vw;
 }
 
 .popup-box>.txt-box>ul>li>.txt-body>p {
@@ -1726,7 +1735,7 @@ footer>h2 {
 }
 
 .popup-box>.txt-box>ul>li>.source {
-    margin-top: 100px;
+    margin-top: 5.2083vw;
 }
 
 .popup-box>.txt-box>ul>li>.source>div>span {
@@ -1781,10 +1790,15 @@ footer>h2 {
         flex: 0 0 auto;
     }
 
+    .about .body>.profile-tab>h3 {
+        font-size: calc(1.4rem + 0.625vw);
+        line-height: calc(1.4rem + 0.625vw);
+    }
     /* 소개 페이지 스킬 탭 */
     .about .body>.skill-tab>.skills-box {
         width: 90%;
     }
+    
 }
 
 
@@ -1845,6 +1859,11 @@ footer>h2 {
         font-size: calc(1.4rem + 0.15625vw);
         line-height: calc(1.4rem + 0.15625vw);
     }
+
+
+    .design .swiper-container .swiper-slide>.img {
+        width: 375px;
+    }
 }
 
 
@@ -1856,14 +1875,49 @@ footer>h2 {
     .side-bar {
         display: none;
     }
-    /* 폰트 사이즈 */
-    .fs-title1 {
-        font-size: calc(36px + 2vw);
-        line-height: calc(36px + 2vw);
+
+    .popup-box>.popup-img {
+        min-width: 200px;
     }
+
+
+
+    /* 폰트 사이즈 */
     .fs-title2 {
         font-size: calc(32.5px + 2vw);
         line-height: calc(32.5px + 2vw);
+    }
+
+
+    .intro {
+        flex-direction: column-reverse;
+        justify-content:center;
+        align-items: center;
+    }
+    .intro .title {
+        margin: 0;
+    }
+    .intro .title>.ti1>span {
+        font-size: 8vw;
+        line-height: 8vw;
+    }
+    .intro .title>.font-Fredericka>span {
+        font-size: 7vw;
+        line-height: 7vw;
+    }
+
+    .intro>.intro-img {
+        align-self: center;
+        margin-left: 0;
+        margin-bottom: 5vh;
+    }
+    .intro>.intro-img>.puzzle-line-img,
+    .intro>.intro-img>.puzzle-line,
+    .intro>.intro-img>.main-puzzle,
+    .intro>.intro-img>.white-bg-img
+    {
+        max-width: none;
+        width: 45vw;
     }
 
 

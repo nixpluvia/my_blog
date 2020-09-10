@@ -39,16 +39,6 @@ function lineAni__init() {
 // 라인 애니메이션 딜레이 끝
 
 
-// 타이틀 라인 사이즈 구하는 함수 시작
-function lineSize__init() {
-    var titleSize = $('.intro > .title').outerWidth();
-    var sizePercent = titleSize / 20;
-    $('.intro > .title > .title-paint-line > img').css('width', titleSize + sizePercent);
-}
-// 타이틀 라인 사이즈 구하는 함수 끝
-
-
-
 
 // 탭박스 함수 시작
 function tabBox__init() {
@@ -65,7 +55,6 @@ function tabBox__init() {
 
         if (tabName == "box-2") {
             if (itemName == 1) {
-                console.log("hi");
                 $('[data-tab-name="' + tabName + '"][data-tab-body-item-name]').addClass('active');
             }
         }
@@ -137,8 +126,6 @@ function introAni__init() {
     var aboutPage = $('.about').offset().top + 200;
 
     $('html').data('data-intro', false);
-
-    console.log("윈도우 사이즈는" + $(window).outerWidth() );
 
     if( $(window).outerWidth() > 768){
         // 스크롤 방지
@@ -258,12 +245,22 @@ function ActiveOnVisible__init() {
 function windowResize__init() {
     $(window).resize(function () {
         var windowSize = $(window).outerWidth();
-
-        if (windowSize > 1400 && windowSize < 1500) {
+        if (windowSize < 1500) {
             lineSize__init();
         }
     });
 }
+
+// 타이틀 라인 사이즈 구하는 함수 시작
+function lineSize__init() {
+    var titleSize = $('.intro > .title').outerWidth();
+    var sizePercent = titleSize / 20;
+    $('.intro > .title > .title-paint-line > img').css('width', titleSize + sizePercent);
+}
+// 타이틀 라인 사이즈 구하는 함수 끝
+
+
+
 
 function pagenation(){
     if ($('html').data('data-intro') == true) {
@@ -381,7 +378,7 @@ $(function () {
 
     // 슬라이드
     swiperSlide__init();
-    // windowResize__init();
+    windowResize__init();
 
     // 인트로 페이지 함수
     introAni__init();
