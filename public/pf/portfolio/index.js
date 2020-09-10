@@ -136,17 +136,24 @@ function introAni__init() {
 
     var aboutPage = $('.about').offset().top + 200;
 
-    // 스크롤 방지
-    $('html').data('data-intro', true);
-    preventScroll();
+    $('html').data('data-intro', false);
 
-    // 스크롤 방지 해제
-    setTimeout(function () {
-        $('html').data('data-intro', false);
-        $('html,body').animate({
-            scrollTop: aboutPage + 'px'
-        }, 1000);
-    }, 5000);
+    console.log("윈도우 사이즈는" + $(window).outerWidth() );
+
+    if( $(window).outerWidth() > 768){
+        // 스크롤 방지
+        $('html').data('data-intro', true);
+
+        preventScroll();    
+
+        // 스크롤 방지 해제
+        setTimeout(function () {
+            $('html').data('data-intro', false);
+            $('html,body').animate({
+                scrollTop: aboutPage + 'px'
+            }, 1000);
+        }, 5000);
+    }
 }
 
 // 스크롤 방지 함수
@@ -248,14 +255,15 @@ function ActiveOnVisible__init() {
 
 
 // 리사이즈
-// function windowResize__init() {
-//     $(window).resize(function () {
-//         var windowSize = $(window).outerWidth();
-//         if (windowSize > 1400 && windowSize < 1500) {
-//             lineSize__init();
-//         }
-//     });
-// }
+function windowResize__init() {
+    $(window).resize(function () {
+        var windowSize = $(window).outerWidth();
+
+        if (windowSize > 1400 && windowSize < 1500) {
+            lineSize__init();
+        }
+    });
+}
 
 function pagenation(){
     if ($('html').data('data-intro') == true) {

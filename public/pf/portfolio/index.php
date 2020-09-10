@@ -668,8 +668,8 @@
                     </form>
                 </div>
                 <div class="info-box">
-                    <div class="info-wrap flex-column">
-                        <div class="sub-title flex-jc-st">
+                    <div class="info-wrap flex">
+                        <div class="sub-title">
                             <div class="txt-wrap">
                                 <div class="flex-jc-st font-Fredericka">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg"

@@ -939,7 +939,6 @@ section {
 /* 어바웃 페이지 - 컨텐츠 박스 */
 .about>.content-box {
     margin-top: 140px;
-    flex-wrap: wrap;
     justify-content: center;
 }
 .about>.content-box>div{
@@ -1431,7 +1430,7 @@ section {
 
 /* contact 섹션 - 컨텐츠 박스 */
 .contact>.content {
-    margin-top: 150px;
+    margin-top: 7.8vw;
     margin-bottom: 100px;
 }
 
@@ -1509,9 +1508,14 @@ section {
     height: 100%;
     padding-left: 20%;
     box-sizing: border-box;
+    flex-direction: column;
 }
 
 /* contact 섹션 - info 타이틀 */
+.contact>.content>.info-box .sub-title {
+    display: flex;
+    justify-content: flex-start;
+}
 .contact>.content>.info-box .sub-title .txt-wrap> :not(:last-child) {
     margin-bottom: 25px;
 }
@@ -1726,9 +1730,11 @@ footer>h2 {
 
 
 
+/* Resoponsive Web*/
 
 /* Desktop device */
 @media (max-width: 1700px) {
+    /* 페이지 여백 */
     .con {
         padding-left: 5.8vw;
         padding-right: 5.8vw;
@@ -1740,17 +1746,19 @@ footer>h2 {
 
 
 
-
-
 @media (max-width: 1440px) {
     /* 소개 페이지 여백 */
     .about>.content-box>.content {
         padding-left: 3vw;
     }
+
+
     /* 포트폴리오 아이템 갯수 */
     .portfolio>.content-box>.body>ul>li {
         width: calc(100% / 2);
     }
+
+
     /* 디자인 페이지 */
     .design {
         flex-wrap: wrap;
@@ -1764,8 +1772,40 @@ footer>h2 {
         width: 100%;
         flex: 0 0 auto;
     }
+
+    /* 소개 페이지 스킬 탭 */
+    .about .body>.skill-tab>.skills-box {
+        width: 90%;
+    }
 }
-@media (max-width: 1129px) {
+
+
+@media (min-width: 769px) and (max-width: 1440px) {
+    .con {
+        padding-left: calc( 72px + 5.8vw );
+    }
+    .design {
+        padding-left: calc( 72px + 5.8vw );
+    }
+}
+
+
+
+
+
+
+@media (max-width: 1024px) {
+    .intro .title {
+        margin-bottom: 42vh;
+    }
+    .intro>.intro-img {
+        margin-bottom: 40vh;
+    }
+
+    /* 소개 페이지 */
+    .about>.content-box {
+        flex-wrap: wrap;
+    }
     .about>.content-box>.content {
         width: 100%;
         padding-left: 0;
@@ -1783,26 +1823,11 @@ footer>h2 {
         max-width: 397px;
     }
     .about .body>.skill-tab>.skills-box {
-        flex-wrap: wrap;
         width: 100%;
     }
-}
-
-@media (min-width: 769px) and (max-width: 1440px) {
-    .con {
-        padding-left: calc( 72px + 5.8vw );
-    }
-    .design {
-        padding-left: calc( 72px + 5.8vw );
-    }
-}
 
 
 
-
-
-
-@media (max-width: 1024px) {
     .portfolio>.content-box>.body>ul>li>.item-content>.txt span:first-child {
         font-size: calc(1.4rem + 0.15625vw);
         line-height: calc(1.4rem + 0.15625vw);
@@ -1827,11 +1852,37 @@ footer>h2 {
         font-size: calc(32.5px + 2vw);
         line-height: calc(32.5px + 2vw);
     }
+
+
     .portfolio>.content-box>.body>ul>li {
         width: 100%;
     }
     .portfolio>.content-box>.body>ul>li>.item-content>.txt span:first-child {
         font-size: calc(2rem + 0.15625vw);
         line-height: calc(2rem + 0.15625vw);
+    }
+
+
+    .contact>.content {
+        flex-direction: column-reverse;
+    }
+    .contact>.content>.info-box{
+        padding-bottom: 5vh;
+    }
+    .contact>.content>.info-box>.info-wrap {
+        padding-left: 0;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .contact>.content>.info-box .sub-title {
+        width: 100%;
+        justify-content: center;
+    }
+    .contact>.content>.info-box>.info-wrap>div:not(:first-child) {
+        width: 50%;
+    }
+    .contact>.content>.send-mail {
+        width: 100%;
+        max-width: none;
     }
 }
