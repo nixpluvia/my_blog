@@ -287,7 +287,7 @@
                 <span>About</span>
             </h2>
             <div class="content-box flex-ai-st">
-                <div class="photo">
+                <div class="photo flex-shrink-0">
                     <img src="https://nixpluvia.github.io/img1/pf/portfolio/photo.png" alt="이호연 사진">
                 </div>
                 <div class="content flex-grow-1">
@@ -356,41 +356,39 @@
                                     <div class="progress-bar">
                                         <div class="bar" data-width="80%"></div>
                                     </div>
-                                    <div class="txt font-noto fs-txt1">웹 표준·웹접근성에 대한 이해를 통한 마크업</div>
+                                    <div class="txt font-noto fs-txt1-1">웹 표준·웹접근성에 대한 이해를 통한 마크업</div>
                                 </div>
                                 <div class="skill">
-                                    <div class="skill-name flex-jc-between font-noto fs-txt1">
+                                    <div class="skill-name flex-jc-between font-noto fs-txt1-1">
                                         <span>CSS</span>
                                         <span class="info-num" data-max-num="82"></span>
                                     </div>
                                     <div class="progress-bar">
                                         <div class="bar" data-width="82%"></div>
                                     </div>
-                                    <div class="txt font-noto fs-txt1">실용적인 코드 사용과 반응형 사이트, 애니메이션 구현</div>
+                                    <div class="txt font-noto fs-txt1-1">실용적인 코드 사용과 반응형 사이트, 애니메이션 구현</div>
                                 </div>
                                 <div class="skill">
-                                    <div class="skill-name flex-jc-between font-noto fs-txt1">
+                                    <div class="skill-name flex-jc-between font-noto fs-txt1-1">
                                         <span>JavaScript / JQuery</span>
                                         <span class="info-num" data-max-num="65"></span>
                                     </div>
                                     <div class="progress-bar">
                                         <div class="bar" data-width="65%"></div>
                                     </div>
-                                    <div class="txt font-noto fs-txt1">
-                                        기본적인 문법 이해와 알고리즘 문제 해결, 라이브러리와
-                                        <br>
-                                        플러그인을 사용한 유용한 기능 구현
+                                    <div class="txt font-noto fs-txt1-1">
+                                        기본적인 문법 이해와 알고리즘 문제 해결, 라이브러리와 플러그인을 사용한 유용한 기능 구현
                                     </div>
                                 </div>
                                 <div class="skill">
-                                    <div class="skill-name flex-jc-between font-noto fs-txt1">
+                                    <div class="skill-name flex-jc-between font-noto fs-txt1-1">
                                         <span>PHP</span>
                                         <span class="info-num" data-max-num="40"></span>
                                     </div>
                                     <div class="progress-bar">
                                         <div class="bar" data-width="40%"></div>
                                     </div>
-                                    <div class="txt font-noto fs-txt1">데이터베이스 MYSQL을 활용한 기본적인 게시판 기능 구현</div>
+                                    <div class="txt font-noto fs-txt1-1">데이터베이스 MYSQL을 활용한 기본적인 게시판 기능 구현</div>
                                 </div>
                             </div>
                             <div class="other-skills">
@@ -590,7 +588,7 @@
             <div class="slider swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide flex">
-                        <div class="img"></div>
+                        <div class="img flex-shrink-0"></div>
                         <ul class="txt">
                             <li class="title font-noto fs-subtitle2">교보문고 리디자인</li>
                             <li class="tag flex">
@@ -617,7 +615,7 @@
                         <div class="bg-img"></div>
                     </div>
                     <div class="swiper-slide flex">
-                        <div class="img"></div>
+                        <div class="img flex-shrink-0"></div>
                         <ul class="txt">
                             <li class="title font-noto fs-subtitle2">코카콜라 리디자인</li>
                             <li class="tag flex">

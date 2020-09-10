@@ -225,6 +225,10 @@ button {
     flex-grow: 1;
 }
 
+*>.flex-shrink-0 {
+    flex-shrink: 0;
+}
+
 *>.flex-jc-st {
     display: flex;
     justify-content: flex-start;
@@ -395,6 +399,9 @@ body::-webkit-scrollbar {
 .fs-txt1 {
     font-size: calc(1.3rem + 0.15625vw);
     line-height: calc(1.3rem + 0.15625vw);
+}
+.fs-txt1-1 {
+    font-size: calc(1.3rem + 0.15625vw);
 }
 .fs-txt2 {
     font-size: 1.4rem;
@@ -1062,6 +1069,7 @@ section {
 .about .body>.skill-tab>.skills-box>.skill>.txt {
     font-weight: 400;
     letter-spacing: -1px;
+    word-break: keep-all;
 }
 
 .about .body>.skill-tab>.skills-box>.skill>.skill-name>.info-num::after {
@@ -1313,8 +1321,8 @@ section {
 
 /* design 섹션 - 슬라이드 이미지 박스*/
 .design .swiper-container .swiper-slide>.img {
-    width: 100%;
-    max-width: 450px;
+    width: 450px;
+    flex-shrink: 0;
     border-right: 10px solid #2D2924;
     background-size: cover;
     background-position: 0 0;
@@ -1806,6 +1814,11 @@ footer>h2 {
     .about>.content-box {
         flex-wrap: wrap;
     }
+    /* 소개 페이지 사진 */
+    .about>.content-box>.photo {
+        width: 300px;
+    }
+    /* 소개 페이지 탭박스 */
     .about>.content-box>.content {
         width: 100%;
         padding-left: 0;
@@ -1820,12 +1833,12 @@ footer>h2 {
     .about>.content-box>.content>.body>.skill-tab{
         margin-left: auto;
         margin-right: auto;
-        max-width: 397px;
+        max-width: 400px;
     }
     .about .body>.skill-tab>.skills-box {
         width: 100%;
     }
-
+    
 
 
     .portfolio>.content-box>.body>ul>li>.item-content>.txt span:first-child {
